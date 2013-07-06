@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>City:</strong>
+  <%= @event.city %>
+</p>
+
+<p>
+  <strong>Theme:</strong>
+  <%= @event.theme %>
+</p>
+
+<p>
+  <strong>Hackathon start:</strong>
+  <%= @event.hackathon_start %>
+</p>
+
+<p>
+  <strong>Hackathon end:</strong>
+  <%= @event.hackathon_end %>
+</p>
+
+<p>
+  <strong>Show start:</strong>
+  <%= @event.show_start %>
+</p>
+
+<p>
+  <strong>Show end:</strong>
+  <%= @event.show_end %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @event.about %>
+</p>
+
+<p>
+  <strong>Hack rsvp url:</strong>
+  <%= @event.hack_rsvp_url %>
+</p>
+
+<p>
+  <strong>Show rsvp url:</strong>
+  <%= @event.show_rsvp_url %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

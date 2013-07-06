@@ -1,0 +1,43 @@
+<h1>Listing events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>Theme</th>
+      <th>Hackathon start</th>
+      <th>Hackathon end</th>
+      <th>Show start</th>
+      <th>Show end</th>
+      <th>About</th>
+      <th>Hack rsvp url</th>
+      <th>Show rsvp url</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.city %></td>
+        <td><%= event.theme %></td>
+        <td><%= event.hackathon_start %></td>
+        <td><%= event.hackathon_end %></td>
+        <td><%= event.show_start %></td>
+        <td><%= event.show_end %></td>
+        <td><%= event.about %></td>
+        <td><%= event.hack_rsvp_url %></td>
+        <td><%= event.show_rsvp_url %></td>
+        <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event', new_event_path %>

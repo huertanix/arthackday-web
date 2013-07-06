@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @participant.name %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @participant.bio %>
+</p>
+
+<p>
+  <strong>Twitter handle:</strong>
+  <%= @participant.twitter_handle %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @participant.website %>
+</p>
+
+<%= link_to 'Edit', edit_participant_path(@participant) %> |
+<%= link_to 'Back', participants_path %>
