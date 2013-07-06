@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130706211845) do
+ActiveRecord::Schema.define(version: 20130706223913) do
 
   create_table "events", force: true do |t|
     t.string   "city"
@@ -34,7 +34,20 @@ ActiveRecord::Schema.define(version: 20130706211845) do
     t.string   "website"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
   end
+
+  add_index "participants", ["email"], name: "index_participants_on_email", unique: true
+  add_index "participants", ["reset_password_token"], name: "index_participants_on_reset_password_token", unique: true
 
   create_table "press_blurbs", force: true do |t|
     t.string   "headline"
