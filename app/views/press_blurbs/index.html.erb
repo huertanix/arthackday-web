@@ -1,0 +1,33 @@
+<h1>Listing press_blurbs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Headline</th>
+      <th>Source name</th>
+      <th>Source url</th>
+      <th>Logo uri</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @press_blurbs.each do |press_blurb| %>
+      <tr>
+        <td><%= press_blurb.headline %></td>
+        <td><%= press_blurb.source_name %></td>
+        <td><%= press_blurb.source_url %></td>
+        <td><%= press_blurb.logo_uri %></td>
+        <td><%= link_to 'Show', press_blurb %></td>
+        <td><%= link_to 'Edit', edit_press_blurb_path(press_blurb) %></td>
+        <td><%= link_to 'Destroy', press_blurb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Press blurb', new_press_blurb_path %>

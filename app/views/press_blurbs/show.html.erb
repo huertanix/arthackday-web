@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Headline:</strong>
+  <%= @press_blurb.headline %>
+</p>
+
+<p>
+  <strong>Source name:</strong>
+  <%= @press_blurb.source_name %>
+</p>
+
+<p>
+  <strong>Source url:</strong>
+  <%= @press_blurb.source_url %>
+</p>
+
+<p>
+  <strong>Logo uri:</strong>
+  <%= @press_blurb.logo_uri %>
+</p>
+
+<%= link_to 'Edit', edit_press_blurb_path(@press_blurb) %> |
+<%= link_to 'Back', press_blurbs_path %>

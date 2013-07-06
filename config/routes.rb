@@ -1,4 +1,8 @@
 ArthackdayWeb::Application.routes.draw do
+  resources :press_blurbs
+
+  resources :sponsors
+
   resources :participants
 
   resources :projects
