@@ -43,3 +43,8 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# User management
+gem 'protected_attributes' # use attr_accessible until Device supports strong_parameters
+gem 'devise', '3.0.0.rc'
+
