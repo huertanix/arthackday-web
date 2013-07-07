@@ -5,7 +5,18 @@ Art Hack Day website.
 
 Install
 -------
-Install Ruby 1.9.3, sqlite3, libsqlite3-dev
-gem install rails (4.0.0)
-bundle install
-rails s
+System Prereqs:
+
+* libreadline6
+* libreadline6-dev
+* sqlite3
+* libsqlite3-dev
+
+Ruby Prereqs: 
+* rvm
+* Ruby 1.9.3, 
+* gem install rails (4.0.0)
+
+Application Install:
+* bundle install
+* rails s

@@ -11,20 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130706223913) do
+ActiveRecord::Schema.define(version: 20130707211903) do
 
-  create_table "events", force: true do |t|
-    t.string   "city"
-    t.string   "theme"
-    t.datetime "hackathon_start"
-    t.datetime "hackathon_end"
-    t.datetime "show_start"
-    t.datetime "show_end"
-    t.text     "about"
-    t.string   "hack_rsvp_url"
-    t.string   "show_rsvp_url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+# Could not dump table "events" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+
+  create_table "events_participants", id: false, force: true do |t|
+    t.integer "event_id",       null: false
+    t.integer "participant_id", null: false
   end
 
   create_table "participants", force: true do |t|
@@ -49,30 +43,19 @@ ActiveRecord::Schema.define(version: 20130706223913) do
   add_index "participants", ["email"], name: "index_participants_on_email", unique: true
   add_index "participants", ["reset_password_token"], name: "index_participants_on_reset_password_token", unique: true
 
-  create_table "press_blurbs", force: true do |t|
-    t.string   "headline"
-    t.string   "source_name"
-    t.string   "source_url"
-    t.string   "logo_uri"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "participants_projects", id: false, force: true do |t|
+    t.integer "participant_id", null: false
+    t.integer "project_id",     null: false
   end
 
-  create_table "projects", force: true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.string   "tag"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+# Could not dump table "press_blurbs" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
-  create_table "sponsors", force: true do |t|
-    t.string   "name"
-    t.string   "website"
-    t.string   "logo_uri"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+# Could not dump table "projects" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+
+# Could not dump table "sponsors" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "venues", force: true do |t|
     t.string   "name"
