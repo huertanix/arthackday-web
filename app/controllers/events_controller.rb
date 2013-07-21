@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_organizer!, :only => [:create, :update, :new, :edit, :destroy]
 
   # GET /events
   # GET /events.json
@@ -14,25 +15,32 @@ class EventsController < ApplicationController
 
   # GET /events/new
   def new
-    @event = Event.new
+    if organizer_signed_in?
+      @event = Event.new
+    end
   end
 
   # GET /events/1/edit
   def edit
+    if organizer_signed_in?
+      @event = Event.find(params[:id])
+    end
   end
 
   # POST /events
   # POST /events.json
   def create
-    @event = Event.new(event_params)
+    if organizer_signed_in?
+      @event = Event.new(event_params)
 
-    respond_to do |format|
-      if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @event }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
+      respond_to do |format|
+        if @event.save
+          format.html { redirect_to @event, notice: 'Event was successfully created.' }
+          format.json { render action: 'show', status: :created, location: @event }
+        else
+          format.html { render action: 'new' }
+          format.json { render json: @event.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -40,13 +48,15 @@ class EventsController < ApplicationController
   # PATCH/PUT /events/1
   # PATCH/PUT /events/1.json
   def update
-    respond_to do |format|
-      if @event.update(event_params)
-        format.html { redirect_to @event, notice: 'Event was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
+    if organizer_signed_in?
+      respond_to do |format|
+        if @event.update(event_params)
+          format.html { redirect_to @event, notice: 'Event was successfully updated.' }
+          format.json { head :no_content }
+        else
+          format.html { render action: 'edit' }
+          format.json { render json: @event.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -54,10 +64,12 @@ class EventsController < ApplicationController
   # DELETE /events/1
   # DELETE /events/1.json
   def destroy
-    @event.destroy
-    respond_to do |format|
-      format.html { redirect_to events_url }
-      format.json { head :no_content }
+    if organizer_signed_in?
+      @event.destroy
+      respond_to do |format|
+        format.html { redirect_to events_url }
+        format.json { head :no_content }
+      end
     end
   end
 

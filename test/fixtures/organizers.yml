@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  event_admin: false
+  org_admin: false
+
+two:
+  name: MyString
+  event_admin: false
+  org_admin: false

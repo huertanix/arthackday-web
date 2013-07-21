@@ -11,15 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130707211903) do
+ActiveRecord::Schema.define(version: 20130720192159) do
 
 # Could not dump table "events" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
+
+  create_table "events_organizers", id: false, force: true do |t|
+    t.integer "event_id",     null: false
+    t.integer "organizer_id", null: false
+  end
 
   create_table "events_participants", id: false, force: true do |t|
     t.integer "event_id",       null: false
     t.integer "participant_id", null: false
   end
+
+  create_table "organizers", force: true do |t|
+    t.string   "name"
+    t.boolean  "event_admin"
+    t.boolean  "org_admin"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+  end
+
+  add_index "organizers", ["email"], name: "index_organizers_on_email", unique: true
+  add_index "organizers", ["reset_password_token"], name: "index_organizers_on_reset_password_token", unique: true
 
   create_table "participants", force: true do |t|
     t.string   "name"
