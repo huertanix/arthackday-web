@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :city %><br>
+    <%= f.label :city %> (as it appears on the front page)<br>
     <%= f.text_field :city %>
   </div>
   <div class="field">
-    <%= f.label :theme %><br>
+    <%= f.label :theme %> (short byline, not the whole dissertation)<br>
     <%= f.text_field :theme %>
   </div>
   <div class="field">
@@ -47,6 +47,21 @@
     <%= f.label :show_rsvp_url %><br>
     <%= f.text_field :show_rsvp_url %>
   </div>
+  <fieldset>
+    Venue<br>
+    <% if @event.venue.nil? %>
+      Add venue
+      <% # UX plan is to have this click trigger opening a list of existing venues with a "new venue" link at the bottom of the list %>
+    <% else %>
+      <%= @event.venue.name %> [Change]
+      <% # TODO: Add same list to change venue with same link to create a new one %>
+    <% end %>
+  </fieldset>
+  <fieldset>
+    Sponsors<br>
+    
+  </fieldset>
+
   <div class="actions">
     <%= f.submit %>
   </div>
