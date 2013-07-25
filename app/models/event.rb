@@ -1,11 +1,13 @@
 class Event < ActiveRecord::Base
-  has_one :venue
+  belongs_to :venue
   has_many :projects
   has_many :press_blurbs
   has_many :sponsors
   has_and_belongs_to_many :participants
   has_and_belongs_to_many :organizers
-
-  accepts_nested_attributes_for :venue, :projects, :press_blurbs, :sponsors, :participants
-
+  # venue might not work here?
+  accepts_nested_attributes_for :venue, :projects, :press_blurbs, :sponsors, :participants, allow_destroy: true
+  # protect from hax
+  attr_accessible :city, :theme, :hackathon_start, :hackathon_end, :show_start, :show_end, :about, 
+  :hack_rsvp_url, :show_rsvp_url
 end

@@ -49,19 +49,25 @@
   </div>
   <fieldset>
     Venue<br>
-    <% if @event.venue.nil? %>
-      Add venue
-      <% # UX plan is to have this click trigger opening a list of existing venues with a "new venue" link at the bottom of the list %>
-    <% else %>
-      <%= @event.venue.name %> [Change]
-      <% # TODO: Add same list to change venue with same link to create a new one %>
-    <% end %>
+    
   </fieldset>
   <fieldset>
     Sponsors<br>
-    
+    <%= f.fields_for :sponsors do |sponsor_fields| %>
+      Name: <%= sponsor_fields.text_field :name %><br>
+      Website: <%= sponsor_fields.text_field :website %><br>
+      Logo URI: <%= sponsor_fields.text_field :logo_uri %><br>
+      <% # TODO: Add field to set logo size %>
+    <% end %>
   </fieldset>
-
+  <fieldset>
+    Press Blurbs<br>
+    <%= f.fields_for :press_blurbs do |press_blurb_fields| %>
+      Headline: <%= press_blurb_fields.text_field :headline %><br>
+      Source Name: <%= press_blurb_fields.text_field :source_name %><br>
+      Source URL: <%= press_blurb_fields.text_field :source_url %><br>
+    <% end %>
+  </fieldset>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -11,6 +11,7 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    logger.debug "event city: #{@event.city}"
   end
 
   # GET /events/new
@@ -77,6 +78,7 @@ class EventsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_event
       @event = Event.find(params[:id])
+
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
