@@ -1,0 +1,6 @@
+<%= #f.fields_for :press_blurbs do |press_blurb_fields| %>
+<%= f.fields_for "event[press_blurbs_attributes][]" do |pb| %>
+  Headline: <%= pb.text_field :headline %><br>
+  Source Name: <%= pb.text_field :source_name %><br>
+  Source URL: <%= pb.text_field :source_url %><br>
+<% end %>

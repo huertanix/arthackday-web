@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130725033420) do
+ActiveRecord::Schema.define(version: 20130727174140) do
 
 # Could not dump table "events" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
