@@ -1,4 +1,4 @@
-<%= form_for(@event) do |f| %>
+<%= nested_form_for @event do |f| %>
   <% if @event.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
@@ -51,13 +51,16 @@
     Venue<br>
     Do a drop-down menu
   </fieldset>
-  <fieldset>
+
     Press Blurbs<br>
-    <ul>
-      <%= render(:partial => "press_blurb", :collection => @event.press_blurbs) %>
-    </ul>
-    <%= link_to "Add New Press Blurb", "#add-press-blurb", :id => "add-another-press-blurb" %>
-  </fieldset>
+    <%= f.fields_for :press_blurbs do |pb| %>
+      Headline: <%= pb.text_field :headline %><br>
+      Source Name: <%= pb.text_field :source_name %><br>
+      Source URL: <%= pb.text_field :source_url %><br>
+      <%= pb.link_to_remove "Remoooove?" %><br>
+    <% end %>
+    <%= f.link_to_add "Add a Press Blurb", :press_blurbs %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

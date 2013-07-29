@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130727174140) do
+ActiveRecord::Schema.define(version: 20130729003446) do
 
-# Could not dump table "events" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "events", force: true do |t|
+    t.string   "city"
+    t.string   "theme"
+    t.datetime "hackathon_start"
+    t.datetime "hackathon_end"
+    t.datetime "show_start"
+    t.datetime "show_end"
+    t.text     "about"
+    t.string   "hack_rsvp_url"
+    t.string   "show_rsvp_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "venue_id"
+  end
 
   create_table "events_organizers", id: false, force: true do |t|
     t.integer "event_id",     null: false
@@ -79,14 +91,33 @@ ActiveRecord::Schema.define(version: 20130727174140) do
     t.integer "project_id",     null: false
   end
 
-# Could not dump table "press_blurbs" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "press_blurbs", force: true do |t|
+    t.string   "headline"
+    t.string   "source_name"
+    t.string   "source_url"
+    t.string   "logo_uri"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "event_id"
+  end
 
-# Could not dump table "projects" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "projects", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "tag"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "event_id"
+  end
 
-# Could not dump table "sponsors" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "sponsors", force: true do |t|
+    t.string   "name"
+    t.string   "website"
+    t.string   "logo_uri"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "event_id"
+  end
 
   create_table "venues", force: true do |t|
     t.string   "name"
