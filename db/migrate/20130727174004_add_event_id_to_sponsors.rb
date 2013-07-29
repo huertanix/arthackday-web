@@ -1,5 +1,5 @@
 class AddEventIdToSponsors < ActiveRecord::Migration
   def change
-    add_column :sponsors, :event_id, :reference
+    add_column :sponsors, :event_id, :integer
   end
 end
