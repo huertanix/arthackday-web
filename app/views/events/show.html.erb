@@ -1,17 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>City:</strong>
-  <%= @event.city %>
-</p>
+<h1>Art Hack Day :: <%= @event.city %></h1>
+<p><%= @event.theme %></p>
+<p>Art Hack Day is part happening, part hackathon</p>
+<p>For hackers whose medium is art and artists whose medium is tech</p>
+
+<h2>About</h2>
+<p><%= @event.about %></p>
+
+<h2>Projects</h2>
+<p>TBA</p>
+
+<h2>When &amp; Where</h2>
 
 <p>
-  <strong>Theme:</strong>
-  <%= @event.theme %>
-</p>
-
-<p>
-  <strong>Hackathon start:</strong>
+  Hacking begins 
   <%= @event.hackathon_start %>
 </p>
 
@@ -21,7 +24,7 @@
 </p>
 
 <p>
-  <strong>Show start:</strong>
+  Show begins 
   <%= @event.show_start %>
 </p>
 
@@ -30,11 +33,7 @@
   <%= @event.show_end %>
 </p>
 
-<p>
-  <strong>About:</strong>
-  <%= @event.about %>
-</p>
-
+<h2>Attend</h2>
 <p>
   <strong>Hack rsvp url:</strong>
   <%= @event.hack_rsvp_url %>
@@ -44,6 +43,23 @@
   <strong>Show rsvp url:</strong>
   <%= @event.show_rsvp_url %>
 </p>
+
+<h2>Partners</h2>
+<p>TBA</p>
+
+<h2>Press</h2>
+<% if @event.press_blurbs.any? %>
+<ul class="press_blurbs">
+  <% @event.press_blurbs.each do |blurb| %>
+    <li>"<%= blurb.headline %>" - <a href="<%= blurb.source_url %>"><%= blurb.source_name %></a></li>
+  <% end %>
+</ul>
+<% else %>
+  <p>Stay tuned!</p>
+<% end %>
+
+<h2>Participants</h2>
+<p>TBA</p>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
