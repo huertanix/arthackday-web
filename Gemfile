@@ -50,3 +50,6 @@ gem 'devise', '3.0.0.rc'
 
 # Nested form support
 gem "nested_form" #, :git => "git://github.com/madebydna/nested_form.git"
+
+# Geocoding venue lat/lon for maps
+gem 'geocoder'
