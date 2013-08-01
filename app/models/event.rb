@@ -11,7 +11,9 @@ class Event < ActiveRecord::Base
   attr_accessible :city, :theme, :hackathon_start, :hackathon_end, :show_start, :show_end, :about, 
   :hack_rsvp_url, :show_rsvp_url, :press_blurbs_attributes, :projects_attributes, :sponsors_attributes, :venue_id
 
-  #def venue
+  scope :sorted_by_date, order('hackathon_start desc') 
 
-  #end
+  def upcoming? 
+    self.show_end > DateTime.now
+  end
 end

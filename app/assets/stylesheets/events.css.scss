@@ -1,3 +1,24 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$highlight: #F03;
+$lowlight: #CCC;
+$light_text: #FFF;
+
+#events li {
+  background-color:$lowlight;
+}
+
+#events li a, #events li a:visited {
+  color:$light_text;
+}
+
+#events li.upcoming {
+  background-color:$highlight;
+}
+
+#venue_map {
+  width:100%;
+  height:300px;
+}

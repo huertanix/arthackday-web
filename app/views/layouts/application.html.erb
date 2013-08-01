@@ -3,9 +3,11 @@
 <head>
   <title>Art Hack Day</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag :defaults, "nested_form" %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+  <% #javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "nested_form" %>
+  <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
   <%= csrf_meta_tags %>
   <meta name="google-site-verification" content="zu9Bbmki1kIgzpwZbMDTBpmHUUljuDUIKjFMxM75Dh4" />
 </head>

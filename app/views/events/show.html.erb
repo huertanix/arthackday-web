@@ -47,7 +47,7 @@
   <% end %>
 </p>
 
-<h2>Partners</h2>
+<h2>Participants</h2>
 <p>TBA</p>
 
 <h2>Press</h2>
@@ -61,8 +61,24 @@
   <p>Stay tuned!</p>
 <% end %>
 
-<h2>Participants</h2>
+<h2>Partners</h2>
 <p>TBA</p>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    if ($('#venue_map')) {
+      var map = L.map('venue_map').setView([<%= @event.venue.latitude %>, <%= @event.venue.longitude %>], 14);
+
+      // create the tile layer with correct attribution
+      var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+      var osmAttrib='Map data © OpenStreetMap contributors';
+      var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 16, attribution: osmAttrib});
+
+      var marker = L.marker([<%= @event.venue.latitude %>, <%= @event.venue.longitude %>]).addTo(map);
+      map.addLayer(osm);
+    }
+  });
+</script>
