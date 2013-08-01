@@ -10,4 +10,8 @@ class Event < ActiveRecord::Base
   # protect from hax
   attr_accessible :city, :theme, :hackathon_start, :hackathon_end, :show_start, :show_end, :about, 
   :hack_rsvp_url, :show_rsvp_url, :press_blurbs_attributes, :projects_attributes, :sponsors_attributes, :venue_id
+
+  #def venue
+
+  #end
 end

@@ -47,10 +47,10 @@
     <%= f.label :show_rsvp_url %><br>
     <%= f.text_field :show_rsvp_url %>
   </div>
-  <fieldset>
+  <div class="field">
     Venue<br>
-    Do a drop-down menu
-  </fieldset>
+    <%= select("event", "venue_id", Venue.all.collect {|p| [ p.name, p.id ] }, {include_blank: 'TBA'}) %>
+  </div>
 
     Press Blurbs<br>
     <%= f.fields_for :press_blurbs do |pb| %>

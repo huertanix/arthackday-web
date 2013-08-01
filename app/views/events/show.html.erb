@@ -14,34 +14,37 @@
 <h2>When &amp; Where</h2>
 
 <p>
-  Hacking begins 
-  <%= @event.hackathon_start %>
+  Hacking begins <%= @event.hackathon_start.strftime("%A, %b %d, %I:%M %p") %>
 </p>
+<% #use @event.hackathon_end for hack ending %>
 
 <p>
-  <strong>Hackathon end:</strong>
-  <%= @event.hackathon_end %>
+  Closing exhibit, open to the public begins <%= @event.show_start.strftime("%A, %b %d, %I:%M %p") %>
 </p>
+<% #use @event.show_end for closing time %>
 
 <p>
-  Show begins 
-  <%= @event.show_start %>
+  @ <%= @event.venue.name %><br>
+  <%= @event.venue.address %>, <%= @event.venue.city %> 
 </p>
 
-<p>
-  <strong>Show end:</strong>
-  <%= @event.show_end %>
-</p>
+<div id="venue_map"></div>
 
 <h2>Attend</h2>
-<p>
-  <strong>Hack rsvp url:</strong>
-  <%= @event.hack_rsvp_url %>
+<p>Do you have mad skills? Register to attend the full weekend and collaborate on projects: 
+  <% if @event.hack_rsvp_url? %>
+    <a href="<%= @event.hack_rsvp_url %>">Register to hack</a>
+  <% else %>
+    <a href="https://www.youtube.com/watch?v=JvsvpRZFh2Q">Coming soon</a>
+  <% end %>
 </p>
 
-<p>
-  <strong>Show rsvp url:</strong>
-  <%= @event.show_rsvp_url %>
+<p>Join the Art Hack Day teams on <%= @event.show_start.strftime("%A, %b %d starting at %I:%M %p") %> for a closing exhibition, live performances, and party:
+  <% if @event.show_rsvp_url? %>
+    <a href="<%= @event.show_rsvp_url %>">Register to party</a>
+  <% else %>
+    <a href="https://www.youtube.com/watch?v=JvsvpRZFh2Q">Coming soon</a>
+  <% end %>
 </p>
 
 <h2>Partners</h2>
