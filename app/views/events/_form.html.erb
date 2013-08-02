@@ -16,6 +16,10 @@
     <%= f.text_field :city %>
   </div>
   <div class="field">
+    Venue<br>
+    <%= select("event", "venue_id", Venue.all.collect {|p| [ p.name, p.id ] }, {include_blank: 'TBA'}) %>
+  </div>
+  <div class="field">
     <%= f.label :theme %> (short byline, not the whole dissertation)<br>
     <%= f.text_field :theme %>
   </div>
@@ -47,12 +51,9 @@
     <%= f.label :show_rsvp_url %><br>
     <%= f.text_field :show_rsvp_url %>
   </div>
+  
   <div class="field">
-    Venue<br>
-    <%= select("event", "venue_id", Venue.all.collect {|p| [ p.name, p.id ] }, {include_blank: 'TBA'}) %>
-  </div>
-
-    Press Blurbs<br>
+    <%= f.label :press_blurbs %><br>
     <%= f.fields_for :press_blurbs do |pb| %>
       Headline: <%= pb.text_field :headline %><br>
       Source Name: <%= pb.text_field :source_name %><br>
@@ -60,6 +61,18 @@
       <%= pb.link_to_remove "Remove?" %><br>
     <% end %>
     <%= f.link_to_add "Add a Press Blurb", :press_blurbs %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sponsors %><br>
+    <%= f.fields_for :sponsors do |s| %>
+      Name: <%= s.text_field :name %><br>
+      Website: <%= s.text_field :website %><br>
+      Logo: <%= s.text_field :logo_uri %><br>
+      <%= s.link_to_remove "Remove?" %><br>
+    <% end %>
+    <%= f.link_to_add "Add a Sponsor", :sponsors %>
+  </div>
 
   <div class="actions">
     <%= f.submit %>
