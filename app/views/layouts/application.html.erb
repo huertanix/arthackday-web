@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Art Hack Day</title>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
-  <% #javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "nested_form" %>
-  <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
-  <%= csrf_meta_tags %>
-  <meta name="google-site-verification" content="zu9Bbmki1kIgzpwZbMDTBpmHUUljuDUIKjFMxM75Dh4" />
-</head>
-<body>
+	<head>
+	  <title>Art Hack Day</title>
+	  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+	   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+	  <% #javascript_include_tag "application", "data-turbolinks-track" => true %>
+	  <%= javascript_include_tag "application", "nested_form" %>
+	  <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+	  <%= csrf_meta_tags %>
+	  <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+	  <link rel="stylesheet" href="/css/style.css" />
 
-<%= yield %>
-
-</body>
+	  <meta name="google-site-verification" content="zu9Bbmki1kIgzpwZbMDTBpmHUUljuDUIKjFMxM75Dh4" />
+	</head>
+	<body>
+		<div class="section" id="nav">
+			<div id="nav-left">
+				<img src="/img/ahd_assets/ahd_logo_white.svg"/>
+			</div>
+		</div>
+		
+		<%= yield %>
+		
+		<div class="section" id="footer">
+			<div class="container">
+				<div id="organized-by">© ARTHACKDAY <%= DateTime.now.strftime('%Y') %> Organized by <a href="https://twitter.com/olofster">Olof Mathé</a>, <a href="https://twitter.com/captDaylight">Paul Christophe</a>, and <a href="https://twitter.com/huertanix">David Huerta</a>.
+			</div>
+		</div>
+	</body>
 </html>
