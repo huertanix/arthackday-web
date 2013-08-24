@@ -1,0 +1,174 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+tt,
+var,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+h1,
+h2,
+h3 {
+  line-height: 40px;
+}
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 30px;
+}
+/* MISC */
+.remove-bottom {
+  margin-bottom: 0 !important;
+}
+.half-bottom {
+  margin-bottom: 10px !important;
+}
+.add-bottom {
+  margin-bottom: 20px !important;
+}
+.no-display {
+  display: none;
+}
+.half-display {
+  opacity: 0.2;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.invisible {
+  visibility: hidden;
+}
+#nav {
+  background-color: black;
+}
+.section#footer {
+  height: 100px;
+  border-top: 1px solid black;
+}
+.section#footer #organized-by {
+  font-size: 12px;
+}
+.section#landing-header {
+  height: 800px;
+  background-color: #aaa;
+  color: white;
+}
+.section#ahd-about #ahd-tagline {
+  font-size: 25px;
+  line-height: 30px;
+}
+.section#header {
+  height: 500px;
+  background-color: #aaaaaa;
+  color: #ffffff;
+}
+.section .container {
+  width: 980px;
+  margin: 0px auto;
+  padding: 50px 0px;
+}
+.section .container .about-paragraph {
+  font-size: 20px;
+}
