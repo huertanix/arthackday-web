@@ -64,8 +64,10 @@
 <h2>Partners</h2>
 <p>TBA</p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<% if organizer_signed_in? %>
+  <%= link_to 'Edit', edit_event_path(@event) %> |
+<% end %>
+<%= link_to 'Home', events_path %>
 
 <script type="text/javascript">
   $(document).ready(function() {

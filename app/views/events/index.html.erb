@@ -12,8 +12,9 @@
   <% end %>
 </ul>
 <br>
-<%= link_to 'New Event', new_event_path %>
-
+<% if organizer_signed_in? %>
+  <%= link_to 'New Event', new_event_path %>
+<% end %>
 <div class="contact">
   <p>To contact us about bringing Art Hack Day to your city or providing sponsorship, contact us at <b>arthackday at gmail dot com</b>.</p>
 </div>
