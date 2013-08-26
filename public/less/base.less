@@ -35,7 +35,9 @@ h1{
 h2{
 	font-size: 30px;
 }
-
+ul,li{
+	list-style: none;
+}
 
 /* MISC */
 .remove-bottom { margin-bottom: 0 !important; }
@@ -69,3 +71,13 @@ h2{
 @black: rgb(18, 17, 18);
 @blackLight: rgb(128,128,128);
 @white: rgb(255, 255, 255);
+
+
+// Transition
+.transition(@params){
+  -moz-transition: @params; // FF4+
+  -o-transition: @params; // Opera 10.5+
+  -webkit-transition: @params; // Safari 3.2+, Chrome
+  -ms-transition: @params; // IE10
+  transition: @params; // CSS3
+}

@@ -1,6 +1,12 @@
-<div class="section" id="landing-header">
+<div class="section" id="landing-header" style=" 
+  background: url(http://25.media.tumblr.com/tumblr_mdvl99UOZj1rlcnubo1_1280.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+">
 	<div class="container">
-		<h1>ART HACK DAY</h1>
+		
 	</div>
 </div>
 
@@ -12,17 +18,21 @@
 	</div>
 </div>
 
-
-<ul id="events">
-  <% @events.sorted_by_date.each do |event| %>
-    <%= link_to(event) do %>
-      <li <%= event.upcoming? ? 'class=upcoming' : nil %>>
-        <%= event.city.upcase + ' (' + event.hackathon_start.strftime('%Y') + '): ' + event.theme %>
-      </li>
-    <% end %>
-  <% end %>
-</ul>
-<br>
+<div class="section">
+	<div class="container" id="contact">
+		<div class="section-header">Events</div>
+		<ul id="events">
+		  <% @events.sorted_by_date.each do |event| %>
+		    <%= link_to(event) do %>
+		      <li <%= event.upcoming? ? 'class=upcoming' : nil %>>
+		        <%= event.city.upcase + ' (' + event.hackathon_start.strftime('%Y') + '): ' + event.theme %>
+		      </li>
+		    <% end %>
+		  <% end %>
+		</ul>
+	</div>
+	<br>
+</div>
 
 <div class="section">
 	<div class="container" id="contact">

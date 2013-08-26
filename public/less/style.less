@@ -3,7 +3,29 @@
 
 
 #nav{
-	background-color: black;
+	height:98px;
+	width:100%;
+	position: fixed;
+	.transition(all 1s ease);
+	&.not-top{
+		background-color: black;
+	}
+	#nav-left{
+		float: left;
+	}
+	#nav-right{
+		float: right;
+		ul{
+			margin: 39px 20px 0px 0px;
+			li{
+				display: inline-block;
+				margin-left: 20px;
+				a{
+					color: white;
+				}
+			}
+		}
+	}
 }
 
 .section{

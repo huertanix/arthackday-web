@@ -19,6 +19,12 @@
 			<div id="nav-left">
 				<img src="/img/ahd_assets/ahd_logo_white.svg"/>
 			</div>
+			<div id="nav-right">
+				<ul>
+					<li><a>About</a></li>
+					<li><a>Events</a></li>
+				</ul>
+			</div>
 		</div>
 		
 		<%= yield %>
@@ -28,5 +34,8 @@
 				<div id="organized-by">© ARTHACKDAY <%= DateTime.now.strftime('%Y') %> Organized by <a href="https://twitter.com/olofster">Olof Mathé</a>, <a href="https://twitter.com/captDaylight">Paul Christophe</a>, and <a href="https://twitter.com/huertanix">David Huerta</a>.
 			</div>
 		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="/javascripts/lib/waypoints.min.js"></script>
+		<script type="text/javascript" src="/javascripts/main.js"></script>
 	</body>
 </html>

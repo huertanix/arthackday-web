@@ -109,6 +109,10 @@ h1 {
 h2 {
   font-size: 30px;
 }
+ul,
+li {
+  list-style: none;
+}
 /* MISC */
 .remove-bottom {
   margin-bottom: 0 !important;
@@ -141,7 +145,33 @@ h2 {
   visibility: hidden;
 }
 #nav {
+  height: 98px;
+  width: 100%;
+  position: fixed;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+#nav.not-top {
   background-color: black;
+}
+#nav #nav-left {
+  float: left;
+}
+#nav #nav-right {
+  float: right;
+}
+#nav #nav-right ul {
+  margin: 39px 20px 0px 0px;
+}
+#nav #nav-right ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+#nav #nav-right ul li a {
+  color: white;
 }
 .section#footer {
   height: 100px;
