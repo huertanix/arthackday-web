@@ -23,10 +23,16 @@
   <% end %>
 </ul>
 <br>
-<%= link_to 'New Event', new_event_path %>
 
-<div class="contact">
-  <p>To contact us about bringing Art Hack Day to your city or providing sponsorship, contact us at <b>arthackday at gmail dot com</b>.</p>
+<div class="section">
+	<div class="container" id="contact">
+  		To contact us about bringing Art Hack Day to your city or providing sponsorship, contact us at <b>arthackday at gmail dot com</b>.
+	</div>
 </div>
 
-<p>© ARTHACKDAY <%= DateTime.now.strftime('%Y') %> Organized by <a href="https://twitter.com/olofster">Olof Mathé</a>, <a href="https://twitter.com/captDaylight">Paul Christophe</a>, and <a href="https://twitter.com/huertanix">David Huerta</a>.</p>
+
+<div class="section">
+	<div class="container">
+		<%= link_to 'New Event', new_event_path %>
+	</div>
+</div>
