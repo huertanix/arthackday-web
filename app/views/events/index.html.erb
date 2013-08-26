@@ -30,9 +30,9 @@
 	</div>
 </div>
 
-
 <div class="section">
-	<div class="container">
-		<%= link_to 'New Event', new_event_path %>
-	</div>
+	<% if organizer_signed_in? %>
+	  <%= link_to 'New Event', new_event_path %>
+	<% end %>
 </div>
+
