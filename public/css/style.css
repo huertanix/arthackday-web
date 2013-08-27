@@ -113,6 +113,10 @@ ul,
 li {
   list-style: none;
 }
+a,
+u {
+  text-decoration: none;
+}
 /* MISC */
 .remove-bottom {
   margin-bottom: 0 !important;
@@ -148,17 +152,22 @@ li {
   height: 98px;
   width: 100%;
   position: fixed;
+  top: 0px;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   -webkit-transition: all 1s ease;
   -ms-transition: all 1s ease;
   transition: all 1s ease;
+  z-index: 5;
 }
 #nav.not-top {
   background-color: black;
 }
 #nav #nav-left {
   float: left;
+}
+#nav #nav-left a {
+  background-color: transparent;
 }
 #nav #nav-right {
   float: right;
@@ -184,6 +193,14 @@ li {
   height: 800px;
   background-color: #aaa;
   color: white;
+  position: relative;
+}
+.section#landing-header .container {
+  position: relative;
+  top: 50%;
+  margin-bottom: 110px;
+  padding: 20px;
+  background-color: black;
 }
 .section#ahd-about #ahd-tagline {
   font-size: 25px;
@@ -194,11 +211,28 @@ li {
   background-color: #aaaaaa;
   color: #ffffff;
 }
+.section#projects .projects .project {
+  width: 260px;
+  height: 160px;
+  padding: 20px;
+  background-color: #ddd;
+  display: inline-block;
+  margin: 0px 0px 20px 20px;
+  vertical-align: top;
+  color: white;
+}
+.section#projects .projects .project .project-inner {
+  width: 100%;
+}
 .section .container {
   width: 980px;
   margin: 0px auto;
   padding: 50px 0px;
 }
+.section .container .section-header {
+  margin: 0px 0px 20px 20px;
+}
 .section .container .about-paragraph {
   font-size: 20px;
+  padding: 0px 20px;
 }

@@ -1,4 +1,5 @@
 $(function(){
+	
 	$('body').waypoint(function(direction) {
 		if(direction === 'down'){
 			$('#nav').addClass('not-top');
