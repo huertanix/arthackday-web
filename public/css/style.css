@@ -1,3 +1,56 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icons/icomoon.eot');
+  src: url('../fonts/icons/icomoon.eot?#iefix') format('embedded-opentype'), url('../fonts/icons/icomoon.woff') format('woff'), url('../fonts/icons/icomoon.ttf') format('truetype'), url('../fonts/icons/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'icomoon';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-twitter,
+.icon-facebook,
+.icon-mail {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-twitter:before {
+  content: "\61";
+}
+.icon-facebook:before {
+  content: "\62";
+}
+.icon-mail:before {
+  content: "\63";
+}
+@font-face {
+  font-family: 'COLFAX';
+  src: url('../fonts/ColfaxWebMedium_EOT/ColfaxWebMedium.eot');
+  src: url('../fonts/ColfaxWebMedium_EOT/ColfaxWebMedium.eot?#iefix') format('embedded-opentype'), url('../fonts/ColfaxWebMedium_WOFF/ColfaxWebMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 html,
 body,
 div,
@@ -116,6 +169,10 @@ li {
 a,
 u {
   text-decoration: none;
+}
+i {
+  font-style: normal;
+  font-family: "icomoon";
 }
 /* MISC */
 .remove-bottom {
@@ -544,6 +601,9 @@ u {
   width: 0;
   height: 0;
 }
+a {
+  color: #5000ff;
+}
 #nav {
   height: 98px;
   width: 100%;
@@ -560,16 +620,15 @@ u {
   background-color: black;
 }
 #nav #nav-left {
+  margin: 25px;
   float: left;
 }
 #nav #nav-left a {
   background-color: transparent;
 }
 #nav #nav-right {
+  margin: 25px;
   float: right;
-}
-#nav #nav-right ul {
-  margin: 39px 20px 0px 0px;
 }
 #nav #nav-right ul li {
   display: inline-block;
@@ -579,11 +638,52 @@ u {
   color: white;
 }
 .section#footer {
-  height: 100px;
-  border-top: 1px solid black;
+  color: white;
 }
-.section#footer #organized-by {
-  font-size: 12px;
+.section#footer #footer-top {
+  height: 55px;
+  border-top: 1px dotted gray;
+  background-color: black;
+}
+.section#footer #footer-top #newsletter-signup {
+  margin-top: 18px;
+}
+.section#footer #footer-top #social-section {
+  margin-top: 17px;
+}
+.section#footer #footer-top #social-section ul li {
+  float: right;
+  font-size: 20px;
+  margin-left: 10px;
+}
+.section#footer #footer-top #social-section ul li a {
+  color: white;
+}
+.section#footer #footer-top #social-section ul li:hover {
+  margin-top: 1px;
+}
+.section#footer #footer-middle {
+  border-top: 1px dotted gray;
+  height: 150px;
+  background-color: black;
+}
+.section#footer #footer-middle #main-sponsors {
+  text-align: center;
+}
+.section#footer #footer-middle #main-sponsors div {
+  margin-top: 30px;
+}
+.section#footer #footer-middle #main-sponsors img {
+  margin-top: 20px;
+}
+.section#footer #footer-bottom {
+  height: 26px;
+  background-color: #5000ff;
+  text-align: center;
+  padding-top: 9px;
+}
+.section#footer #footer-bottom a {
+  color: white;
 }
 .section#landing-header {
   height: 800px;
@@ -595,6 +695,7 @@ u {
   position: relative;
   top: 50%;
   margin-bottom: 110px;
+  font-family: "COLFAX";
 }
 .section#ahd-about #ahd-tagline {
   font-size: 25px;
@@ -620,7 +721,6 @@ u {
 }
 .section .container {
   margin: 0px auto;
-  padding: 50px 0px;
 }
 .section .container .section-header {
   margin: 0px 0px 20px 20px;

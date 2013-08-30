@@ -1,1 +1,50 @@
-<h1>Landing page</h1>
+<div class="section" id="landing-header" style=" 
+  background: url(http://www.godvisions.com/images/FoilageDragon.gif);
+">
+	<div class="container">
+		<div class="event-callout sixteen columns">
+			<p>coming soon...</p>
+			<h1>Berlin</h1>
+			<h2>Sept 26 - 28 with LEAP</h2>
+		</div>
+	</div>
+</div>
+
+<div class="section" id="ahd-about">
+	<div class="container">
+		<div id="ahd-tagline" class="sixteen columns">
+			Art Hack Day is an internet-based nonprofit dedicated to hackers whose medium is art and artists whose medium is tech. We bridge the gap between art, technology and entrepreneurship with grassroots hackathons which demonstrate the expressive potential of new technology and the power of radical collaboration in art. We believe in non-utilitarian beauty through technology and its ability to affect social change for public good.
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="container" id="events-short">
+		<div class="section-header">Events</div>
+		<ul id="events">
+		  <% @events.sorted_by_date.each do |event| %>
+		    <%= link_to(event) do %>
+		      <li <%= event.upcoming? ? 'class=upcoming' : nil %>>
+		        <%= event.city.upcase + ' (' + event.hackathon_start.strftime('%Y') + '): ' + event.theme %>
+		      </li>
+		    <% end %>
+		  <% end %>
+		</ul>
+	</div>
+	<br>
+</div>
+
+<div class="section">
+	<div class="container" id="contact">
+		<div class="sixteen columns">
+  		To contact us about bringing Art Hack Day to your city or providing sponsorship, contact us at <b>arthackday at gmail dot com</b>.
+  		</div>
+	</div>
+</div>
+
+<div class="section">
+	<% if organizer_signed_in? %>
+	  <%= link_to 'New Event', new_event_path %>
+	<% end %>
+</div>
+

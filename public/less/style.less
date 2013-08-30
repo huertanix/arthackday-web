@@ -3,6 +3,12 @@
 @import "skeleton.less";
 
 @margin: 20px;
+@electric-blue: #5000ff;
+
+a{
+	color:@electric-blue;
+}
+
 
 #nav{
 	height:98px;
@@ -14,16 +20,21 @@
 	&.not-top{
 		background-color: black;
 	}
+
 	#nav-left{
+		margin: 25px;
+
 		float: left;
 		a{
 			background-color: transparent;
 		}
 	}
 	#nav-right{
+		margin: 25px;
+
 		float: right;
 		ul{
-			margin: 39px 20px 0px 0px;
+			// margin: 39px 20px 0px 0px;
 			li{
 				display: inline-block;
 				margin-left: 20px;
@@ -38,10 +49,53 @@
 .section{
 	// general
 	&#footer{
-		height:100px;
-		border-top: 1px solid black;
-		#organized-by{
-			font-size: 12px;
+		color:white;
+		#footer-top{
+			height:55px;
+			border-top: 1px dotted gray;
+			background-color: black;
+			#newsletter-signup{
+				margin-top:18px;
+			}
+			#social-section{
+				margin-top: 17px;
+				ul{
+					li{
+						float:right;
+						font-size: 20px;
+						margin-left: 10px;
+						a{
+							color:white;
+						}
+						&:hover{
+							margin-top: 1px;
+						}
+					}
+				}
+			}
+		}
+		#footer-middle{
+			border-top: 1px dotted gray;
+			height:150px;
+			background-color: black;
+			#main-sponsors{
+				text-align: center;
+				div{
+					margin-top: 30px;
+				}
+				img{
+					margin-top: 20px;
+				}
+			}
+		}
+		#footer-bottom{
+			height:26px;
+			background-color: @electric-blue;
+			text-align: center;
+			padding-top: 9px;
+			a{
+				color:white;
+			}
 		}
 	}
 
@@ -55,6 +109,7 @@
 			position:relative;
 			top: 50%;
 			margin-bottom: 110px;
+			font-family: @header;
 		}
 	}
 	&#ahd-about{
@@ -91,7 +146,6 @@
 	}
 	.container{
 		margin: 0px auto;
-		padding: 50px 0px;
 		.section-header{
 			margin: 0px 0px @margin @margin;
 		}
