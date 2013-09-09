@@ -111,11 +111,29 @@ a{
 			margin-bottom: 110px;
 			font-family: @header;
 		}
+		#header-credit{
+			position:absolute;
+			bottom:20px;
+			margin-left: 25px;
+			font-size: 12px;
+			a{
+				font-family: 'COLFAX';
+				text-transform:uppercase;
+				color:white;
+			}
+		}
 	}
+
 	&#ahd-about{
 		#ahd-tagline{
-			font-size: 25px;
-			line-height:30px;
+			font-size: 40px;
+			line-height:40px;
+			font-family: 'COLFAX';
+			text-transform:uppercase;
+			a{
+				font-family: 'COLFAX';
+				color: @electric-blue;
+			}
 		}
 	}
 
@@ -147,7 +165,10 @@ a{
 	.container{
 		margin: 0px auto;
 		.section-header{
-			margin: 0px 0px @margin @margin;
+			font-family: 'COLFAX';
+			text-transform:uppercase;
+			font-size: 14px;
+			margin-bottom: @smallMargin;
 		}
 		.about-paragraph{
 			font-size: 20px;
@@ -156,9 +177,42 @@ a{
 		.event-callout{
 			text-align: center;
 			#hero{
-				font-size: 200px;
-				line-height: 200px;
+				font-size: 150px;
+				line-height: 150px;
 				font-family: 'COLFAX';
+				text-transform:uppercase;
+			}
+			#sub-hero{
+				font-size: 14px;
+				line-height: 14px;
+				font-family: 'COLFAX';
+				text-transform:uppercase;
+			}
+		}
+		#events-homepage{
+			.event-homepage{
+				.event-display{
+					height: 150px;
+					width:100%;
+					background-color:gray;
+				}
+				.event-title{
+					margin-top: @smallMargin;
+					a{
+						font-family: 'COLFAX';
+						color: black;
+						text-transform:uppercase;
+						font-size: 14px;
+						&:hover{
+							color:@electric-blue;
+						}
+					}
+					
+				}
+				.event-short-about{
+					margin-top: @smallMargin;
+
+				}
 			}
 		}
 	}

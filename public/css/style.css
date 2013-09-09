@@ -205,6 +205,9 @@ i {
 .invisible {
   visibility: hidden;
 }
+.top-margin {
+  margin-top: 120px;
+}
 /*
 * Skeleton V1.2
 * Copyright 2011, Dave Gamache
@@ -697,9 +700,26 @@ a {
   margin-bottom: 110px;
   font-family: "COLFAX";
 }
+.section#landing-header #header-credit {
+  position: absolute;
+  bottom: 20px;
+  margin-left: 25px;
+  font-size: 12px;
+}
+.section#landing-header #header-credit a {
+  font-family: 'COLFAX';
+  text-transform: uppercase;
+  color: white;
+}
 .section#ahd-about #ahd-tagline {
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 40px;
+  line-height: 40px;
+  font-family: 'COLFAX';
+  text-transform: uppercase;
+}
+.section#ahd-about #ahd-tagline a {
+  font-family: 'COLFAX';
+  color: #5000ff;
 }
 .section#header {
   height: 500px;
@@ -723,7 +743,10 @@ a {
   margin: 0px auto;
 }
 .section .container .section-header {
-  margin: 0px 0px 20px 20px;
+  font-family: 'COLFAX';
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 30px;
 }
 .section .container .about-paragraph {
   font-size: 20px;
@@ -733,9 +756,36 @@ a {
   text-align: center;
 }
 .section .container .event-callout #hero {
-  font-size: 200px;
-  line-height: 200px;
+  font-size: 150px;
+  line-height: 150px;
   font-family: 'COLFAX';
+  text-transform: uppercase;
+}
+.section .container .event-callout #sub-hero {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: 'COLFAX';
+  text-transform: uppercase;
+}
+.section .container #events-homepage .event-homepage .event-display {
+  height: 150px;
+  width: 100%;
+  background-color: gray;
+}
+.section .container #events-homepage .event-homepage .event-title {
+  margin-top: 30px;
+}
+.section .container #events-homepage .event-homepage .event-title a {
+  font-family: 'COLFAX';
+  color: black;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.section .container #events-homepage .event-homepage .event-title a:hover {
+  color: #5000ff;
+}
+.section .container #events-homepage .event-homepage .event-short-about {
+  margin-top: 30px;
 }
 /*
 * Skeleton V1.2
