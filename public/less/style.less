@@ -212,6 +212,25 @@ a{
 				.event-short-about{
 					margin-top: @smallMargin;
 
+					height: 53px;
+					/* Fallback for non-webkit */
+					overflow: hidden;
+				}
+				.event-short-more{
+					font-size: 14px;
+					position: relative;
+					bottom: 16px;
+					background-color: white;
+					float: right;
+					padding-left: 5px;
+					-webkit-box-shadow: -5px 0px 5px rgba(255, 255, 255, 0.75);
+					-moz-box-shadow:    -5px 0px 5px rgba(255, 255, 255, 0.75);
+					box-shadow:         -5px 0px 5px rgba(255, 255, 255, 0.75);
+					a{
+
+						font-family: 'COLFAX';
+					}
+
 				}
 			}
 		}
