@@ -136,7 +136,7 @@ video {
   font-weight: inherit;
   font-style: inherit;
   font-size: 100%;
-  font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: 'COLFAX';
 }
 h1,
 h2,
@@ -606,11 +606,11 @@ i {
 }
 a {
   color: #5000ff;
+  font-family: 'COLFAX';
 }
-#nav {
+.nav {
   height: 98px;
   width: 100%;
-  position: fixed;
   top: 0px;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -618,38 +618,62 @@ a {
   -ms-transition: all 1s ease;
   transition: all 1s ease;
   z-index: 5;
+  text-transform: uppercase;
 }
-#nav.not-top {
+.nav.not-top {
   background-color: black;
 }
-#nav #nav-left {
+.nav#nav-main {
+  height: 98px;
+  position: absolute;
+}
+.nav .back-to-top {
+  cursor: pointer;
+}
+.nav .nav-left {
   margin: 25px;
+  color: white;
+  font-size: 12px;
   float: left;
 }
-#nav #nav-left a {
+.nav .nav-left a {
   background-color: transparent;
 }
-#nav #nav-right {
+.nav .nav-right {
   margin: 25px;
+  font-size: 12px;
   float: right;
 }
-#nav #nav-right ul li {
+.nav .nav-right ul li {
   display: inline-block;
   margin-left: 20px;
 }
-#nav #nav-right ul li a {
+.nav .nav-right ul li a {
   color: white;
+}
+.nav#nav-drop {
+  height: 40px;
+  background-color: black;
+  position: fixed;
+}
+.nav#nav-drop .nav-right {
+  margin: 12px 25px 0px 0px;
+}
+.nav#nav-drop .nav-left {
+  margin: 12px 0px 0px 25px;
 }
 .section#footer {
   color: white;
+  font-family: 'COLFAX';
 }
 .section#footer #footer-top {
   height: 55px;
-  border-top: 1px dotted gray;
+  border-top: 1px solid gray;
   background-color: black;
 }
 .section#footer #footer-top #newsletter-signup {
   margin-top: 18px;
+  font-family: 'COLFAX';
 }
 .section#footer #footer-top #social-section {
   margin-top: 17px;
@@ -666,7 +690,7 @@ a {
   margin-top: 1px;
 }
 .section#footer #footer-middle {
-  border-top: 1px dotted gray;
+  border-top: 1px solid gray;
   height: 150px;
   background-color: black;
 }
@@ -748,6 +772,9 @@ a {
   font-size: 14px;
   margin-bottom: 30px;
 }
+.section .container .section-header a {
+  color: black;
+}
 .section .container .about-paragraph {
   font-size: 20px;
   padding: 0px 20px;
@@ -786,6 +813,7 @@ a {
 }
 .section .container #events-homepage .event-homepage .event-short-about {
   margin-top: 30px;
+  font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   height: 53px;
   /* Fallback for non-webkit */
 
@@ -803,6 +831,7 @@ a {
   box-shadow: -5px 0px 5px rgba(255, 255, 255, 0.75);
 }
 .section .container #events-homepage .event-homepage .event-short-more a {
+  color: #5000ff;
   font-family: 'COLFAX';
 }
 /*
@@ -844,4 +873,115 @@ a {
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
   
+}
+.animated {
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: .25s;
+  -moz-animation-duration: .25s;
+  -ms-animation-duration: .25s;
+  -o-animation-duration: .25s;
+  animation-duration: .25s;
+}
+.animated.hinge {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+}
+@-webkit-keyframes slideUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+}
+@-moz-keyframes slideUp {
+  0% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -moz-transform: translateY(-20px);
+  }
+}
+@-o-keyframes slideUp {
+  0% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -o-transform: translateY(-20px);
+  }
+}
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+.slideUp {
+  -webkit-animation-name: slideUp;
+  -moz-animation-name: slideUp;
+  -o-animation-name: slideUp;
+  animation-name: slideUp;
+}
+@-webkit-keyframes slideDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes slideDown {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+@-o-keyframes slideDown {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.slideDown {
+  -webkit-animation-name: slideDown;
+  -moz-animation-name: slideDown;
+  -o-animation-name: slideDown;
+  animation-name: slideDown;
 }

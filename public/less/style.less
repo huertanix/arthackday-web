@@ -7,31 +7,41 @@
 
 a{
 	color:@electric-blue;
+	font-family: 'COLFAX';
 }
 
 
-#nav{
+.nav{
 	height:98px;
 	width:100%;
-	position: fixed;
 	top:0px;
 	.transition(all 1s ease);
 	z-index: 5;
+	text-transform:uppercase;
+
 	&.not-top{
 		background-color: black;
 	}
+	&#nav-main{
+		height:98px;
+		position: absolute;
 
-	#nav-left{
+	}
+	.back-to-top{
+		cursor: pointer;
+	}
+	.nav-left{
 		margin: 25px;
-
+		color:white;
+		font-size: 12px;
 		float: left;
 		a{
 			background-color: transparent;
 		}
 	}
-	#nav-right{
+	.nav-right{
 		margin: 25px;
-
+		font-size: 12px;
 		float: right;
 		ul{
 			// margin: 39px 20px 0px 0px;
@@ -44,18 +54,33 @@ a{
 			}
 		}
 	}
+	&#nav-drop{
+		height:40px;
+		background-color: black;
+		position: fixed;
+		.nav-right{
+			margin: 12px 25px 0px 0px;
+		}
+		.nav-left{
+			margin: 12px 0px 0px 25px;
+		}
+	}
 }
 
 .section{
 	// general
 	&#footer{
 		color:white;
+		font-family: 'COLFAX';
 		#footer-top{
 			height:55px;
-			border-top: 1px dotted gray;
+			border-top: 1px solid gray;
 			background-color: black;
+
 			#newsletter-signup{
 				margin-top:18px;
+				font-family: 'COLFAX';
+
 			}
 			#social-section{
 				margin-top: 17px;
@@ -75,7 +100,7 @@ a{
 			}
 		}
 		#footer-middle{
-			border-top: 1px dotted gray;
+			border-top: 1px solid gray;
 			height:150px;
 			background-color: black;
 			#main-sponsors{
@@ -169,6 +194,9 @@ a{
 			text-transform:uppercase;
 			font-size: 14px;
 			margin-bottom: @smallMargin;
+			a{
+				color: black;
+			}
 		}
 		.about-paragraph{
 			font-size: 20px;
@@ -211,7 +239,7 @@ a{
 				}
 				.event-short-about{
 					margin-top: @smallMargin;
-
+					font-family: @font-basic;
 					height: 53px;
 					/* Fallback for non-webkit */
 					overflow: hidden;
@@ -227,7 +255,7 @@ a{
 					-moz-box-shadow:    -5px 0px 5px rgba(255, 255, 255, 0.75);
 					box-shadow:         -5px 0px 5px rgba(255, 255, 255, 0.75);
 					a{
-
+						color:@electric-blue;
 						font-family: 'COLFAX';
 					}
 
@@ -238,3 +266,4 @@ a{
 }
 
 @import "responsive.less";
+@import "animations.less";

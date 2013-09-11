@@ -9,12 +9,17 @@ $(function(){
 	$('.event-callout').css({
 		'margin-top': eventCallout
 	});
+	$('.back-to-top').click(function(){
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+	});
 	
-	// $('body').waypoint(function(direction) {
-	// 	if(direction === 'down'){
-	// 		$('#nav').addClass('not-top');
-	// 	}else{
-	// 		$('#nav').removeClass('not-top');
-	// 	}
-	// },{offset: -1});
+	$('body').waypoint(function(direction) {
+		if(direction === 'down'){
+			$('#nav-main').removeClass('slideDown').addClass('slideUp');
+			$('#nav-drop').removeClass('slideUp invisible').addClass('slideDown');
+		}else{
+			$('#nav-main').removeClass('slideUp').addClass('slideDown');
+			$('#nav-drop').removeClass('slideDown').addClass('slideUp');
+		}
+	},{offset: -40});
 });

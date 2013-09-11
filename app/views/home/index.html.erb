@@ -1,5 +1,5 @@
 <div class="section" id="landing-header" style=" 
-  background: url(http://www.godvisions.com/images/FoilageDragon.gif);
+  background: url(http://www.godvisions.com/images/GVBlackCarpet.gif);
 ">
 	<div class="container">
 		<div class="event-callout sixteen columns">
@@ -23,10 +23,7 @@
 
 <div class="section top-margin">
 	<div class="container">
-		<div class="sixteen columns section-header">Events</div>
-
-
-
+		<div class="sixteen columns section-header"><a href="/events">Events</a></div>
 		<ul id="events-homepage">
 		  <% @events.sorted_by_date.each do |event| %>
 		      <li class="one-third column event-homepage" <%= event.upcoming? ? 'class=upcoming' : nil %>>
