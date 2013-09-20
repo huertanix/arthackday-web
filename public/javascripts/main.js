@@ -1,5 +1,5 @@
 $(function(){
-	// for hero block
+	// hero block height
 	var windowHeight = $(window).height(); 
 	$('#landing-header').css({
 		'height': windowHeight
@@ -9,10 +9,11 @@ $(function(){
 	$('.event-callout').css({
 		'margin-top': eventCallout
 	});
+
+	// nav bar expand and contract
 	$('.back-to-top').click(function(){
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 	});
-	
 	$('body').waypoint(function(direction) {
 		if(direction === 'down'){
 			$('#nav-main').removeClass('slideDown').addClass('slideUp');
@@ -22,4 +23,12 @@ $(function(){
 			$('#nav-drop').removeClass('slideDown').addClass('slideUp');
 		}
 	},{offset: -40});
+
+
+	// footer email appear
+	$('#signup').click(function(){
+		$(this).hide();
+		$('#signup-input').show();
+	});
+
 });

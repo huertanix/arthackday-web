@@ -44,34 +44,39 @@
 		
 		<div class="section" id="footer">
 			<div id="footer-top">
-				<div class="container">
-					<div id="newsletter-social" class="sixteen columns">
-						<div id="newsletter-signup" class="pull-left">
-							<a href="#">SIGN UP</a> TO RECIEVE ALL OF OUR RECENT NEWS AND UPDATES.
-						</div>
-						<div id="social-section" class="pull-right">
-							<ul>
-								<li id="email-social"><a href="mailto:arthackday@gmail.com"><i>a</i></a></li>
-								<li id="facebook-social"><a href="https://www.facebook.com/arthackday"><i>b</i></a></li>
-								<li id="twitter-social"><a href="https://twitter.com/arthackday"><i>c</i></a></li>
-							</ul>
+				<div class="container sixteen columns">
+					<div class="pull-left">
+						<ul id="social-section">
+							<li id="email-social"><a href="mailto:arthackday@gmail.com"><i>a</i></a></li>
+							<li id="facebook-social"><a href="https://www.facebook.com/arthackday"><i>b</i></a></li>
+							<li id="twitter-social"><a href="https://twitter.com/arthackday"><i>c</i></a></li>
+						</ul>
+						<div id="newsletter-signup">
+							<div id="signup">
+								NEWSLETTER SIGN UP
+							</div>
+							<div id="signup-input">
+								<input type="text"/>
+								<button>SUBMIT</button>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div id="footer-middle">
-				<div class="container" class="sixteen columns">
-					<div id="main-sponsors">
-						<div>THANKS TO OUR MAIN SPONSOR</div>
-						<a href="http://mailchimp.com/"><img src="/img/ahd_assets/mailchimp-white.png" alt="mailchimp"/></a>
+					<div class="pull-right">
+						<div id="main-sponsors">
+							<a href="http://mailchimp.com/"><img src="/img/ahd_assets/mailchimp-white.png" alt="mailchimp"/></a>
+							<div>THANKS TO OUR MAIN SPONSOR</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div id="footer-bottom">
-				<div id="organized-by">© ARTHACKDAY <%= DateTime.now.strftime('%Y') %> Organized by <a href="https://twitter.com/olofster">Olof Mathé</a>, <a href="https://twitter.com/captDaylight">Paul Christophe</a>, and <a href="https://twitter.com/huertanix">David Huerta</a>.</div>
+				<div class="container">
+					<div id="organized-by">© ARTHACKDAY <%= DateTime.now.strftime('%Y') %> -  Organized by <a href="https://twitter.com/olofster">Olof Mathé</a>, <a href="https://twitter.com/captDaylight">Paul Christophe</a>, and <a href="https://twitter.com/huertanix">David Huerta</a>.</div>
+				</div>
 			</div>
-		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		</div> 
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+		<script type="text/javascript" src="/javascripts/lib/jquery.js"></script>
 		<script type="text/javascript" src="/javascripts/lib/waypoints.min.js"></script>
 		<script type="text/javascript" src="/javascripts/main.js"></script>
 	</body>

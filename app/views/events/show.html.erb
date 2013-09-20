@@ -6,10 +6,44 @@
 </div>
 
 
-<div class="section" id="about">
+<div class="section" id="event-about">
   <div class="container">
-    <div class="about-paragraph">
-      <%= @event.about %>
+    <div class="sixteen columns">
+      <h2>
+        <%= @event.city.upcase + ' _ ' + @event.hackathon_start.strftime('%Y')%>
+        <br/>
+        <%=@event.theme %>
+      </h2>
+    </div>
+    <div class="about-event-section two-thirds column">
+
+      <div>
+        HACKING BEGINS
+        <br/>
+        <%= @event.hackathon_start.strftime('%D,%Y')%>
+        <br/>
+        <br/>
+        CLOSING EXHIBIT & PARTY (OPEN TO THE PUBLIC)
+        <br/>
+        <%= @event.hackathon_end.strftime('%D,%Y')%>
+      </div>
+      <p>
+        <%= @event.about %>
+      </p>
+    </div>
+    <div class="about-event-right one-third column">
+      <div class="border-container">
+        <div class="pre-about">
+          <div>
+            <p>Join the Art Hack Day teams on Saturday April 13 starting at 6:00pm for a closing exhibition, live performances, and party.</p>
+            <button>RSVP</button>
+          </div>
+          <div>
+            <p>Do you have mad skills? Register to attend the full weekend and collaborate on projects.</p>
+            <button>PARTICIPATE</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

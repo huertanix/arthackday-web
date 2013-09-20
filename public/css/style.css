@@ -174,6 +174,10 @@ i {
   font-style: normal;
   font-family: "icomoon";
 }
+p {
+  font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 14px;
+}
 /* MISC */
 .remove-bottom {
   margin-bottom: 0 !important;
@@ -670,51 +674,84 @@ a {
   height: 55px;
   border-top: 1px solid gray;
   background-color: black;
+  height: 90px;
+}
+.section#footer #footer-top .pull-left {
+  margin-top: 35px;
 }
 .section#footer #footer-top #newsletter-signup {
-  margin-top: 18px;
+  float: left;
   font-family: 'COLFAX';
+  margin-left: 25px;
+  font-size: 14px;
 }
-.section#footer #footer-top #social-section {
-  margin-top: 17px;
+.section#footer #footer-top #newsletter-signup #signup {
+  margin-top: 2px;
+  cursor: pointer;
 }
-.section#footer #footer-top #social-section ul li {
-  float: right;
-  font-size: 20px;
-  margin-left: 10px;
+.section#footer #footer-top #newsletter-signup #signup-input {
+  display: none;
+  position: relative;
+  top: -7px;
 }
-.section#footer #footer-top #social-section ul li a {
+.section#footer #footer-top #newsletter-signup #signup-input input {
+  border: 1px solid white;
+  background-color: black;
+  height: 28px;
+  width: 200px;
   color: white;
 }
-.section#footer #footer-top #social-section ul li:hover {
+.section#footer #footer-top #newsletter-signup #signup-input button {
+  height: 32px;
+  border: 1px solid white;
+  background-color: white;
+  margin-left: -5px;
+  font-family: 'COLFAX';
+  font-size: 14px;
+  padding: 0px 20px;
+  cursor: pointer;
+}
+.section#footer #footer-top #social-section {
+  float: left;
+}
+.section#footer #footer-top #social-section li {
+  float: left;
+  font-size: 20px;
+  margin-left: 15px;
+}
+.section#footer #footer-top #social-section li a {
+  color: white;
+}
+.section#footer #footer-top #social-section li:hover {
   margin-top: 1px;
 }
-.section#footer #footer-middle {
-  border-top: 1px solid gray;
-  height: 150px;
-  background-color: black;
+.section#footer #footer-top #main-sponsors {
+  margin-top: 35px;
 }
-.section#footer #footer-middle #main-sponsors {
-  text-align: center;
+.section#footer #footer-top #main-sponsors a,
+.section#footer #footer-top #main-sponsors div {
+  float: right;
+  font-size: 14px;
 }
-.section#footer #footer-middle #main-sponsors div {
-  margin-top: 30px;
+.section#footer #footer-top #main-sponsors div {
+  margin-right: 25px;
 }
-.section#footer #footer-middle #main-sponsors img {
-  margin-top: 20px;
+.section#footer #footer-top #main-sponsors a {
+  margin-top: -10px;
 }
 .section#footer #footer-bottom {
   height: 26px;
   background-color: #5000ff;
-  text-align: center;
+  text-align: left;
   padding-top: 9px;
+  font-size: 12px;
 }
 .section#footer #footer-bottom a {
   color: white;
 }
 .section#landing-header {
   height: 800px;
-  background-color: #aaa;
+  background-color: black;
   color: white;
   position: relative;
 }
@@ -735,6 +772,46 @@ a {
   text-transform: uppercase;
   color: white;
 }
+.section#events-page {
+  background-color: black;
+}
+.section#events-page ul {
+  padding-top: 120px;
+}
+.section#events-page ul li {
+  height: 16px;
+  padding: 25px;
+  margin: 25px 0px;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.section#events-page ul li:hover {
+  background-color: #5000ff;
+  border-color: #5000ff;
+}
+.section#events-page ul li .left-event {
+  font-size: 30px;
+  float: left;
+  text-transform: uppercase;
+}
+.section#events-page ul li .right-event {
+  float: right;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.section#events-page ul li .right-event div {
+  top: -2px;
+  position: relative;
+  float: right;
+  clear: both;
+  line-height: 13px;
+}
 .section#ahd-about #ahd-tagline {
   font-size: 40px;
   line-height: 40px;
@@ -749,6 +826,36 @@ a {
   height: 500px;
   background-color: #aaaaaa;
   color: #ffffff;
+}
+.section#event-about {
+  margin: 100px 0px;
+}
+.section#event-about h2 {
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.section#event-about .about-event-section div {
+  margin-bottom: 25px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.section#event-about .about-event-right .border-container {
+  width: 100%;
+  border: 1px solid black;
+}
+.section#event-about .about-event-right .border-container > div {
+  margin: 20px;
+}
+.section#event-about .about-event-right .border-container .pre-about button {
+  height: 32px;
+  padding: 0px 20px;
+  background-color: black;
+  font-family: 'COLFAX';
+  color: white;
+  border: none;
+  font-size: 14px;
+  margin: 15px 0px;
 }
 .section#projects .projects .project {
   width: 260px;

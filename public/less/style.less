@@ -76,48 +76,77 @@ a{
 			height:55px;
 			border-top: 1px solid gray;
 			background-color: black;
-
-			#newsletter-signup{
-				margin-top:18px;
-				font-family: 'COLFAX';
-
+			height:90px;
+			.pull-left{
+				margin-top: 35px;
 			}
-			#social-section{
-				margin-top: 17px;
-				ul{
-					li{
-						float:right;
-						font-size: 20px;
-						margin-left: 10px;
-						a{
-							color:white;
-						}
-						&:hover{
-							margin-top: 1px;
-						}
+			#newsletter-signup{
+				float: left;
+				font-family: 'COLFAX';
+				margin-left: 25px;
+				font-size: 14px;
+
+				#signup{
+					margin-top: 2px;
+					cursor: pointer;
+				}
+				#signup-input{
+					display:none;
+					position: relative;
+					top: -7px;
+					input{
+						border: 1px solid white;
+						background-color: black;
+						height: 28px;
+						width:200px;
+						color:white;
+					}
+					button{
+						height: 32px;
+						border: 1px solid white;
+						background-color: white;
+						margin-left: -5px;
+						font-family: 'COLFAX';
+						font-size: 14px;
+						padding: 0px 20px;
+						cursor: pointer;
 					}
 				}
 			}
-		}
-		#footer-middle{
-			border-top: 1px solid gray;
-			height:150px;
-			background-color: black;
-			#main-sponsors{
-				text-align: center;
-				div{
-					margin-top: 30px;
+			#social-section{
+				float: left;
+				li{
+					float:left;
+					font-size: 20px;
+					margin-left: 15px;
+					a{
+						color:white;
+					}
+					&:hover{
+						margin-top: 1px;
+					}
 				}
-				img{
-					margin-top: 20px;
+			}
+			#main-sponsors{
+				margin-top: 35px;
+				a,div{
+					float:right;
+					font-size: 14px;
+				}
+				div{
+					margin-right: 25px;
+				}
+				a{
+					margin-top: -10px;
 				}
 			}
 		}
 		#footer-bottom{
 			height:26px;
 			background-color: @electric-blue;
-			text-align: center;
+			text-align: left;
 			padding-top: 9px;
+			font-size: 12px;
 			a{
 				color:white;
 			}
@@ -127,7 +156,7 @@ a{
 	// landing page
 	&#landing-header{
 		height: 800px;
-		background-color: #aaa;
+		background-color: black;
 		color: white;
 		position: relative;
 		.container{
@@ -148,7 +177,43 @@ a{
 			}
 		}
 	}
+	&#events-page{
+		background-color: black;
+		ul{
+			padding-top: 120px;
+			li{
+				height:16px;
+				padding:25px;
+				margin: 25px 0px;
+				background-color: black;
+				border: 1px solid white;
+				color: white;
+				.transition(all .2s ease);
+				&:hover{
+					background-color: @electric-blue;
+					border-color: @electric-blue;
+				}
+				.left-event{
+					font-size: 30px;
+					float:left;
+					text-transform:uppercase;
 
+				}
+				.right-event{
+					float:right;
+					text-transform:uppercase;
+					font-size: 12px;
+					div{
+						top:-2px;
+						position: relative;
+						float: right;
+						clear: both;
+						line-height: 13px;
+					}
+				}
+			}
+		}
+	}
 	&#ahd-about{
 		#ahd-tagline{
 			font-size: 40px;
@@ -169,7 +234,42 @@ a{
 		color: @white;
 	}
 
-
+	&#event-about{
+		margin: 100px 0px;
+		h2{
+			line-height: 30px;
+			text-transform:uppercase;
+			margin-bottom: 25px;
+		}
+		.about-event-section{
+			div{
+				margin-bottom: 25px;
+				font-size: 14px;
+				text-transform:uppercase;
+			}
+		}
+		.about-event-right{
+			.border-container{
+				width: 100%;
+				border: 1px solid black;
+				&> div{
+					margin: 20px;
+				}
+				.pre-about{
+					button{
+						height:32px;
+						padding:0px 20px;
+						background-color: black;
+						font-family: 'COLFAX';
+						color: white;
+						border: none;
+						font-size: 14px;
+						margin:15px 0px;
+					}
+				}
+			}
+		}
+	}
 	&#projects{
 		.projects{
 			.project{
