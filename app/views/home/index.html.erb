@@ -3,10 +3,9 @@
 ">
 	<div class="container">
 		<div class="event-callout sixteen columns">
-			<div id="hero">GOING DARK</div>
-			<div id="sub-hero">LEAP/TRANSMEDIALE _ SEPT 26-28</div>
+			<a href="http://localhost:3000/events/5"><div id="hero">GOING DARK</div>
+			<div id="sub-hero">LEAP/TRANSMEDIALE _ SEPT 26-28</div></a>
 		</div>
-
 	</div>
 	<div id="header-credit">
 		<a href="#">IMAGERY BY: OCEAN FACE</a>
@@ -23,14 +22,16 @@
 
 <div class="section top-margin">
 	<div class="container">
-		<div class="sixteen columns section-header"><a href="/events">Events</a></div>
+		<div class="sixteen columns section-header"><a href="/events">Events _ most recent</a></div>
 		<ul id="events-homepage">
 		  <% @events.sorted_by_date.each do |event| %>
 		      <li class="one-third column event-homepage" <%= event.upcoming? ? 'class=upcoming' : nil %>>
 		      	<div class="event-display"></div>
 		        <div class="event-title">
 		      		<%= link_to(event) do %>
-		        	<%= event.city.upcase + ' _ ' + event.hackathon_start.strftime('%Y') + ': ' + event.theme %>
+		        	<%=event.theme %>
+		        	<br/>
+		        	<%= event.city.upcase + ' _ ' + event.hackathon_start.strftime('%Y')%>
 		        	<% end %>
 		        </div>
 		        <div class="event-short-about">

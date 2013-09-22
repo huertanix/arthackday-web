@@ -1,7 +1,19 @@
-<div class="section" id="header">
+<!-- <div class="section" id="header">
   <div class="container">
     <h1><%= @event.theme %></h1>
     <h2>Art Hack Day :: <%= @event.city %></h2>
+  </div>
+</div> -->
+<div class="section" id="header" style=" 
+  background: url(http://www.godvisions.com/images/GVBlackCarpet.gif);
+">
+  <div class="container">
+    <div class="event-callout sixteen columns">
+      <div id="hero">GOING DARK</div>
+    </div>
+  </div>
+  <div id="header-credit">
+    <a href="#">IMAGERY BY: OCEAN FACE</a>
   </div>
 </div>
 
@@ -9,6 +21,7 @@
 <div class="section" id="event-about">
   <div class="container">
     <div class="sixteen columns">
+      <div class="section-header">show information</div>
       <h2>
         <%= @event.city.upcase + ' _ ' + @event.hackathon_start.strftime('%Y')%>
         <br/>

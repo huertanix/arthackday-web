@@ -177,6 +177,18 @@ i {
 p {
   font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 14px;
+  line-height: 17px;
+}
+.basic-colfax {
+  font-family: "COLFAX";
+  font-size: 13px;
+  line-height: 16px;
+}
+input:focus {
+  outline: none !important;
+}
+a:hover {
+  background-color: transparent;
 }
 /* MISC */
 .remove-bottom {
@@ -231,7 +243,7 @@ p {
 ================================================== */
 .container {
   position: relative;
-  width: 960px;
+  width: 1020px;
   margin: 0 auto;
   padding: 0;
 }
@@ -239,8 +251,8 @@ p {
 .container .columns {
   float: left;
   display: inline;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .row {
   margin-bottom: 20px;
@@ -255,54 +267,24 @@ p {
   margin-right: 0;
 }
 /* Base Grid */
-.container .one.column,
-.container .one.columns {
-  width: 40px;
-}
-.container .two.columns {
-  width: 100px;
-}
-.container .three.columns {
-  width: 160px;
-}
-.container .four.columns {
-  width: 220px;
-}
-.container .five.columns {
-  width: 280px;
-}
-.container .six.columns {
-  width: 340px;
-}
-.container .seven.columns {
-  width: 400px;
-}
-.container .eight.columns {
-  width: 460px;
-}
-.container .nine.columns {
-  width: 520px;
-}
-.container .ten.columns {
-  width: 580px;
-}
-.container .eleven.columns {
-  width: 640px;
-}
-.container .twelve.columns {
-  width: 700px;
-}
-.container .thirteen.columns {
-  width: 760px;
-}
-.container .fourteen.columns {
-  width: 820px;
-}
-.container .fifteen.columns {
-  width: 880px;
-}
+/*    .container .one.column,
+    .container .one.columns                     { width: 40px;  }
+    .container .two.columns                     { width: 100px; }
+    .container .three.columns                   { width: 160px; }
+    .container .four.columns                    { width: 220px; }
+    .container .five.columns                    { width: 280px; }
+    .container .six.columns                     { width: 340px; }
+    .container .seven.columns                   { width: 400px; }
+    .container .eight.columns                   { width: 460px; }
+    .container .nine.columns                    { width: 520px; }
+    .container .ten.columns                     { width: 580px; }
+    .container .eleven.columns                  { width: 640px; }
+    .container .twelve.columns                  { width: 700px; }
+    .container .thirteen.columns                { width: 760px; }
+    .container .fourteen.columns                { width: 820px; }
+    .container .fifteen.columns                 { width: 880px; }*/
 .container .sixteen.columns {
-  width: 940px;
+  width: 980px;
 }
 .container .one-third.column {
   width: 300px;
@@ -359,7 +341,7 @@ p {
 /* #Tablet (Portrait)
 ================================================== */
 /* Note: Design for a width of 768px */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
+@media only screen and (min-width: 768px) and (max-width: 1019px) {
   .container {
     width: 768px;
   }
@@ -631,6 +613,15 @@ a {
   height: 98px;
   position: absolute;
 }
+.nav#nav-main .nav-left #black-logo {
+  display: none;
+}
+.nav#nav-main .nav-left #black-logo.show-black {
+  display: block;
+}
+.nav#nav-main.black-on-white ul li a {
+  color: black;
+}
 .nav .back-to-top {
   cursor: pointer;
 }
@@ -639,6 +630,11 @@ a {
   color: white;
   font-size: 12px;
   float: left;
+}
+.nav .nav-left img {
+  margin-right: 25px;
+  position: relative;
+  top: -2px;
 }
 .nav .nav-left a {
   background-color: transparent;
@@ -669,6 +665,7 @@ a {
 .section#footer {
   color: white;
   font-family: 'COLFAX';
+  margin-top: 200px;
 }
 .section#footer #footer-top {
   height: 55px;
@@ -683,7 +680,15 @@ a {
   float: left;
   font-family: 'COLFAX';
   margin-left: 25px;
-  font-size: 14px;
+  font-size: 13px;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.section#footer #footer-top #newsletter-signup:hover {
+  color: #5000ff;
 }
 .section#footer #footer-top #newsletter-signup #signup {
   margin-top: 2px;
@@ -707,7 +712,7 @@ a {
   background-color: white;
   margin-left: -5px;
   font-family: 'COLFAX';
-  font-size: 14px;
+  font-size: 13px;
   padding: 0px 20px;
   cursor: pointer;
 }
@@ -718,12 +723,22 @@ a {
   float: left;
   font-size: 20px;
   margin-left: 15px;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 .section#footer #footer-top #social-section li a {
   color: white;
 }
-.section#footer #footer-top #social-section li:hover {
+.section#footer #footer-top #social-section li a:hover {
+  color: #5000ff;
   margin-top: 1px;
+}
+.section#footer #footer-top #social-section li a i {
+  position: relative;
+  top: 1px;
 }
 .section#footer #footer-top #main-sponsors {
   margin-top: 35px;
@@ -731,7 +746,7 @@ a {
 .section#footer #footer-top #main-sponsors a,
 .section#footer #footer-top #main-sponsors div {
   float: right;
-  font-size: 14px;
+  font-size: 13px;
 }
 .section#footer #footer-top #main-sponsors div {
   margin-right: 25px;
@@ -749,42 +764,50 @@ a {
 .section#footer #footer-bottom a {
   color: white;
 }
-.section#landing-header {
-  height: 800px;
+.section#landing-header,
+.section#header {
+  height: 500px;
   background-color: black;
   color: white;
   position: relative;
 }
-.section#landing-header .container {
+.section#landing-header a,
+.section#header a {
+  color: white;
+}
+.section#landing-header .container,
+.section#header .container {
   position: relative;
   top: 50%;
   margin-bottom: 110px;
   font-family: "COLFAX";
 }
-.section#landing-header #header-credit {
+.section#landing-header #header-credit,
+.section#header #header-credit {
   position: absolute;
   bottom: 20px;
   margin-left: 25px;
   font-size: 12px;
 }
-.section#landing-header #header-credit a {
+.section#landing-header #header-credit a,
+.section#header #header-credit a {
   font-family: 'COLFAX';
   text-transform: uppercase;
   color: white;
 }
 .section#events-page {
-  background-color: black;
+  background-color: white;
 }
 .section#events-page ul {
   padding-top: 120px;
 }
 .section#events-page ul li {
-  height: 16px;
+  height: 30px;
   padding: 25px;
-  margin: 25px 0px;
-  background-color: black;
-  border: 1px solid white;
-  color: white;
+  margin: 40px 0px;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
@@ -794,27 +817,71 @@ a {
 .section#events-page ul li:hover {
   background-color: #5000ff;
   border-color: #5000ff;
+  color: white;
 }
 .section#events-page ul li .left-event {
-  font-size: 30px;
+  font-size: 36px;
+  line-height: 36px;
   float: left;
   text-transform: uppercase;
 }
 .section#events-page ul li .right-event {
   float: right;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 13px;
+  line-height: 16px;
 }
 .section#events-page ul li .right-event div {
   top: -2px;
   position: relative;
   float: right;
   clear: both;
-  line-height: 13px;
+}
+.section#contact-page {
+  background-color: black;
+  color: white;
+  padding-top: 150px;
+  padding-bottom: 200px;
+  min-height: 100%;
+  margin-bottom: -200px;
+}
+.section#contact-page .one-third ul li {
+  margin-bottom: 30px;
+}
+.section#contact-page .one-third ul li a {
+  color: white;
+}
+.section#contact-page .one-third ul li a:hover {
+  color: #5000ff;
+}
+.section#contact-page .one-third ul li p {
+  font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+}
+.section#contact-page .one-third ul li p a {
+  font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+}
+.section#contact-page .two-third textarea {
+  height: 200px;
+}
+.section#contact-page .two-third input,
+.section#contact-page .two-third textarea {
+  border: 1px solid white;
+  background-color: black;
+  padding: 10px;
+  width: 100%;
+  font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 30px;
+  color: white;
 }
 .section#ahd-about #ahd-tagline {
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 36px;
+  line-height: 38px;
   font-family: 'COLFAX';
   text-transform: uppercase;
 }
@@ -837,8 +904,11 @@ a {
 }
 .section#event-about .about-event-section div {
   margin-bottom: 25px;
-  font-size: 14px;
+  font-size: 13px;
   text-transform: uppercase;
+}
+.section#event-about .about-event-section p {
+  padding-right: 100px;
 }
 .section#event-about .about-event-right .border-container {
   width: 100%;
@@ -854,7 +924,7 @@ a {
   font-family: 'COLFAX';
   color: white;
   border: none;
-  font-size: 14px;
+  font-size: 13px;
   margin: 15px 0px;
 }
 .section#projects .projects .project {
@@ -876,8 +946,8 @@ a {
 .section .container .section-header {
   font-family: 'COLFAX';
   text-transform: uppercase;
-  font-size: 14px;
-  margin-bottom: 30px;
+  font-size: 13px;
+  margin-bottom: 35px;
 }
 .section .container .section-header a {
   color: black;
@@ -896,38 +966,40 @@ a {
   text-transform: uppercase;
 }
 .section .container .event-callout #sub-hero {
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 21px;
+  line-height: 21px;
   font-family: 'COLFAX';
   text-transform: uppercase;
 }
 .section .container #events-homepage .event-homepage .event-display {
-  height: 150px;
+  height: 200px;
   width: 100%;
   background-color: gray;
 }
 .section .container #events-homepage .event-homepage .event-title {
-  margin-top: 30px;
+  margin-top: 35px;
 }
 .section .container #events-homepage .event-homepage .event-title a {
   font-family: 'COLFAX';
   color: black;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 13px;
 }
 .section .container #events-homepage .event-homepage .event-title a:hover {
   color: #5000ff;
 }
 .section .container #events-homepage .event-homepage .event-short-about {
-  margin-top: 30px;
+  margin-top: 35px;
   font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   height: 53px;
   /* Fallback for non-webkit */
 
   overflow: hidden;
+  font-size: 14px;
+  line-height: 17px;
 }
 .section .container #events-homepage .event-homepage .event-short-more {
-  font-size: 14px;
+  font-size: 13px;
   position: relative;
   bottom: 16px;
   background-color: white;
@@ -938,8 +1010,11 @@ a {
   box-shadow: -5px 0px 5px rgba(255, 255, 255, 0.75);
 }
 .section .container #events-homepage .event-homepage .event-short-more a {
-  color: #5000ff;
+  color: black;
   font-family: 'COLFAX';
+}
+.section .container #events-homepage .event-homepage .event-short-more a:hover {
+  color: #5000ff;
 }
 /*
 * Skeleton V1.2

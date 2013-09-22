@@ -25,7 +25,24 @@ a{
 	&#nav-main{
 		height:98px;
 		position: absolute;
+		.nav-left{
+			#black-logo{
+				display:none;
+				&.show-black{
+					display:block;
+				}
+			}
+		}
+		&.black-on-white{
+			ul{
+				li{
+					a{
+						color:black;						
+					}
+				}
+			}
 
+		}
 	}
 	.back-to-top{
 		cursor: pointer;
@@ -35,6 +52,11 @@ a{
 		color:white;
 		font-size: 12px;
 		float: left;
+		img{
+			margin-right: 25px;
+			position: relative;
+			top:-2px;
+		}
 		a{
 			background-color: transparent;
 		}
@@ -72,6 +94,7 @@ a{
 	&#footer{
 		color:white;
 		font-family: 'COLFAX';
+		margin-top: 200px;
 		#footer-top{
 			height:55px;
 			border-top: 1px solid gray;
@@ -84,8 +107,11 @@ a{
 				float: left;
 				font-family: 'COLFAX';
 				margin-left: 25px;
-				font-size: 14px;
-
+				font-size: 13px;
+				.transition(all .2s ease);
+				&:hover{
+					color:@electric-blue;
+				}
 				#signup{
 					margin-top: 2px;
 					cursor: pointer;
@@ -107,7 +133,7 @@ a{
 						background-color: white;
 						margin-left: -5px;
 						font-family: 'COLFAX';
-						font-size: 14px;
+						font-size: 13px;
 						padding: 0px 20px;
 						cursor: pointer;
 					}
@@ -119,11 +145,20 @@ a{
 					float:left;
 					font-size: 20px;
 					margin-left: 15px;
+					.transition(all .2s ease);
 					a{
 						color:white;
+						&:hover{
+							color: @electric-blue;							
+							margin-top: 1px;
+
+						}
+						i{
+							position: relative;
+							top: 1px;
+						}
 					}
 					&:hover{
-						margin-top: 1px;
 					}
 				}
 			}
@@ -131,7 +166,7 @@ a{
 				margin-top: 35px;
 				a,div{
 					float:right;
-					font-size: 14px;
+					font-size: 13px;
 				}
 				div{
 					margin-right: 25px;
@@ -154,11 +189,14 @@ a{
 	}
 
 	// landing page
-	&#landing-header{
-		height: 800px;
+	&#landing-header, &#header{
+		height: 500px;
 		background-color: black;
 		color: white;
 		position: relative;
+		a{
+			color:white;
+		}
 		.container{
 			position:relative;
 			top: 50%;
@@ -178,23 +216,25 @@ a{
 		}
 	}
 	&#events-page{
-		background-color: black;
+		background-color: white;
 		ul{
 			padding-top: 120px;
 			li{
-				height:16px;
+				height:30px;
 				padding:25px;
-				margin: 25px 0px;
-				background-color: black;
-				border: 1px solid white;
-				color: white;
+				margin: 40px 0px;
+				background-color: white;
+				border: 1px solid black;
+				color: black;
 				.transition(all .2s ease);
 				&:hover{
 					background-color: @electric-blue;
 					border-color: @electric-blue;
+					color: white;
 				}
 				.left-event{
-					font-size: 30px;
+					font-size: 36px;
+					line-height: 36px;
 					float:left;
 					text-transform:uppercase;
 
@@ -202,22 +242,69 @@ a{
 				.right-event{
 					float:right;
 					text-transform:uppercase;
-					font-size: 12px;
+					font-size: 13px;
+					line-height: 16px;
 					div{
 						top:-2px;
 						position: relative;
 						float: right;
 						clear: both;
-						line-height: 13px;
 					}
 				}
 			}
 		}
 	}
+	&#contact-page{
+		background-color: black;
+		color:white;
+		padding-top: 150px;
+		padding-bottom: 200px;
+		min-height: 100%;
+		margin-bottom: -200px;
+		.one-third{
+			ul{
+				li{
+					a{
+						color:white;
+						&:hover{
+							color: @electric-blue;
+						}
+					}
+					margin-bottom: 30px;
+					p{
+						a{
+							font-family: @font-basic;
+							font-size: 14px;
+							line-height: 17px;							
+						}
+						font-family: @font-basic;
+						font-size: 14px;
+						line-height: 17px;
+					}
+				}
+			}
+		}
+		.two-third{
+			textarea{
+				height: 200px;
+			}
+			input, textarea{
+				border: 1px solid white;
+				background-color: black;
+				padding: 10px;
+				width: 100%;
+				font-family: @font-basic;
+				font-size: 14px;
+				line-height: 17px;
+				margin-bottom: 30px;
+				color: white;
+			}
+		}
+	}
 	&#ahd-about{
 		#ahd-tagline{
-			font-size: 40px;
-			line-height:40px;
+			font-size: 36px;
+			line-height:38px;
 			font-family: 'COLFAX';
 			text-transform:uppercase;
 			a{
@@ -244,8 +331,11 @@ a{
 		.about-event-section{
 			div{
 				margin-bottom: 25px;
-				font-size: 14px;
+				font-size: 13px;
 				text-transform:uppercase;
+			}
+			p{
+				padding-right: 100px;
 			}
 		}
 		.about-event-right{
@@ -263,7 +353,7 @@ a{
 						font-family: 'COLFAX';
 						color: white;
 						border: none;
-						font-size: 14px;
+						font-size: 13px;
 						margin:15px 0px;
 					}
 				}
@@ -292,7 +382,7 @@ a{
 		.section-header{
 			font-family: 'COLFAX';
 			text-transform:uppercase;
-			font-size: 14px;
+			font-size: 13px;
 			margin-bottom: @smallMargin;
 			a{
 				color: black;
@@ -311,8 +401,8 @@ a{
 				text-transform:uppercase;
 			}
 			#sub-hero{
-				font-size: 14px;
-				line-height: 14px;
+				font-size: 21px;
+				line-height: 21px;
 				font-family: 'COLFAX';
 				text-transform:uppercase;
 			}
@@ -320,7 +410,7 @@ a{
 		#events-homepage{
 			.event-homepage{
 				.event-display{
-					height: 150px;
+					height: 200px;
 					width:100%;
 					background-color:gray;
 				}
@@ -330,7 +420,7 @@ a{
 						font-family: 'COLFAX';
 						color: black;
 						text-transform:uppercase;
-						font-size: 14px;
+						font-size: 13px;
 						&:hover{
 							color:@electric-blue;
 						}
@@ -343,9 +433,11 @@ a{
 					height: 53px;
 					/* Fallback for non-webkit */
 					overflow: hidden;
+					font-size: 14px;
+					line-height: 17px;
 				}
 				.event-short-more{
-					font-size: 14px;
+					font-size: 13px;
 					position: relative;
 					bottom: 16px;
 					background-color: white;
@@ -355,8 +447,11 @@ a{
 					-moz-box-shadow:    -5px 0px 5px rgba(255, 255, 255, 0.75);
 					box-shadow:         -5px 0px 5px rgba(255, 255, 255, 0.75);
 					a{
-						color:@electric-blue;
+						color:black;
 						font-family: 'COLFAX';
+						&:hover{
+							color:@electric-blue;
+						}
 					}
 
 				}

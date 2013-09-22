@@ -1,14 +1,26 @@
-$(function(){
+function updateContainer(wH){
+	// executed everytime the window size changes, and on load
+
 	// hero block height
-	var windowHeight = $(window).height(); 
 	$('#landing-header').css({
-		'height': windowHeight
+		'height': $(window).height()
 	});
 	var eventCallout = $('.event-callout').height();
 	eventCallout = - (eventCallout / 2);
 	$('.event-callout').css({
 		'margin-top': eventCallout
 	});
+}
+
+
+$(function(){
+	
+	// call updateContainer on load and on resize
+   	updateContainer();	
+    $(window).resize(function() {
+    	updateContainer();
+    });
+
 
 	// nav bar expand and contract
 	$('.back-to-top').click(function(){
@@ -30,5 +42,12 @@ $(function(){
 		$(this).hide();
 		$('#signup-input').show();
 	});
+
+	//check if it's the events page
+	if ($('#events-page').length > 0) {
+		$('#nav-main').addClass('black-on-white');
+		$('#white-logo').hide();
+		$('#black-logo').show();
+	}
 
 });
