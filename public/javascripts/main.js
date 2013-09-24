@@ -49,5 +49,4 @@ $(function(){
 		$('#white-logo').hide();
 		$('#black-logo').show();
 	}
-
 });

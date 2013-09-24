@@ -138,6 +138,10 @@ video {
   font-size: 100%;
   font-family: 'COLFAX';
 }
+html,
+body {
+  height: 100%;
+}
 h1,
 h2,
 h3,
@@ -183,6 +187,7 @@ p {
   font-family: "COLFAX";
   font-size: 13px;
   line-height: 16px;
+  text-transform: uppercase;
 }
 input:focus {
   outline: none !important;
@@ -290,7 +295,7 @@ a:hover {
   width: 300px;
 }
 .container .two-thirds.column {
-  width: 620px;
+  width: 640px;
 }
 /* Offsets */
 .container .offset-by-one {
@@ -619,6 +624,10 @@ a {
 .nav#nav-main .nav-left #black-logo.show-black {
   display: block;
 }
+.nav#nav-main .nav-left img {
+  width: 68px;
+  height: 65px;
+}
 .nav#nav-main.black-on-white ul li a {
   color: black;
 }
@@ -788,6 +797,7 @@ a {
   bottom: 20px;
   margin-left: 25px;
   font-size: 12px;
+  text-shadow: 0px 0px 5px #000000;
 }
 .section#landing-header #header-credit a,
 .section#header #header-credit a {
@@ -797,6 +807,7 @@ a {
 }
 .section#events-page {
   background-color: white;
+  height: 100%;
 }
 .section#events-page ul {
   padding-top: 120px;
@@ -844,6 +855,7 @@ a {
   padding-bottom: 200px;
   min-height: 100%;
   margin-bottom: -200px;
+  height: 100%;
 }
 .section#contact-page .one-third ul li {
   margin-bottom: 30px;
@@ -927,18 +939,96 @@ a {
   font-size: 13px;
   margin: 15px 0px;
 }
-.section#projects .projects .project {
-  width: 260px;
-  height: 160px;
-  padding: 20px;
-  background-color: #ddd;
-  display: inline-block;
-  margin: 0px 0px 20px 20px;
-  vertical-align: top;
-  color: white;
+.section#participants {
+  margin-top: 100px;
 }
-.section#projects .projects .project .project-inner {
+.section#participants #participants-container {
+  -moz-column-count: 3;
+  /* Firefox */
+
+  -webkit-column-count: 3;
+  /* Safari and Chrome */
+
+  column-count: 3;
+}
+.section#participants #participants-container .participant .name.selected {
+  color: #5000ff;
+}
+.section#participants #participants-container .participant .participant-additional {
+  margin: 10px 0px;
+}
+.section#participants #participants-container .participant .participant-additional img,
+.section#participants #participants-container .participant .participant-additional div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.section#participants #participants-container .participant .participant-additional a:hover {
+  color: black;
+}
+.section#participants #participants-container .participant .participant-bottom {
+  padding: 20px 0px;
+  border-bottom: 1px solid black;
+}
+.section#projects .projects .project {
+  /*width:260px;*/
+
+  /*height: 160px;*/
+
+  /*padding: @margin;*/
+
+  /*				background-color: #ddd;
+*/
+  /*display: inline-block;*/
+
+  /*margin: 0px 0px @margin @margin;*/
+
+  /*vertical-align: top;*/
+
+  /*				color: white;
+
+*/
+  height: 200px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  /*				margin-left: 20px;
+				width:300px;
+				margin-bottom: 35px;*/
+
+  /*margin: 0px 20px;*/
+
+  /*
+				.project-inner{
+					width:100%;
+				}*/
+
+}
+.section#projects .projects .project img {
   width: 100%;
+}
+.section#projects .projects .project .project-info {
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  opacity: 0;
+  background-color: #5000ff;
+  color: white;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding: 75px 0px;
+}
+.section#projects .projects .project .project-info div {
+  margin-bottom: 20px;
+}
+.section#projects .projects .project .project-info p {
+  padding: 0px 10px;
+}
+.section#projects .projects .project:hover .project-info {
+  opacity: 1;
 }
 .section .container {
   margin: 0px auto;
@@ -964,12 +1054,14 @@ a {
   line-height: 150px;
   font-family: 'COLFAX';
   text-transform: uppercase;
+  text-shadow: 0px 0px 10px #000000;
 }
 .section .container .event-callout #sub-hero {
   font-size: 21px;
   line-height: 21px;
   font-family: 'COLFAX';
   text-transform: uppercase;
+  text-shadow: 0px 0px 10px #000000;
 }
 .section .container #events-homepage .event-homepage .event-display {
   height: 200px;

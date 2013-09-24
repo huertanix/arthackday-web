@@ -2,7 +2,7 @@
 
 <div class="section" id="events-page">
 	<div class="container">
-		<ul id="events">
+		<ul id="events" class="sixteen columns">
 		  <% @events.sorted_by_date.each do |event| %>
 		    <%= link_to(event) do %>
 		      <li <%= event.upcoming? ? 'class=upcoming' : nil %>>
