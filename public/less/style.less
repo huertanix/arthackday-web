@@ -329,7 +329,7 @@ a{
 	}
 
 	&#event-about{
-		margin: 100px 0px;
+		margin: 150px 0px;
 		h2{
 			line-height: 30px;
 			text-transform:uppercase;
@@ -367,6 +367,31 @@ a{
 			}
 		}
 	}
+	&#press-partners{
+		margin-top: 150px;
+		#press-container{
+			.border-container{
+				border: 1px solid black;
+				width:100%;
+			}
+			.press{
+				margin: 20px;
+				a{
+					color:@electric-blue;
+					&:hover{
+						color:black;
+					}
+				}
+			}
+		}
+		#partners-container{
+			.partner{
+				background-color: #eee;
+				height: 200px;
+				margin-bottom: 40px;
+			}
+		}
+	}
 	&#participants{
 		margin-top: 100px;
 		#participants-container{
@@ -375,15 +400,43 @@ a{
 			column-count:3;
 			.participant{
 				.name{
+					cursor: pointer;
+					&:hover{
+						color: @electric-blue;
+						svg{
+							opacity: 1;
+						}
+					}
+
+
+
+					svg{
+						margin-left: 10px;
+						opacity: 0;
+						position: relative;
+						top: -1px;
+						.rotation(180deg);
+					}
 					&.selected{
 						color: @electric-blue;
+						&:hover{
+							color:black;
+							svg{
+								.rotation(0deg);
+							}
+						}
+
 					}
 				}
 				.participant-additional{
 					margin:10px 0px;
+					display: none;
 					img,div{
 						display: inline-block;
 						vertical-align: middle;
+					}
+					img{
+						margin-right: 10px;
 					}
 					a{
 						&:hover{

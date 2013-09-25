@@ -49,4 +49,21 @@ $(function(){
 		$('#white-logo').hide();
 		$('#black-logo').show();
 	}
+
+	$('.name').click(function(){
+		var $partAdditional = $(this).parent().find('.participant-additional');
+		var $arrow = $(this).find('svg g polyline');
+		console.log($arrow);
+		if($(this).hasClass('selected')){
+			$(this).removeClass('selected');
+			$partAdditional.slideUp(100);
+			$arrow.attr('stroke','#5000ff');
+		}else{
+			$(this).addClass('selected');
+			$partAdditional.slideDown(100);
+			$arrow.attr('stroke','#000000');
+		}
+	});
+
+
 });

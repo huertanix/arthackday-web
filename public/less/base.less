@@ -109,7 +109,11 @@ a{
   -ms-transition: @params; // IE10
   transition: @params; // CSS3
 }
-
+.rotation(@deg: 5deg){
+  -webkit-transform: rotate(@deg);
+     -moz-transform: rotate(@deg);
+          transform: rotate(@deg);
+}
 .top-margin{
   margin-top:120px;
 }

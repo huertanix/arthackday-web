@@ -907,7 +907,7 @@ a {
   color: #ffffff;
 }
 .section#event-about {
-  margin: 100px 0px;
+  margin: 150px 0px;
 }
 .section#event-about h2 {
   line-height: 30px;
@@ -939,6 +939,27 @@ a {
   font-size: 13px;
   margin: 15px 0px;
 }
+.section#press-partners {
+  margin-top: 150px;
+}
+.section#press-partners #press-container .border-container {
+  border: 1px solid black;
+  width: 100%;
+}
+.section#press-partners #press-container .press {
+  margin: 20px;
+}
+.section#press-partners #press-container .press a {
+  color: #5000ff;
+}
+.section#press-partners #press-container .press a:hover {
+  color: black;
+}
+.section#press-partners #partners-container .partner {
+  background-color: #eee;
+  height: 200px;
+  margin-bottom: 40px;
+}
 .section#participants {
   margin-top: 100px;
 }
@@ -951,16 +972,46 @@ a {
 
   column-count: 3;
 }
+.section#participants #participants-container .participant .name {
+  cursor: pointer;
+}
+.section#participants #participants-container .participant .name:hover {
+  color: #5000ff;
+}
+.section#participants #participants-container .participant .name:hover svg {
+  opacity: 1;
+}
+.section#participants #participants-container .participant .name svg {
+  margin-left: 10px;
+  opacity: 0;
+  position: relative;
+  top: -1px;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
 .section#participants #participants-container .participant .name.selected {
   color: #5000ff;
 }
+.section#participants #participants-container .participant .name.selected:hover {
+  color: black;
+}
+.section#participants #participants-container .participant .name.selected:hover svg {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
 .section#participants #participants-container .participant .participant-additional {
   margin: 10px 0px;
+  display: none;
 }
 .section#participants #participants-container .participant .participant-additional img,
 .section#participants #participants-container .participant .participant-additional div {
   display: inline-block;
   vertical-align: middle;
+}
+.section#participants #participants-container .participant .participant-additional img {
+  margin-right: 10px;
 }
 .section#participants #participants-container .participant .participant-additional a:hover {
   color: black;
