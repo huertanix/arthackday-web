@@ -1,16 +1,15 @@
 
+<p id="notice"><%= notice %></p>
 
 <div class="section" id="project-page">
 	<div class="container">
 		<div id="project">
 			<div class="one-third column" id="project-description">
-				<h2>  <%= @project.name %> project title</h2>
+				<h2>  <%= @project.name %></h2>
 		        <div class="basic-colfax">
 		        	berlin larger than life
 		        </div>
-		        <p>The Glitch booth started as a response to Instagram: computer generated filters that emulate the errors of analog lenses and aestehtic of instant film to generate enhanced digital images.
-Gritch, aims to capture images degraded by computer generated errors on instant film. The process in which glitchs are created or generated are hardly social, the booth aims to make "social" the production of imperfect images in the same way Instagram socialize the acummulation of enhanced images.</p><p>
-Errors and imperfections are larger than life, aren't they?</p>
+		        <p><%= @project.description %></p>
 				<a href="#"><p>Project Website</p></a>
 				<a href="#"><p>Project Github</p></a>
 				<div class="section-header basic-colfax">
@@ -52,23 +51,6 @@ Errors and imperfections are larger than life, aren't they?</p>
 
 <div class="section">
   <div class="container">
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @project.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
-
-<p>
-  <strong>Tag:</strong>
-  <%= @project.tag %>
-</p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

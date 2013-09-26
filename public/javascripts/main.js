@@ -44,7 +44,7 @@ $(function(){
 	});
 
 	//check if it's the events page
-	if ($('#events-page,#project-page').length > 0) {
+	if ($('#events-page,#project-page,.space').length > 0) {
 		$('#nav-main').addClass('black-on-white');
 		$('#white-logo').hide();
 		$('#black-logo').show();
