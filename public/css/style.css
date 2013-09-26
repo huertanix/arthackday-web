@@ -152,8 +152,9 @@ h6 {
   font-family: 'COLFAX';
   font-weight: bold;
   line-height: 20px;
-  color: inherit;
+  color: black;
   text-rendering: optimizelegibility;
+  text-transform: uppercase;
 }
 h1,
 h2,
@@ -804,6 +805,48 @@ a {
   font-family: 'COLFAX';
   text-transform: uppercase;
   color: white;
+}
+.section#project-page {
+  background-color: white;
+  height: 100%;
+}
+.section#project-page #project {
+  padding-top: 150px;
+}
+.section#project-page #project #project-description h2 {
+  margin-bottom: 20px;
+  margin-top: 0px;
+  top: -8px;
+  position: relative;
+}
+.section#project-page #project #project-description p {
+  margin: 30px 0px;
+}
+.section#project-page #project #project-description a > p {
+  margin: 0px;
+}
+.section#project-page #project #project-description a > p:hover {
+  color: black;
+}
+.section#project-page #project #project-description .section-header {
+  margin: 30px 0px;
+}
+.section#project-page #project #project-description .project-contributor {
+  margin-bottom: 30px;
+}
+.section#project-page #project #project-description .project-contributor img,
+.section#project-page #project #project-description .project-contributor div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.section#project-page #project #project-description .project-contributor img {
+  margin-right: 10px;
+}
+.section#project-page #project #project-contents .project-item {
+  margin-bottom: 40px;
+}
+.section#project-page #project #project-contents .project-item img {
+  width: 100%;
 }
 .section#events-page {
   background-color: white;
