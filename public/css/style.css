@@ -981,6 +981,14 @@ a {
   border: none;
   font-size: 13px;
   margin: 15px 0px;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.section#event-about .about-event-right .border-container .pre-about button:hover {
+  background-color: #5000ff;
 }
 .section#press-partners {
   margin-top: 150px;
