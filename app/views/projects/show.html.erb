@@ -10,8 +10,14 @@
 		        	berlin larger than life
 		        </div>
 		        <p><%= @project.description %></p>
-				<a href="#"><p>Project Website</p></a>
-				<a href="#"><p>Project Github</p></a>
+		        <% if project.website %>
+					<a href="#"><p>Project Website</p></a>
+				<% end %>
+
+				<% if @project.github %>
+					<a href="#"><p>Project Github</p></a>
+				<% end %>
+
 				<div class="section-header basic-colfax">
 		        	contributors
 		        </div>
