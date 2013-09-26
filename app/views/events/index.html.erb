@@ -6,10 +6,10 @@
 		  <% @events.sorted_by_date.each do |event| %>
 		    <%= link_to(event) do %>
 		      <li <%= event.upcoming? ? 'class=upcoming' : nil %>>
-		      	<div class="left-event"><%= event.city.upcase %></div>
+		      	<div class="left-event"><%= event.theme%></div>
 		      	<div class="right-event">
+		      		<div class="event-page"><%= event.city.upcase %></div>
 		      		<div class="event-page-time"><%= event.hackathon_start.strftime('%Y') %></div>
-		      		<div class="event-page"><%= event.theme%></div>
 		      	</div>
 		      </li>
 		    <% end %>

@@ -44,45 +44,29 @@
         <%= @event.about %>
       </p>
     </div>
+    <% if @event.upcoming? %>
+
     <div class="about-event-right one-third column">
       <div class="border-container">
         <div class="pre-about">
           <div>
             <p>Join the Art Hack Day teams on Saturday April 13 starting at 6:00pm for a closing exhibition, live performances, and party.</p>
-            <button>RSVP</button>
+            <a href="<%= @event.show_rsvp_url%>"><button >RSVP</button></a>
           </div>
           <div>
             <p>Do you have mad skills? Register to attend the full weekend and collaborate on projects.</p>
-            <button>PARTICIPATE</button>
+            <a href="<%= @event.hack_rsvp_url%>"><button>PARTICIPATE</button></a>
           </div>
         </div>
       </div>
     </div>
+    <% else %>
+
+    <% end%>
+
   </div>
 </div>
 
-<% if @event.upcoming? %>
-  <div id="rsvps">
-    <p>Do you have mad skills? Register to attend the full weekend and collaborate on projects: 
-    <% if @event.hack_rsvp_url? %>
-      <a href="<%= @event.hack_rsvp_url %>">Register to hack</a>
-    <% else %>
-      <a href="https://www.youtube.com/watch?v=JvsvpRZFh2Q">Coming soon</a>
-    <% end %>
-    </p>
-    <p>Join the Art Hack Day teams on <%= @event.show_start.strftime("%A, %b %d starting at %I:%M %p") %> for a closing exhibition, live performances, and party:
-      <% if @event.show_rsvp_url? %>
-        <a href="<%= @event.show_rsvp_url %>">Register to party</a>
-      <% else %>
-        <a href="https://www.youtube.com/watch?v=JvsvpRZFh2Q">Coming soon</a>
-      <% end %>
-    </p>
-  </div>
-<% else %>
-  <div id="media">
-    <!-- Add Tumblr API call here. -->
-  </div>
-<% end %>
 
 </div>
 
