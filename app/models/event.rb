@@ -9,11 +9,15 @@ class Event < ActiveRecord::Base
   accepts_nested_attributes_for :projects, :press_blurbs, :sponsors, :participants, allow_destroy: true
   # protect from hax
   attr_accessible :city, :theme, :hackathon_start, :hackathon_end, :show_start, :show_end, :about, 
-  :hack_rsvp_url, :show_rsvp_url, :press_blurbs_attributes, :projects_attributes, :sponsors_attributes, :venue_id
-
+  :hack_rsvp_url, :show_rsvp_url, :press_blurbs_attributes, :projects_attributes, :sponsors_attributes, 
+  :venue_id, :header_image, :header_image_artist, :header_image_artist_website
+  
   scope :sorted_by_date, order('hackathon_start desc') 
 
   def upcoming? 
     self.show_end > DateTime.now
+  end
+
+  def 
   end
 end
