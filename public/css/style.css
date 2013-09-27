@@ -1094,6 +1094,8 @@ a {
   /*				color: white;
 
 */
+
+  background-position: center;
   height: 200px;
   margin-bottom: 40px;
   overflow: hidden;
