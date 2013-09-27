@@ -12,6 +12,38 @@ function updateContainer(wH){
 	});
 }
 
+function orderParticipants(participantsContainer){
+	var participants = participantsContainer.find('.participant');
+   	var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+   	for(var i=0; i<str.length; i++){
+      	var nextChar = str.charAt(i);
+      	participants.each(function(){
+      		var part = $(this).find('.name span').html();
+	      	if(part.charAt(0) === nextChar){
+	      		if($("#" + nextChar + "-group").length > 0){
+	      			$("#" + nextChar + "-group").append($(this));
+	      		}else{
+	      			var group = '<div class="participant-group" id="' + nextChar + '-group"><h2>' + nextChar + '</h2></div>';
+	      			participantsContainer.append(group);
+	      			var group = $("#"+nextChar+"-group");
+	      			group.append($(this));
+	      		}
+	      	}	      		
+      	});
+   	}
+   	var leftover = participantsContainer.find('> .participant');
+   	$(leftover).each(function(){
+		if($("#rest-group").length > 0){
+			$("#rest-group").append($(this));
+		}else{
+			var group = '<div class="participant-group" id="rest-group"><h2>*</h2></div>';
+			participantsContainer.append(group);
+			var group = $("#rest-group");
+			group.append($(this));
+		}
+   	});
+}
+
 
 $(function(){
 	
@@ -64,6 +96,8 @@ $(function(){
 			$arrow.attr('stroke','#000000');
 		}
 	});
+
+	orderParticipants($('.participants-all'));
 
 
 });
