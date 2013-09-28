@@ -20,5 +20,12 @@
   <%= @participant.website %>
 </p>
 
+<p>
+  <strong>Events:</strong>
+  <% @participant.events.each do |event| %>
+    <%= event.theme + " " %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_participant_path(@participant) %> |
 <%= link_to 'Back', participants_path %>

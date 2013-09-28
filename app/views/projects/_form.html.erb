@@ -31,6 +31,20 @@
     <%= f.label :github %><br>
     <%= f.text_field :github %>
   </div>
+  <div class="field">
+    Event<br>
+    <%= select("project", "event_id", Event.all.collect {|e| [ e.theme, e.id ] }) %>
+  </div>
+  <div class="field">
+    Participants<br>
+    <%= hidden_field_tag "project[participant_ids][]", nil %>
+    <% Participant.all.each do |participant| %>
+      <label class="checkbox">
+      <%= check_box_tag "project[participant_ids][]", participant.id, @project.participant_ids.include?(participant.id), id: dom_id(participant) %>
+      <%= participant.name %>
+      </label>
+    <% end %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

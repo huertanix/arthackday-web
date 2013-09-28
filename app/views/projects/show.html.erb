@@ -5,36 +5,40 @@
 	<div class="container">
 		<div id="project">
 			<div class="one-third column" id="project-description">
-				<h2>  <%= @project.name %></h2>
-		        <div class="basic-colfax">
-		        	berlin larger than life
-		        </div>
-		        <p><%= @project.description %></p>
-		        <% if @project.website %>
-					<a href="@project.website"><p>Project Website</p></a>
+				<h2><%= @project.name %></h2>
+	    	<div class="basic-colfax">
+	      	<%= @project.event.theme + " : " + @project.event.city %>
+	    	</div>
+	    	<p><%= @project.description %></p>
+	    	<% if @project.website %>
+					<a href="<%= @project.website %>"><p>Project Website</p></a>
 				<% end %>
 
 				<% if @project.github %>
-					<a href="@project.github"><p>Project Github</p></a>
+					<a href="<%= @project.github %>"><p>Project Github</p></a>
 				<% end %>
 
 				<div class="section-header basic-colfax">
-		        	contributors
-		        </div>
-		        <div class="project-contributor">
-			        <img src="https://si0.twimg.com/profile_images/1793418464/388888_10150511898106391_592121390_10881362_712276188_n_bigger.jpg"/>
-		    	    <div>
-		    	    	<div class="basic-colfax">paul christophe</div>
-		    	    	<a><p>@captDaylight</p></a>
-		        	</div>
-		      	</div>
-		        <div class="project-contributor">
-			        <img src="https://si0.twimg.com/profile_images/3258619754/02839446b5983cff17edfd914cbde4fe_bigger.jpeg"/>
-		    	    <div>
-		    	    	<div class="basic-colfax">paul christophe</div>
-		    	    	<a><p>@captDaylight</p></a>
-		        	</div>
-		      	</div>
+		      contributors
+		    </div>
+        <% @project.participants.each do |participant| %>
+          <div class="project-contributor">
+            <img src="https://si0.twimg.com/profile_images/1793418464/388888_10150511898106391_592121390_10881362_712276188_n_bigger.jpg"/>
+            <div>
+            <div class="basic-colfax"><%= participant.name %></div>
+              <% if !participant.twitter_handle.nil? %>
+                <a href="https://www.twitter.com/<%= URI.encode_www_form_component "#{participant.twitter_handle}" %>"><p>@<%= participant.twitter_handle %></p></a>
+              <% end %>
+            </div>
+  		    </div>
+        <% end %>
+		    <!--<div class="project-contributor">
+          <img src="https://si0.twimg.com/profile_images/3258619754/02839446b5983cff17edfd914cbde4fe_bigger.jpeg"/>
+          <div>
+            <div class="basic-colfax">paul christophe</div>
+            <a><p>@captDaylight</p></a>
+          </div>
+		    </div>-->
 			</div>
 			<div class="two-thirds column" id="project-contents">
 				<div class="project-item">

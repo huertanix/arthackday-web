@@ -25,6 +25,7 @@ class ParticipantsController < ApplicationController
   # POST /participants.json
   def create
     @participant = Participant.new(participant_params)
+    #participant_params[:event_ids] ||= []
 
     respond_to do |format|
       if @participant.save
@@ -65,10 +66,11 @@ class ParticipantsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_participant
       @participant = Participant.find(params[:id])
+      #@participant.events = Event.find(params[:event_ids]) if params[:event_ids]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def participant_params
-      params.require(:participant).permit(:name, :bio, :twitter_handle, :website)
+      params.require(:participant).permit(:name, :email, :bio, :twitter_handle, :website, {:event_ids => []})
     end
 end
