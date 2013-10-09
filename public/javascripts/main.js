@@ -13,8 +13,10 @@ function updateContainer(wH){
 }
 
 function orderParticipants(participantsContainer){
+	
 	var participants = participantsContainer.find('.participant');
    	var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
    	for(var i=0; i<str.length; i++){
       	var nextChar = str.charAt(i);
       	participants.each(function(){
