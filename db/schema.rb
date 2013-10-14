@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130926212155) do
+ActiveRecord::Schema.define(version: 20131014200034) do
 
   create_table "events", force: true do |t|
     t.string   "city"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20130926212155) do
     t.string   "header_image"
     t.string   "header_image_artist"
     t.string   "header_image_artist_website"
+    t.string   "theme_excerpt"
   end
 
   create_table "events_organizers", id: false, force: true do |t|
