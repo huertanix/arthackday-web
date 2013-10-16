@@ -19,6 +19,7 @@ Ruby Prereqs:
 
 Application Install:
 * bundle install
+* rake db:migrate
 * rails s
 
 Getting Started
