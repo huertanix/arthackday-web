@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "1.9.3"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
@@ -56,6 +57,8 @@ gem "nested_form" #, :git => "git://github.com/madebydna/nested_form.git"
 # Geocoding venue lat/lon for maps
 gem 'geocoder'
 
-group :production do 
+# Heroku stuff
+group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
