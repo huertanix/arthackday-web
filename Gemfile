@@ -55,3 +55,7 @@ gem "nested_form" #, :git => "git://github.com/madebydna/nested_form.git"
 
 # Geocoding venue lat/lon for maps
 gem 'geocoder'
+
+group :production do 
+  gem 'pg'
+end
