@@ -175,6 +175,12 @@ a,
 u {
   text-decoration: none;
 }
+.black-link a {
+  color: black;
+}
+.black-link a:visited {
+  color: black;
+}
 i {
   font-style: normal;
   font-family: "icomoon";
@@ -234,6 +240,12 @@ a:hover {
 }
 .top-margin {
   margin-top: 120px;
+}
+table {
+  border-collapse: collapse;
+}
+table tr {
+  border-bottom: 20px solid white;
 }
 /*
 * Skeleton V1.2
