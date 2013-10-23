@@ -6,19 +6,19 @@
 		<div id="project">
 			<div class="one-third column" id="project-description">
 				<h2><%= @project.name %></h2>
-	    	<div class="basic-colfax">
-	      	<%= @project.event.theme + " : " + @project.event.city %>
+	    	<div class="basic-colfax black-link">
+	      	<%= link_to(@project.event) do %><%= @project.event.theme + " : " + @project.event.city %><% end %>
 	    	</div>
 	    	<p><%= @project.description %></p>
-	    	<% if @project.website %>
-					<a href="<%= @project.website %>"><p>Project Website</p></a>
-				<% end %>
+	    	<% if @project.website? %>
+				<a href="<%= @project.website %>"><p>Project Website</p></a>
+			<% end %>
 
-				<% if @project.github %>
-					<a href="<%= @project.github %>"><p>Project Github</p></a>
-				<% end %>
+			<% if @project.github? %>
+				<a href="<%= @project.github %>"><p>Project Github</p></a>
+			<% end %>
 
-				<div class="section-header basic-colfax">
+			<div class="section-header basic-colfax">
 		      contributors
 		    </div>
         <% @project.participants.each do |participant| %>

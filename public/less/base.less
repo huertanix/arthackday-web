@@ -45,6 +45,14 @@ ul,li{
 a, u {
     text-decoration: none;
 }
+.black-link{
+  a{
+    color:black;
+    &:visited{
+      color:black;
+    }        
+  }
+}
 i{
     font-style:normal;
     font-family: @icons;
@@ -124,4 +132,10 @@ a{
 }
 @smallMargin: 35px;
 
+table{
+  border-collapse: collapse;
+  tr{
+    border-bottom: 20px solid white;
+  }
+}
 
