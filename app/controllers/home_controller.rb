@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @events = Event.all
+    @events = Event.all.sorted_by_date
   end
 end
