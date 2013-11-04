@@ -1,4 +1,5 @@
 class Event < ActiveRecord::Base
+  extend FriendlyId
   belongs_to :venue
   has_many :projects
   has_many :press_blurbs
@@ -13,6 +14,8 @@ class Event < ActiveRecord::Base
   :venue_id, :header_image, :header_image_artist, :header_image_artist_website, :theme_excerpt
 
   scope :sorted_by_date, order('hackathon_start desc') 
+
+  friendly_id :theme, use: :slugged
 
   def upcoming? 
     self.show_end > DateTime.now

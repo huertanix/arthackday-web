@@ -57,6 +57,9 @@ gem "nested_form" #, :git => "git://github.com/madebydna/nested_form.git"
 # Geocoding venue lat/lon for maps
 gem 'geocoder'
 
+# Semantic URLs (defined in event model)
+gem 'friendly_id', '~> 5.0.0' # Need 5.0.0 or above for Rails 4
+
 # Heroku stuff
 group :production do
   gem 'pg'
