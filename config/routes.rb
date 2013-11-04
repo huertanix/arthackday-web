@@ -23,8 +23,16 @@ ArthackdayWeb::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'home#index'
+  root 'home#index'
 
+   # SEO-friendly support for old website URLs
+  get '319scholes', to: redirect('/events/hackers-as-artists')
+  get 'big_bad_lab', to: redirect('/events/tech-not-bribes-art-for-suffrage')
+  get 'gaffta', to: redirect('/events/lethal-software')
+  get 'god_mode', to: redirect('/events/god-mode')
+  get 'stockholm', to: redirect('/events/larger-than-life')
+  get 'berlin', to: redirect('/events/going-dark')
+  get 'afterglow', to: redirect('/events/after-glow')
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
