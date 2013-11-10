@@ -791,6 +791,24 @@ a {
 .section#footer #footer-bottom a {
   color: white;
 }
+.section#about-page .container.about-what-section {
+  margin: 75px auto;
+}
+.section#about-page .container.about-what-section .one-third img {
+  width: 100%;
+}
+.section#about-page .container.about-what-section .two-thirds .section-header {
+  margin-top: -3px;
+}
+.section#about-page .container.about-partner-venue .one-third .section-header {
+  margin-top: -3px;
+}
+.section#about-page .container.about-partner-venue .two-thirds img {
+  width: 100%;
+}
+.section#about-page .container.about-press {
+  margin: 75px auto;
+}
 .section#landing-header,
 .section#header {
   height: 500px;
