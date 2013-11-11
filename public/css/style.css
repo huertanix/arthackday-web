@@ -809,6 +809,25 @@ a {
 .section#about-page .container.about-press {
   margin: 75px auto;
 }
+.section#about-page .container.about-press .about-press-blurb {
+  position: relative;
+  border: 1px solid black;
+  height: 190px;
+  padding: 0px 20px;
+}
+.section#about-page .container.about-press .about-press-blurb > div {
+  position: absolute;
+  display: table;
+  height: 190px;
+}
+.section#about-page .container.about-press .about-press-blurb > div > * {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.section#about-page .container.about-press .about-press-blurb > div > * .section-header {
+  margin-bottom: 20px;
+}
 .section#landing-header,
 .section#header {
   height: 500px;

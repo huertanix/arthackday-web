@@ -220,6 +220,25 @@ a{
 			}
 			&.about-press{
 				margin: 75px auto;
+				.about-press-blurb{
+					position: relative;
+					border: 1px solid black;
+					height: 190px;
+					padding: 0px 20px;
+					> div{
+						position: absolute; 
+						display: table; 
+						height:190px;
+						> *{
+							display: table-cell; 
+							vertical-align: middle; 
+							text-align: center;
+							.section-header{
+								margin-bottom: 20px;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
