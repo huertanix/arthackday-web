@@ -806,16 +806,20 @@ a {
 .section#about-page .container.about-partner-venue .two-thirds img {
   width: 100%;
 }
+.section#about-page .container#about-header {
+  padding-top: 100px;
+}
 .section#about-page .container.about-press {
   margin: 75px auto;
 }
 .section#about-page .container.about-press .about-press-blurb {
   position: relative;
-  border: 1px solid black;
   height: 190px;
-  padding: 0px 20px;
+  margin-bottom: 40px;
 }
 .section#about-page .container.about-press .about-press-blurb > div {
+  border: 1px solid black;
+  padding: 0px 20px;
   position: absolute;
   display: table;
   height: 190px;
