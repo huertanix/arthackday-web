@@ -211,7 +211,7 @@ a{
 					.section-header{
 						margin-top: -3px;
 					}
-				}
+				}	
 				.two-thirds{
 					img{
 						width:100%;
@@ -227,21 +227,46 @@ a{
 					position: relative;
 					height: 190px;
 					margin-bottom: 40px;
-					> div{
-						border: 1px solid black;
-						padding: 0px 20px;
-						position: absolute; 
-						display: table; 
-						height:190px;
-						> *{
-							display: table-cell; 
-							vertical-align: middle; 
-							text-align: center;
-							.section-header{
-								margin-bottom: 20px;
+					a{
+						color:@black;
+						.transition(all .2s ease);
+						> div{
+							.transition(all .2s ease);
+							border: 1px solid black;
+							padding: 0px 20px;
+							position: absolute; 
+							display: table; 
+							height:190px;
+							> *{
+								display: table-cell; 
+								vertical-align: middle; 
+								text-align: center;
+								.section-header{
+									margin-bottom: 20px;
+								}
 							}
 						}
+						&:hover{
+							
+							> div{
+								color:@white;
+								border-color: @electric-blue;
+								background-color: @electric-blue;
+
+							}
+						}						
 					}
+
+				}
+			}
+			&.about-sponsors{
+				.space{
+					height: 50px;
+				}
+				.about-sponsor{
+					background-color: @black;
+					margin-bottom: 40px;
+					height: 200px;
 				}
 			}
 		}

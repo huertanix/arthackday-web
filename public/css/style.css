@@ -817,20 +817,46 @@ a {
   height: 190px;
   margin-bottom: 40px;
 }
-.section#about-page .container.about-press .about-press-blurb > div {
+.section#about-page .container.about-press .about-press-blurb a {
+  color: #121112;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.section#about-page .container.about-press .about-press-blurb a > div {
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   border: 1px solid black;
   padding: 0px 20px;
   position: absolute;
   display: table;
   height: 190px;
 }
-.section#about-page .container.about-press .about-press-blurb > div > * {
+.section#about-page .container.about-press .about-press-blurb a > div > * {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 }
-.section#about-page .container.about-press .about-press-blurb > div > * .section-header {
+.section#about-page .container.about-press .about-press-blurb a > div > * .section-header {
   margin-bottom: 20px;
+}
+.section#about-page .container.about-press .about-press-blurb a:hover > div {
+  color: #ffffff;
+  border-color: #5000ff;
+  background-color: #5000ff;
+}
+.section#about-page .container.about-sponsors .space {
+  height: 50px;
+}
+.section#about-page .container.about-sponsors .about-sponsor {
+  background-color: #121112;
+  margin-bottom: 40px;
+  height: 200px;
 }
 .section#landing-header,
 .section#header {
