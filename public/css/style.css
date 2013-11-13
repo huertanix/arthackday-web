@@ -791,6 +791,9 @@ a {
 .section#footer #footer-bottom a {
   color: white;
 }
+.section#about-page .controls-wrapper .title {
+  display: none;
+}
 .section#about-page .container.about-what-section {
   margin: 75px auto;
 }
