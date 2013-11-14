@@ -23,6 +23,7 @@ class EventsController < ApplicationController
   # GET /events/1/edit
   def edit
     if organizer_signed_in?
+      logger.debug "param: {params[:id]}"
       @event = Event.friendly.find(params[:id])
     end
   end
@@ -82,12 +83,13 @@ private
     # the request path will not match the post_path, and we should do
     # a 301 redirect that uses the current friendly id.
     if request.path != event_path(@event)
-      return redirect_to @event, :status => :moved_permanently
+      #return redirect_to @event, :status => :moved_permanently
+      # TODO: fix to not break /edit
     end
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def event_params
-    params.require(:event).permit(:city, :theme, :hackathon_start, :hackathon_end, :show_start, :show_end, :about, :hack_rsvp_url, :show_rsvp_url, :venue_id, :theme_excerpt, :press_blurbs_attributes => [:id, :headline, :source_name, :source_url, :logo_uri, :event_id, :_destroy], :projects_attributes => [:id, :name, :description, :tag, :event_id, :_destroy], :sponsors_attributes => [:id, :name, :website, :logo_uri, :event_id, :_destroy])
+    params.require(:event).permit(:city, :theme, :hackathon_start, :hackathon_end, :show_start, :show_end, :about, :hack_rsvp_url, :show_rsvp_url, :venue_id, :theme_excerpt, :press_blurbs_attributes => [:id, :headline, :source_name, :source_url, :logo_uri, :featured, :event_id, :_destroy], :projects_attributes => [:id, :name, :description, :tag, :event_id, :_destroy], :sponsors_attributes => [:id, :name, :website, :logo_uri, :event_id, :_destroy])
   end
 end
