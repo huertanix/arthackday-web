@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131114032953) do
+ActiveRecord::Schema.define(version: 20131116231234) do
 
   create_table "events", force: true do |t|
     t.string   "city"
@@ -112,7 +112,7 @@ ActiveRecord::Schema.define(version: 20131114032953) do
   end
 
   create_table "press_blurbs", force: true do |t|
-    t.string   "headline"
+    t.text     "headline"
     t.string   "source_name"
     t.string   "source_url"
     t.string   "logo_uri"

@@ -104,7 +104,7 @@
 
 <div class="section" id="participants">
   <div class="container">
-      <div class="section-header columns sixteen">Participants</div>
+    <div class="section-header columns sixteen">Participants</div>
   </div>
   <div class="container" id="participants-container">
     <div class="column one-third participants-all">
@@ -124,7 +124,7 @@
             </div>
             <div class="participant-additional">
               <div class="participant-top">
-                <img src="<%= participant.photo_url %>" alt="" />
+                <img src="<%= participant.photo_url.blank? ? 'http://placekitten.com/48/48' : participant.photo_url %>" style="width:48px;height:48px;" />
                 <div>
                   <% if participant.twitter_handle.blank? %>
                     <a href="<%= participant.website %>"><p><%= participant.name %></p></a>
@@ -184,15 +184,14 @@
   <div class="container">
       <div class="column one-third" id="press-container">
         <div class="border-container">
-          <div class="press">
+          <% @event.press_blurbs.each do |blurb| %>
+            <div class="press">
+              <p>"<%= blurb.headline %>" _<a href="<%= blurb.source_url %>"><%= blurb.source_name %></a><p>
+            </div>
+          <% end %>
+          <!--<div class="press">
             <p>“It’s a new and different art form” _<a href="#">Gomorron Sverige</a><p>
-          </div>
-                    <div class="press">
-            <p>“It’s a new and different art form” _<a href="#">Gomorron Sverige</a><p>
-          </div>
-                    <div class="press">
-            <p>“It’s a new and different art form” _<a href="#">Gomorron Sverige</a><p>
-          </div>
+          </div>-->
         </div>
       </div>
       <div id="partners-container">
@@ -205,7 +204,7 @@
 </div>
 
 <% if organizer_signed_in? %>
-  <%= link_to 'Edit', edit_event_path(@event) %> |
+  <%= link_to 'Edit', edit_event_path(@event) %>
 <% end %>
 
 <script type="text/javascript"></script>
