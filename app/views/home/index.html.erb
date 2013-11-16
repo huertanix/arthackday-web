@@ -3,14 +3,17 @@
 ">
 	<div class="container">
 		<div class="event-callout sixteen columns">
-
-			<a href="http://localhost:3000/events/5"><div id="hero">GOING DARK</div>
-			<div id="sub-hero">LEAP/TRANSMEDIALE _ SEPT 26-28</div></a>
+			<%= link_to(@events.first) do %>
+				<div id="hero"><%= @events.first.theme %></div>
+				<div id="sub-hero">LEAP/TRANSMEDIALE _ SEPT 26-28</div>
+			<% end %>
 		</div>
 	</div>
-	<div id="header-credit">
-		<a href="#">IMAGERY BY: OCEAN FACE</a>
-	</div>
+	<% unless @events.first.header_image_artist.blank? %>
+    <div id="header-credit">
+      <a href="<%= @events.first.header_image_artist_website %>">IMAGERY BY: <%= @events.first.header_image_artist %></a>
+    </div>
+  <% end %>
 </div>
 
 <div class="section top-margin" id="ahd-about">
@@ -30,7 +33,7 @@
 		      	<div class="event-display"></div>
 		        <div class="event-title">
 		      		<%= link_to(event) do %>
-		        	<%=event.theme %>
+		        	<%= event.theme %>
 		        	<br/>
 		        	<%= event.city.upcase + ' _ ' + event.hackathon_start.strftime('%Y')%>
 		        	<% end %>
