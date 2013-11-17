@@ -1,11 +1,14 @@
 <div class="section" id="landing-header" style=" 
-  background: #000000 url(/img/ahd_assets/OF_ScreenTone.gif);
+  background: #000 url(<%= @events.first.header_image %>);
 ">
 	<div class="container">
 		<div class="event-callout sixteen columns">
 			<%= link_to(@events.first) do %>
 				<div id="hero"><%= @events.first.theme %></div>
-				<div id="sub-hero">LEAP/TRANSMEDIALE _ SEPT 26-28</div>
+				<div id="sub-hero">
+					<%= @events.first.venue.name %> _ <%= @events.first.hackathon_start.strftime('%^b') %> 
+					<%= @events.first.hackathon_start.strftime('%-d') %>-<%= @events.first.show_start.strftime('%-d') %>
+				</div>
 			<% end %>
 		</div>
 	</div>
@@ -35,7 +38,7 @@
 		      		<%= link_to(event) do %>
 		        	<%= event.theme %>
 		        	<br/>
-		        	<%= event.city.upcase + ' _ ' + event.hackathon_start.strftime('%Y')%>
+		        	<%= event.city.upcase + ' _ ' + event.hackathon_start.strftime('%Y') %>
 		        	<% end %>
 		        </div>
 		        <div class="event-short-about">
