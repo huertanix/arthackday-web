@@ -195,10 +195,10 @@
         </div>
       </div>
       <div id="partners-container">
-        <div class="column one-third partner"></div>
-        <div class="column one-third partner"></div>
-        <div class="column one-third partner"></div>
-        <div class="column one-third partner"></div>
+        <% @event.sponsors.each do |sponsor| %>
+        <div class="column one-third partner"><%= sponsor.name %></div>
+        <% end %>
+        <!--<div class="column one-third partner"></div>-->
       </div>
   </div>
 </div>
