@@ -7,7 +7,7 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record, but not on Heroku
 group :development, :test do
   gem 'sqlite3'
-  gem 'pg' # temporary for data migration
+  #gem 'pg' # temporary for data migration
   gem 'taps'
 end
 
@@ -61,6 +61,9 @@ gem 'geocoder'
 
 # Semantic URLs (defined in event model)
 gem 'friendly_id', '~> 5.0.0' # Need 5.0.0 or above for Rails 4
+
+# File uploads, because it's a fucking mission to Jupiter with just Rails
+gem "paperclip", "~> 3.0"
 
 # Heroku stuff
 group :production do

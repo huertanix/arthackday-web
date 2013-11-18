@@ -23,7 +23,6 @@ class EventsController < ApplicationController
   # GET /events/1/edit
   def edit
     if organizer_signed_in?
-      logger.debug "param: {params[:id]}"
       @event = Event.friendly.find(params[:id])
     end
   end
@@ -78,7 +77,6 @@ private
   # Use callbacks to share common setup or constraints between actions.
   def set_event
     @event = Event.friendly.find(params[:id])
-
     # If an old id or a numeric id was used to find the record, then
     # the request path will not match the post_path, and we should do
     # a 301 redirect that uses the current friendly id.
@@ -86,6 +84,18 @@ private
       #return redirect_to @event, :status => :moved_permanently
       # TODO: fix to not break /edit
     end
+    
+    #logger.debug "UUUUUUUUUGGGGGGGGGGHHHHHHHHH header image always blank: #{ params[:header_image_file] }"
+    # File upload stuffs
+    #unless params[:header_image_file].nil?
+    #  uploaded_io = params[:header_image_file]
+      
+    #  File.open(Rails.root.join('public', 'header_backgrounds', uploaded_io.original_filename), 'wb') do |file|
+    #    file.write(uploaded_io.read)
+        # Not sure about the elegance of this approach, but more mechanically simpler than Paperclip
+    #    params[:header_image] = '/header_backgrounds/' + uploaded_io.original_filename
+    #  end
+    #end # doesn't work
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

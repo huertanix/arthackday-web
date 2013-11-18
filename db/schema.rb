@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20131116231234) do
     t.string   "slug"
   end
 
-  add_index "events", ["slug"], name: "index_events_on_slug", unique: true, using: :btree
+  add_index "events", ["slug"], name: "index_events_on_slug", unique: true
 
   create_table "events_organizers", id: false, force: true do |t|
     t.integer "event_id",     null: false
@@ -58,10 +58,10 @@ ActiveRecord::Schema.define(version: 20131116231234) do
     t.datetime "created_at"
   end
 
-  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
-  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
-  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
-  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
+  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
+  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
 
   create_table "organizers", force: true do |t|
     t.string   "name"
@@ -81,8 +81,8 @@ ActiveRecord::Schema.define(version: 20131116231234) do
     t.string   "last_sign_in_ip"
   end
 
-  add_index "organizers", ["email"], name: "index_organizers_on_email", unique: true, using: :btree
-  add_index "organizers", ["reset_password_token"], name: "index_organizers_on_reset_password_token", unique: true, using: :btree
+  add_index "organizers", ["email"], name: "index_organizers_on_email", unique: true
+  add_index "organizers", ["reset_password_token"], name: "index_organizers_on_reset_password_token", unique: true
 
   create_table "participants", force: true do |t|
     t.string   "name"
@@ -104,7 +104,7 @@ ActiveRecord::Schema.define(version: 20131116231234) do
     t.string   "photo_url"
   end
 
-  add_index "participants", ["reset_password_token"], name: "index_participants_on_reset_password_token", unique: true, using: :btree
+  add_index "participants", ["reset_password_token"], name: "index_participants_on_reset_password_token", unique: true
 
   create_table "participants_projects", id: false, force: true do |t|
     t.integer "participant_id", null: false
@@ -112,7 +112,7 @@ ActiveRecord::Schema.define(version: 20131116231234) do
   end
 
   create_table "press_blurbs", force: true do |t|
-    t.text     "headline"
+    t.text     "headline",    limit: 255
     t.string   "source_name"
     t.string   "source_url"
     t.string   "logo_uri"

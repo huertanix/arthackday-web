@@ -6,6 +6,12 @@ class Event < ActiveRecord::Base
   has_many :sponsors
   has_and_belongs_to_many :participants
   has_and_belongs_to_many :organizers
+
+  #attr_accessor :header_image_file 
+  #attr_reader :header_image_file #ugh
+  # fuck it I'll use paperclip #yolo
+  #has_attached_file :header_image, :styles => { :medium => "300x300>", :thumb => "100x100>" } #, :default_url => "/images/:style/missing.png"
+
   # venue might not work here?
   accepts_nested_attributes_for :projects, :press_blurbs, :sponsors, :participants, allow_destroy: true
   # protect from hax
