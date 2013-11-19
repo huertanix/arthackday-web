@@ -673,6 +673,7 @@ a {
 }
 .nav .nav-right {
   margin: 25px;
+  margin-top: 20px;
   font-size: 12px;
   float: right;
 }
@@ -1162,6 +1163,7 @@ a {
 }
 .section#press-partners #press-container .press a {
   color: #5000ff;
+  font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 .section#press-partners #press-container .press a:hover {
   color: black;
