@@ -137,6 +137,7 @@ video {
   font-style: inherit;
   font-size: 100%;
   font-family: 'COLFAX';
+  color: black;
 }
 html,
 body {
@@ -791,6 +792,14 @@ a {
   text-align: left;
   padding-top: 9px;
   font-size: 12px;
+  text-transform: capitalize;
+}
+.section#footer #footer-bottom #organized-by {
+  font-size: 10px;
+  color: white;
+}
+.section#footer #footer-bottom #organized-by a:hover {
+  color: black;
 }
 .section#footer #footer-bottom a {
   color: white;
@@ -1033,12 +1042,15 @@ a {
 }
 .section#contact-page {
   background-color: black;
-  color: white;
   padding-top: 150px;
   padding-bottom: 200px;
   min-height: 100%;
   margin-bottom: -200px;
   height: 100%;
+  color: white;
+}
+.section#contact-page .section-header {
+  color: white;
 }
 .section#contact-page .one-third ul li {
   margin-bottom: 30px;
@@ -1049,7 +1061,11 @@ a {
 .section#contact-page .one-third ul li a:hover {
   color: #5000ff;
 }
+.section#contact-page .one-third ul li div {
+  color: white;
+}
 .section#contact-page .one-third ul li p {
+  color: white;
   font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 14px;
   line-height: 17px;
@@ -1083,6 +1099,9 @@ a {
 .section#ahd-about #ahd-tagline a {
   font-family: 'COLFAX';
   color: #5000ff;
+}
+.section#ahd-about #ahd-tagline a:hover {
+  color: black;
 }
 .section#header {
   height: 500px;
