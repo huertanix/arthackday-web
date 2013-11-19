@@ -652,6 +652,10 @@ a {
 .nav .back-to-top {
   cursor: pointer;
 }
+.nav .back-to-top img {
+  height: 10px;
+  margin-top: 4px;
+}
 .nav .nav-left {
   margin: 25px;
   color: white;
@@ -803,8 +807,40 @@ a {
 .section#about-page .container.about-what-section .two-thirds .section-header {
   margin-top: -3px;
 }
+.section#about-page .container.about-partner-venue .one-third {
+  height: 427px;
+}
 .section#about-page .container.about-partner-venue .one-third .section-header {
   margin-top: -3px;
+}
+.section#about-page .container.about-partner-venue .one-third p {
+  margin-bottom: 20px;
+}
+.section#about-page .container.about-partner-venue .one-third ul {
+  font-size: 13px;
+}
+.section#about-page .container.about-partner-venue .one-third ul li a {
+  color: black;
+}
+.section#about-page .container.about-partner-venue .one-third button {
+  color: #ffffff;
+  background-color: black;
+  border-radius: 0px;
+  border: none;
+  font-family: 'COLFAX';
+  font-size: 13px;
+  position: absolute;
+  bottom: 3px;
+  padding: 7px 60px;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.section#about-page .container.about-partner-venue .one-third button:hover {
+  background-color: #5000ff;
 }
 .section#about-page .container.about-partner-venue .two-thirds img {
   width: 100%;
@@ -853,13 +889,30 @@ a {
   border-color: #5000ff;
   background-color: #5000ff;
 }
-.section#about-page .container.about-sponsors .space {
+.section#about-page .container.about-sponsors .sponsor-space {
   height: 50px;
 }
 .section#about-page .container.about-sponsors .about-sponsor {
   background-color: #121112;
   margin-bottom: 40px;
   height: 200px;
+}
+.section#about-page .container.about-sponsors .sponsor-us a div {
+  border: 1px solid black;
+  text-align: center;
+  padding: 35px 0px 30px 0px;
+  color: black;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  font-size: 35px;
+}
+.section#about-page .container.about-sponsors .sponsor-us a:hover div {
+  color: #ffffff;
+  background-color: #5000ff;
+  border-color: #5000ff;
 }
 .section#landing-header,
 .section#header {
@@ -1099,16 +1152,20 @@ a {
   height: 200px;
   margin-bottom: 40px;
 }
+.section#press-partners #partners-container .partner:nth-child(even) {
+  margin-right: 0px;
+}
+.section#press-partners #partners-container .partner:nth-child(odd) {
+  margin-left: 0px;
+}
 .section#participants {
   margin-top: 100px;
 }
 .section#participants #participants-container {
   -moz-column-count: 3;
   /* Firefox */
-
   -webkit-column-count: 3;
   /* Safari and Chrome */
-
   column-count: 3;
 }
 .section#participants #participants-container .participant .name {
@@ -1161,23 +1218,16 @@ a {
 }
 .section#projects .projects .project {
   /*width:260px;*/
-
   /*height: 160px;*/
-
   /*padding: @margin;*/
-
   /*				background-color: #ddd;
 */
   /*display: inline-block;*/
-
   /*margin: 0px 0px @margin @margin;*/
-
   /*vertical-align: top;*/
-
   /*				color: white;
 
 */
-
   background-position: center;
   height: 200px;
   margin-bottom: 40px;
@@ -1187,14 +1237,11 @@ a {
   /*				margin-left: 20px;
 				width:300px;
 				margin-bottom: 35px;*/
-
   /*margin: 0px 20px;*/
-
   /*
 				.project-inner{
 					width:100%;
 				}*/
-
 }
 .section#projects .projects .project img {
   width: 100%;
@@ -1277,7 +1324,6 @@ a {
   font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   height: 53px;
   /* Fallback for non-webkit */
-
   overflow: hidden;
   font-size: 14px;
   line-height: 17px;
@@ -1321,25 +1367,10 @@ a {
 /* #Media Queries
 ================================================== */
 /* Smaller than standard 960 (devices and browsers) */
-@media only screen and (max-width: 959px) {
-  
-}
 /* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  
-}
 /* All Mobile Sizes (devices and browser) */
-@media only screen and (max-width: 767px) {
-  
-}
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  
-}
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {
-  
-}
 .animated {
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;

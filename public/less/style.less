@@ -10,7 +10,6 @@ a{
 	font-family: 'COLFAX';
 }
 
-
 .nav{
 	height:98px;
 	width:100%;
@@ -50,6 +49,10 @@ a{
 	}
 	.back-to-top{
 		cursor: pointer;
+		img{
+			height: 10px;
+			margin-top: 4px;
+		}
 	}
 	.nav-left{
 		margin: 25px;
@@ -213,8 +216,38 @@ a{
 			}
 			&.about-partner-venue{
 				.one-third{
+					height: 427px;
+
 					.section-header{
 						margin-top: -3px;
+					}
+					p{
+						margin-bottom: 20px;
+					}
+					ul{
+						font-size: 13px;
+
+						li{
+							a{
+								color: black;
+							}
+						}
+					}
+					button{
+						color:@white;
+						background-color: black;
+						border-radius: 0px;
+						border: none;
+						font-family: 'COLFAX';
+						font-size: 13px;
+						position: absolute;
+						bottom: 3px;
+						padding: 7px 60px;
+						.transition(all .2s ease);
+						cursor: pointer;
+						&:hover{
+							background-color: @electric-blue;
+						}
 					}
 				}	
 				.two-thirds{
@@ -265,13 +298,33 @@ a{
 				}
 			}
 			&.about-sponsors{
-				.space{
+				.sponsor-space{
 					height: 50px;
 				}
 				.about-sponsor{
 					background-color: @black;
 					margin-bottom: 40px;
 					height: 200px;
+				}
+				.sponsor-us{
+					a{
+						div{
+							border: 1px solid black;
+							text-align: center;
+							padding: 35px 0px 30px 0px;							
+							color:black;
+							.transition(all .2s ease);
+							font-size: 35px;
+						}
+						&:hover{
+							div{
+								color: @white;
+								background-color: @electric-blue;
+								border-color: @electric-blue;
+							}
+						}
+					}
+
 				}
 			}
 		}
@@ -523,6 +576,12 @@ a{
 				background-color: #eee;
 				height: 200px;
 				margin-bottom: 40px;
+				&:nth-child(even){
+					margin-right: 0px;
+				}
+				&:nth-child(odd){
+					margin-left: 0px;
+				}
 			}
 		}
 	}

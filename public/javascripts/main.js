@@ -57,9 +57,9 @@ $(function(){
 
 
 	// nav bar expand and contract
-	$('.back-to-top').click(function(){
-		$("html, body").animate({ scrollTop: 0 }, "slow");
-	});
+	// $('.back-to-top').click(function(){
+	// 	$("html, body").animate({ scrollTop: 0 }, "slow");
+	// });
 	$('body').waypoint(function(direction) {
 		if(direction === 'down'){
 			$('#nav-main').removeClass('slideDown').addClass('slideUp');
@@ -79,6 +79,7 @@ $(function(){
 
 	//check if it's the events page
 	if ($('#events-page,#project-page,.space').length > 0) {
+		console.log('here');
 		$('#nav-main').addClass('black-on-white');
 		$('#white-logo').hide();
 		$('#black-logo').show();
