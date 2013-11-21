@@ -46,6 +46,24 @@ function orderParticipants(participantsContainer){
    	});
 }
 
+function videoResize(test){
+	var height = $('#landing-header').height();
+	var width = $('#landing-header').width();
+	var RATIO = 0.54375;
+
+	if((height/width) < RATIO){
+		$('iframe').height(height/RATIO).width(width);
+		var videoHeight = height/RATIO;
+		var diff = (height - videoHeight) / 2;
+		$('iframe').css({top: diff, left: 0});			
+	}else{
+		$('iframe').height(height).width(width/RATIO);
+		var videoWidth = width/RATIO;
+		var diff = (width - videoWidth) /2;
+		$('iframe').css({left: diff, top:0});	
+	}
+}
+
 
 $(function(){
 	
@@ -53,7 +71,17 @@ $(function(){
    	updateContainer();	
     $(window).resize(function() {
     	updateContainer();
+    	if ($('#about-page').length === 1){
+    		videoResize();
+    	}
     });
+
+    // for the about section
+	if ($('#about-page').length === 1) {
+		videoResize();
+	}
+    
+
 
 
 	// nav bar expand and contract

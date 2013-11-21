@@ -137,7 +137,6 @@ video {
   font-style: inherit;
   font-size: 100%;
   font-family: 'COLFAX';
-  color: black;
 }
 html,
 body {
@@ -151,11 +150,13 @@ h5,
 h6 {
   margin: 10px 0;
   font-family: 'COLFAX';
-  font-weight: bold;
   line-height: 20px;
   color: black;
   text-rendering: optimizelegibility;
   text-transform: uppercase;
+}
+p {
+  color: black;
 }
 h1,
 h2,
@@ -166,7 +167,8 @@ h1 {
   font-size: 50px;
 }
 h2 {
-  font-size: 30px;
+  font-size: 36px;
+  line-height: 38px;
 }
 ul,
 li {
@@ -817,6 +819,9 @@ a {
 .section#about-page .container.about-what-section .two-thirds .section-header {
   margin-top: -3px;
 }
+.section#about-page .container.about-partner-venue {
+  margin-top: 150px;
+}
 .section#about-page .container.about-partner-venue .one-third {
   height: 427px;
 }
@@ -856,10 +861,10 @@ a {
   width: 100%;
 }
 .section#about-page .container#about-header {
-  padding-top: 100px;
+  margin: 150px auto;
 }
 .section#about-page .container.about-press {
-  margin: 75px auto;
+  margin: 150px auto;
 }
 .section#about-page .container.about-press .about-press-blurb {
   position: relative;
@@ -894,10 +899,17 @@ a {
 .section#about-page .container.about-press .about-press-blurb a > div > * .section-header {
   margin-bottom: 20px;
 }
+.section#about-page .container.about-press .about-press-blurb a:hover {
+  color: #ffffff;
+}
 .section#about-page .container.about-press .about-press-blurb a:hover > div {
   color: #ffffff;
   border-color: #5000ff;
   background-color: #5000ff;
+}
+.section#about-page .container.about-press .about-press-blurb a:hover > div .section-header,
+.section#about-page .container.about-press .about-press-blurb a:hover > div p {
+  color: white;
 }
 .section#about-page .container.about-sponsors .sponsor-space {
   height: 50px;
@@ -923,6 +935,12 @@ a {
   color: #ffffff;
   background-color: #5000ff;
   border-color: #5000ff;
+}
+.section#landing-header {
+  overflow: hidden;
+}
+.section#landing-header iframe {
+  position: absolute;
 }
 .section#landing-header,
 .section#header {
@@ -1091,6 +1109,20 @@ a {
   margin-bottom: 30px;
   color: white;
 }
+.section#contact-page .two-third button {
+  border: 1px solid white;
+  background: none;
+  color: white;
+  padding: 10px 40px;
+  font-family: 'COLFAX';
+  text-transform: uppercase;
+  font-size: 13px;
+  cursor: pointer;
+}
+.section#contact-page .two-third button:hover {
+  color: black;
+  background-color: white;
+}
 .section#ahd-about #ahd-tagline {
   font-size: 36px;
   line-height: 38px;
@@ -1113,7 +1145,6 @@ a {
   margin: 150px 0px;
 }
 .section#event-about h2 {
-  line-height: 30px;
   text-transform: uppercase;
   margin-bottom: 25px;
 }
@@ -1121,8 +1152,10 @@ a {
   margin-bottom: 25px;
   font-size: 13px;
   text-transform: uppercase;
+  color: black;
 }
 .section#event-about .about-event-section p {
+  color: black;
   padding-right: 100px;
 }
 .section#event-about .about-event-right .border-container {
@@ -1298,6 +1331,8 @@ a {
   text-transform: uppercase;
   font-size: 13px;
   margin-bottom: 35px;
+  color: black;
+  letter-spacing: .02em;
 }
 .section .container .section-header a {
   color: black;
@@ -1315,6 +1350,7 @@ a {
   font-family: 'COLFAX';
   text-transform: uppercase;
   text-shadow: 0px 0px 10px #000000;
+  color: white;
 }
 .section .container .event-callout #sub-hero {
   font-size: 21px;
@@ -1322,6 +1358,7 @@ a {
   font-family: 'COLFAX';
   text-transform: uppercase;
   text-shadow: 0px 0px 10px #000000;
+  color: white;
 }
 .section .container #events-homepage .event-homepage .event-display {
   height: 200px;

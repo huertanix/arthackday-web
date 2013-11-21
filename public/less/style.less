@@ -224,8 +224,10 @@ a{
 						margin-top: -3px;
 					}
 				}
+
 			}
 			&.about-partner-venue{
+				margin-top: 150px;
 				.one-third{
 					height: 427px;
 
@@ -268,10 +270,10 @@ a{
 				}
 			}
 			&#about-header{
-				padding-top: 100px;
+				margin: 150px auto;
 			}
 			&.about-press{
-				margin: 75px auto;
+				margin: 150px auto;
 				.about-press-blurb{
 					position: relative;
 					height: 190px;
@@ -296,11 +298,14 @@ a{
 							}
 						}
 						&:hover{
-							
+							color:@white;
 							> div{
 								color:@white;
 								border-color: @electric-blue;
 								background-color: @electric-blue;
+								.section-header,p{
+									color:white;
+								}
 
 							}
 						}						
@@ -341,6 +346,12 @@ a{
 		}
 	}
 	// landing page
+	&#landing-header{
+		overflow: hidden;
+		iframe{
+			position: absolute;
+		}
+	}
 	&#landing-header, &#header{
 		height: 500px;
 		background-color: black;
@@ -509,6 +520,20 @@ a{
 				margin-bottom: 30px;
 				color: white;
 			}
+			button{
+				border: 1px solid white;
+				background: none;
+				color: white;
+				padding: 10px 40px;
+				font-family: 'COLFAX';
+				text-transform: uppercase;
+				font-size: 13px;
+				cursor: pointer;
+				&:hover{
+					color: black;
+					background-color: white;
+				}
+			}
 		}
 	}
 	&#ahd-about{
@@ -537,7 +562,6 @@ a{
 	&#event-about{
 		margin: 150px 0px;
 		h2{
-			line-height: 30px;
 			text-transform:uppercase;
 			margin-bottom: 25px;
 		}
@@ -546,8 +570,10 @@ a{
 				margin-bottom: 25px;
 				font-size: 13px;
 				text-transform:uppercase;
+				color:black;
 			}
 			p{
+				color:black;
 				padding-right: 100px;
 			}
 		}
@@ -730,6 +756,8 @@ a{
 			text-transform:uppercase;
 			font-size: 13px;
 			margin-bottom: @smallMargin;
+			color: black;
+			letter-spacing: .02em;
 			a{
 				color: black;
 			}
@@ -740,12 +768,14 @@ a{
 		}
 		.event-callout{
 			text-align: center;
+
 			#hero{
 				font-size: 150px;
 				line-height: 150px;
 				font-family: 'COLFAX';
 				text-transform:uppercase;
 				text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+				color:white;
 			}
 			#sub-hero{
 				font-size: 21px;
@@ -753,6 +783,7 @@ a{
 				font-family: 'COLFAX';
 				text-transform:uppercase;
 				text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+				color:white;
 			}
 		}
 		#events-homepage{
