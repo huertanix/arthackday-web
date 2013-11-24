@@ -31,12 +31,12 @@
       <div>
         HACKING BEGINS
         <br/>
-        <%= @event.hackathon_start.strftime('%D,%Y')%>
+        <%= @event.hackathon_start.strftime('%A, %b %e, %Y %l:%M %p') %>
         <br/>
         <br/>
         CLOSING EXHIBIT &amp; PARTY (OPEN TO THE PUBLIC)
         <br/>
-        <%= @event.hackathon_end.strftime('%D,%Y')%>
+        <%= @event.hackathon_end.strftime('%A, %b %e, %Y %l:%M %p') %>
       </div>
       <p>
         <%= @event.about %>
