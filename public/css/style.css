@@ -1271,34 +1271,19 @@ a {
   border-bottom: 1px solid black;
 }
 .section#projects .projects .project {
-  /*width:260px;*/
-  /*height: 160px;*/
-  /*padding: @margin;*/
-  /*				background-color: #ddd;
-*/
-  /*display: inline-block;*/
-  /*margin: 0px 0px @margin @margin;*/
-  /*vertical-align: top;*/
-  /*				color: white;
-
-*/
-  background-position: center;
-  height: 200px;
+  position: relative;
   margin-bottom: 40px;
   overflow: hidden;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  /*				margin-left: 20px;
-				width:300px;
-				margin-bottom: 35px;*/
-  /*margin: 0px 20px;*/
-  /*
-				.project-inner{
-					width:100%;
-				}*/
 }
 .section#projects .projects .project img {
   width: 100%;
+  display: block;
+}
+.section#projects .projects .project > div {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
 }
 .section#projects .projects .project .project-info {
   -moz-transition: all 0.2s ease;
@@ -1312,12 +1297,19 @@ a {
   height: 100%;
   width: 100%;
   text-align: center;
-  padding: 75px 0px;
 }
-.section#projects .projects .project .project-info div {
+.section#projects .projects .project .project-info > div {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+}
+.section#projects .projects .project .project-info > div > div {
+  margin-top: -30px;
+}
+.section#projects .projects .project .project-info > div > div > div {
   margin-bottom: 20px;
 }
-.section#projects .projects .project .project-info p {
+.section#projects .projects .project .project-info > div > div p {
   padding: 0px 10px;
 }
 .section#projects .projects .project:hover .project-info {

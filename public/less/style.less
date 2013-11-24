@@ -699,33 +699,20 @@ a{
 	&#projects{
 		.projects{
 			.project{
-				/*width:260px;*/
-				/*height: 160px;*/
-				/*padding: @margin;*/
-/*				background-color: #ddd;
-*/				/*display: inline-block;*/
-				/*margin: 0px 0px @margin @margin;*/
-				/*vertical-align: top;*/
-/*				color: white;
-
-*/
-				background-position: center;
+				position: relative;
 				img{
 					width: 100%;
+					display: block;
 				}
-				height: 200px;
+				// height: 200px;
 				margin-bottom: 40px;
 				overflow: hidden;
-				background-size: 100%;
-    			background-repeat: no-repeat;
-/*				margin-left: 20px;
-				width:300px;
-				margin-bottom: 35px;*/
-				/*margin: 0px 20px;*/
-/*
-				.project-inner{
-					width:100%;
-				}*/
+				> div{
+					position: absolute;
+					top: 0px;
+					width: 100%;
+					height: 100%;
+				}
 				.project-info{
 					.transition(all .2s ease);
 
@@ -735,13 +722,23 @@ a{
 					height: 100%;
 					width: 100%;
 					text-align: center;
-					padding: 75px 0px;
-					div{
-						margin-bottom: 20px;
+					> div{
+						position: absolute;
+						width: 100%;
+						top: 50%;
+						> div{
+							margin-top: -30px;
+							> div{
+								margin-bottom: 20px;
+							}
+							p{
+								padding:0px 10px;
+							}	
+
+						}
+					
 					}
-					p{
-						padding:0px 10px;
-					}
+
 				}
 				&:hover .project-info{
 					opacity: 1;
