@@ -154,6 +154,7 @@ h6 {
   color: black;
   text-rendering: optimizelegibility;
   text-transform: uppercase;
+  letter-spacing: .02em;
 }
 p {
   color: black;
@@ -822,22 +823,22 @@ a {
 .section#about-page .container.about-partner-venue {
   margin-top: 150px;
 }
-.section#about-page .container.about-partner-venue .one-third {
+.section#about-page .container.about-partner-venue .partner-container {
   height: 427px;
 }
-.section#about-page .container.about-partner-venue .one-third .section-header {
+.section#about-page .container.about-partner-venue .partner-container .section-header {
   margin-top: -3px;
 }
-.section#about-page .container.about-partner-venue .one-third p {
+.section#about-page .container.about-partner-venue .partner-container p {
   margin-bottom: 20px;
 }
-.section#about-page .container.about-partner-venue .one-third ul {
+.section#about-page .container.about-partner-venue .partner-container ul {
   font-size: 13px;
 }
-.section#about-page .container.about-partner-venue .one-third ul li a {
+.section#about-page .container.about-partner-venue .partner-container ul li a {
   color: black;
 }
-.section#about-page .container.about-partner-venue .one-third button {
+.section#about-page .container.about-partner-venue .partner-container button {
   color: #ffffff;
   background-color: black;
   border-radius: 0px;
@@ -854,7 +855,7 @@ a {
   transition: all 0.2s ease;
   cursor: pointer;
 }
-.section#about-page .container.about-partner-venue .one-third button:hover {
+.section#about-page .container.about-partner-venue .partner-container button:hover {
   background-color: #5000ff;
 }
 .section#about-page .container.about-partner-venue .two-thirds img {
@@ -1128,6 +1129,8 @@ a {
   line-height: 38px;
   font-family: 'COLFAX';
   text-transform: uppercase;
+  color: black;
+  letter-spacing: .02em;
 }
 .section#ahd-about #ahd-tagline a {
   font-family: 'COLFAX';
@@ -1341,7 +1344,6 @@ a {
   line-height: 150px;
   font-family: 'COLFAX';
   text-transform: uppercase;
-  text-shadow: 0px 0px 10px #000000;
   color: white;
 }
 .section .container .event-callout #sub-hero {
@@ -1349,7 +1351,6 @@ a {
   line-height: 21px;
   font-family: 'COLFAX';
   text-transform: uppercase;
-  text-shadow: 0px 0px 10px #000000;
   color: white;
 }
 .section .container #events-homepage .event-homepage .event-display {
