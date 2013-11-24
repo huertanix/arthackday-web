@@ -70,22 +70,79 @@
   </div>
   <div class="container">
     <div class="projects" id="projects-container">
-      <% @event.projects.each do |project| %>
-        <div class="project column one-third" style="background: url(http://placekitten.com/300/200);background-size: 100%;background-position: center;">
-          <a href="/projects/<%= project.id %>">
-          <div class="project-info">
-            <div class="basic-colfax">
-              <%= project.name %>
-            </div>
-            <p>
-              <% project.participants.each do |proj_participant| %>
-                _<%= proj_participant.name %>
-              <% end %>
-            </p>
-          </div>
-          </a>
+
+        <div class="project-column column one-third">
+          <% @event.projects.each_with_index do |project, index| %>
+            <% if (index % 3 == 0) %>
+              <div class="project">
+                <img src="http://placekitten.com/300/200"/>
+                <div>
+                  <a href="/projects/<%= project.id %>">
+                    <div class="project-info">
+                      <div class="project-wrapper">
+                        <div>
+                          <div class="basic-colfax">
+                            <%= project.name %>
+                          </div>
+                          <p>
+                            <% project.participants.each do |proj_participant| %>
+                              _<%= proj_participant.name %>
+                            <% end %>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            <% end%>
+          <% end %>
         </div>
-      <% end %>
+        <div class="project-column column one-third">
+          <% @event.projects.each_with_index do |project, index| %>
+
+            <% if (index % 3 == 1) %>
+              <div class="project column one-third" style="background: url(http://placekitten.com/300/200);background-size: 100%;background-position: center;">
+                <a href="/projects/<%= project.id %>">
+                <div class="project-info">
+                  <div class="basic-colfax">
+                    <%= project.name %>
+                  </div>
+                  <p>
+                    <% project.participants.each do |proj_participant| %>
+                      _<%= proj_participant.name %>
+                    <% end %>
+                  </p>
+                </div>
+                </a>
+              </div>
+            <% end%>
+          <% end %>
+        </div>
+        <div class="project-column column one-third">
+          <% @event.projects.each_with_index do |project, index| %>
+            <% if (index % 3 == 2) %>
+              <div class="project column one-third" style="background: url(http://placekitten.com/300/200);background-size: 100%;background-position: center;">
+                <a href="/projects/<%= project.id %>">
+                <div class="project-info">
+                  <div class="basic-colfax">
+                    <%= project.name %>
+                  </div>
+                  <p>
+                    <% project.participants.each do |proj_participant| %>
+                      _<%= proj_participant.name %>
+                    <% end %>
+                  </p>
+                </div>
+                </a>
+              </div>
+            <% end%>
+          <% end %>
+        </div>
+
+
+
+
 
       <!--<div class="project column one-third" style="background: url(http://25.media.tumblr.com/e9e0b008f6bf6a78c3a208efef8126f4/tumblr_mmnfc4gKEs1rlcnubo1_250.jpg);background-size: 100%;background-position: center;">
                 <div class="project-info">
