@@ -758,7 +758,7 @@ a {
 .section#footer #footer-top #social-section li {
   float: left;
   font-size: 20px;
-  margin-left: 15px;
+  margin-left: 20px;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
@@ -772,9 +772,11 @@ a {
   color: #5000ff;
   margin-top: 1px;
 }
-.section#footer #footer-top #social-section li a i {
-  position: relative;
-  top: 1px;
+.section#footer #footer-top #social-section li a img {
+  height: 20px;
+}
+.section#footer #footer-top #social-section li:hover {
+  margin-top: 1px;
 }
 .section#footer #footer-top #main-sponsors {
   margin-top: 35px;
