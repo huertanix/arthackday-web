@@ -22,23 +22,39 @@
   <div class="container">
     <div class="sixteen columns">
       <div class="section-header">show information</div>
+      
       <h2>
         <%= @event.hackathon_start.strftime('%^B') %> <%= @event.hackathon_start.strftime('%-d') %>-<%= @event.hackathon_end.strftime('%-d') %>, <%= @event.hackathon_start.strftime('%^Y') %>
         <br/>
         <%=  @event.venue.nil? ? "TBA" : @event.venue.city %>_<%= @event.venue.nil? ? "TBA" : @event.venue.name %>
       </h2>
+
     </div>
-    <div class="about-event-section two-thirds column">
-      <div>
-        HACKING BEGINS
-        <br/>
-        <%= @event.hackathon_start.strftime('%^B') %> <%= @event.hackathon_start.strftime('%-d') %>, <%= @event.hackathon_start.strftime('%^Y') %>
-        <br/>
-        <br/>
-        CLOSING EXHIBIT &amp; PARTY (OPEN TO THE PUBLIC)
-        <br/>
-        <%= @event.hackathon_end.strftime('%^B') %> <%= @event.hackathon_end.strftime('%-d') %>, <%= @event.hackathon_end.strftime('%^Y') %>
-      </div>
+
+    <% if Time.now.to_i < @event.hackathon_end.to_i %>  
+      <div class="about-event-section two-thirds column">
+    <% else %>
+      <div class="about-event-section one-third column">
+    <% end %>
+
+      <!-- BEFORE THE EVENT HAS HAPPENED -->
+      <% if Time.now.to_i < @event.hackathon_end.to_i %>  
+
+        <div>
+          HACKING BEGINS
+          <br/>
+
+          <%= @event.hackathon_start.strftime('%A, %^B %e, %Y — %l %p') %>
+          <br/>
+          <br/>
+          CLOSING EXHIBIT &amp; PARTY (OPEN TO THE PUBLIC)
+          <br/>
+
+          <%= @event.hackathon_end.strftime('%A, %^B %e, %Y — %l %p - LATE') %>
+        </div>
+      <% end %>
+      <!-- BEFORE THE EVENT HAS HAPPENED -->
+
       <p>
         <%= @event.about %>
       </p>

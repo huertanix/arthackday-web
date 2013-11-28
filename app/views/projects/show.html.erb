@@ -4,6 +4,7 @@
 	<div class="container">
 		<div id="project">
 			<div class="one-third column" id="project-description">
+        
 				<h2><%= @project.name %></h2>
 	    	<div class="basic-colfax black-link">
 	      	<%= link_to(@project.event) do %>
@@ -26,7 +27,10 @@
             <div>
               <div class="basic-colfax"><%= participant.name %></div>
               <% unless participant.twitter_handle.blank? %>
-                <a href="https://www.twitter.com/<%= URI.encode_www_form_component "#{participant.twitter_handle}" %>"><p>@<%= participant.twitter_handle %></p></a>
+                <p>
+                  <a href="https://www.twitter.com/<%= URI.encode_www_form_component "#{participant.twitter_handle}" %>">@<%= participant.twitter_handle %>
+                  </a>
+                </p>
               <% end %>
             </div>
   		    </div>

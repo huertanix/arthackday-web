@@ -772,8 +772,9 @@ a {
   color: #5000ff;
   margin-top: 1px;
 }
-.section#footer #footer-top #social-section li a img {
+.section#footer #footer-top #social-section li a svg {
   height: 20px;
+  width: 20px;
 }
 .section#footer #footer-top #social-section li:hover {
   margin-top: 1px;
@@ -1013,6 +1014,13 @@ a {
 .section#project-page #project #project-description .project-contributor img {
   margin-right: 10px;
 }
+.section#project-page #project #project-description .project-contributor p {
+  margin: 0px;
+  color: #5000ff;
+}
+.section#project-page #project #project-description .project-contributor p a {
+  font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
 .section#project-page #project #project-contents .project-item {
   margin-bottom: 40px;
 }
@@ -1142,7 +1150,7 @@ a {
   color: black;
 }
 .section#header {
-  height: 500px;
+  height: 65%;
   background-color: #aaaaaa;
   color: #ffffff;
 }
@@ -1161,7 +1169,6 @@ a {
 }
 .section#event-about .about-event-section p {
   color: black;
-  padding-right: 100px;
 }
 .section#event-about .about-event-right .border-container {
   width: 100%;

@@ -82,7 +82,15 @@ $(function(){
 	}
     
 
-
+	// FOOTER
+	$('#social-section svg').hover(         
+		function () {
+           $(this).attr('fill','#5000ff');
+        }, 
+        function () {
+           $(this).attr('fill','#ffffff');
+        }
+    );
 
 	// nav bar expand and contract
 	// $('.back-to-top').click(function(){
