@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131128204756) do
+ActiveRecord::Schema.define(version: 20131128225812) do
 
   create_table "events", force: true do |t|
     t.string   "city"
@@ -131,6 +131,10 @@ ActiveRecord::Schema.define(version: 20131128204756) do
     t.integer  "event_id"
     t.string   "website"
     t.string   "github"
+    t.string   "main_image_file_name"
+    t.string   "main_image_content_type"
+    t.integer  "main_image_file_size"
+    t.datetime "main_image_updated_at"
   end
 
   create_table "sponsors", force: true do |t|

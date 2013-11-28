@@ -31,12 +31,12 @@
       <div>
         HACKING BEGINS
         <br/>
-        <%= @event.hackathon_start.strftime('%A, %b %e, %Y %l:%M %p') %>
+        <%= @event.hackathon_start.strftime('%A %b %e, %Y %l:%M %p') %>
         <br/>
         <br/>
         CLOSING EXHIBIT &amp; PARTY (OPEN TO THE PUBLIC)
         <br/>
-        <%= @event.hackathon_end.strftime('%A, %b %e, %Y %l:%M %p') %>
+        <%= @event.hackathon_end.strftime('%A %b %e, %Y %l:%M %p') %>
       </div>
       <p>
         <%= @event.about %>
@@ -75,7 +75,7 @@
           <% @event.projects.each_with_index do |project, index| %>
             <% if (index % 3 == 0) %>
               <div class="project">
-                <img src="http://placekitten.com/300/200"/>
+                <%= image_tag project.main_image.url(:thumb), :alt => project.name %>
                 <div>
                   <a href="/projects/<%= project.id %>">
                     <div class="project-info">

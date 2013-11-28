@@ -36,6 +36,10 @@
     <%= select("project", "event_id", Event.all.collect {|e| [ e.theme, e.id ] }) %>
   </div>
   <div class="field">
+    <%= f.label :main_image %><br>
+    <%= f.file_field :main_image %>
+  </div>
+  <div class="field">
     Participants<br>
     <%= hidden_field_tag "project[participant_ids][]", nil %>
     <% Participant.all.each do |participant| %>
