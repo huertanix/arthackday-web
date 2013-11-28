@@ -267,7 +267,9 @@
       </div>
       <div id="partners-container" class="two-thirds column">
         <% @event.sponsors.each do |sponsor| %>
-          <div class="column one-third partner"><%= sponsor.name %></div>
+          <div class="column one-third partner">
+            <%= image_tag sponsor.logo.url(:thumb) %>
+          </div>
         <% end %>
         <!--<div class="column one-third partner"></div>-->
       </div>
