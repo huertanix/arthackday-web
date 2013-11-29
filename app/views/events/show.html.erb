@@ -74,7 +74,9 @@
       </div>
     <% else %>
       <div class="about-event-right two-thirds column video">
-        <iframe src="//player.vimeo.com/video/45841989" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/45841989">319 Scholes presents Art Hack Day</a> from <a href="http://vimeo.com/scholes319">319 Scholes</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+        <% unless @event.featured_video.empty? %>
+          <%= @event.featured_video.html_safe %>
+        <% end %>
       </div>
     <% end%>
   </div>
