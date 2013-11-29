@@ -138,5 +138,9 @@ $(function(){
 
 	orderParticipants($('.participants-all'));
 
+	if($('.about-event-right.video').length !== 0){
+		$()
+	}
+	
 
 });

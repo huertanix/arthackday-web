@@ -31,29 +31,27 @@
 
     </div>
 
-    <% if Time.now.to_i < @event.hackathon_end.to_i %>  
+    <% if @event.upcoming? %> 
       <div class="about-event-section two-thirds column">
     <% else %>
       <div class="about-event-section one-third column">
     <% end %>
 
-      <!-- BEFORE THE EVENT HAS HAPPENED -->
-      <% if Time.now.to_i < @event.hackathon_end.to_i %>  
+    <% if @event.upcoming? %> 
 
-        <div>
-          HACKING BEGINS
-          <br/>
+      <div>
+        HACKING BEGINS
+        <br/>
 
-          <%= @event.hackathon_start.strftime('%A, %^B %e, %Y — %l %p') %>
-          <br/>
-          <br/>
-          CLOSING EXHIBIT &amp; PARTY (OPEN TO THE PUBLIC)
-          <br/>
+        <%= @event.hackathon_start.strftime('%A, %^B %e, %Y — %l %p') %>
+        <br/>
+        <br/>
+        CLOSING EXHIBIT &amp; PARTY (OPEN TO THE PUBLIC)
+        <br/>
 
-          <%= @event.hackathon_end.strftime('%A, %^B %e, %Y — %l %p - LATE') %>
-        </div>
-      <% end %>
-      <!-- BEFORE THE EVENT HAS HAPPENED -->
+        <%= @event.hackathon_end.strftime('%A, %^B %e, %Y — %l %p - LATE') %>
+      </div>
+    <% end %>
 
       <p>
         <%= @event.about %>
@@ -75,7 +73,9 @@
         </div>
       </div>
     <% else %>
-
+      <div class="about-event-right two-thirds column">
+        <iframe src="//player.vimeo.com/video/45841989" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/45841989">319 Scholes presents Art Hack Day</a> from <a href="http://vimeo.com/scholes319">319 Scholes</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+      </div>
     <% end%>
   </div>
 </div>
