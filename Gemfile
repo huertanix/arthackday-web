@@ -51,7 +51,7 @@ end
 
 # User management
 gem 'protected_attributes' # use attr_accessible until Device supports strong_parameters
-gem 'devise', '3.0.0.rc'
+gem 'devise', '3.2.2'
 
 # Nested form support
 gem "nested_form" #, :git => "git://github.com/madebydna/nested_form.git"

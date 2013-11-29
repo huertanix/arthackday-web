@@ -87,7 +87,7 @@
     <%= f.fields_for :sponsors do |s| %>
       Name: <%= s.text_field :name %><br>
       Website: <%= s.text_field :website %><br>
-      Logo: <%= s.text_field :logo_uri %><br>
+      Logo: <%= s.file_field :logo %><br>
       <%= s.link_to_remove "Remove?" %><br>
     <% end %>
     <%= f.link_to_add "Add a Sponsor", :sponsors %>
