@@ -17,11 +17,14 @@ class Event < ActiveRecord::Base
   # protect from hax
   attr_accessible :city, :theme, :hackathon_start, :hackathon_end, :show_start, :show_end, :about, 
   :hack_rsvp_url, :show_rsvp_url, :press_blurbs_attributes, :projects_attributes, :sponsors_attributes, 
-  :venue_id, :header_image, :header_image_artist, :header_image_artist_website, :theme_excerpt
+  :venue_id, :header_image, :header_image_artist, :header_image_artist_website, :theme_excerpt, 
+  :featured_video, :featured_image
 
   scope :sorted_by_date, order('hackathon_start desc') 
 
   friendly_id :theme, use: :slugged
+
+  has_attached_file :featured_image, :styles => { :medium => "600x400", :thumb => "300x200>", :chibi => "100x75>" }, :default_url => "http://placekitten.com/600/400"
 
   def upcoming? 
     self.show_end > DateTime.now

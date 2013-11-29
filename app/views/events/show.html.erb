@@ -72,7 +72,11 @@
       </div>
     <% else %>
       <div class="about-event-right two-thirds column video">
-        <iframe src="//player.vimeo.com/video/45841989" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/45841989">319 Scholes presents Art Hack Day</a> from <a href="http://vimeo.com/scholes319">319 Scholes</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+        <% if !@event.featured_video.blank? %>
+          <%= @event.featured_video.html_safe %>
+        <% else %>
+          <%= image_tag @event.featured_image.url(:medium) %>
+        <% end %>
       </div>
     <% end%>
   </div>
@@ -85,12 +89,11 @@
   </div>
   <div class="container">
     <div class="projects" id="projects-container">
-
         <div class="project-column column one-third">
           <% @event.projects.each_with_index do |project, index| %>
             <% if (index % 3 == 0) %>
               <div class="project">
-                <img src="http://placekitten.com/300/200"/>
+                <%= image_tag project.main_image.url(:thumb), :alt => project.name %>
                 <div>
                   <a href="/projects/<%= project.id %>">
                     <div class="project-info">
@@ -115,10 +118,9 @@
         </div>
         <div class="project-column column one-third">
           <% @event.projects.each_with_index do |project, index| %>
-
             <% if (index % 3 == 1) %>
               <div class="project">
-                <img src="http://placekitten.com/300/200"/>
+                <%= image_tag project.main_image.url(:thumb), :alt => project.name %>
                 <div>
                   <a href="/projects/<%= project.id %>">
                     <div class="project-info">
@@ -268,24 +270,25 @@
   </div>
 
   <div class="container">
-      <div class="column one-third" id="press-container">
-        <div class="border-container">
-          <% @event.press_blurbs.each do |blurb| %>
-            <div class="press">
-              <p>"<%= blurb.headline %>" _<a href="<%= blurb.source_url %>"><%= blurb.source_name %></a><p>
-            </div>
-          <% end %>
-          <!--<div class="press">
-            <p>“It’s a new and different art form” _<a href="#">Gomorron Sverige</a><p>
-          </div>-->
-        </div>
-      </div>
-      <div id="partners-container" class="two-thirds column">
-        <% @event.sponsors.each do |sponsor| %>
-          <div class="column one-third partner"><%= sponsor.name %></div>
+    <div class="column one-third" id="press-container">
+      <div class="border-container">
+        <% @event.press_blurbs.each do |blurb| %>
+          <div class="press">
+            <p>"<%= blurb.headline %>" _<a href="<%= blurb.source_url %>"><%= blurb.source_name %></a><p>
+          </div>
         <% end %>
-        <!--<div class="column one-third partner"></div>-->
+        <!--<div class="press">
+          <p>“It’s a new and different art form” _<a href="#">Gomorron Sverige</a><p>
+        </div>-->
       </div>
+    </div>
+    <div id="partners-container" class="two-thirds column">
+      <% @event.sponsors.each do |sponsor| %>
+        <div class="column one-third partner">
+          <%= image_tag sponsor.logo.url(:thumb), :alt => sponsor.name %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
 
