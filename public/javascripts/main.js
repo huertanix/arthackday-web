@@ -141,6 +141,6 @@ $(function(){
 	if($('.about-event-right.video').length !== 0){
 		$()
 	}
-	
+	$("#hero").fitText();
 
 });

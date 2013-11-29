@@ -957,12 +957,15 @@ a {
 .section#header a {
   color: white;
 }
-.section#landing-header .container,
-.section#header .container {
-  position: relative;
+.section#landing-header .event-callout,
+.section#header .event-callout {
+  text-align: center;
+  font-family: 'COLFAX';
+  text-transform: uppercase;
+  color: white;
   top: 50%;
-  margin-bottom: 110px;
-  font-family: "COLFAX";
+  position: absolute;
+  width: 100%;
 }
 .section#landing-header #header-credit,
 .section#header #header-credit {
@@ -1344,23 +1347,6 @@ a {
 .section .container .about-paragraph {
   font-size: 20px;
   padding: 0px 20px;
-}
-.section .container .event-callout {
-  text-align: center;
-}
-.section .container .event-callout #hero {
-  font-size: 150px;
-  line-height: 150px;
-  font-family: 'COLFAX';
-  text-transform: uppercase;
-  color: white;
-}
-.section .container .event-callout #sub-hero {
-  font-size: 21px;
-  line-height: 21px;
-  font-family: 'COLFAX';
-  text-transform: uppercase;
-  color: white;
 }
 .section .container #events-homepage .event-homepage .event-display {
   height: 200px;

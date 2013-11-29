@@ -5,10 +5,8 @@
   </div>
 </div> -->
 <div class="section" id="header" style="background: #000 url(<%= @event.header_image %>);">
-  <div class="container">
-    <div class="event-callout sixteen columns">
-      <div id="hero"><%= @event.theme %></div>
-    </div>
+  <div class="event-callout">
+    <div id="hero"><%= @event.theme %></div>
   </div>
   <% unless @event.header_image_artist.blank? %>
     <div id="header-credit">
