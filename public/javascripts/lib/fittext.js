@@ -30,7 +30,7 @@
         var fontSize = Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize));
         $this.css('font-size', fontSize);
         if($('#sub-hero').length > 0){
-          $('#sub-hero').css('margin-top', fontSize/3);
+          $('#sub-hero').css('margin-top', fontSize/2.5);
         }
       };
 
