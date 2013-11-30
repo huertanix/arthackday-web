@@ -141,6 +141,11 @@ $(function(){
 	if($('#event-video').length !== 0){
 		$('#event-video').fitVids();
 	}
-	$("#hero").fitText();
+	if($('#hero').length !== 0){
+		var heroText = $("#hero").html();
+		var heroLength = heroText.length;
+		$('#hero').fitText(heroLength * .07);
+	}
+	
 
 });
