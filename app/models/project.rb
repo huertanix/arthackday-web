@@ -1,5 +1,6 @@
 class Project < ActiveRecord::Base
   belongs_to :event
+  has_many :media
   has_and_belongs_to_many :participants
 
   # Setup accessible (or protected) attributes for your model

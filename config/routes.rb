@@ -1,4 +1,6 @@
 ArthackdayWeb::Application.routes.draw do
+  resources :media
+
   devise_for :organizers
   
   resources :press_blurbs

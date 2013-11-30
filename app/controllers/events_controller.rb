@@ -98,7 +98,7 @@ private
     #end # doesn't work
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
+  # Never trust parameters from the scary internet, only allow the whitelist through.
   def event_params
     params.require(:event).permit(:city, :theme, :hackathon_start, :hackathon_end, :show_start, :show_end, :about, :hack_rsvp_url, :show_rsvp_url, :venue_id, :theme_excerpt, :header_image, :header_image_artist, :header_image_artist_website, :featured_video, :featured_image, :press_blurbs_attributes => [:id, :headline, :source_name, :source_url, :logo_uri, :featured, :event_id, :_destroy], :projects_attributes => [:id, :name, :description, :tag, :event_id, :main_image, :_destroy], :sponsors_attributes => [:id, :name, :website, :logo, :event_id, :_destroy])
   end
