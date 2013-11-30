@@ -41,13 +41,13 @@
         HACKING BEGINS
         <br/>
 
-        <%= @event.hackathon_start.strftime('%A, %^B %e, %Y — %l %p') %>
+        <%= @event.hackathon_start.strftime('%A %^B %e, %Y — %l %p') %>
         <br/>
         <br/>
         CLOSING EXHIBIT &amp; PARTY (OPEN TO THE PUBLIC)
         <br/>
 
-        <%= @event.hackathon_end.strftime('%A, %^B %e, %Y — %l %p - LATE') %>
+        <%= @event.hackathon_end.strftime('%A %^B %e, %Y — %l %p - LATE') %>
       </div>
     <% end %>
 
