@@ -1,4 +1,4 @@
-<%= form_for(@project) do |f| %>
+<%= nested_form_for @project do |f| %>
   <% if @project.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
@@ -50,6 +50,12 @@
     <% end %>
   </div>
   <div class="field">
+    <%= f.label :medium %><br>
+    <%= f.fields_for :medium do |m| %>
+      HTML Snippet: <%= m.text_area :snippet %><br>
+      <%= m.link_to_remove "Remove?" %><br>
+    <% end %>
+    <%= f.link_to_add "Add a Media Snippet", :medium %>
   </div>
   <div class="actions">
     <%= f.submit %>
