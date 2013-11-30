@@ -1181,6 +1181,9 @@ a {
 .section#event-about .about-event-section p {
   color: black;
 }
+.section#event-about .about-event-right img {
+  width: 100%;
+}
 .section#event-about .about-event-right .border-container {
   width: 100%;
   border: 1px solid black;
