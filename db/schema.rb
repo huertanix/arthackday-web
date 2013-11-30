@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131129043659) do
+ActiveRecord::Schema.define(version: 20131130055425) do
 
   create_table "events", force: true do |t|
     t.string   "city"
@@ -67,6 +67,13 @@ ActiveRecord::Schema.define(version: 20131129043659) do
   add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+
+  create_table "media", force: true do |t|
+    t.text     "snippet"
+    t.integer  "project_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "organizers", force: true do |t|
     t.string   "name"
