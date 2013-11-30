@@ -73,7 +73,7 @@
     <% else %>
       <div class="about-event-right two-thirds column video">
         <% if !@event.featured_video.blank? %>
-          <%= @event.featured_video.html_safe %>
+          <div id="event-video"><%= @event.featured_video.html_safe %></div>
         <% else %>
           <%= image_tag @event.featured_image.url(:medium) %>
         <% end %>

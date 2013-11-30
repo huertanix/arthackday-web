@@ -138,8 +138,8 @@ $(function(){
 
 	orderParticipants($('.participants-all'));
 
-	if($('.about-event-right.video').length !== 0){
-		$()
+	if($('#event-video').length !== 0){
+		$('#event-video').fitVids();
 	}
 	$("#hero").fitText();
 
