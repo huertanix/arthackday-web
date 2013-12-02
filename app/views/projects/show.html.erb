@@ -44,15 +44,16 @@
 		    </div>-->
 			</div>
 			<div class="two-thirds column" id="project-contents">
-				<div class="project-item">
-					<img src="http://24.media.tumblr.com/0529e8668efdcca9dc49903f9c378417/tumblr_mlko99SShA1rlcnubo1_500.jpg"/>
-				</div>
-				<div class="project-item">
-					<img src="http://24.media.tumblr.com/5f4ffdc41cdd5879f9ae39d076472180/tumblr_mmd43lHzOo1rlcnubo1_500.png"/>
-				</div>
-				<div class="project-item">
-					<img src="http://24.media.tumblr.com/588e6fe2724f7e5ed17290004ffb227c/tumblr_mlzgz291X21rlcnubo1_500.jpg"/>
-				</div>
+        <% unless @project.medium.empty? %>
+          <% @project.medium.each do |media| %>
+    				<div class="project-item">
+    					<%= media.snippet.html_safe %>
+    				</div>
+    				<!--<div class="project-item">
+    					<img src="http://24.media.tumblr.com/5f4ffdc41cdd5879f9ae39d076472180/tumblr_mmd43lHzOo1rlcnubo1_500.png"/>
+    				</div>-->
+          <% end %>
+        <% end %>
 			</div>
 		</div>
 	</div>

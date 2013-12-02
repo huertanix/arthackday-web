@@ -35,9 +35,14 @@
     Event<br>
     <%= select("project", "event_id", Event.all.collect {|e| [ e.theme, e.id ] }) %>
   </div>
-  <div class="field">
+  <!-- Pay no attention to this form field! -->
+  <!--<div class="field">
     <%= f.label :main_image %><br>
     <%= f.file_field :main_image %>
+  </div>-->
+  <div class="field">
+    <%= f.label :featured_thumbnail %><br>
+    <%= f.text_field :featured_thumbnail %>
   </div>
   <div class="field">
     Participants<br>
