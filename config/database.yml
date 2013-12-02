@@ -4,13 +4,13 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 development:
-  adapter: sqlite3
-  #adapter: postgresql
-  database: db/development.sqlite3
-  #database: arthackdayweb_development
-  #encoding: utf8
-  #username: huertanix
-  #password: password
+  #adapter: sqlite3
+  adapter: postgresql
+  #database: db/development.sqlite3
+  database: arthackdayweb_development
+  encoding: utf8
+  username: huertanix
+  password: password
   pool: 5
   timeout: 5000
 
