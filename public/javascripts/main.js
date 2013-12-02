@@ -144,7 +144,7 @@ $(function(){
 	if($('#hero').length !== 0){
 		var heroText = $("#hero").html();
 		var heroLength = heroText.length;
-		$('#hero').fitText(heroLength * .07);
+		$('#hero').fitText(heroLength * .08);
 	}
 	
 

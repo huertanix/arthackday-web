@@ -194,6 +194,9 @@ p {
   font-size: 14px;
   line-height: 17px;
 }
+p a {
+  font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
 .basic-colfax {
   font-family: "COLFAX";
   font-size: 13px;
