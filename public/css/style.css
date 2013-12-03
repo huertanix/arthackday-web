@@ -1044,6 +1044,9 @@ a {
 .section#project-page #project #project-contents .project-item img {
   width: 100%;
 }
+.section#events-page #events {
+  margin-top: 50px;
+}
 .section #events {
   background-color: white;
   height: 100%;

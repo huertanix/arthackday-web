@@ -33,8 +33,9 @@
 
 		<ul id="events" class="sixteen columns">
 		  <% @events.each do |event| %>
-		    <%= link_to(event) do %>
 		      <li <%= event.upcoming? ? 'class=upcoming' : nil %>>
+   			    <%= link_to(event) do %>
+
 		      	<div class="left-event"><%= event.theme%></div>
 		      	<div class="right-event">
 		      		<div class="event-page"> <%= event.hackathon_start.strftime('%^B') %> <%= event.hackathon_start.strftime('%-d') %>-<%= event.hackathon_end.strftime('%-d') %>, <%= event.hackathon_start.strftime('%^Y') %></div>
@@ -45,8 +46,9 @@
 			        <td><%= link_to 'Edit', edit_event_path(event) %></td>
 			        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 		      	<% end %>
+			    <% end %>
+
 		      </li>
-		    <% end %>
 		  <% end %>
 		</ul>
 	</div>

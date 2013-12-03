@@ -5,11 +5,13 @@ function updateContainer(wH){
 	$('#landing-header').css({
 		'height': $(window).height()
 	});
-	var eventCallout = $('.event-callout').height();
-	eventCallout = - (eventCallout / 2);
-	$('.event-callout').css({
-		'margin-top': eventCallout
-	});
+	if($('.event-callout #sub-hero').length < 0){
+		var eventCallout = $('.event-callout').height();
+		eventCallout = - (eventCallout / 2);
+		$('.event-callout').css({
+			'margin-top': eventCallout
+		});
+	}
 }
 
 function orderParticipants(participantsContainer){
