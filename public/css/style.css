@@ -1336,18 +1336,19 @@ a {
   width: 100%;
   text-align: center;
 }
-.section#projects .projects .project .project-info > div {
+.section#projects .projects .project .project-info .project-wrapper {
   position: absolute;
   width: 100%;
   top: 50%;
 }
-.section#projects .projects .project .project-info > div > div {
+.section#projects .projects .project .project-info .project-wrapper > div {
   margin-top: -30px;
 }
-.section#projects .projects .project .project-info > div > div > div {
+.section#projects .projects .project .project-info .project-wrapper > div .basic-colfax {
   margin-bottom: 20px;
+  padding: 0px 15px;
 }
-.section#projects .projects .project .project-info > div > div p {
+.section#projects .projects .project .project-info .project-wrapper > div p {
   padding: 0px 10px;
 }
 .section#projects .projects .project:hover .project-info {
