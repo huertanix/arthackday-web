@@ -35,19 +35,19 @@
 		  <% @events.each do |event| %>
 		      <li <%= event.upcoming? ? 'class=upcoming' : nil %>>
    			    <%= link_to(event) do %>
-
-		      	<div class="left-event"><%= event.theme%></div>
-		      	<div class="right-event">
-		      		<div class="event-page"> <%= event.hackathon_start.strftime('%^B') %> <%= event.hackathon_start.strftime('%-d') %>-<%= event.hackathon_end.strftime('%-d') %>, <%= event.hackathon_start.strftime('%^Y') %></div>
-		      		<div class="event-page-time"><%=  event.venue.nil? ? "TBA" : event.venue.city %>_<%= event.venue.nil? ? "TBA" : event.venue.name %></div>
-		      	</div>
-		      	<% if organizer_signed_in? %>
-			        <td><%= link_to 'Show', event %></td>
-			        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-			        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-		      	<% end %>
+	   			    <div class="event-wrapper">
+				      	<div class="left-event"><%= event.theme%></div>
+				      	<div class="right-event">
+				      		<div class="event-page"> <%= event.hackathon_start.strftime('%^B') %> <%= event.hackathon_start.strftime('%-d') %>-<%= event.hackathon_end.strftime('%-d') %>, <%= event.hackathon_start.strftime('%^Y') %></div>
+				      		<div class="event-page-time"><%=  event.venue.nil? ? "TBA" : event.venue.city %>_<%= event.venue.nil? ? "TBA" : event.venue.name %></div>
+				      	</div>
+				      	<% if organizer_signed_in? %>
+					        <td><%= link_to 'Show', event %></td>
+					        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+					        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				      	<% end %>
+					</div>
 			    <% end %>
-
 		      </li>
 		  <% end %>
 		</ul>
