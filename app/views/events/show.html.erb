@@ -92,23 +92,26 @@
         <div class="project-column column one-third">
           <% @event.projects.each_with_index do |project, index| %>
             <% if (index % 3 == 0) %>
-              <div class="project" style="background: url('<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>');background-size:100%;background-position:center;height:200px;">
-                <a href="/projects/<%= project.id %>">
-                  <div class="project-info">
-                    <div class="project-wrapper">
-                      <div>
-                        <div class="basic-colfax">
-                          <%= project.name %>
+              <div class="project">
+                <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>"/>
+                <div>
+                  <a href="/projects/<%= project.id %>">
+                    <div class="project-info">
+                      <div class="project-wrapper">
+                        <div>
+                          <div class="basic-colfax">
+                            <%= project.name %>
+                          </div>
+                          <p>
+                            <% project.participants.each do |proj_participant| %>
+                              _<%= proj_participant.name %>
+                            <% end %>
+                          </p>
                         </div>
-                        <p>
-                          <% project.participants.each do |proj_participant| %>
-                            _<%= proj_participant.name %>
-                          <% end %>
-                        </p>
                       </div>
                     </div>
-                  </div>
-                </a>
+                  </a>
+                </div>
               </div>
             <% end%>
           <% end %>
@@ -116,23 +119,26 @@
         <div class="project-column column one-third">
           <% @event.projects.each_with_index do |project, index| %>
             <% if (index % 3 == 1) %>
-              <div class="project" style="background: url('<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>');background-size:100%;background-position:center;height:200px;">
-                <a href="/projects/<%= project.id %>">
-                  <div class="project-info">
-                    <div class="project-wrapper">
-                      <div>
-                        <div class="basic-colfax">
-                          <%= project.name %>
+              <div class="project">
+                <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>"/>
+                <div>
+                  <a href="/projects/<%= project.id %>">
+                    <div class="project-info">
+                      <div class="project-wrapper">
+                        <div>
+                          <div class="basic-colfax">
+                            <%= project.name %>
+                          </div>
+                          <p>
+                            <% project.participants.each do |proj_participant| %>
+                              _<%= proj_participant.name %>
+                            <% end %>
+                          </p>
                         </div>
-                        <p>
-                          <% project.participants.each do |proj_participant| %>
-                            _<%= proj_participant.name %>
-                          <% end %>
-                        </p>
                       </div>
                     </div>
-                  </div>
-                </a>
+                  </a>
+                </div>
               </div>
             <% end%>
           <% end %>
@@ -140,23 +146,26 @@
         <div class="project-column column one-third">
           <% @event.projects.each_with_index do |project, index| %>
             <% if (index % 3 == 2) %>
-              <div class="project" style="background: url('<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>');background-size:100%;background-position:center;height:200px;">
-                <a href="/projects/<%= project.id %>">
-                  <div class="project-info">
-                    <div class="project-wrapper">
-                      <div>
-                        <div class="basic-colfax">
-                          <%= project.name %>
+               <div class="project">
+                <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>"/>
+                <div>
+                  <a href="/projects/<%= project.id %>">
+                    <div class="project-info">
+                      <div class="project-wrapper">
+                        <div>
+                          <div class="basic-colfax">
+                            <%= project.name %>
+                          </div>
+                          <p>
+                            <% project.participants.each do |proj_participant| %>
+                              _<%= proj_participant.name %>
+                            <% end %>
+                          </p>
                         </div>
-                        <p>
-                          <% project.participants.each do |proj_participant| %>
-                            _<%= proj_participant.name %>
-                          <% end %>
-                        </p>
                       </div>
                     </div>
-                  </div>
-                </a>
+                  </a>
+                </div>
               </div>
             <% end%>
           <% end %>
