@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131201230130) do
+ActiveRecord::Schema.define(version: 20131203050011) do
 
   create_table "events", force: true do |t|
     t.string   "city"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20131201230130) do
     t.string   "featured_image_content_type"
     t.integer  "featured_image_file_size"
     t.datetime "featured_image_updated_at"
+    t.boolean  "header_image_tiled"
   end
 
   add_index "events", ["slug"], name: "index_events_on_slug", unique: true
@@ -153,6 +154,7 @@ ActiveRecord::Schema.define(version: 20131201230130) do
   create_table "sponsors", force: true do |t|
     t.string   "name"
     t.string   "website"
+    t.string   "logo_uri"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "event_id"
