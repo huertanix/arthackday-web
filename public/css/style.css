@@ -978,13 +978,16 @@ a {
   position: absolute;
   width: 100%;
 }
+.section#landing-header .event-callout #sub-hero,
+.section#header .event-callout #sub-hero {
+  font-size: 21px;
+}
 .section#landing-header #header-credit,
 .section#header #header-credit {
   position: absolute;
   bottom: 20px;
   margin-left: 25px;
   font-size: 12px;
-  text-shadow: 0px 0px 5px #000000;
 }
 .section#landing-header #header-credit a,
 .section#header #header-credit a {
@@ -1169,7 +1172,7 @@ a {
   color: #ffffff;
 }
 .section#event-about {
-  margin: 150px 0px;
+  margin: 75px 0px;
 }
 .section#event-about h2 {
   text-transform: uppercase;
