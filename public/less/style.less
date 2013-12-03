@@ -451,43 +451,43 @@ a{
 			}
 		}
 	}
-	&#events-page{
+	#events{
 		background-color: white;
 		height: 100%;
-		ul{
-			padding-top: 120px;
-			li{
-				height:30px;
-				padding:25px;
-				margin: 40px 0px;
-				background-color: white;
-				border: 1px solid black;
-				color: black;
-				.transition(all .2s ease);
-				&:hover{
-					background-color: @electric-blue;
-					border-color: @electric-blue;
-					color: white;
-				}
-				.left-event{
-					font-size: 36px;
-					line-height: 36px;
-					float:left;
-					text-transform:uppercase;
+		li{
+			height:30px;
+			padding:25px;
+			margin: 40px 0px;
+			background-color: white;
+			border: 1px solid black;
+			color: black;
+			.transition(all .2s ease);
+			&:hover{
+				background-color: @electric-blue;
+				border-color: @electric-blue;
+				color: white;
+			}
+			.left-event{
+				font-size: 36px;
+				line-height: 36px;
+				float:left;
+				text-transform:uppercase;
 
+			}
+			.right-event{
+				float:right;
+				text-transform:uppercase;
+				font-size: 13px;
+				line-height: 16px;
+				div{
+					top:-2px;
+					position: relative;
+					float: right;
+					clear: both;
 				}
-				.right-event{
-					float:right;
-					text-transform:uppercase;
-					font-size: 13px;
-					line-height: 16px;
-					div{
-						top:-2px;
-						position: relative;
-						float: right;
-						clear: both;
-					}
-				}
+			}
+			&:first-child{
+				margin-top: 0px;
 			}
 		}
 	}

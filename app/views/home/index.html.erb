@@ -29,23 +29,23 @@
 <div class="section top-margin">
 	<div class="container">
 		<div class="sixteen columns section-header"><a href="/events">Events _ most recent</a></div>
-		<ul id="events-homepage">
-		  <% @events.sorted_by_date.each do |event| %>
-		      <li class="one-third column event-homepage" <%= event.upcoming? ? 'class=upcoming' : nil %>>
-		      	<div class="event-display"></div>
-		        <div class="event-title">
-		      		<%= link_to(event) do %>
-		        	<%= event.theme %>
-		        	<br/>
-		        	<%= event.city.upcase + ' _ ' + event.hackathon_start.strftime('%Y') %>
-		        	<% end %>
-		        </div>
-		        <div class="event-short-about">
-		        	<%= event.theme_excerpt %>
-		        	<!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
-		        </div>
-		        <div class="event-short-more"><%= link_to(event) do %>. . . READ MORE<% end %></div>
+
+		<ul id="events" class="sixteen columns">
+		  <% @events.each do |event| %>
+		    <%= link_to(event) do %>
+		      <li <%= event.upcoming? ? 'class=upcoming' : nil %>>
+		      	<div class="left-event"><%= event.theme%></div>
+		      	<div class="right-event">
+		      		<div class="event-page"> <%= event.hackathon_start.strftime('%^B') %> <%= event.hackathon_start.strftime('%-d') %>-<%= event.hackathon_end.strftime('%-d') %>, <%= event.hackathon_start.strftime('%^Y') %></div>
+		      		<div class="event-page-time"><%=  event.venue.nil? ? "TBA" : event.venue.city %>_<%= event.venue.nil? ? "TBA" : event.venue.name %></div>
+		      	</div>
+		      	<% if organizer_signed_in? %>
+			        <td><%= link_to 'Show', event %></td>
+			        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+			        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		      	<% end %>
 		      </li>
+		    <% end %>
 		  <% end %>
 		</ul>
 	</div>

@@ -1041,14 +1041,11 @@ a {
 .section#project-page #project #project-contents .project-item img {
   width: 100%;
 }
-.section#events-page {
+.section #events {
   background-color: white;
   height: 100%;
 }
-.section#events-page ul {
-  padding-top: 120px;
-}
-.section#events-page ul li {
+.section #events li {
   height: 30px;
   padding: 25px;
   margin: 40px 0px;
@@ -1061,28 +1058,31 @@ a {
   -ms-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.section#events-page ul li:hover {
+.section #events li:hover {
   background-color: #5000ff;
   border-color: #5000ff;
   color: white;
 }
-.section#events-page ul li .left-event {
+.section #events li .left-event {
   font-size: 36px;
   line-height: 36px;
   float: left;
   text-transform: uppercase;
 }
-.section#events-page ul li .right-event {
+.section #events li .right-event {
   float: right;
   text-transform: uppercase;
   font-size: 13px;
   line-height: 16px;
 }
-.section#events-page ul li .right-event div {
+.section #events li .right-event div {
   top: -2px;
   position: relative;
   float: right;
   clear: both;
+}
+.section #events li:first-child {
+  margin-top: 0px;
 }
 .section#contact-page {
   background-color: black;
