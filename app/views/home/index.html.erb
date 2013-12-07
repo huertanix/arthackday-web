@@ -33,8 +33,9 @@
 
 		<ul id="events" class="sixteen columns">
 		  <% @events.each do |event| %>
+			    <%= link_to(event) do %>
+
 		      <li <%= event.upcoming? ? 'class=upcoming' : nil %>>
-   			    <%= link_to(event) do %>
 	   			    <div class="event-wrapper">
 				      	<div class="left-event"><%= event.theme%></div>
 				      	<div class="right-event">
@@ -42,15 +43,16 @@
 				      		<div class="event-page-time"><%=  event.venue.nil? ? "TBA" : event.venue.city %>_<%= event.venue.nil? ? "TBA" : event.venue.name %></div>
 				      	</div>
 					</div>
-			    <% end %>
-		      	<% if organizer_signed_in? %>
-		      	<br>
+
+		      </li>
+  			  <% end %>
+  				<% if organizer_signed_in? %>
 			        <span><%= link_to 'Show', event %></span>
 			        <span><%= link_to 'Edit', edit_event_path(event) %></span>
 			        <span><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-			        <br>
+			        <br><br><br><br><br>
 		      	<% end %>
-		      </li>
+
 		  <% end %>
 		</ul>
 	</div>
