@@ -1,6 +1,6 @@
 <div class="section" id="landing-header" style="
-  background: #000 url(<%= @events.first.header_image %>);
-  background-repeat: <%= (@events.first.header_image_tiled? ? 'repeat' : 'no-repeat') %>;">
+  background: #000 url('<%= @events.first.header_image %>');
+  background-repeat:<%= (@events.first.header_image_tiled? ? 'repeat' : 'no-repeat') %>;">
 
 	<%= link_to(@events.first) do %>
 	<div class="event-callout">
@@ -41,13 +41,15 @@
 				      		<div class="event-page"> <%= event.hackathon_start.strftime('%^B') %> <%= event.hackathon_start.strftime('%-d') %>-<%= event.hackathon_end.strftime('%-d') %>, <%= event.hackathon_start.strftime('%^Y') %></div>
 				      		<div class="event-page-time"><%=  event.venue.nil? ? "TBA" : event.venue.city %>_<%= event.venue.nil? ? "TBA" : event.venue.name %></div>
 				      	</div>
-				      	<% if organizer_signed_in? %>
-					        <td><%= link_to 'Show', event %></td>
-					        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-					        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-				      	<% end %>
 					</div>
 			    <% end %>
+		      	<% if organizer_signed_in? %>
+		      	<br>
+			        <span><%= link_to 'Show', event %></span>
+			        <span><%= link_to 'Edit', edit_event_path(event) %></span>
+			        <span><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+			        <br>
+		      	<% end %>
 		      </li>
 		  <% end %>
 		</ul>

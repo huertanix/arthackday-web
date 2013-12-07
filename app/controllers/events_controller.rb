@@ -76,14 +76,18 @@ class EventsController < ApplicationController
 private
   # Use callbacks to share common setup or constraints between actions.
   def set_event
-    @event = Event.friendly.find(params[:id])
+    if params[:id] =~ /^\d{1,3}/
+      @event = Event.find(params[:id])
+    else
+      @event = Event.friendly.find(params[:id])
+    end
+    
     # If an old id or a numeric id was used to find the record, then
     # the request path will not match the post_path, and we should do
     # a 301 redirect that uses the current friendly id.
-    if request.path != event_path(@event)
+    #if request.path != event_path(@event)
       #return redirect_to @event, :status => :moved_permanently
-      # TODO: fix to not break /edit
-    end
+    #end
     
     #logger.debug "UUUUUUUUUGGGGGGGGGGHHHHHHHHH header image always blank: #{ params[:header_image_file] }"
     # File upload stuffs
@@ -100,6 +104,6 @@ private
 
   # Never trust parameters from the scary internet, only allow the whitelist through.
   def event_params
-    params.require(:event).permit(:city, :theme, :hackathon_start, :hackathon_end, :show_start, :show_end, :about, :hack_rsvp_url, :show_rsvp_url, :venue_id, :theme_excerpt, :header_image, :header_image_tiled, :header_image_artist, :header_image_artist_website, :featured_video, :featured_image, :press_blurbs_attributes => [:id, :headline, :source_name, :source_url, :logo_uri, :featured, :event_id, :_destroy], :projects_attributes => [:id, :name, :description, :tag, :event_id, :main_image, :_destroy], :sponsors_attributes => [:id, :name, :website, :logo, :event_id, :_destroy])
+    params.require(:event).permit(:city, :theme, :hackathon_start, :hackathon_end, :show_start, :show_end, :about, :hack_rsvp_url, :show_rsvp_url, :venue_id, :theme_excerpt, :header_image, :header_image_tiled, :header_image_artist, :header_image_artist_website, :featured_video, :featured_image, :press_blurbs_attributes => [:id, :headline, :source_name, :source_url, :logo_uri, :featured, :event_id, :_destroy], :projects_attributes => [:id, :name, :description, :tag, :event_id, :main_image, :_destroy], :sponsors_attributes => [:id, :name, :website, :logo, :event_id, :featured, :_destroy])
   end
 end

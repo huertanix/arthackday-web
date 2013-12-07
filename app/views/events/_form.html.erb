@@ -98,6 +98,7 @@
     <%= f.fields_for :sponsors do |s| %>
       Name: <%= s.text_field :name %><br>
       Website: <%= s.text_field :website %><br>
+      Featured on about page: <%= s.check_box :featured %><br>
       Logo: <%= s.file_field :logo %><br>
       <%= s.link_to_remove "Remove?" %><br>
     <% end %>

@@ -1,5 +1,3 @@
-
-
 <div class="section" id="events-page">
 	<div class="container">
 		<ul id="events" class="sixteen columns">
@@ -11,11 +9,6 @@
 		      		<div class="event-page"><%= event.city.upcase %></div>
 		      		<div class="event-page-time"><%= event.hackathon_start.strftime('%Y') %></div>
 		      	</div>
-		      	<% if organizer_signed_in? %>
-			        <td><%= link_to 'Show', event %></td>
-			        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-			        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-		      	<% end %>
 		      </li>
 		    <% end %>
 		  <% end %>
