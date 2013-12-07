@@ -143,6 +143,9 @@ $(function(){
 	if($('#event-video').length !== 0){
 		$('#event-video').fitVids();
 	}
+	if($('#project').length !== 0){
+		$('.project-item').fitVids();
+	}
 	if($('#hero').length !== 0){
 		var heroText = $("#hero").html();
 		var heroLength = heroText.length;
