@@ -10,5 +10,19 @@ class Project < ActiveRecord::Base
   attr_accessible :name, :description, :tag, :website, :github, :participant_ids, :event_id, :medium_attributes, :featured_thumbnail
   has_attached_file :main_image, :styles => { :medium => "600x400", :thumb => "300x200>", :chibi => "100x75>" }, :default_url => "http://placekitten.com/300/200"
 
-  friendly_id :name, use: :slugged
+  friendly_id :participants_with_project_name, use: :slugged
+
+  def participants_with_project_name
+    participant_names = String.new
+
+    self.participants.map do | participant |
+      participant_names += participant.name + " "
+    end
+
+    "#{participant_names}#{self.name}"
+  end
+
+  def should_generate_new_friendly_id?
+    true
+  end
 end
