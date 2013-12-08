@@ -7,7 +7,7 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record, but not on Heroku
 group :development, :test do
   gem 'sqlite3'
-  #gem 'pg' # temporary for data migration
+  gem 'pg' # temporary for data migration
   gem 'taps'
 end
 
