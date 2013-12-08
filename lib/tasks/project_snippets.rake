@@ -24,12 +24,16 @@ namespace :arthackday do
     
     Project.all.each do |project|
       if project.description.include? "<iframe "
-        description_html = Nokogiri::HTML(project.description)
-        description_html.css('iframe').remove
-        puts description_html.to_s
-
-        project.description = description_html.to_s
-        project.save
+        #description_html = Nokogiri::HTML(project.description)
+        #description_html.css('iframe').remove
+        #puts description_html.text # fail - removes legit formatting
+        #project.description = description_html.to_s # fail - this adds html head/body tags
+        # EVERYBODY STAND BACK. I KNOW REGULAR EXPRESSIONS.
+        iframe_regex = /<iframe("[^"]*"|'[^']*'|[^'">])*><\/iframe>/
+        purged_description = project.description.gsub(iframe_regex, '')
+        project.description = purged_description
+        puts project.description #no idea why this echoes out nothing but it work so w/e
+        project.save!
       end
     end
   end
