@@ -1,6 +1,8 @@
-<div class="section" id="landing-header" style="
+<!--<div class="section" id="landing-header" style="
   background: #000 url('<%= @events.first.header_image %>');
-  background-repeat:<%= (@events.first.header_image_tiled? ? 'repeat' : 'no-repeat') %>;">
+  background-repeat:<%= (@events.first.header_image_tiled? ? 'repeat' : 'no-repeat') %>;">-->
+<div class="section" id="landing-header" style="background: #000 url('<%=@events.first.header_image %>');
+  <%= (@events.first.header_image_tiled? ? 'background-repeat:repeat' : 'background-size:100%;background-position: center') %>;">
 
 	<%= link_to(@events.first) do %>
 	<div class="event-callout">

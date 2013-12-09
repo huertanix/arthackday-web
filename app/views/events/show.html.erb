@@ -5,7 +5,7 @@
   </div>
 </div> -->
 <div class="section" id="header" style="background: #000 url('<%=@event.header_image %>');
-  background-repeat:<%= (@event.header_image_tiled? ? 'repeat' : 'no-repeat') %>;">
+  <%= (@event.header_image_tiled? ? 'background-repeat:repeat' : 'background-size:100%;background-position: center') %>;">
   <div class="event-callout">
     <div id="hero"><%= @event.theme %></div>
   </div>
