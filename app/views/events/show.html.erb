@@ -96,7 +96,7 @@
               <div class="project">
                 <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>" alt="<%= project.name %>" />
                 <div>
-                  <a href="/projects/<%= project.id %>">
+                  <%= link_to(project) do %>
                     <div class="project-info">
                       <div class="project-wrapper">
                         <div>
@@ -111,7 +111,7 @@
                         </div>
                       </div>
                     </div>
-                  </a>
+                  <% end %>
                 </div>
               </div>
             <% end%>
