@@ -121,7 +121,7 @@ menu,
 nav,
 output,
 ruby,
-section,
+/*section,*/ /* These css props make stuff inside not clickable*/
 summary,
 time,
 mark,
