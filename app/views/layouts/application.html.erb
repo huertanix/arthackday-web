@@ -17,7 +17,7 @@
 	</head>
 	<body>
 		<div class="section animated nav" id="nav-main">
-			<% if (!@event.nil? && @event.header_dark_font === true) || (!@events.first.nil? && @events.first.header_dark_font === true) %>
+			<% if (!@event.nil? && @event.header_dark_font === true) || (!@events.nil? && @events.first.header_dark_font === true) %>
 				<% @show_dark_text = true %>
 			<% end %>
 			<div class="nav-left">
