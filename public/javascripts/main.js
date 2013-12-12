@@ -216,7 +216,9 @@ $(function(){
 
 	// for the about page
 	if(isThere('#about-page')){
-		// $('video')
+		$('#about-video-container').click(function(){
+			$('.big-play').hide();
+		});
 	}	
 
 });

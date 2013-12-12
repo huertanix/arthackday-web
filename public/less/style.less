@@ -1,11 +1,12 @@
 @import "fonts.less";
 @import "base.less";
 @import "skeleton.less";
-@import "videojs.less";
+// @import "videojs.less";
 
 @margin: 20px;
 @electric-blue: #5000ff;
-
+.vjs-big-play-button {
+visibility: hidden;}
 a{
 	color:@electric-blue;
 	font-family: 'COLFAX';
@@ -366,13 +367,31 @@ a{
 		iframe{
 			position: absolute;
 		}
-		#about-video{
-			height:100%;
-			.vjs-poster{
-				background-size: cover;
+
+		#about-video-container{
+
+			.big-play{
+				height: 90px;
+				width:78px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				z-index: 2;
+				margin-left: -39px;
+				margin-top: -45px;
+				pointer-events:none;
 			}
 
+
+			#about-video{
+				height:100%;
+				.vjs-poster{
+					background-size: cover;
+				}
+
+			}			
 		}
+
 	}
 	&#landing-header, &#header{
 		height: 500px;
