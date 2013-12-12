@@ -1,6 +1,7 @@
 @import "fonts.less";
 @import "base.less";
 @import "skeleton.less";
+@import "videojs.less";
 
 @margin: 20px;
 @electric-blue: #5000ff;
@@ -355,7 +356,6 @@ a{
 							}
 						}
 					}
-
 				}
 			}
 		}
@@ -365,6 +365,13 @@ a{
 		overflow: hidden;
 		iframe{
 			position: absolute;
+		}
+		#about-video{
+			height:100%;
+			.vjs-poster{
+				background-size: cover;
+			}
+
 		}
 	}
 	&#landing-header, &#header{

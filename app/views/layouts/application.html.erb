@@ -12,28 +12,37 @@
 	  <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
 	  <%= csrf_meta_tags %>
 	  <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+	  <!-- <link href="//vjs.zencdn.net/4.2/video-js.css" rel="stylesheet"> -->
 	  <link rel="stylesheet" href="/css/style.css" />
+
 	  <meta name="google-site-verification" content="zu9Bbmki1kIgzpwZbMDTBpmHUUljuDUIKjFMxM75Dh4" />
 	</head>
 	<body>
 		<div class="section animated nav" id="nav-main">
+			<% if (!@event.nil? && @event.header_dark_font === true) || (!@events.nil? && @events.first.header_dark_font === true) %>
+				<% @show_dark_text = true %>
+			<% end %>
 			<div class="nav-left">
 				<a href="/"><img src="/img/ahd_assets/ahd_logo_white.svg" id="white-logo"/></a>
 				<a href="/"><img src="/img/ahd_assets/ahd_logo_black.svg" id="black-logo"/></a>
 			</div>
 			<div class="nav-right">
-				<% if params[:controller] == "about"%>
+				<% if params[:controller] == "about" %>
 					<ul class="about">
-				<% elsif params[:controller] == "events"%>
+				<% elsif params[:controller] == "events" %>
 					<ul class="events">
-				<% elsif params[:controller] == "contact"%>
+				<% elsif params[:controller] == "contact" %>
 					<ul class="contact">
-				<%else%>
+				<% else %>
 					<ul>
 				<% end %>
-					<li class="about"><a href="/about">About</a></li>
-					<!-- <li class="events"><a href="/events">Events</a></li> -->
-					<li class="contact"><a href="/contact">Contact</a></li>
+					<li class="about">
+						<a href="/about" style="<%= (@show_dark_text === true ? 'color:#000;':'') %>">About</a>
+					</li>
+					<!--<li class="events"><a href="/events">Events</a></li>-->
+					<li class="contact">
+						<a href="/contact" style="<%= (@show_dark_text === true ? 'color:#000;':'') %>">Contact</a>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -42,13 +51,13 @@
 				<div class="back-to-top"><a href="/"><img src="/img/ahd_assets/AHD_Logo_Horizontal-White.svg" alt="back up"/></a></div>
 			</div>
 			<div class="nav-right">
-				<% if params[:controller] == "about"%>
+				<% if params[:controller] == "about" %>
 					<ul class="about">
-				<% elsif params[:controller] == "events"%>
+				<% elsif params[:controller] == "events" %>
 					<ul class="events">
-				<% elsif params[:controller] == "contact"%>
+				<% elsif params[:controller] == "contact" %>
 					<ul class="contact">
-				<%else%>
+				<% else %>
 					<ul>
 				<% end %>
 					<li class="about"><a href="/about">About</a></li>
@@ -153,29 +162,7 @@
 		<script type="text/javascript" src="/javascripts/lib/waypoints.min.js"></script>
 		<script type="text/javascript" src="/javascripts/lib/fitvids.js"></script>
 		<script type="text/javascript" src="/javascripts/lib/fittext.js"></script>
+		<script src="//vjs.zencdn.net/4.2/video.js"></script>
 		<script type="text/javascript" src="/javascripts/main.js"></script>
-
-		<script>
-		  $(function(){
-		 
-		 //    var $container = $('#projects-container');
-		
-			// $container.masonry({
-			//   columnWidth: 340,
-			//   itemSelector: '.project'
-			// });
-		    // $container.imagesLoaded( function(){
-		    //   $container.masonry({
-		    //   	columnWidth:'200',
-		    //     itemSelector : '.project'
-		    //   });
-		    // });
-		   
-
-		   // for the about page
-		  });
-		</script>
-
-
 	</body>
 </html>

@@ -54,7 +54,7 @@ gem 'protected_attributes' # use attr_accessible until Device supports strong_pa
 gem 'devise', '3.2.2'
 
 # Nested form support
-gem "nested_form" #, :git => "git://github.com/madebydna/nested_form.git"
+gem 'nested_form' #, :git => "git://github.com/madebydna/nested_form.git"
 
 # Geocoding venue lat/lon for maps
 gem 'geocoder'
@@ -63,7 +63,10 @@ gem 'geocoder'
 gem 'friendly_id', '~> 5.0.0' # Need 5.0.0 or above for Rails 4
 
 # File uploads, because it's a fucking mission to Jupiter with just Rails
-gem "paperclip", "~> 3.0"
+gem 'paperclip', '~> 3.0'
+
+# For the rake task parsing out html from old project descriptions
+gem 'nokogiri'
 
 # Heroku stuff
 group :production do

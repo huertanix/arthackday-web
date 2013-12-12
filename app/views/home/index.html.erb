@@ -1,11 +1,13 @@
-<div class="section" id="landing-header" style="
+<!--<div class="section" id="landing-header" style="
   background: #000 url('<%= @events.first.header_image %>');
-  background-repeat:<%= (@events.first.header_image_tiled? ? 'repeat' : 'no-repeat') %>;">
+  background-repeat:<%= (@events.first.header_image_tiled? ? 'repeat' : 'no-repeat') %>;">-->
+<div class="section" id="landing-header" style="background: #000 url('<%=@events.first.header_image %>');
+  <%= (@events.first.header_image_tiled? ? 'background-repeat:repeat' : 'background-size:100%;background-position: center') %>;">
 
 	<%= link_to(@events.first) do %>
 	<div class="event-callout">
-		<div id="hero"><%= @events.first.theme %></div>
-		<div id="sub-hero">
+		<div id="hero" style="<%= (@events.first.header_dark_font? ? 'color:#000;' : '') %>"><%= @events.first.theme %></div>
+		<div id="sub-hero" style="<%= (@events.first.header_dark_font? ? 'color:#000;' : '') %>">
 			<%=  @events.first.venue.nil? ? "TBA" : @events.first.venue.city %>_<%= @events.first.venue.nil? ? "TBA" : @events.first.venue.name %>_<%= @events.first.hackathon_start.strftime('%^B') %> 
 			<%= @events.first.hackathon_start.strftime('%-d') %>-<%= @events.first.show_start.strftime('%-d') %>
 		</div>
@@ -14,7 +16,8 @@
 		
 	<% unless @events.first.header_image_artist.blank? %>
     <div id="header-credit">
-      <a href="<%= @events.first.header_image_artist_website %>">IMAGERY BY: <%= @events.first.header_image_artist %></a>
+      <a href="<%= @events.first.header_image_artist_website %>" 
+      	style="<%= (@events.first.header_dark_font? ? 'color:#000;' : '') %>">IMAGERY BY: <%= @events.first.header_image_artist %></a>
     </div>
   <% end %>
 </div>

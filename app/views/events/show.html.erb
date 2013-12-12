@@ -5,13 +5,15 @@
   </div>
 </div> -->
 <div class="section" id="header" style="background: #000 url('<%=@event.header_image %>');
-  background-repeat:<%= (@event.header_image_tiled? ? 'repeat' : 'no-repeat') %>;">
-  <div class="event-callout">
+  <%= (@event.header_image_tiled? ? 'background-repeat:repeat' : 'background-size:100%;background-position: center') %>;">
+  <div class="event-callout" style="<%= (@event.header_dark_font? ? 'color:#000;' : '') %>">
     <div id="hero"><%= @event.theme %></div>
   </div>
   <% unless @event.header_image_artist.blank? %>
     <div id="header-credit">
-      <a href="<%= @event.header_image_artist_website %>">IMAGERY BY: <%= @event.header_image_artist %></a>
+      <a href="<%= @event.header_image_artist_website %>" style="<%= (@event.header_dark_font? ? 'color:#000;' : '') %>">
+        IMAGERY BY: <%= @event.header_image_artist %>
+      </a>
     </div>
   <% end %>
 </div>
@@ -94,9 +96,9 @@
           <% @event.projects.each_with_index do |project, index| %>
             <% if (index % 3 == 0) %>
               <div class="project">
-                <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>"/>
+                <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>" alt="<%= project.name %>" />
                 <div>
-                  <a href="/projects/<%= project.id %>">
+                  <%= link_to(project) do %>
                     <div class="project-info">
                       <div class="project-wrapper">
                         <div>
@@ -111,7 +113,7 @@
                         </div>
                       </div>
                     </div>
-                  </a>
+                  <% end %>
                 </div>
               </div>
             <% end%>
@@ -121,7 +123,7 @@
           <% @event.projects.each_with_index do |project, index| %>
             <% if (index % 3 == 1) %>
               <div class="project">
-                <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>"/>
+                <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>" alt="<%= project.name %>" />
                 <div>
                   <a href="/projects/<%= project.id %>">
                     <div class="project-info">
@@ -147,8 +149,8 @@
         <div class="project-column column one-third">
           <% @event.projects.each_with_index do |project, index| %>
             <% if (index % 3 == 2) %>
-               <div class="project">
-                <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>"/>
+              <div class="project">
+                <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>" alt="<%= project.name %>" />
                 <div>
                   <a href="/projects/<%= project.id %>">
                     <div class="project-info">
@@ -262,23 +264,27 @@
 
 <div class="section" id="press-partners">
   <div class="container">
-    <div class="section-header column one-third">Press</div>
+    <% unless @event.press_blurbs.empty? %>
+      <div class="section-header column one-third">Press</div>
+    <% end %>
     <div class="section-header column two-third">Partners</div>
   </div>
 
   <div class="container">
-    <div class="column one-third" id="press-container">
-      <div class="border-container">
-        <% @event.press_blurbs.each do |blurb| %>
-          <div class="press">
-            <p>"<%= blurb.headline %>" _<a href="<%= blurb.source_url %>"><%= blurb.source_name %></a><p>
-          </div>
-        <% end %>
-        <!--<div class="press">
-          <p>“It’s a new and different art form” _<a href="#">Gomorron Sverige</a><p>
-        </div>-->
+    <% unless @event.press_blurbs.empty? %>
+      <div class="column one-third" id="press-container">
+        <div class="border-container">
+          <% @event.press_blurbs.each do |blurb| %>
+            <div class="press">
+              <p>"<%= blurb.headline %>" _<a href="<%= blurb.source_url %>"><%= blurb.source_name %></a><p>
+            </div>
+          <% end %>
+          <!--<div class="press">
+            <p>“It’s a new and different art form” _<a href="#">Gomorron Sverige</a><p>
+          </div>-->
+        </div>
       </div>
-    </div>
+      <% end %>
     <div id="partners-container" class="two-thirds column">
       <% @event.sponsors.each do |sponsor| %>
         <div class="column one-third partner">
