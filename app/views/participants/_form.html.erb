@@ -32,6 +32,7 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
+    <span>Events this participant <em>participated</em> in:</span>
     <%= hidden_field_tag "participant[event_ids][]", nil %>
     <% Event.all.each do |event| %>
       <label class="checkbox">

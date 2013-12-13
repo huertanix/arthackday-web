@@ -17,4 +17,6 @@ class Participant < ActiveRecord::Base
 
   accepts_nested_attributes_for :events
 
+  #scope :is_event_organizer, where(:event_organizer => true)
+
 end
