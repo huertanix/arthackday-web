@@ -68,6 +68,9 @@ gem 'paperclip', '~> 3.0'
 # For the rake task parsing out html from old project descriptions
 gem 'nokogiri'
 
+# Amazon S3
+gem 'aws-sdk'
+
 # Heroku stuff
 group :production do
   gem 'pg'
