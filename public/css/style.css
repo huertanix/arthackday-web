@@ -1261,6 +1261,9 @@ a {
 }
 .section#press-partners #partners-container .partner {
   background-color: #eee;
+  border-color: #000;
+  border-style: solid;
+  border-width:1px;
   height: 186px;
   margin-bottom: 40px;
 }
