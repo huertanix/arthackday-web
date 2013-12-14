@@ -262,6 +262,15 @@
   </div>
 </div>
 
+<div class="section" id="organizers">
+  <div class="container">
+    <div class="section-header columns sixteen">Organizers</div>
+  </div>
+  <div class="container">
+    <%= @event.organizer_section.html_safe unless @event.organizer_section.nil? %>
+  </div>
+</div>
+
 <div class="section" id="press-partners">
   <div class="container">
     <% unless @event.press_blurbs.empty? %>

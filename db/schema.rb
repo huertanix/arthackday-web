@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131213022226) do
+ActiveRecord::Schema.define(version: 20131214012243) do
 
   create_table "events", force: true do |t|
     t.string   "city"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20131213022226) do
     t.datetime "featured_image_updated_at"
     t.boolean  "header_image_tiled"
     t.boolean  "header_dark_font"
+    t.text     "organizer_section"
   end
 
   add_index "events", ["slug"], name: "index_events_on_slug", unique: true
