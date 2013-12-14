@@ -19,8 +19,21 @@
 	</head>
 	<body>
 		<div class="section animated nav" id="nav-main">
-			<% if (!@event.nil? && @event.header_dark_font === true) || (!@events.nil? && @events.first.header_dark_font === true) %>
-				<% @show_dark_text = true %>
+			<% # This block is why Ruby sometimes blows ~ .dh %>
+			<% unless @event.nil? %>
+				<% #@event.inspect # Run this in a project edit page, shit bricks. %>
+				<% if @event.attributes.has_key? 'header_dark_font' %>
+					<% if @event.header_dark_font === true %>
+						<% show_dark_text = true %>
+					<% end %>
+				<% end %>
+			<% end %>
+			<% unless @events.nil? %>
+				<% if @events.first.attributes.has_key? 'header_dark_font' %>
+					<% if @events.first.header_dark_font === true %>
+						<% show_dark_text = true %>
+					<% end %>
+				<% end %>
 			<% end %>
 			<div class="nav-left">
 				<a href="/"><img src="/img/ahd_assets/ahd_logo_white.svg" id="white-logo"/></a>
@@ -37,11 +50,11 @@
 					<ul>
 				<% end %>
 					<li class="about">
-						<a href="/about" style="<%= (@show_dark_text === true ? 'color:#000;':'') %>">About</a>
+						<a href="/about" style="<%= (show_dark_text === true ? 'color:#000;':'') %>">About</a>
 					</li>
 					<!--<li class="events"><a href="/events">Events</a></li>-->
 					<li class="contact">
-						<a href="/contact" style="<%= (@show_dark_text === true ? 'color:#000;':'') %>">Contact</a>
+						<a href="/contact" style="<%= (show_dark_text === true ? 'color:#000;':'') %>">Contact</a>
 					</li>
 				</ul>
 			</div>
