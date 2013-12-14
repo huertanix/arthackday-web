@@ -26,10 +26,12 @@
 			<div class="section-header">
 				send us a message
 			</div>
-			<input type="text" placeholder="Email Address"/>
-			<input type="text" placeholder="Subject"/>
-			<textarea placeholder="Your Message..."></textarea>
-			<button class="contact-submit">SEND</button>
+			<%= form_for @message do |f| %>
+				<%= f.text_field :email, :placeholder => "Email Address", :class => "contact-input" %>
+				<%= f.text_field :subject, :placeholder => "Subject", :class => "contact-input" %>
+				<%= f.text_area :body, :placeholder => "Your Message..." %>
+				<%= f.submit "SEND", :class => "contact-submit" %>
+			<% end %>
 		</div>
 	</div>
 </div>

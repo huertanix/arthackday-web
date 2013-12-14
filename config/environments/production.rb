@@ -79,11 +79,24 @@ ArthackdayWeb::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_credentials => {
-    :bucket => ENV['S3_BUCKET_NAME'],
-    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['S3_BUCKET_NAME'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
   }
-}
+
+  config.action_mailer.default_url_options = { :host => 'smtp.gmail.com' }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :domain               => "gmail.com",
+    :port                 => 587,
+    :user_name            => 'arthackday@gmail.com',
+    :password             => ENV['GMAIL_PASSWORD'],
+    :authentication       => 'plain',
+    :enable_starttls_auto => true
+  }
 end

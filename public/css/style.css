@@ -1151,7 +1151,7 @@ a {
 .section#contact-page .two-third textarea {
   height: 200px;
 }
-.section#contact-page .two-third input,
+.section#contact-page .two-third .contact-input,
 .section#contact-page .two-third textarea {
   border: 1px solid white;
   background-color: black;
@@ -1163,7 +1163,7 @@ a {
   margin-bottom: 30px;
   color: white;
 }
-.section#contact-page .two-third button {
+.section#contact-page .two-third .contact-submit {
   border: 1px solid white;
   background: none;
   color: white;
@@ -1173,7 +1173,7 @@ a {
   font-size: 13px;
   cursor: pointer;
 }
-.section#contact-page .two-third button:hover {
+.section#contact-page .two-third .contact-submit:hover {
   color: black;
   background-color: white;
 }

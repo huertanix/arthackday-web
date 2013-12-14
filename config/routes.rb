@@ -19,7 +19,8 @@ ArthackdayWeb::Application.routes.draw do
 
   resources :about
 
-  resources :contact
+  resources :messages, only: [:index, :create]
+  get 'contact' => "messages#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

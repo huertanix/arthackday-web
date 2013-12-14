@@ -71,6 +71,9 @@ gem 'nokogiri'
 # Amazon S3
 gem 'aws-sdk'
 
+# Contact form
+gem 'mail_form'
+
 # Heroku stuff
 group :production do
   gem 'pg'
