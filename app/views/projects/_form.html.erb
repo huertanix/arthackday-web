@@ -2,7 +2,6 @@
   <% if @project.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
-
       <ul>
       <% @project.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -17,7 +16,7 @@
   </div>
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, size: "64x8" %>
   </div>
   <div class="field">
     <%= f.label :tag %><br>
@@ -57,7 +56,7 @@
   <div class="field">
     <%= f.label :medium %><br>
     <%= f.fields_for :medium do |m| %>
-      HTML Snippet: <%= m.text_area :snippet %><br>
+      HTML Snippet: <%= m.text_area :snippet, size: "64x8" %><br>
       <%= m.link_to_remove "Remove?" %><br>
     <% end %>
     <%= f.link_to_add "Add a Media Snippet", :medium %>
