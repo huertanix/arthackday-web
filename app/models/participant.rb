@@ -10,7 +10,7 @@ class Participant < ActiveRecord::Base
   ##       :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :bio, :twitter_handle, :website, :event_ids
+  attr_accessible :email, :name, :bio, :twitter_handle, :website, :photo_url, :event_ids
 
   has_and_belongs_to_many :events
   has_and_belongs_to_many :projects
