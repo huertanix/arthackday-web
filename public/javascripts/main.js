@@ -217,10 +217,21 @@ $(function(){
 	// for the about page
 	if(isThere('#about-page')){
 		var myPlayer = videojs('#about-video');
+		var clicked = false;
 		$('#about-video-container').click(function(){
-			$('.big-play').hide();
-			// $('#about-video').trigger('click');
-			myPlayer.play();
+
+			if(!clicked){
+				$('.big-play').hide();
+				myPlayer.play();
+				$('#about-video').addClass('playing');
+				clicked = true;
+			}else{
+				$('.big-play').show();
+				myPlayer.pause();
+				$('#about-video').removeClass('playing');
+				clicked = false;
+			}
+
 		});
 
 		$('#play-button-svg').mouseenter( function(){
