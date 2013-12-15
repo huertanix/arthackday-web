@@ -30,7 +30,7 @@ class Event < ActiveRecord::Base
     self.show_end > DateTime.now
   end
 
-  def should_generate_new_friendly_id?
-    true
-  end
+  #def should_generate_new_friendly_id?
+  #  true
+  #end
 end
