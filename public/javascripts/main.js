@@ -216,10 +216,24 @@ $(function(){
 
 	// for the about page
 	if(isThere('#about-page')){
+		var myPlayer = videojs('#about-video');
 		$('#about-video-container').click(function(){
 			$('.big-play').hide();
+			// $('#about-video').trigger('click');
+			myPlayer.play();
+		});
+
+		$('#play-button-svg').mouseenter( function(){
+			// mouseing onto the play icon
+			var polygon = $($(this).find('polygon'));
+			polygon.attr('fill', '#ffffff');
+		}).mouseleave( function(){
+			// mousing off the play icon 
+			var polygon = $($(this).find('polygon'));
+			polygon.attr('fill', 'none');
 		});
 	}	
+
 
 });
 

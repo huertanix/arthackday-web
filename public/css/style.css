@@ -969,7 +969,7 @@ a {
   z-index: 2;
   margin-left: -39px;
   margin-top: -45px;
-  pointer-events: none;
+  cursor: pointer;
 }
 .section#landing-header #about-video-container #about-video {
   height: 100%;
@@ -1151,7 +1151,7 @@ a {
 .section#contact-page .two-third textarea {
   height: 200px;
 }
-.section#contact-page .two-third .contact-input,
+.section#contact-page .two-third input,
 .section#contact-page .two-third textarea {
   border: 1px solid white;
   background-color: black;
@@ -1163,7 +1163,7 @@ a {
   margin-bottom: 30px;
   color: white;
 }
-.section#contact-page .two-third .contact-submit {
+.section#contact-page .two-third button {
   border: 1px solid white;
   background: none;
   color: white;
@@ -1173,7 +1173,7 @@ a {
   font-size: 13px;
   cursor: pointer;
 }
-.section#contact-page .two-third .contact-submit:hover {
+.section#contact-page .two-third button:hover {
   color: black;
   background-color: white;
 }
@@ -1261,15 +1261,11 @@ a {
 }
 .section#press-partners #partners-container .partner {
   background-color: #eee;
-  border-color: #000;
-  border-style: solid;
-  border-width:1px;
   height: 186px;
   margin-bottom: 40px;
-  margin-right:-2px;
 }
 .section#press-partners #partners-container .partner:nth-child(even) {
-  margin-right: -20px; /* Adjustment for border sizing */
+  margin-right: 0px;
 }
 .section#press-partners #partners-container .partner:nth-child(odd) {
   margin-left: 0px;

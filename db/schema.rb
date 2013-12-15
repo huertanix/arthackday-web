@@ -159,7 +159,6 @@ ActiveRecord::Schema.define(version: 20131214012243) do
   create_table "sponsors", force: true do |t|
     t.string   "name"
     t.string   "website"
-    t.string   "logo_uri"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "event_id"
