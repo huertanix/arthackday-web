@@ -974,6 +974,9 @@ a {
 .section#landing-header #about-video-container #about-video {
   height: 100%;
 }
+.section#landing-header #about-video-container #about-video.playing {
+  cursor: pointer;
+}
 .section#landing-header #about-video-container #about-video .vjs-poster {
   background-size: cover;
 }
