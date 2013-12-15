@@ -1266,6 +1266,9 @@ a {
   height: 186px;
   margin-bottom: 40px;
 }
+.section#press-partners #partners-container .partner a img {
+  border: 1px solid black;
+}
 .section#press-partners #partners-container .partner:nth-child(even) {
   margin-right: 0px;
 }
