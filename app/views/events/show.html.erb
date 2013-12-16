@@ -250,7 +250,9 @@
     <% unless @event.press_blurbs.empty? %>
       <div class="section-header column one-third">Press</div>
     <% end %>
-    <div class="section-header column two-third">Partners</div>
+    <% unless @event.sponsors.empty? %>
+      <div class="section-header column two-third">Partners</div>
+    <%end%>
   </div>
 
   <div class="container">
