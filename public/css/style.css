@@ -987,6 +987,17 @@ a {
   color: white;
   position: relative;
 }
+.section#landing-header.tiled-header,
+.section#header.tiled-header {
+  background-repeat: repeat;
+}
+.section#landing-header.centered-header,
+.section#header.centered-header {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .section#landing-header a,
 .section#header a {
   color: white;
