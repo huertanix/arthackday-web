@@ -980,13 +980,17 @@ a {
 .section#landing-header,
 .section#header {
   height: 500px;
-  background-color: black;
   color: white;
   position: relative;
+  background-color: black;
 }
 .section#landing-header.tiled-header,
 .section#header.tiled-header {
   background-repeat: repeat;
+}
+.section#landing-header.dark,
+.section#header.dark {
+  background-color: white;
 }
 .section#landing-header.centered-header,
 .section#header.centered-header {
@@ -1214,8 +1218,11 @@ a {
 }
 .section#header {
   height: 65%;
-  background-color: #aaaaaa;
+  background-color: black;
   color: #ffffff;
+}
+.section#header.dark {
+  background-color: white;
 }
 .section#event-about {
   margin: 75px 0px;

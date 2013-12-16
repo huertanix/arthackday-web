@@ -423,6 +423,11 @@ a{
 		&.tiled-header{
 			background-repeat:repeat;
 		}
+		background-color:black;
+		&.dark{
+			background-color: white;
+
+		}
 		&.centered-header{
 			  -webkit-background-size: cover;
 			  -moz-background-size: cover;
@@ -661,8 +666,11 @@ a{
 	// events
 	&#header{
 		height:65%;
-		background-color: #aaaaaa;
+		background-color: black;
 		color: @white;
+		&.dark{
+			background-color: white;
+		}
 	}
 
 	&#event-about{
