@@ -27,12 +27,12 @@ a{
 		height:98px;
 		position: absolute;
 		.nav-left{
-			#black-logo{
-				display:none;
-				&.show-black{
-					display:block;
-				}
-			}
+			// #black-logo{
+			// 	display:none;
+			// 	&.show-black{
+			// 		display:block;
+			// 	}
+			// }
 			img{
 				width:68px;
 				height: 65px;
@@ -74,6 +74,16 @@ a{
 		margin: 20px 25px 0px 0px;
 		font-size: 12px;
 		float: right;
+		&.dark{
+			ul{
+				li{
+					
+					a{
+						color:black;	
+					}
+				}
+			}
+		}
 		ul{
 			// margin: 39px 20px 0px 0px;
 			&.about{
@@ -405,6 +415,11 @@ a{
 		background-color: black;
 		color: white;
 		position: relative;
+		// &#hero, #sub-hero, #header-credit a{
+		// 	&.dark{
+		// 		color:black;
+		// 	}
+		// }
 		&.tiled-header{
 			background-repeat:repeat;
 		}
@@ -428,6 +443,12 @@ a{
 			#sub-hero{
 				font-size: 21px;
 			}
+			&.dark{
+				#hero,#sub-hero{
+					color: black;
+				}
+
+			}
 		}
 		#header-credit{
 			position:absolute;
@@ -438,6 +459,11 @@ a{
 				font-family: 'COLFAX';
 				text-transform:uppercase;
 				color:white;
+			}
+			&.dark{
+				a{
+					color: black;
+				}
 			}
 		}
 	}

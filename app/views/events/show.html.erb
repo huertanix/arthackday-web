@@ -1,12 +1,12 @@
 
 <div class="section <%= @event.header_image_tiled? ? 'tiled-header' : 'centered-header' %>" id="header" style="background-image: url('<%=@event.header_image %>');">
 
-  <div class="event-callout" style="<%= (@event.header_dark_font? ? 'color:#000;' : '') %>">
+  <div class="event-callout <%= (@event.header_dark_font? ? 'dark' : '') %>">
     <div id="hero"><%= @event.theme %></div>
   </div>
   <% unless @event.header_image_artist.blank? %>
-    <div id="header-credit">
-      <a href="<%= @event.header_image_artist_website %>" style="<%= (@event.header_dark_font? ? 'color:#000;' : '') %>">
+    <div id="header-credit" class="<%= (@event.header_dark_font? ? 'dark' : '') %>">
+      <a href="<%= @event.header_image_artist_website %>">
         IMAGERY BY: <%= @event.header_image_artist %>
       </a>
     </div>
@@ -53,6 +53,7 @@
       </p>
     </div>
     <% if @event.upcoming? %>
+      <%if @event.show_rsvp_url.blank? %>
       <div class="about-event-right one-third column">
         <div class="border-container">
           <div class="pre-about">
@@ -67,6 +68,7 @@
           </div>
         </div>
       </div>
+      <% end %>
     <% else %>
       <div class="about-event-right two-thirds column video">
         <% if !@event.featured_video.blank? %>

@@ -36,10 +36,13 @@
 				<% end %>
 			<% end %>
 			<div class="nav-left">
-				<a href="/"><img src="/img/ahd_assets/ahd_logo_white.svg" id="white-logo"/></a>
+				<% if show_dark_text %>
 				<a href="/"><img src="/img/ahd_assets/ahd_logo_black.svg" id="black-logo"/></a>
+				<% else %>
+				<a href="/"><img src="/img/ahd_assets/ahd_logo_white.svg" id="white-logo"/></a>
+				<% end %>
 			</div>
-			<div class="nav-right">
+			<div class="nav-right <%= (show_dark_text === true ? 'dark':'') %>">
 				<% if params[:controller] == "about" %>
 					<ul class="about">
 				<% elsif params[:controller] == "events" %>
@@ -50,7 +53,7 @@
 					<ul>
 				<% end %>
 					<li class="about">
-						<a href="/about" style="<%= (show_dark_text === true ? 'color:#000;':'') %>">About</a>
+						<a href="/about">About</a>
 					</li>
 					<!--<li class="events"><a href="/events">Events</a></li>-->
 					<li class="contact">

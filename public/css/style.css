@@ -646,12 +646,6 @@ a {
   height: 98px;
   position: absolute;
 }
-.nav#nav-main .nav-left #black-logo {
-  display: none;
-}
-.nav#nav-main .nav-left #black-logo.show-black {
-  display: block;
-}
 .nav#nav-main .nav-left img {
   width: 68px;
   height: 65px;
@@ -684,6 +678,9 @@ a {
   margin: 20px 25px 0px 0px;
   font-size: 12px;
   float: right;
+}
+.nav .nav-right.dark ul li a {
+  color: black;
 }
 .nav .nav-right ul.about .about {
   border-bottom: 1px solid white;
@@ -1016,6 +1013,12 @@ a {
 .section#header .event-callout #sub-hero {
   font-size: 21px;
 }
+.section#landing-header .event-callout.dark #hero,
+.section#header .event-callout.dark #hero,
+.section#landing-header .event-callout.dark #sub-hero,
+.section#header .event-callout.dark #sub-hero {
+  color: black;
+}
 .section#landing-header #header-credit,
 .section#header #header-credit {
   position: absolute;
@@ -1028,6 +1031,10 @@ a {
   font-family: 'COLFAX';
   text-transform: uppercase;
   color: white;
+}
+.section#landing-header #header-credit.dark a,
+.section#header #header-credit.dark a {
+  color: black;
 }
 .section#project-page {
   background-color: white;
