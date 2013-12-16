@@ -195,7 +195,7 @@ $(function(){
 		}
 	});
 
-	orderParticipants($('.participants-all'));
+	// orderParticipants($('.participants-all'));
 
 	// for the event 
 	if(isThere('#event-video')){

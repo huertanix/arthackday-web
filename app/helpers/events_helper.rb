@@ -13,5 +13,6 @@ module EventsHelper
 
 			partHash[k] << part
 		end
+		return partHash
 	end
 end
