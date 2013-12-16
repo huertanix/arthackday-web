@@ -14,38 +14,24 @@ function updateContainer(wH){
 	}
 }
 
-function orderParticipants(participantsContainer){
-	
-	var participants = participantsContainer.find('.participant');
-   	var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+function orderParticipants(partContainer){
+	// var participants = partContainer.find('.participant').length;
+	// var eachColumn = Math.floor(participants/3);
 
-   	for(var i=0; i<str.length; i++){
-      	var nextChar = str.charAt(i);
-      	participants.each(function(){
-      		var part = $(this).find('.name span').html();
-	      	if(part.charAt(0) === nextChar){
-	      		if($("#" + nextChar + "-group").length > 0){
-	      			$("#" + nextChar + "-group").append($(this));
-	      		}else{
-	      			var group = '<div class="participant-group" id="' + nextChar + '-group"><h2>' + nextChar + '</h2></div>';
-	      			participantsContainer.append(group);
-	      			var group = $("#"+nextChar+"-group");
-	      			group.append($(this));
-	      		}
-	      	}	      		
-      	});
-   	}
-   	var leftover = participantsContainer.find('> .participant');
-   	$(leftover).each(function(){
-		if($("#rest-group").length > 0){
-			$("#rest-group").append($(this));
-		}else{
-			var group = '<div class="participant-group" id="rest-group"><h2>*</h2></div>';
-			participantsContainer.append(group);
-			var group = $("#rest-group");
-			group.append($(this));
-		}
-   	});
+	// var partGroup = partContainer.find('.participant-group');
+	// var group = 0;
+	// var count = 0
+	// var newColumn = false;
+
+	// $(partGroup).each(function(){
+	// 	if(newColumn){
+	// 		// add to new column
+	// 	}
+	// 	console.log($(this).find('.participant').length);
+	// 	if(){
+
+	// 	}
+	// });
 }
 
 
@@ -195,7 +181,7 @@ $(function(){
 		}
 	});
 
-	// orderParticipants($('.participants-all'));
+	orderParticipants($('.participants-all'));
 
 	// for the event 
 	if(isThere('#event-video')){

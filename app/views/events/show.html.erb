@@ -235,18 +235,13 @@
             <% end %>
           </div>
         <% end %>
+        <div class="participant-group" id="org-group">
+          <h2>ORG.</h2>
+          <%= @event.organizer_section.html_safe unless @event.organizer_section.nil? %>
+        </div>
       <% end %>
 
     </div> 
-  </div>
-</div>
-
-<div class="section" id="organizers">
-  <div class="container">
-    <div class="section-header columns sixteen">Organizers</div>
-  </div>
-  <div class="container">
-    <%= @event.organizer_section.html_safe unless @event.organizer_section.nil? %>
   </div>
 </div>
 
