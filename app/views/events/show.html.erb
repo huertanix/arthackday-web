@@ -53,7 +53,7 @@
       </p>
     </div>
     <% if @event.upcoming? %>
-      <%if @event.show_rsvp_url.blank? || @event.hack_rsvp_url.blank? %>
+      <%if !@event.show_rsvp_url.blank? || !@event.hack_rsvp_url.blank? %>
       <div class="about-event-right one-third column">
         <div class="border-container">
           <div class="pre-about">
