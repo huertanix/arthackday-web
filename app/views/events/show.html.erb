@@ -198,37 +198,43 @@
       <% if @event.participants.empty? %>
         Can't wait to meet you!
       <% else %>
-        <% @event.participants.each do |participant| %>
-          <div class="participant">
-            <div class="name basic-colfax">
-              <span><%= participant.name %></span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                   width="16.264px" height="8.839px" viewBox="0 0 16.264 8.839" enable-background="new 0 0 16.264 8.839" xml:space="preserve">
-                <g id="Layer_1">
-                  <polyline fill="none" stroke="#5000ff" stroke-miterlimit="10" points="0.354,8.485 8.132,0.707 15.91,8.485   "/>
-                </g>
-              </svg>
-            </div>
-            <div class="participant-additional">
-              <div class="participant-top">
-                <img src="<%= participant.photo_url.blank? ? 'http://placekitten.com/48/48' : participant.photo_url %>" style="width:48px;height:48px;" />
-                <div>
-                  <% if participant.twitter_handle.blank? %>
-                    <a href="<%= participant.website %>"><p><%= participant.name %></p></a>
-                  <% else %>
-                    <a href="https://twitter.com/<%= participant.twitter_handle %>"><p>@<%= participant.twitter_handle %></p></a>
-                    <!--<div class="basic-colfax">Brooklyn, ny</div>-->
-                  <% end %>
+        <% parts = order_participants(@event.participants.each) %>
+        <% parts.keys.sort.each do |t| %>
+          <div class="participant-group" id="<%= t %>-group">
+            <h2><%= t %></h2>
+            <% parts[t].each do |p| %>
+              <div class="participant">
+                <div class="name basic-colfax">
+                  <span><%= p.name %></span>
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                       width="16.264px" height="8.839px" viewBox="0 0 16.264 8.839" enable-background="new 0 0 16.264 8.839" xml:space="preserve">
+                    <g id="Layer_1">
+                      <polyline fill="none" stroke="#5000ff" stroke-miterlimit="10" points="0.354,8.485 8.132,0.707 15.91,8.485   "/>
+                    </g>
+                  </svg>
+                </div>
+                <div class="participant-additional">
+                  <div class="participant-top">
+                    <img src="<%= p.photo_url.blank? ? 'http://placekitten.com/48/48' : p.photo_url %>" style="width:48px;height:48px;" />
+                    <div>
+                      <% if p.twitter_handle.blank? %>
+                        <a href="<%= p.website %>"><p><%= p.name %></p></a>
+                      <% else %>
+                        <a href="https://twitter.com/<%= p.twitter_handle %>"><p>@<%= p.twitter_handle %></p></a>
+                        <!--<div class="basic-colfax">Brooklyn, ny</div>-->
+                      <% end %>
+                    </div>
+                  </div>
+                  <div class="participant-bottom">
+                    <p>
+                      <%= p.bio %>
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div class="participant-bottom">
-                <p>
-                  <%= participant.bio %>
-                </p>
-              </div>
-            </div>
+            <% end %>
           </div>
-        <% end %>  
+        <% end %>
       <% end %>
 
     </div> 
