@@ -1048,7 +1048,7 @@ a {
   margin: 0px;
 }
 .section#project-page #project #project-description a > p:hover {
-  color: black;
+  color: #5000ff;
 }
 .section#project-page #project #project-description .section-header {
   margin: 30px 0px;
