@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	  <title>Art Hack Day</title>
-	  <link rel="icon" href="/img/ahd_assets/favicon.ico" type="image/x-icon"/>
-	  <link rel="shortcut icon" href="/img/ahd_assets/favicon.ico" type="image/x-icon"/>
-	  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-	  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-	   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
-	  <% #javascript_include_tag "application", "data-turbolinks-track" => true %>
-	  <%= javascript_include_tag "application", "nested_form" %>
-	  <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
-	  <%= csrf_meta_tags %>
-	  <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-	  <link href="//vjs.zencdn.net/4.2/video-js.css" rel="stylesheet">
-	  <link rel="stylesheet" href="/css/style.css" />
+		<title>Art Hack Day</title>
+		<link rel="icon" href="/img/ahd_assets/favicon.ico" type="image/x-icon"/>
+		<link rel="shortcut icon" href="/img/ahd_assets/favicon.ico" type="image/x-icon"/>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+		<% #javascript_include_tag "application", "data-turbolinks-track" => true %>
+		<%= javascript_include_tag "application", "nested_form" %>
+		<script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+		<%= csrf_meta_tags %>
+		<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+		<link href="//vjs.zencdn.net/4.2/video-js.css" rel="stylesheet">
+		<link rel="stylesheet" href="/css/style.css" />
 
-	  <meta name="google-site-verification" content="zu9Bbmki1kIgzpwZbMDTBpmHUUljuDUIKjFMxM75Dh4" />
+		<meta property="og:title" content="ART HACK DAY"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:url" content="http://www.arthackday.net"/>
+		<meta property="og:image" content="http://www.arthackday.net/img/ahd_assets/ahd_logo_black.svg"/>
+		<meta property="og:site_name" content="ART HACK DAY"/>
+		<meta property="og:description" content="ART HACK DAY is an event for hackers whose medium is art and artists whose medium is technology."/>
+
+		<meta name="google-site-verification" content="zu9Bbmki1kIgzpwZbMDTBpmHUUljuDUIKjFMxM75Dh4" />
 	</head>
 	<body>
 		<div class="section animated nav" id="nav-main">
