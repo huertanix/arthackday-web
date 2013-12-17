@@ -43,13 +43,13 @@
 				<% end %>
 			<% end %>
 			<div class="nav-left">
-				<% if show_dark_text %>
+				<% if show_dark_text || params[:controller] == "projects"%>
 				<a href="/"><img src="/img/ahd_assets/ahd_logo_black.svg" id="black-logo"/></a>
 				<% else %>
 				<a href="/"><img src="/img/ahd_assets/ahd_logo_white.svg" id="white-logo"/></a>
 				<% end %>
 			</div>
-			<div class="nav-right <%= (show_dark_text === true ? 'dark':'') %>">
+			<div class="nav-right <%= ((show_dark_text === true || params[:controller] == "projects")? 'dark':'') %>">
 				<% if params[:controller] == "about" %>
 					<ul class="about">
 				<% elsif params[:controller] == "events" %>
@@ -89,7 +89,7 @@
 				</ul>
 			</div>
 		</div>
-		
+
 		<%= yield %>
 		
 		<div class="section" id="footer">
