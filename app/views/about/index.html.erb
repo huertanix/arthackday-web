@@ -57,13 +57,15 @@
       <div class="section-header">HOST AN ART HACK DAY</div>
       <p>Art Hack Day is a grassroots event driven by outstanding co-organizers and co-organizing art spaces around the world. The following art spaces have co-organized Art Hack Days in the past: </p>
       <ul>
-        <li><a href="http://319scholes.org/">319 SCHOLES</a></li>
-        <li><a href="http://www.transmediale.de/">TRANSMEDIALE</a></li>
-        <li><a href="http://www.leapknecht.de/">LEAP</a></li>
-        <li><a href="http://www.bonnierskonsthall.se/en/utstallning/body-talk/">BONNIERS KONSTHALL</a></li>
-        <li><a href="http://www.gaffta.org/">GAFFTA</a></li>
+        <li><a href="http://319scholes.org/">319 SCHOLES</a> (Igal Nassima, Lindsay Howard)</li>
+         <li><a href="http://www.gaffta.org/">GAFFTA</a> (Josette Melchor, Mat Dryhurst)</li>
+        <li><a href="http://www.bonnierskonsthall.se/en/utstallning/body-talk/">BONNIERS KONSTHALL</a> (Bj&ouml;rn Norborg</li>
+        <li><a href="http://www.leapknecht.de/">LEAP</a> (Daniel Franke, John McKiernan, Kai Kreuzm&ouml;ller)</li>
+         <li><a href="http://www.transmediale.de/">TRANSMEDIALE</a> (Kristoffer Gansing, Inga Seidler)</li>
+        
+       
       </ul>
-      <a href="mailto:arthackday@gmail.com"><button class="one-third column alpha omega">BECOME A PARTNER</button></a>
+      <a href="mailto:arthackday@gmail.com"><button class="one-third column alpha omega">INTERESTED IN CO-ORGANIZING?</button></a>
     </div>
     <div class="two-thirds column"> 
       <img src="/img/about/Arthackday_About_Partners.jpg"/>
@@ -101,29 +103,6 @@
     </div>-->
     <!-- close press blurb -->
 
-  <div class="container about-sponsors">
-    <div class="sixteen columns">
-      <div class="section-header">SPONSOR AN EVENT</div>
-    </div>
-    <div class="two-thirds column">
-      <p>Art Hack Day provides an unprecedented opportunity to reach a targeted audience of technology visionairies, digital artists, coders, tastemakers and entrepreneurs both in U.S., Europe, and globally.</p><p>We are happy to work with companies that share our values and have a long-term interest in nurturing the community and supporting future exhibitions.</p>
-    </div>
-    <div class="sixteen columns sponsor-space"></div>
-    <% @sponsors.each do |sponsor| %>
-      <a href="<%= sponsor.website %>">
-        <div class="one-third column about-sponsor">
-          <%= image_tag sponsor.logo.url(:thumb), :alt => sponsor.name %>
-        </div>
-      </a>
-    <% end %>
-    <!-- sponsor -->
-    <!--<div class="one-third column about-sponsor"></div>--><!-- close sponsor -->
-    <div class="sixteen columns sponsor-us">
-      <a href="mailto:arthackday@gmail.com">
-        <div>SPONSOR US</div>
-      </a>
-    </div>
-  </div>
 
 </div>
 
