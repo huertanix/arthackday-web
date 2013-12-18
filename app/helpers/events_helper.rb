@@ -1,7 +1,6 @@
 module EventsHelper
 	def order_participants(participants)
 		partHash = Hash.new
-		# partCount = participants.length
 
 		# loop through participants
 		participants.each do |part|
@@ -14,19 +13,11 @@ module EventsHelper
 			partHash[k] << part
 		end
 
-		# $i = 0
-		# $col = 2
 
-		# colCount = 0
-
-		# until $i > $col  do
-		# 	# each column has a hash
-		# 	partHash[$i] = Hash.new
-
-		# 	for partHash.keys.sort.each do 
-				
-		# 	end
-		# end
+		partHash.keys.sort.each do |p|
+			# alphabetize the names in each of the arrays
+			partHash[p].sort! { |a,b| a.name.downcase <=> b.name.downcase }
+		end
 
 		return partHash
 	end
