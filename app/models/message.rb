@@ -3,6 +3,8 @@ class Message < MailForm::Base
   attribute :subject, :validate => true
   attribute :body, :validate => true
 
+  #attr_accessible :email, :subject, :body
+
   def headers
     {
       :subject => %(#{subject}),

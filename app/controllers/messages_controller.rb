@@ -4,16 +4,16 @@ class MessagesController < ApplicationController
   end
 
   def create
-    message = Message.new(params[:contact_form])
+    @message = Message.new(params[:message])
 
-    if message.valid?
-      if message.deliver
+    if @message.valid?
+      if @message.deliver
         redirect_to root_path, :notice => 'Message has been sent.'
       else
         redirect_to root_path, :notice => 'Message could not be sent. Try emailing arthackday@gmail.com for now.'
       end
     else
-      # todo: error message display
+      render 'index'
     end
   end
 end
