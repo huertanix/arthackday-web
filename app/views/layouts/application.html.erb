@@ -26,6 +26,9 @@
 	</head>
 	<body>
 		<div class="section animated nav" id="nav-main">
+			<% flash.each do |name, msg| -%>
+      	<%= content_tag :div, msg, class: name %>
+    	<% end -%>
 			<% # This block is why Ruby sometimes blows ~ .dh %>
 			<% unless @event.nil? %>
 				<% #@event.inspect # Run this in a project edit page, shit bricks. %>
