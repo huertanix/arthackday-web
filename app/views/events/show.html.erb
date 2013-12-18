@@ -1,4 +1,4 @@
-<a name="top" class="anchor"></a>
+<a id="top" class="anchor"></a>
 <div class="section <%= @event.header_image_tiled? ? 'tiled-header' : 'centered-header' %> <%= (@event.header_dark_font? ? 'dark' : '') %>" id="header" style="background-image: url('<%=@event.header_image %>');">
   <div class="event-callout <%= (@event.header_dark_font? ? 'dark' : '') %>">
     <div id="hero"><%= @event.theme %></div>
@@ -13,7 +13,7 @@
 </div>
 
 <div class="section" id="event-about">
-  <a name="about" class="anchor"></a>
+  <a id="about" class="anchor"></a>
   <div class="container">
     <div class="sixteen columns">
       <div class="section-header">show information</div>
@@ -53,7 +53,7 @@
       </p>
     </div>
     <% if @event.upcoming? %>
-      <a name="attend" class="anchor"></a>
+      <a id="attend" class="anchor"></a>
       <%if !@event.show_rsvp_url.blank? || !@event.hack_rsvp_url.blank? %>
         <div class="about-event-right one-third column">
           <div class="border-container">
@@ -88,7 +88,7 @@
 
 <% unless @event.projects.empty? %>
 <div class="section" id="projects">
-  <a name="projects" class="anchor"></a>
+  <a id="projects" class="anchor"></a>
   <div class="container">
     <div class="section-header columns sixteen">Projects</div>
   </div>
@@ -192,7 +192,7 @@
 <% end %>
 
 <div class="section" id="participants">
-  <a name="participants" class="anchor"></a>
+  <a id="participants" class="anchor"></a>
   <div class="container">
     <div class="section-header columns sixteen">Participants</div>
   </div>
@@ -261,7 +261,7 @@
 
   <div class="container">
     <% unless @event.press_blurbs.empty? %>
-      <a name="press" class="anchor"></a>
+      <a id="press" class="anchor"></a>
       <div class="column one-third" id="press-container">
         <div class="border-container">
           <% @event.press_blurbs.each do |blurb| %>
@@ -276,7 +276,7 @@
       </div>
     <% end %>
     <div id="partners-container" class="two-thirds column">
-      <a name="partners" class="anchor"></a>
+      <a id="partners" class="anchor"></a>
       <% @event.sponsors.each do |sponsor| %>
         <div class="column one-third partner">
           <a href="<%=sponsor.website%>">
