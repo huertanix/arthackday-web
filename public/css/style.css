@@ -1603,3 +1603,14 @@ a {
   -o-animation-name: slideDown;
   animation-name: slideDown;
 }
+
+/* For rails notifications e.g. "Message has been sent." */
+.notice {
+  background-color:lightgreen;
+  background-color:rgba(144, 238, 144, 0.75);
+  color:#fff;
+  padding-top:20px;
+  padding-bottom:20px;
+  text-align:center;
+  width:100%;
+}

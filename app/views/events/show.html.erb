@@ -1,6 +1,5 @@
-
+<a id="top" class="anchor"></a>
 <div class="section <%= @event.header_image_tiled? ? 'tiled-header' : 'centered-header' %> <%= (@event.header_dark_font? ? 'dark' : '') %>" id="header" style="background-image: url('<%=@event.header_image %>');">
-
   <div class="event-callout <%= (@event.header_dark_font? ? 'dark' : '') %>">
     <div id="hero"><%= @event.theme %></div>
   </div>
@@ -14,6 +13,7 @@
 </div>
 
 <div class="section" id="event-about">
+  <a id="about" class="anchor"></a>
   <div class="container">
     <div class="sixteen columns">
       <div class="section-header">show information</div>
@@ -53,25 +53,26 @@
       </p>
     </div>
     <% if @event.upcoming? %>
+      <a id="attend" class="anchor"></a>
       <%if !@event.show_rsvp_url.blank? || !@event.hack_rsvp_url.blank? %>
-      <div class="about-event-right one-third column">
-        <div class="border-container">
-          <div class="pre-about">
-            <%if !@event.show_rsvp_url.blank? %>
-            <div>
-              <p>Join the Art Hack Day teams on Saturday April 13 starting at 6:00pm for a closing exhibition, live performances, and party.</p>
-              <a href="<%= @event.show_rsvp_url%>"><button >RSVP</button></a>
+        <div class="about-event-right one-third column">
+          <div class="border-container">
+            <div class="pre-about">
+              <%if !@event.show_rsvp_url.blank? %>
+              <div>
+                <p>Join the Art Hack Day teams on Saturday April 13 starting at 6:00pm for a closing exhibition, live performances, and party.</p>
+                <a href="<%= @event.show_rsvp_url%>"><button >RSVP</button></a>
+              </div>
+              <% end %>
+              <%if !@event.hack_rsvp_url.blank? %>
+              <div>
+                <p>Do you have mad skills? Register to attend the full weekend and collaborate on projects.</p>
+                <a href="<%= @event.hack_rsvp_url%>"><button>PARTICIPATE</button></a>
+              </div>
+              <% end %>
             </div>
-            <% end %>
-            <%if !@event.hack_rsvp_url.blank? %>
-            <div>
-              <p>Do you have mad skills? Register to attend the full weekend and collaborate on projects.</p>
-              <a href="<%= @event.hack_rsvp_url%>"><button>PARTICIPATE</button></a>
-            </div>
-            <% end %>
           </div>
         </div>
-      </div>
       <% end %>
     <% else %>
       <div class="about-event-right two-thirds column video">
@@ -87,92 +88,93 @@
 
 <% unless @event.projects.empty? %>
 <div class="section" id="projects">
+  <a id="projects" class="anchor"></a>
   <div class="container">
     <div class="section-header columns sixteen">Projects</div>
   </div>
   <div class="container">
     <div class="projects" id="projects-container">
-        <div class="project-column column one-third">
-          <% @event.projects.each_with_index do |project, index| %>
-            <% if (index % 3 == 0) %>
-              <div class="project">
-                <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>" alt="<%= project.name %>" />
-                <div>
-                  <%= link_to(project) do %>
-                    <div class="project-info">
-                      <div class="project-wrapper">
-                        <div>
-                          <div class="basic-colfax">
-                            <%= project.name %>
-                          </div>
-                          <p>
-                            <% project.participants.each do |proj_participant| %>
-                              _<%= proj_participant.name %>
-                            <% end %>
-                          </p>
+      <div class="project-column column one-third">
+        <% @event.projects.each_with_index do |project, index| %>
+          <% if (index % 3 == 0) %>
+            <div class="project">
+              <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>" alt="<%= project.name %>" />
+              <div>
+                <%= link_to(project) do %>
+                  <div class="project-info">
+                    <div class="project-wrapper">
+                      <div>
+                        <div class="basic-colfax">
+                          <%= project.name %>
                         </div>
+                        <p>
+                          <% project.participants.each do |proj_participant| %>
+                            _<%= proj_participant.name %>
+                          <% end %>
+                        </p>
                       </div>
                     </div>
-                  <% end %>
-                </div>
+                  </div>
+                <% end %>
               </div>
-            <% end%>
-          <% end %>
-        </div>
-        <div class="project-column column one-third">
-          <% @event.projects.each_with_index do |project, index| %>
-            <% if (index % 3 == 1) %>
-              <div class="project">
-                <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>" alt="<%= project.name %>" />
-                <div>
-                  <%= link_to(project) do %>
-                    <div class="project-info">
-                      <div class="project-wrapper">
-                        <div>
-                          <div class="basic-colfax">
-                            <%= project.name %>
-                          </div>
-                          <p>
-                            <% project.participants.each do |proj_participant| %>
-                              _<%= proj_participant.name %>
-                            <% end %>
-                          </p>
+            </div>
+          <% end%>
+        <% end %>
+      </div>
+      <div class="project-column column one-third">
+        <% @event.projects.each_with_index do |project, index| %>
+          <% if (index % 3 == 1) %>
+            <div class="project">
+              <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>" alt="<%= project.name %>" />
+              <div>
+                <%= link_to(project) do %>
+                  <div class="project-info">
+                    <div class="project-wrapper">
+                      <div>
+                        <div class="basic-colfax">
+                          <%= project.name %>
                         </div>
+                        <p>
+                          <% project.participants.each do |proj_participant| %>
+                            _<%= proj_participant.name %>
+                          <% end %>
+                        </p>
                       </div>
                     </div>
-                  <% end %>
-                </div>
+                  </div>
+                <% end %>
               </div>
-            <% end%>
-          <% end %>
-        </div>
-        <div class="project-column column one-third">
-          <% @event.projects.each_with_index do |project, index| %>
-            <% if (index % 3 == 2) %>
-              <div class="project">
-                <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>" alt="<%= project.name %>" />
-                <div>
-                  <%= link_to(project) do %>
-                    <div class="project-info">
-                      <div class="project-wrapper">
-                        <div>
-                          <div class="basic-colfax">
-                            <%= project.name %>
-                          </div>
-                          <p>
-                            <% project.participants.each do |proj_participant| %>
-                              _<%= proj_participant.name %>
-                            <% end %>
-                          </p>
+            </div>
+          <% end%>
+        <% end %>
+      </div>
+      <div class="project-column column one-third">
+        <% @event.projects.each_with_index do |project, index| %>
+          <% if (index % 3 == 2) %>
+            <div class="project">
+              <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>" alt="<%= project.name %>" />
+              <div>
+                <%= link_to(project) do %>
+                  <div class="project-info">
+                    <div class="project-wrapper">
+                      <div>
+                        <div class="basic-colfax">
+                          <%= project.name %>
                         </div>
+                        <p>
+                          <% project.participants.each do |proj_participant| %>
+                            _<%= proj_participant.name %>
+                          <% end %>
+                        </p>
                       </div>
                     </div>
-                  <% end %>
-                </div>
+                  </div>
+                <% end %>
               </div>
-            <% end%>
-          <% end %>
-        </div>
+            </div>
+          <% end%>
+        <% end %>
+      </div>
 
       <!--<div class="project column one-third" style="background: url(http://25.media.tumblr.com/e9e0b008f6bf6a78c3a208efef8126f4/tumblr_mmnfc4gKEs1rlcnubo1_250.jpg);background-size: 100%;background-position: center;">
                 <div class="project-info">
@@ -190,6 +192,7 @@
 <% end %>
 
 <div class="section" id="participants">
+  <a id="participants" class="anchor"></a>
   <div class="container">
     <div class="section-header columns sixteen">Participants</div>
   </div>
@@ -259,6 +262,7 @@
 
   <div class="container">
     <% unless @event.press_blurbs.empty? %>
+      <a id="press" class="anchor"></a>
       <div class="column one-third" id="press-container">
         <div class="border-container">
           <% @event.press_blurbs.each do |blurb| %>
@@ -271,8 +275,9 @@
           </div>-->
         </div>
       </div>
-      <% end %>
+    <% end %>
     <div id="partners-container" class="two-thirds column">
+      <a id="partners" class="anchor"></a>
       <% @event.sponsors.each do |sponsor| %>
         <div class="column one-third partner">
           <a href="<%=sponsor.website%>">
