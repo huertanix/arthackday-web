@@ -49,7 +49,7 @@
     <% end %>
 
       <p>
-        <%= @event.about %>
+        <%= @event.about.html_safe %>
       </p>
     </div>
     <% if @event.upcoming? %>
