@@ -49,15 +49,17 @@
   </div>
   <div class="field">
     <%= f.label :hack_rsvp_url %><br>
+    <small>Don't forget the http:// or https://</small><br>
     <%= f.text_field :hack_rsvp_url %>
   </div>
   <div class="field">
     <%= f.label :show_rsvp_url %><br>
+    <small>Don't forget the http:// or https://</small><br>
     <%= f.text_field :show_rsvp_url %>
   </div>
   <div class="field">
     <%= f.label :header_image %><br>
-    <small>e.g. /img/header_background/coolartbro.gif</small><br>
+    <small>e.g. /img/header_backgrounds/coolartbro.gif</small><br>
     <%= f.text_field :header_image %>
   </div>
   <div class="field">
@@ -70,7 +72,7 @@
   </div>
   <div class="field">
     <%= f.label :header_image_artist_website %><br>
-    <small>Don't forget the http:// or https:// if you're ~CYPHERPUNK~</small><br>
+    <small>Don't forget the http:// or https://</small><br>
     <%= f.text_field :header_image_artist_website %>
   </div>
   <div class="field">
@@ -96,6 +98,7 @@
       Headline: <%= pb.text_field :headline %><br>
       Source Name: <%= pb.text_field :source_name %><br>
       Source URL: <%= pb.text_field :source_url %><br>
+      <small>Don't forget the http:// or https:// if you're ~CYPHERPUNK~</small><br>
       Featured on about page: <%= pb.check_box :featured %><br>
       <%= pb.link_to_remove "Remove?" %><br>
     <% end %>
@@ -107,6 +110,7 @@
     <%= f.fields_for :sponsors do |s| %>
       Name: <%= s.text_field :name %><br>
       Website: <%= s.text_field :website %><br>
+      <small>Don't forget the http:// or https:// if you're ~CYPHERPUNK~</small><br>
       Featured on about page: <%= s.check_box :featured %><br>
       Logo: <%= s.file_field :logo %><br>
       <%= s.link_to_remove "Remove?" %><br>
