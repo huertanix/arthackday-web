@@ -45,14 +45,17 @@
 					<% end %>
 				<% end %>
 			<% end %>
+			<% if params[:controller] === "projects" || params[:controller] === "organizers" %>
+				<% show_dark_text = true %>
+			<% end %>
 			<div class="nav-left">
-				<% if show_dark_text || params[:controller] == "projects"%>
+				<% if show_dark_text %>
 				<a href="/"><img src="/img/ahd_assets/ahd_logo_black.svg" id="black-logo"/></a>
 				<% else %>
 				<a href="/"><img src="/img/ahd_assets/ahd_logo_white.svg" id="white-logo"/></a>
 				<% end %>
 			</div>
-			<div class="nav-right <%= ((show_dark_text === true || params[:controller] == "projects")? 'dark':'') %>">
+			<div class="nav-right <%= (show_dark_text === true ? 'dark':'') %>">
 				<% if params[:controller] == "about" %>
 					<ul class="about">
 				<% elsif params[:controller] == "events" %>

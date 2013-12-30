@@ -19,8 +19,12 @@ ArthackdayWeb::Application.routes.draw do
 
   resources :about
 
+  # contact page
   resources :messages, only: [:index, :create]
   get 'contact' => "messages#index"
+
+  # organizer admin pages
+  resources :organizers, only: [:edit, :update]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
