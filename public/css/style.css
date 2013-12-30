@@ -185,10 +185,10 @@ u {
 .black-link a:visited {
   color: black;
 }
-i {
+/*i {
   font-style: normal;
   font-family: "icomoon";
-}
+}*/ /* This was adding Twitter birds to event descriptions when i tags were used */
 p {
   font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 14px;
