@@ -1678,4 +1678,24 @@ a {
 .login label {
   width:200px;
   min-width:200px;
+  float:left;
+}
+
+.admin-two-column {
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+}
+
+.admin-three-column {
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+}
+
+.admin-three-column {
+  -moz-column-count: 4;
+  -webkit-column-count: 4;
+}
+
+small {
+  font-size:12px;
 }

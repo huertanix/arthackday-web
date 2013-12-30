@@ -2,7 +2,10 @@
 <div class="section">
   <div class="container" id="projects-listing">
 <h1>Listing projects</h1>
-
+<br>
+<%= link_to 'New Project', new_project_path %>
+<br>
+<br>
 <table>
   <thead>
     <tr>
@@ -14,7 +17,6 @@
       <th></th>
     </tr>
   </thead>
-
   <tbody>
     <% @projects.each do |project| %>
       <tr>
@@ -28,9 +30,7 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
-
 <%= link_to 'New Project', new_project_path %>
 </div>
 </div>

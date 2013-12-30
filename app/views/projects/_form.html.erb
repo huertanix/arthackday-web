@@ -24,15 +24,17 @@
   </div>
   <div class="field">
     <%= f.label :website %><br>
+    <small>Don't forget the http:// or https://</small><br>
     <%= f.text_field :website %>
   </div>
   <div class="field">
     <%= f.label :github %><br>
+    <small>Don't forget the http:// or https://</small><br>
     <%= f.text_field :github %>
   </div>
   <div class="field">
     Event<br>
-    <%= select("project", "event_id", Event.all.collect {|e| [ e.theme, e.id ] }) %>
+    <%= select("project", "event_id", Event.all.sorted_by_date.collect {|e| [ e.theme, e.id ] }) %>
   </div>
   <!-- Pay no attention to this form field! -->
   <!--<div class="field">
@@ -41,17 +43,20 @@
   </div>-->
   <div class="field">
     <%= f.label :featured_thumbnail %><br>
+    <small>Don't forget the http:// or https://</small><br>
     <%= f.text_field :featured_thumbnail %>
   </div>
   <div class="field">
     Participants<br>
     <%= hidden_field_tag "project[participant_ids][]", nil %>
-    <% Participant.all.each do |participant| %>
-      <label class="checkbox">
-      <%= check_box_tag "project[participant_ids][]", participant.id, @project.participant_ids.include?(participant.id), id: dom_id(participant) %>
-      <%= participant.name %>
-      </label>
-    <% end %>
+    <div class="admin-three-column">
+      <% Participant.all.each do |participant| %>
+        <label class="checkbox">
+        <%= check_box_tag "project[participant_ids][]", participant.id, @project.participant_ids.include?(participant.id), id: dom_id(participant) %>
+        <%= participant.name %>
+        </label><br>
+      <% end %>
+    </div>
   </div>
   <div class="field">
     <%= f.label :medium %><br>
