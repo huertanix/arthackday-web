@@ -46,7 +46,9 @@
 				<% end %>
 			<% end %>
 			<% #= params[:controller].inspect %>
-			<% if params[:controller] === "projects" || params[:controller] === "devise/sessions" %>
+			<% if params[:controller] === "projects" || 
+				params[:controller] === "devise/sessions" || 
+				params[:controller] === "admin" %>
 				<% show_dark_text = true %>
 			<% end %>
 			<div class="nav-left">
