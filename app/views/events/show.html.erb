@@ -85,6 +85,23 @@
     <% end%>
   </div>
 </div>
+<% if @event.upcoming? && %>
+
+<div class="section" id="location-section">
+  <a id="location" class="anchor"></a>
+  <div class="container">
+    <div class="section-header columns sixteen">Location</div>
+  </div>
+  <div class="container">
+    <div class="location" id="location-container">
+      <div class="location-column column full">
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
 
 <% unless @event.projects.empty? %>
 <div class="section" id="projects">
