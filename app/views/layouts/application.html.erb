@@ -31,7 +31,7 @@
     	<% end -%>
 			<% # This block is why Ruby sometimes blows ~ .dh %>
 			<% unless @event.nil? %>
-				<% #@event.inspect # Run this in a project edit page, shit bricks. %>
+				<% #= @event.inspect # Run this in a project edit page, shit bricks. %>
 				<% if @event.attributes.has_key? 'header_dark_font' %>
 					<% if @event.header_dark_font === true %>
 						<% show_dark_text = true %>
@@ -45,7 +45,8 @@
 					<% end %>
 				<% end %>
 			<% end %>
-			<% if params[:controller] === "projects" || params[:controller] === "organizers" %>
+			<% #= params[:controller].inspect %>
+			<% if params[:controller] === "projects" || params[:controller] === "devise/sessions" %>
 				<% show_dark_text = true %>
 			<% end %>
 			<div class="nav-left">
