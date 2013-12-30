@@ -1,0 +1,34 @@
+<div class="space"></div>
+<div class="section">
+  <div class="container">
+    <h1>Listing organizers</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Name</th>
+          <th>Bio</th>
+          <th>Twitter handle</th>
+          <th>Website</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @organizers.each do |organizer| %>
+          <tr>
+            <td><%= organizer.email %></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><%= link_to 'Edit', edit_organizer_path(organizer) %></td>
+            <td><%= link_to 'Destroy', organizer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

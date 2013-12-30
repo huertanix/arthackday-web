@@ -1,0 +1,33 @@
+<%= form_for(@organizer) do |f| %>
+  <% if @organizer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@organizer.errors.count, "error") %> prohibited this participant from being saved:</h2>
+      <ul>
+      <% @organizer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <br>
+  <br>
+  <div class="field">
+    <span>Events this organizer helps run:</span><br>
+    <%= hidden_field_tag "organizer[event_ids][]", nil %>
+    <% Event.all.each do |event| %>
+      <label class="checkbox">
+      <%= check_box_tag "organizer[event_ids][]", event.id, @organizer.event_ids.include?(event.id), id: dom_id(event) %>
+      <%= event.theme + " - " + event.city %>
+      </label>
+      <br>
+    <% end %>
+    <br>
+    To level up this event organizer to organization-level, run this rake task from your arthackday-website project directory:
+    <br>
+    <p>heroku run rake arthackday:level_up_organizer[<%=@organizer.email%>]</p>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
