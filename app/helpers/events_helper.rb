@@ -21,4 +21,24 @@ module EventsHelper
 
 		return partHash
 	end
+	def google_map_search(venue)
+		location = ''
+		if venue.address
+			venue.address.downcase!
+			venue.address.gsub! /\s+/, '+'
+			location = location + venue.address + ",+"
+		end
+		if venue.city
+			venue.city.downcase!
+			venue.city.gsub! /\s+/, '+'
+			location = location + venue.city + ",+"
+		end
+		if venue.country
+			venue.country.downcase!
+			venue.country.gsub! /\s+/, '+'
+			location = location + venue.country + "+"
+		end
+
+		return location
+	end
 end
