@@ -1295,10 +1295,10 @@ a {
   border: 1px solid black;
 }
 .section#press-partners #partners-container .partner:nth-child(even) {
-  margin-right: 0px;
+  margin-left: 0px;
 }
 .section#press-partners #partners-container .partner:nth-child(odd) {
-  margin-left: 0px;
+  margin-right: 0px;
 }
 .section#participants {
   margin-top: 100px;
