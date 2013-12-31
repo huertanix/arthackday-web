@@ -10,6 +10,10 @@ class Organizer < ActiveRecord::Base
   attr_accessor :invite_code
   attr_accessible :email, :password, :password_confirmation, :remember_me, :invite_code, :event_ids
 
+  def can_edit_event?(event_id)
+    self.org_admin? || self.event_ids.include?(event_id)
+  end
+
   validates_each :invite_code, :on => :create do |record, attr, value|
     record.errors.add attr, "Please enter correct invite code" unless
       value && value == ENV["ORG_INVITE_CODE"]

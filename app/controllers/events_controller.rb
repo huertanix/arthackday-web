@@ -15,24 +15,33 @@ class EventsController < ApplicationController
 
   # GET /events/new
   def new
-    if organizer_signed_in?
+    if current_organizer.org_admin?
       @event = Event.new
+    else
+      redirect_to '/admin', alert: "Access Denied! Cyberpolice have been alerted."
     end
   end
 
   # GET /events/1/edit
   def edit
-    if organizer_signed_in?
-      @event = Event.friendly.find(params[:id])
+    @event = Event.friendly.find(params[:id])
+
+    if current_organizer.can_edit_event? @event.id
+      respond_to do |format|
+        format.html
+        format.json
+      end
+    else
+      redirect_to '/admin', alert: "Access Denied! Cyberpolice have been alerted."
     end
   end
 
   # POST /events
   # POST /events.json
-  def create
-    if organizer_signed_in?
-      @event = Event.new(event_params)
+  def create  
+    @event = Event.new(event_params)
 
+    if current_organizer.can_edit_event? @event.id
       respond_to do |format|
         if @event.save
           format.html { redirect_to @event, notice: 'Event was successfully created.' }
@@ -48,7 +57,7 @@ class EventsController < ApplicationController
   # PATCH/PUT /events/1
   # PATCH/PUT /events/1.json
   def update
-    if organizer_signed_in?
+    if current_organizer.can_edit_event? @event.id
       respond_to do |format|
         if @event.update(event_params)
           format.html { redirect_to @event, notice: 'Event was successfully updated.' }
@@ -58,18 +67,22 @@ class EventsController < ApplicationController
           format.json { render json: @event.errors, status: :unprocessable_entity }
         end
       end
+    else
+      redirect_to '/admin', alert: "Access Denied! Cyberpolice have been alerted."
     end
   end
 
   # DELETE /events/1
   # DELETE /events/1.json
   def destroy
-    if organizer_signed_in?
+    if current_organizer.org_admin?
       @event.destroy
       respond_to do |format|
         format.html { redirect_to events_url }
         format.json { head :no_content }
       end
+    else
+      redirect_to '/admin', alert: "Access Denied! Cyberpolice have been alerted."
     end
   end
 
