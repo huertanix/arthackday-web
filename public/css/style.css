@@ -185,10 +185,10 @@ u {
 .black-link a:visited {
   color: black;
 }
-/*i {
+i {
   font-style: normal;
   font-family: "icomoon";
-}*/ /* This was adding Twitter birds to event descriptions when i tags were used */
+}
 p {
   font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 14px;
@@ -1602,103 +1602,4 @@ a {
   -moz-animation-name: slideDown;
   -o-animation-name: slideDown;
   animation-name: slideDown;
-}
-
-/* For rails notifications e.g. "Message has been sent." */
-.notice {
-  background-color:lightgreen;
-  background-color:rgba(144, 238, 144, 0.75);
-  color:#fff;
-  padding-top:20px;
-  padding-bottom:20px;
-  text-align:center;
-  width:100%;
-}
-
-.alert {
-  background-color:#F33;
-  background-color:rgba(255, 51, 51, 0.75);
-  color:#fff;
-  padding-top:20px;
-  padding-bottom:20px;
-  text-align:center;
-  width:100%;
-}
-
-/* Admin stuffs */
-.admin_heading {
-  /*margin-top:100px;*/
-}
-
-/*.admin_header {
-  background-color:#000;
-  width:100%;
-  height:100px;
-  margin-bottom:30px;
-}*/
-
-.login-container {
-  padding-top:100px;
-  width:400px;
-  margin:0 auto;
-}
-
-.login {
-  width: 400px;
-  height: 300px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #000;
-  font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 14px;
-  padding: 20px;
-}
-
-.login-form {
-  text-align: left;
-}
-
-.login h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.login input {
-  border: 1px solid black;
-  background-color: white;
-  padding: 10px;
-  font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 14px;
-  line-height: 17px;
-  margin-bottom: 20px;
-  color: black;
-}
-
-.login .text-field {
-  width:380px;
-}
-
-/*.login label {
-  width: 100px;
-  line-height: 17px;
-  float:left;
-}*/
-
-.admin-two-column {
-  -moz-column-count: 2;
-  -webkit-column-count: 2;
-}
-
-.admin-three-column {
-  -moz-column-count: 3;
-  -webkit-column-count: 3;
-}
-
-.admin-three-column {
-  -moz-column-count: 4;
-  -webkit-column-count: 4;
-}
-
-small {
-  font-size:12px;
 }
