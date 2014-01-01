@@ -102,11 +102,23 @@ Stop rails if it's running and run `rake db:migrate`. Start rails again and you 
 
 ...restart Rails and run `rake db:migrate` again. Now both config/database.yml and db/schema.rb should no longer show up when you run `git status` and it should be safe to commit your changes.
 
+
+Deploying to Staging
+-----------------------
+Assuming you have been assigned as a collaborator for arthackday-staging.herokuapp.com (and you have installed https://toolbelt.heroku.com/) push to staging by adding Heroku to your list of git remotes using this command and then pushing:
+
+    git remote rm heroku
+    heroku git:remote -a arthackday-staging
+    git push heroku master
+
+
 Deploying to Production
 -----------------------
 Assuming you have been assigned as a collaborator for arthackday-website.herokuapp.com, you need to install the Heroku toolbelt if you haven't yet (https://toolbelt.heroku.com/) and add Heroku to your list of git remotes using this command:
 
     heroku git:remote -a arthackday-website
+
+(NB: if you've pushed to staging first you'll need to remove the remote pointing to staging first with this command "git remote rm heroku"). 
 
 After the remote has been added, you can push your changes (after pulling the latest from Github and committing the changes you're made) with this command:
 
