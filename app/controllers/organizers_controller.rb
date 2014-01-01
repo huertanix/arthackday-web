@@ -1,6 +1,6 @@
 class OrganizersController < ApplicationController
-  before_action :set_organizer, only: [:edit, :update]
-  before_filter :authenticate_organizer!, :only => [:edit, :update, :index]
+  before_action :set_organizer, only: [:edit, :update, :destroy]
+  before_filter :authenticate_organizer!, :only => [:index, :edit, :update, :destroy]
 
   def index 
     @organizers = Organizer.all

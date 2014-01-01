@@ -1,36 +1,38 @@
-<div class="space"></div>
+<header class="admin-header">
+</header>
 <div class="section">
   <div class="container" id="projects-listing">
-<h1>Listing projects</h1>
-<br>
-<%= link_to 'New Project', new_project_path %>
-<br>
-<br>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Tag</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.name %></td>
-        <td><%= project.description %></td>
-        <td><%= project.tag %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
-<%= link_to 'New Project', new_project_path %>
-</div>
+    <h1>Listing projects</h1>
+    <br>
+    <%= link_to 'New Project', new_project_path %>
+    <br>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Tag</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @projects.each do |project| %>
+          <tr>
+            <td><%= project.name %></td>
+            <td><%= project.description %></td>
+            <td><%= project.tag %></td>
+            <td><%= link_to 'Show', project %></td>
+            <td><%= link_to 'Edit', edit_project_path(project) %></td>
+            <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <br>
+    <%= link_to 'New Project', new_project_path %>
+    <%= link_to 'Back', '/admin' %>
+  </div>
 </div>

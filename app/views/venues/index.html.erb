@@ -1,44 +1,44 @@
-<div class="space"></div>
+<header class="admin-header">
+</header>
 <div class="section">
   <div class="container">
-<h1>Listing venues</h1>
+    <h1>Listing venues</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>City</th>
-      <th>Subdivision</th>
-      <th>Country</th>
-      <th>Postal code</th>
-      <th>Website</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>Subdivision</th>
+          <th>Country</th>
+          <th>Postal code</th>
+          <th>Website</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @venues.each do |venue| %>
-      <tr>
-        <td><%= venue.name %></td>
-        <td><%= venue.address %></td>
-        <td><%= venue.city %></td>
-        <td><%= venue.subdivision %></td>
-        <td><%= venue.country %></td>
-        <td><%= venue.postal_code %></td>
-        <td><%= venue.website %></td>
-        <td><%= link_to 'Show', venue %></td>
-        <td><%= link_to 'Edit', edit_venue_path(venue) %></td>
-        <td><%= link_to 'Destroy', venue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Venue', new_venue_path %>
-</div>
+      <tbody>
+        <% @venues.each do |venue| %>
+          <tr>
+            <td><%= venue.name %></td>
+            <td><%= venue.address %></td>
+            <td><%= venue.city %></td>
+            <td><%= venue.subdivision %></td>
+            <td><%= venue.country %></td>
+            <td><%= venue.postal_code %></td>
+            <td><%= venue.website %></td>
+            <td><%= link_to 'Show', venue %></td>
+            <td><%= link_to 'Edit', edit_venue_path(venue) %></td>
+            <td><%= link_to 'Destroy', venue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <br>
+    <%= link_to 'New Venue', new_venue_path %>
+    <%= link_to 'Back', '/admin' %>
+  </div>
 </div>

@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_organizer!, :only => [:create, :update, :new, :edit, :destroy]
+  before_filter :authenticate_organizer!, :only => [:index, :create, :update, :new, :edit, :destroy]
 
   # GET /projects
   # GET /projects.json
@@ -15,32 +15,26 @@ class ProjectsController < ApplicationController
 
   # GET /projects/new
   def new
-    if organizer_signed_in?
-      @project = Project.new
-    end
+    @project = Project.new
   end
 
   # GET /projects/1/edit
   def edit
-    if organizer_signed_in?
-      @event = Project.friendly.find(params[:id])
-    end
+    @project = Project.friendly.find(params[:id])
   end
 
   # POST /projects
   # POST /projects.json
   def create
-    if organizer_signed_in?
-      @project = Project.new(project_params)
+    @project = Project.new(project_params)
 
-      respond_to do |format|
-        if @project.save
-          format.html { redirect_to @project, notice: 'Project was successfully created.' }
-          format.json { render action: 'show', status: :created, location: @project }
-        else
-          format.html { render action: 'new' }
-          format.json { render json: @project.errors, status: :unprocessable_entity }
-        end
+    respond_to do |format|
+      if @project.save
+        format.html { redirect_to @project, notice: 'Project was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @project }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @project.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -48,15 +42,13 @@ class ProjectsController < ApplicationController
   # PATCH/PUT /projects/1
   # PATCH/PUT /projects/1.json
   def update
-    if organizer_signed_in?
-      respond_to do |format|
-        if @project.update(project_params)
-          format.html { redirect_to @project, notice: 'Project was successfully updated.' }
-          format.json { head :no_content }
-        else
-          format.html { render action: 'edit' }
-          format.json { render json: @project.errors, status: :unprocessable_entity }
-        end
+    respond_to do |format|
+      if @project.update(project_params)
+        format.html { redirect_to @project, notice: 'Project was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @project.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -64,12 +56,10 @@ class ProjectsController < ApplicationController
   # DELETE /projects/1
   # DELETE /projects/1.json
   def destroy
-    if organizer_signed_in?
-      @project.destroy
-      respond_to do |format|
-        format.html { redirect_to projects_url }
-        format.json { head :no_content }
-      end
+    @project.destroy
+    respond_to do |format|
+      format.html { redirect_to projects_url }
+      format.json { head :no_content }
     end
   end
 
