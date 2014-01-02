@@ -14,17 +14,26 @@
 		<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 		<link href="//vjs.zencdn.net/4.2/video-js.css" rel="stylesheet">
 		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/css/admin.css" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/img/ahd_assets/ahd_logo_white_200px.png">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta property="og:title" content="ART HACK DAY"/>
 		<meta property="og:type" content="website"/>
 		<meta property="og:url" content="http://www.arthackday.net"/>
-		<meta property="og:image" content="http://www.arthackday.net/img/ahd_assets/ahd_logo_black.svg"/>
+		<!--<meta property="og:image" content="http://www.arthackday.net/img/ahd_assets/ahd_logo_black_200px.png"/>-->
 		<meta property="og:site_name" content="ART HACK DAY"/>
-		<meta property="og:description" content="ART HACK DAY is an event for hackers whose medium is art and artists whose medium is technology."/>
+		<!--<meta property="og:description" content="ART HACK DAY is an event for hackers whose medium is art and artists whose medium is technology."/>-->
 
 		<meta name="google-site-verification" content="zu9Bbmki1kIgzpwZbMDTBpmHUUljuDUIKjFMxM75Dh4" />
 	</head>
 	<body>
+		<script type="text/javascript" src="/javascripts/lib/jquery.js"></script>
+		<script type="text/javascript" src="/javascripts/lib/waypoints.min.js"></script>
+		<script type="text/javascript" src="/javascripts/lib/fitvids.js"></script>
+		<script type="text/javascript" src="/javascripts/lib/fittext.js"></script>
+		<script src="//vjs.zencdn.net/4.2/video.js"></script>
+		<script type="text/javascript" src="/javascripts/main.js"></script>
+		
 		<div class="section animated nav" id="nav-main">
 			<% flash.each do |name, msg| -%>
       	<%= content_tag :div, msg, class: name %>
@@ -194,11 +203,6 @@
 			</div>
 		</div> 
 		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
-		<script type="text/javascript" src="/javascripts/lib/jquery.js"></script>
-		<script type="text/javascript" src="/javascripts/lib/waypoints.min.js"></script>
-		<script type="text/javascript" src="/javascripts/lib/fitvids.js"></script>
-		<script type="text/javascript" src="/javascripts/lib/fittext.js"></script>
-		<script src="//vjs.zencdn.net/4.2/video.js"></script>
-		<script type="text/javascript" src="/javascripts/main.js"></script>
+		
 	</body>
 </html>

@@ -1,36 +1,37 @@
-<div class="space"></div>
+<header class="admin-header">
+</header>
 <div class="section">
   <div class="container">
-<h1>Listing participants</h1>
+    <h1>Listing participants</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Bio</th>
+          <th>Twitter handle</th>
+          <th>Website</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Bio</th>
-      <th>Twitter handle</th>
-      <th>Website</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+      <tbody>
+        <% @participants.each do |participant| %>
+          <tr>
+            <td><%= participant.name %></td>
+            <td><%= participant.bio %></td>
+            <td><%= participant.twitter_handle %></td>
+            <td><%= participant.website %></td>
+            <td><%= link_to 'Show', participant %></td>
+            <td><%= link_to 'Edit', edit_participant_path(participant) %></td>
+            <td><%= link_to 'Destroy', participant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-  <tbody>
-    <% @participants.each do |participant| %>
-      <tr>
-        <td><%= participant.name %></td>
-        <td><%= participant.bio %></td>
-        <td><%= participant.twitter_handle %></td>
-        <td><%= participant.website %></td>
-        <td><%= link_to 'Show', participant %></td>
-        <td><%= link_to 'Edit', edit_participant_path(participant) %></td>
-        <td><%= link_to 'Destroy', participant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<%= link_to 'New Participant', new_participant_path %>
-</div>
+    <%= link_to 'New Participant', new_participant_path %>
+    <%= link_to 'Back', '/admin' %>
+  </div>
 </div>
