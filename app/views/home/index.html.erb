@@ -31,7 +31,9 @@
 
 <div class="section top-margin">
 	<div class="container">
-		<div class="sixteen columns section-header"><a href="/events">Events _ most recent</a></div>
+		<div class="sixteen columns section-header">
+			<h4>Events _ most recent</h4>
+		</div>
 
 		<ul id="events" class="sixteen columns">
 		  <% @events.each do |event| %>
@@ -39,10 +41,10 @@
 
 		      <li <%= event.upcoming? ? 'class=upcoming' : nil %>>
 	   			    <div class="event-wrapper">
-				      	<div class="left-event"><%= event.theme%></div>
+				      	<div class="left-event"><h2><%= event.theme%></h2></div>
 				      	<div class="right-event">
-				      		<div class="event-page"> <%= event.hackathon_start.strftime('%^B') %> <%= event.hackathon_start.strftime('%-d') %>-<%= event.hackathon_end.strftime('%-d') %>, <%= event.hackathon_start.strftime('%^Y') %></div>
-				      		<div class="event-page-time"><%=  event.venue.nil? ? "TBA" : event.venue.city %>_<%= event.venue.nil? ? "TBA" : event.venue.name %></div>
+				      		<div class="event-page"><h4> <%= event.hackathon_start.strftime('%^B') %> <%= event.hackathon_start.strftime('%-d') %>-<%= event.hackathon_end.strftime('%-d') %>, <%= event.hackathon_start.strftime('%^Y') %></h4></div>
+				      		<div class="event-page-time"><h4><%=  event.venue.nil? ? "TBA" : event.venue.city %>_<%= event.venue.nil? ? "TBA" : event.venue.name %></h4></div>
 				      	</div>
 					</div>
 
