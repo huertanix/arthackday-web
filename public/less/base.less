@@ -26,22 +26,37 @@ h6 {
   text-rendering: optimizelegibility;
   text-transform: uppercase;
   letter-spacing: .02em;
+  a{
+    font-family: 'COLFAX';
+    color: @electric-blue;
+    &:visited{
+      color: @electric-blue;
+    }
+    &:hover{
+      color: black;
+    }
+
+  }
 }
 p{
   color: black;
 }
 
-h1,
-h2,
-h3 {
-  line-height: 40px;
-}
 h1{
 	font-size: 50px;
+  line-height: 52px;
 }
 h2{
 	font-size: 36px;
   line-height: 38px;
+}
+h3{
+  font-size: 21px;
+  line-height: 25px;
+}
+h4{
+  font-size: 13px;
+  line-height: 18px;
 }
 ul,li{
 	list-style: none;

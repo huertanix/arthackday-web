@@ -156,20 +156,49 @@ h6 {
   text-transform: uppercase;
   letter-spacing: .02em;
 }
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-family: 'COLFAX';
+  color: #5000ff;
+}
+h1 a:visited,
+h2 a:visited,
+h3 a:visited,
+h4 a:visited,
+h5 a:visited,
+h6 a:visited {
+  color: #5000ff;
+}
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+  color: black;
+}
 p {
   color: black;
 }
-h1,
-h2,
-h3 {
-  line-height: 40px;
-}
 h1 {
   font-size: 50px;
+  line-height: 52px;
 }
 h2 {
   font-size: 36px;
   line-height: 38px;
+}
+h3 {
+  font-size: 21px;
+  line-height: 25px;
+}
+h4 {
+  font-size: 13px;
+  line-height: 18px;
 }
 ul,
 li {
@@ -675,8 +704,7 @@ a {
   background-color: transparent;
 }
 .nav .nav-right {
-  margin: 20px 25px 0px 0px;
-  font-size: 12px;
+  margin: 10px 25px 0px 0px;
   float: right;
 }
 .nav .nav-right.dark ul li a {
@@ -704,7 +732,7 @@ a {
   position: fixed;
 }
 .nav#nav-drop .nav-right {
-  margin: 12px 25px 0px 0px;
+  margin: 2px 25px 0px 0px;
 }
 .nav#nav-drop .nav-left {
   margin: 12px 0px 0px 25px;
@@ -1028,12 +1056,9 @@ a {
   position: absolute;
   bottom: 20px;
   margin-left: 25px;
-  font-size: 12px;
 }
 .section#landing-header #header-credit a,
 .section#header #header-credit a {
-  font-family: 'COLFAX';
-  text-transform: uppercase;
   color: white;
 }
 .section#landing-header #header-credit.dark a,
@@ -1201,21 +1226,6 @@ a {
   color: black;
   background-color: white;
 }
-.section#ahd-about #ahd-tagline {
-  font-size: 36px;
-  line-height: 38px;
-  font-family: 'COLFAX';
-  text-transform: uppercase;
-  color: black;
-  letter-spacing: .02em;
-}
-.section#ahd-about #ahd-tagline a {
-  font-family: 'COLFAX';
-  color: #5000ff;
-}
-.section#ahd-about #ahd-tagline a:hover {
-  color: black;
-}
 .section#header {
   height: 65%;
   background-color: black;
@@ -1233,9 +1243,6 @@ a {
 }
 .section#event-about .about-event-section div {
   margin-bottom: 25px;
-  font-size: 13px;
-  text-transform: uppercase;
-  color: black;
 }
 .section#event-about .about-event-section p {
   color: black;
@@ -1409,15 +1416,7 @@ a {
   margin: 0px auto;
 }
 .section .container .section-header {
-  font-family: 'COLFAX';
-  text-transform: uppercase;
-  font-size: 13px;
   margin-bottom: 35px;
-  color: black;
-  letter-spacing: .02em;
-}
-.section .container .section-header a {
-  color: black;
 }
 .section .container .about-paragraph {
   font-size: 20px;
@@ -1492,6 +1491,12 @@ a {
 /* All Mobile Sizes (devices and browser) */
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  .section#ahd-about #ahd-tagline {
+    font-size: 21px;
+    line-height: 22px;
+  }
+}
 .animated {
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;

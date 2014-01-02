@@ -5,9 +5,9 @@
   </div>
   <% unless @event.header_image_artist.blank? %>
     <div id="header-credit" class="<%= (@event.header_dark_font? ? 'dark' : '') %>">
-      <a href="<%= @event.header_image_artist_website %>">
+      <h4><a href="<%= @event.header_image_artist_website %>">
         IMAGERY BY: <%= @event.header_image_artist %>
-      </a>
+      </a></h4>
     </div>
   <% end %>
 </div>
@@ -16,7 +16,7 @@
   <a id="about" class="anchor"></a>
   <div class="container">
     <div class="sixteen columns">
-      <div class="section-header">show information</div>
+      <div class="section-header"><h4>show information</h4></div>
       
       <h2>
         <%= @event.hackathon_start.strftime('%^B') %> <%= @event.hackathon_start.strftime('%-d') %>-<%= @event.hackathon_end.strftime('%-d') %>, <%= @event.hackathon_start.strftime('%^Y') %>
@@ -34,7 +34,7 @@
 
     <% if @event.upcoming? %> 
 
-      <div>
+      <h4>
         HACKING BEGINS
         <br/>
 
@@ -45,7 +45,7 @@
         <br/>
 
         <%= @event.hackathon_end.strftime('%A %^B %e, %Y — %l %p - LATE') %>
-      </div>
+      </h4>
     <% end %>
 
       <p>
@@ -90,7 +90,7 @@
 <div class="section" id="location-section">
   <a id="location" class="anchor"></a>
   <div class="container">
-    <div class="section-header columns sixteen">Location</div>
+    <div class="section-header columns sixteen"><h4>Location</h4></div>
   </div>
   <div class="container">
     <div class="location" id="location-container">
@@ -106,7 +106,7 @@
 <div class="section" id="projects">
   <a id="projects" class="anchor"></a>
   <div class="container">
-    <div class="section-header columns sixteen">Projects</div>
+    <div class="section-header columns sixteen"><h4>Projects</h4></div>
   </div>
   <div class="container">
     <div class="projects" id="projects-container">
@@ -210,7 +210,7 @@
 <div class="section" id="participants">
   <a id="participants" class="anchor"></a>
   <div class="container">
-    <div class="section-header columns sixteen">Participants</div>
+    <div class="section-header columns sixteen"><h4>Participants</h4></div>
   </div>
   <div class="container" id="participants-container">
     <div class="column one-third participants-all">
@@ -269,10 +269,10 @@
 <div class="section" id="press-partners">
   <div class="container">
     <% unless @event.press_blurbs.empty? %>
-      <div class="section-header column one-third">Press</div>
+      <div class="section-header column one-third"><h4>Press</h4></div>
     <% end %>
     <% unless @event.sponsors.empty? %>
-      <div class="section-header column two-third">Partners</div>
+      <div class="section-header column two-third"><h4>Partners</h4></div>
     <%end%>
   </div>
 
