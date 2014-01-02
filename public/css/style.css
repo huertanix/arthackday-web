@@ -1526,6 +1526,9 @@ a {
     position: relative;
     left: -50%;
   }
+  .section#footer {
+    margin-top: 0px;
+  }
 }
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
