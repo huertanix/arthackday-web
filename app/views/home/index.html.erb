@@ -5,16 +5,16 @@
 	<div class="event-callout">
 		<div id="hero" style="<%= (@events.first.header_dark_font? ? 'color:#000;' : '') %>"><%= @events.first.theme %></div>
 		<div id="sub-hero" style="<%= (@events.first.header_dark_font? ? 'color:#000;' : '') %>">
-			<%=  @events.first.venue.nil? ? "TBA" : @events.first.venue.city %>_<%= @events.first.venue.nil? ? "TBA" : @events.first.venue.name %>_<%= @events.first.hackathon_start.strftime('%^B') %> 
-			<%= @events.first.hackathon_start.strftime('%-d') %>-<%= @events.first.show_start.strftime('%-d') %>
+			<h3><%=  @events.first.venue.nil? ? "TBA" : @events.first.venue.city %>_<%= @events.first.venue.nil? ? "TBA" : @events.first.venue.name %>_<%= @events.first.hackathon_start.strftime('%^B') %> 
+			<%= @events.first.hackathon_start.strftime('%-d') %>-<%= @events.first.show_start.strftime('%-d') %></h3>
 		</div>
 	</div>
 	<% end %>
 		
 	<% unless @events.first.header_image_artist.blank? %>
     <div id="header-credit">
-      <a href="<%= @events.first.header_image_artist_website %>" 
-      	style="<%= (@events.first.header_dark_font? ? 'color:#000;' : '') %>">IMAGERY BY: <%= @events.first.header_image_artist %></a>
+      <h4><a href="<%= @events.first.header_image_artist_website %>" 
+      	style="<%= (@events.first.header_dark_font? ? 'color:#000;' : '') %>">IMAGERY BY: <%= @events.first.header_image_artist %></a></h4>
     </div>
   <% end %>
 </div>

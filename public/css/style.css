@@ -213,10 +213,10 @@ u {
 .black-link a:visited {
   color: black;
 }
-/*i {
+i {
   font-style: normal;
   font-family: "icomoon";
-}*/ /* This breaks project descriptions with <i> tags */
+}
 p {
   font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 14px;
@@ -720,7 +720,7 @@ a {
 }
 .nav .nav-right ul li {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 16px;
 }
 .nav .nav-right ul li a {
   color: white;
@@ -735,6 +735,7 @@ a {
 }
 .nav#nav-drop .nav-left {
   margin: 12px 0px 0px 25px;
+  width: 125px;
 }
 .section#footer {
   color: white;
@@ -899,9 +900,6 @@ a {
 .section#about-page .container.about-partner-venue .two-thirds img {
   width: 100%;
 }
-.section#about-page .container#about-header {
-  margin: 150px auto;
-}
 .section#about-page .container.about-press {
   margin: 150px auto;
 }
@@ -1022,6 +1020,7 @@ a {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-position: center;
 }
 .section#landing-header a,
 .section#header a {
@@ -1486,14 +1485,50 @@ a {
 /* Smaller than standard 960 (devices and browsers) */
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 /* All Mobile Sizes (devices and browser) */
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {
-  .section#ahd-about #ahd-tagline {
+@media only screen and (max-width: 767px) {
+  h2 {
     font-size: 21px;
-    line-height: 22px;
+    line-height: 25px;
+  }
+  h3 {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .top-margin {
+    margin-top: 60px;
+  }
+  .section #events li {
+    height: 60px;
+    padding: 20px;
+  }
+  .section #events li .left-event {
+    width: 100%;
+  }
+  .section #events li .right-event {
+    margin-top: 5px;
+    float: left;
+  }
+  .section #events li .right-event div {
+    float: left;
+  }
+  .section#footer #footer-top {
+    height: 175px;
+  }
+  .section#footer #footer-top #main-sponsors div {
+    text-align: center;
+    width: 100%;
+    margin: 0px;
+  }
+  .section#footer #footer-bottom {
+    height: 40px;
+  }
+  .section#footer #footer-top #main-sponsors img {
+    position: relative;
+    left: -50%;
   }
 }
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 .animated {
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
