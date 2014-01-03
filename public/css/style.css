@@ -1040,6 +1040,14 @@ a {
 .section#header .event-callout #sub-hero {
   font-size: 21px;
 }
+.section#landing-header .event-callout #sub-hero h2,
+.section#header .event-callout #sub-hero h2,
+.section#landing-header .event-callout #sub-hero h3,
+.section#header .event-callout #sub-hero h3,
+.section#landing-header .event-callout #sub-hero h4,
+.section#header .event-callout #sub-hero h4 {
+  color: white;
+}
 .section#landing-header .event-callout.dark #hero,
 .section#header .event-callout.dark #hero,
 .section#landing-header .event-callout.dark #sub-hero,

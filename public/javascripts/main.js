@@ -141,12 +141,10 @@ $(function(){
 	// 	$('#white-logo').hide();
 	// 	$('#black-logo').show();
 	// }
-	console.log('white or blakc');
 
 	$('.name').click(function(){
 		var $partAdditional = $(this).parent().find('.participant-additional');
 		var $arrow = $(this).find('svg g polyline');
-		console.log($arrow);
 		if($(this).hasClass('selected')){
 			$(this).removeClass('selected');
 			$partAdditional.slideUp(100);
