@@ -95,7 +95,7 @@
   <div class="container">
     <div class="location" id="location-container">
       <div class="location-column sixteen columns">
-        <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=<%= google_map_search(@event.venue) %>&amp;ie=UTF8&amp;markers=<%=@event.venue.latitude%>,<%=@event.venue.longitude%>&amp;ll=<%=@event.venue.latitude%>,<%=@event.venue.longitude%>&amp;&amp;z=13&amp;iwloc=near&addr&amp;&amp;output=embed"></iframe>
+        <iframe width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=<%= google_map_search(@event.venue) %>&amp;ie=UTF8&amp;markers=<%=@event.venue.latitude%>,<%=@event.venue.longitude%>&amp;ll=<%=@event.venue.latitude%>,<%=@event.venue.longitude%>&amp;&amp;z=13&amp;iwloc=near&addr&amp;&amp;output=embed"></iframe>
       </div>
     </div>
   </div>
@@ -266,20 +266,13 @@
   </div>
 </div>
 
-<div class="section" id="press-partners">
-  <div class="container">
-    <% unless @event.press_blurbs.empty? %>
-      <div class="section-header column one-third"><h4>Press</h4></div>
-    <% end %>
-    <% unless @event.sponsors.empty? %>
-      <div class="section-header column two-third"><h4>Partners</h4></div>
-    <%end%>
-  </div>
+<div class="section top-margin" id="press-partners">
 
   <div class="container">
     <% unless @event.press_blurbs.empty? %>
       <a id="press" class="anchor"></a>
       <div class="column one-third" id="press-container">
+        <div class="section-header"><h4>Press</h4></div>
         <div class="border-container">
           <% @event.press_blurbs.each do |blurb| %>
             <div class="press">
@@ -292,7 +285,10 @@
         </div>
       </div>
     <% end %>
+
+    <% unless @event.sponsors.empty? %>
     <div id="partners-container" class="two-thirds column">
+      <div class="section-header"><h4>Partners</h4></div>
       <a id="partners" class="anchor"></a>
       <% @event.sponsors.each do |sponsor| %>
         <div class="column one-third partner">
@@ -302,6 +298,8 @@
         </div>
       <% end %>
     </div>
+    <%end%>
+
   </div>
 </div>
 

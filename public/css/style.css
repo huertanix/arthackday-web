@@ -737,6 +737,9 @@ a {
   margin: 12px 0px 0px 25px;
   width: 125px;
 }
+.section#location-section iframe {
+  height: 400px;
+}
 .section#footer {
   color: white;
   font-family: 'COLFAX';
@@ -1280,9 +1283,6 @@ a {
 .section#event-about .about-event-right .border-container .pre-about button:hover {
   background-color: #5000ff;
 }
-.section#press-partners {
-  margin-top: 150px;
-}
 .section#press-partners #press-container .border-container {
   border: 1px solid black;
   width: 100%;
@@ -1541,6 +1541,15 @@ a {
     -moz-column-count: 1;
     -webkit-column-count: 1;
     column-count: 1;
+  }
+  .about-event-section {
+    margin-bottom: 30px;
+  }
+  #press-container {
+    margin-bottom: 60px;
+  }
+  .section#location-section iframe {
+    height: 200px;
   }
 }
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
