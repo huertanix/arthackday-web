@@ -1306,10 +1306,10 @@ a {
   border: 1px solid black;
 }
 .section#press-partners #partners-container .partner:nth-child(even) {
-  margin-left: 0px;
+  margin-right: 0px;
 }
 .section#press-partners #partners-container .partner:nth-child(odd) {
-  margin-right: 0px;
+  margin-left: 0px;
 }
 .section#participants {
   margin-top: 100px;
@@ -1542,14 +1542,24 @@ a {
     -webkit-column-count: 1;
     column-count: 1;
   }
-  .about-event-section {
-    margin-bottom: 30px;
+  .container .column.about-event-right {
+    margin-top: 20px;
+  }
+  .section#contact-page .two-third input,
+  .section#contact-page .two-third textarea {
+    width: 278px;
   }
   #press-container {
     margin-bottom: 60px;
   }
   .section#location-section iframe {
     height: 200px;
+  }
+  .section#press-partners #partners-container .partner a img {
+    width: 298px;
+  }
+  .section#header {
+    height: 100%;
   }
 }
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
