@@ -76,7 +76,7 @@ Once you have an empty arthackday-development database owned by the user you mad
 
 Then restore it into your local pg database:
 
-    pg_restore --verbose --clean --no-acl --no-owner -h localhost -U myuser -d arthackday-development latest.dump
+    pg_restore --verbose --clean --no-acl --no-owner -h localhost -U myuser -d arthackdayweb_development latest.dump
 
 Congrats! Now you have an exact copy of the production database on your manchine. To wire it up to Rails you'll want to edit Gemfile by uncommenting the 'pg' gem in the :development group:
 
