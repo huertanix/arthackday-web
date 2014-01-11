@@ -190,6 +190,7 @@ h1 {
 h2 {
   font-size: 36px;
   line-height: 38px;
+  letter-spacing: .03em;
 }
 h3 {
   font-size: 21px;
@@ -198,6 +199,7 @@ h3 {
 h4 {
   font-size: 13px;
   line-height: 18px;
+  letter-spacing: 0.01em;
 }
 ul,
 li {
@@ -771,6 +773,10 @@ a {
 .section#footer #footer-top #newsletter-signup #signup {
   margin-top: 2px;
   cursor: pointer;
+  color: white;
+}
+.section#footer #footer-top #newsletter-signup #signup:hover {
+  color: #5000ff;
 }
 .section#footer #footer-top #newsletter-signup #signup-input {
   display: none;
@@ -825,18 +831,19 @@ a {
   margin-top: 35px;
 }
 .section#footer #footer-top #main-sponsors a,
-.section#footer #footer-top #main-sponsors div {
+.section#footer #footer-top #main-sponsors h4 {
   float: right;
   font-size: 13px;
 }
-.section#footer #footer-top #main-sponsors div {
+.section#footer #footer-top #main-sponsors h4 {
+  color: white;
   margin-right: 25px;
 }
 .section#footer #footer-top #main-sponsors a {
   margin-top: -10px;
 }
 .section#footer #footer-top #main-sponsors img {
-  width: 200px;
+  width: 175px;
 }
 .section#footer #footer-bottom {
   height: 26px;
@@ -1536,7 +1543,7 @@ a {
   .section#footer #footer-top #main-sponsors img {
     position: relative;
     left: -50%;
-    margin-left: -100px;
+    margin-left: -50px;
   }
   .section#footer {
     margin-top: 0px;
@@ -1564,6 +1571,11 @@ a {
   }
   .section#header {
     height: 100%;
+  }
+  .section#footer #footer-top #main-sponsors h4 {
+    margin-right: 0px;
+    width: 100%;
+    text-align: center;
   }
 }
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
