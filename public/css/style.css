@@ -835,6 +835,9 @@ a {
 .section#footer #footer-top #main-sponsors a {
   margin-top: -10px;
 }
+.section#footer #footer-top #main-sponsors img {
+  width: 200px;
+}
 .section#footer #footer-bottom {
   height: 26px;
   background-color: #5000ff;
@@ -1533,6 +1536,7 @@ a {
   .section#footer #footer-top #main-sponsors img {
     position: relative;
     left: -50%;
+    margin-left: -100px;
   }
   .section#footer {
     margin-top: 0px;
