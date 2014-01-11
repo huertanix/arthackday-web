@@ -142,6 +142,12 @@ html,
 body {
   height: 100%;
 }
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
 h1,
 h2,
 h3,
@@ -1197,6 +1203,11 @@ body.black {
   margin-bottom: 30px;
 }
 .section#contact-page .one-third ul li a {
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   color: white;
 }
 .section#contact-page .one-third ul li a:hover {
@@ -1216,22 +1227,37 @@ body.black {
   font-size: 14px;
   line-height: 17px;
 }
-.section#contact-page .two-third textarea {
+.section#contact-page .two-thirds textarea {
   height: 200px;
 }
-.section#contact-page .two-third input,
-.section#contact-page .two-third textarea {
+.section#contact-page .two-thirds input,
+.section#contact-page .two-thirds textarea {
   border: 1px solid white;
   background-color: black;
   padding: 6px;
+  padding-right: 0px;
   font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 14px;
   line-height: 17px;
   margin-bottom: 30px;
   color: white;
-  width: 100%;
+  width: 99%;
 }
-.section#contact-page .two-third button {
+.section#contact-page .two-thirds .contact-submit {
+  width: 305px;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.section#contact-page .two-thirds .contact-submit:hover {
+  background-color: #5000ff;
+  border-color: #5000ff;
+  color: white;
+  cursor: pointer;
+}
+.section#contact-page .two-thirds button {
   border: 1px solid white;
   background: none;
   color: white;
@@ -1241,7 +1267,7 @@ body.black {
   font-size: 13px;
   cursor: pointer;
 }
-.section#contact-page .two-third button:hover {
+.section#contact-page .two-thirds button:hover {
   color: black;
   background-color: white;
 }
