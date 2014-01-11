@@ -1245,10 +1245,10 @@ body.black {
   line-height: 17px;
   margin-bottom: 30px;
   color: white;
-  width: 99%;
+  width: 98%;
 }
 .section#contact-page .two-thirds .contact-submit {
-  width: 305px;
+  width: 300px;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
