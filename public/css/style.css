@@ -142,6 +142,10 @@ html,
 body {
   height: 100%;
 }
+html.black,
+body.black {
+  background-color: black;
+}
 input:focus,
 select:focus,
 textarea:focus,
