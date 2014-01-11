@@ -11,7 +11,11 @@ a{
 	color:@electric-blue;
 	font-family: 'COLFAX';
 }
-
+body{
+	&.black{
+		background-color: black;
+	}
+}
 .nav{
 	height:98px;
 	width:100%;
@@ -587,10 +591,6 @@ a{
 		background-color: black;
 		color:white;
 		padding-top: 150px;
-		padding-bottom: 200px;
-		min-height: 100%;
-		margin-bottom: -200px;
-		height:100%;
 		color:white;
 		.section-header{
 			color:white;
@@ -606,8 +606,8 @@ a{
 						}
 					}
 					margin-bottom: 30px;
-					div{
-						color:white;							
+					h4{
+						color:white;
 					}
 					p{
 						color:white;
@@ -630,13 +630,13 @@ a{
 			input, textarea{
 				border: 1px solid white;
 				background-color: black;
-				padding: 10px;
-				width: 100%;
+				padding: 6px;
 				font-family: @font-basic;
 				font-size: 14px;
 				line-height: 17px;
 				margin-bottom: 30px;
 				color: white;
+				width: 100%;
 			}
 			button{
 				border: 1px solid white;
@@ -647,6 +647,7 @@ a{
 				text-transform: uppercase;
 				font-size: 13px;
 				cursor: pointer;
+			
 				&:hover{
 					color: black;
 					background-color: white;

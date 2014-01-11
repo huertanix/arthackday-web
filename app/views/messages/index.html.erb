@@ -1,31 +1,31 @@
 <div class="section" id="contact-page">
 	<div class="container">
 		<div class="one-third column">
-			<div class="section-header">
+			<h4 class="section-header">
 				contact
-			</div>
+			</h4>
 			<ul>
 				<li>
 					<p>arthackday@gmail.com</p>
 				</li>
 				<li>	
-					<div class="basic-colfax">OLOF MATHÉ</div>
+					<h4 class="basic-colfax">OLOF MATHÉ</h4>
 					<p><a href="">@olofster</a></p>
 				</li>
 				<li>
-					<div class="basic-colfax">PAUL CHRISTOPHE</div>
+					<h4 class="basic-colfax">PAUL CHRISTOPHE</h4>
 					<p><a href="">@captDaylight</a></p>
 				</li>
 				<li>
-					<div class="basic-colfax">DAVID HUERTA</div>
+					<h4 class="basic-colfax">DAVID HUERTA</h4>
 					<p><a href="">@huertanix</a></p>
 				</li>
 			</ul>
 		</div>
 		<div class="two-third column">
-			<div class="section-header">
+			<h4 class="section-header">
 				send us a message
-			</div>
+			</h4>
 			<% if @message.errors.any? %>
 		    <div id="error-explanation">
 		      <h2><%= pluralize(@message.errors.count, "error") %> stopped this message from being sent:</h2>
@@ -38,8 +38,11 @@
 		  <% end %>
 			<%= form_for @message do |f| %>
 				<%= f.text_field :email, :placeholder => "Email Address", :class => "contact-input" %>
+				<br>
 				<%= f.text_field :subject, :placeholder => "Subject", :class => "contact-input" %>
+				<br>
 				<%= f.text_area :body, :placeholder => "Your Message..." %>
+				<br>
 				<%= f.submit "SEND", :class => "contact-submit" %>
 			<% end %>
 		</div>

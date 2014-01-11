@@ -657,6 +657,9 @@ a {
   color: #5000ff;
   font-family: 'COLFAX';
 }
+body.black {
+  background-color: black;
+}
 .nav {
   height: 98px;
   width: 100%;
@@ -1185,10 +1188,6 @@ a {
 .section#contact-page {
   background-color: black;
   padding-top: 150px;
-  padding-bottom: 200px;
-  min-height: 100%;
-  margin-bottom: -200px;
-  height: 100%;
   color: white;
 }
 .section#contact-page .section-header {
@@ -1203,7 +1202,7 @@ a {
 .section#contact-page .one-third ul li a:hover {
   color: #5000ff;
 }
-.section#contact-page .one-third ul li div {
+.section#contact-page .one-third ul li h4 {
   color: white;
 }
 .section#contact-page .one-third ul li p {
@@ -1224,13 +1223,13 @@ a {
 .section#contact-page .two-third textarea {
   border: 1px solid white;
   background-color: black;
-  padding: 10px;
-  width: 100%;
+  padding: 6px;
   font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 14px;
   line-height: 17px;
   margin-bottom: 30px;
   color: white;
+  width: 100%;
 }
 .section#contact-page .two-third button {
   border: 1px solid white;
