@@ -77,9 +77,11 @@ a{
 		&.dark{
 			ul{
 				li{
-					
 					a{
 						color:black;	
+					}
+					&:hover{
+						border-bottom: 1px solid black;
 					}
 				}
 			}
@@ -106,6 +108,9 @@ a{
 				margin-left: 16px;
 				a{
 					color: white;
+				}
+				&:hover{
+					border-bottom: 1px solid white;
 				}
 			}
 		}
@@ -193,17 +198,12 @@ a{
 					a{
 						color:white;
 						&:hover{
-							color: @electric-blue;							
-							margin-top: 1px;
-
+							color: @electric-blue;
 						}
 						svg{
 							height:20px;
 							width:20px;
 						}
-					}
-					&:hover{
-						margin-top: 1px;
 					}
 				}
 			}
@@ -235,6 +235,7 @@ a{
 			#organized-by{
 				font-size: 10px;
 				color: white;
+				letter-spacing: .06em;
 				a{
 					&:hover{
 						color: black;
