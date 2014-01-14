@@ -34,7 +34,7 @@
   </div>
   <div class="field">
     Event<br>
-    <%= select("project", "event_id", Event.all.sorted_by_date.collect {|e| [ e.theme, e.id ] }) %>
+    <%= select("project", "event_id", current_organizer.allowed_events.collect {|e| [ e.theme, e.id ] }) %>
   </div>
   <!-- Pay no attention to this form field! -->
   <!--<div class="field">
