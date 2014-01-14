@@ -82,9 +82,9 @@ class ParticipantsController < ApplicationController
 
     # Failed attempt at elegance
     events_to_add = new_event_ids - current_event_ids
-    logger.debug "TO ADD EVENT ids: #{events_to_add.to_a}"
+    #logger.debug "TO ADD EVENT ids: #{events_to_add.to_a}"
     events_to_remove = current_event_ids - new_event_ids
-    logger.debug "TO REMOVE EVENT ids: #{events_to_remove.to_a}"
+    #logger.debug "TO REMOVE EVENT ids: #{events_to_remove.to_a}"
 
     events_to_add.each do |event_id|
       if current_organizer.can_edit_event? event_id
@@ -98,7 +98,7 @@ class ParticipantsController < ApplicationController
       end
     end
 
-    logger.debug "SAVED EVENT ids: #{current_event_ids.to_a}"
+    #logger.debug "SAVED EVENT ids: #{current_event_ids.to_a}"
     params[:participant][:event_ids] = current_event_ids.to_a
   end
 

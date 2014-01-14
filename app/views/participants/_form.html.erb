@@ -40,7 +40,7 @@
   <div class="field">
     <span>Events this participant <em>participated</em> in:</span><br>
     <%= hidden_field_tag "participant[event_ids][]", nil %>
-    <% Event.all.each do |event| %>
+    <% current_organizer.allowed_events.each do |event| %>
       <label class="checkbox">
       <%= check_box_tag "participant[event_ids][]", event.id, @participant.event_ids.include?(event.id), id: dom_id(event) %>
       <%= event.theme + " - " + event.city %>
