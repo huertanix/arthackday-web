@@ -74,7 +74,7 @@ class ParticipantsController < ApplicationController
   # Don't allow assignment to an event the admin has no privileges for
   def filter_events
     # Allow previous event assignments
-    current_event_ids = @participant.event_ids.to_set
+    current_event_ids = (@participant.nil? ? Set.new : @participant.event_ids.to_set)
     # No idea why there's always a blank event being sent. ugh
     params[:participant][:event_ids].reject!(&:empty?)
     # Need to_i to convert strings to ints

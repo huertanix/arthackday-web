@@ -68,7 +68,7 @@ class ProjectsController < ApplicationController
 
   # Don't allow assignment to an event the admin has no privileges for
   def filter_event
-    current_event_id = @project.event_id
+    current_event_id = (@project.nil? ? nil : @project.event_id)
     new_event_id = params[:project][:event_id].to_i
 
     if !current_organizer.can_edit_event? new_event_id
