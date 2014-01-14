@@ -1,5 +1,13 @@
 <a id="top" class="anchor"></a>
-<div class="section <%= @event.header_image_tiled? ? 'tiled-header' : 'centered-header' %> <%= (@event.header_dark_font? ? 'dark' : '') %>" id="header" style="background-image: url('<%=@event.header_image %>');">
+<div class="section <%= @event.header_image_tiled? ? 'tiled-header' : 'centered-header' %> <%= (@event.header_dark_font? ? 'dark' : '') %>" id="header">
+  <% unless @event.header_image.blank? %>
+    <script type="text/javascript">
+      // Load 20+ MB gifs only after the rest of the page loads
+      $(function() {
+        $('#header').css("background-image", "url(<%=@event.header_image%>)");
+      });
+    </script>
+  <% end %>
   <div class="event-callout <%= (@event.header_dark_font? ? 'dark' : '') %>">
     <div id="hero"><%= @event.theme.html_safe %></div>
   </div>
