@@ -11,13 +11,13 @@ System Prereqs:
 * libreadline6-dev
 * sqlite3
 * libsqlite3-dev
+* Heroku toolbelt
 
 Ruby Prereqs: 
 * rvm
 * Ruby 1.9.3, 
 * gem install rails (4.0.0)
 * NB: if you have several rubies installed, you may need to switch to the right one. To see which rubies you have installed type 'rvm list rubies' and switch to 1.9.3 with 'rvm ruby-1.9.3.p374'
-
 
 Application Install:
 * bundle install
@@ -27,7 +27,20 @@ Application Install:
 
 Getting Started
 ---------------
-Create an organizer account if you don't have one by going to /admin and registering. You will need the latest secret invite code to register. Most admin functionality hasn't been stitched together into a cohesive user experience yet. To add a new venue, participant, or project, navigate to /admin and navigate to the list of any of those things and click edit. To edit an event, go to /events after logging in as an admin and click the special New Event link visible only to organizers.
+You will want to clone from Github (not Heroku) and then add the Heroku staging instance as a remote to push changes to http://arthackday-staging.herokuapp.com, where changes can be previewed in a way that's nearly idential to the live site. To do that, run these commands on your machine:
+
+    git clone https://github.com/huertanix/arthackday-web.git arthackday-staging
+    heroku git:remote -a arthackday-staging
+
+To push to staging, type this from inside the arthackday-staging directory:
+
+    git push heroku master
+
+Create an organizer account if you don't have one by going to /admin and registering. You will need the latest secret invite code to register. By default, an organizer has no ability to edit things tied to a specific event, so for your local development environment, you'll want to bump yourself to org-level admin. You can do so for your dev environment by running this rake task from inside arthackday-staging:
+
+    heroku run rake arthackday:level_up_organizer[emailyouusedtoregister@whatevs.com]
+
+Most admin functionality hasn't been stitched together into a cohesive user experience yet. To add a new venue, participant, or project, navigate to /admin and navigate to the list of any of those things and click edit. To edit an event, go to /events after logging in as an admin and click the special New Event link visible only to organizers.
 
 Getting the latest data from Heroku Postgres
 --------------------------------------------
