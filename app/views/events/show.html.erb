@@ -1,3 +1,5 @@
+<% content_for :title do %>Art Hack Day - <%= @event.theme %><% end %>
+<% content_for :description do %><%= @event.about %><% end %>
 <a id="top" class="anchor"></a>
 <div class="section <%= @event.header_image_tiled? ? 'tiled-header' : 'centered-header' %> <%= (@event.header_dark_font? ? 'dark' : '') %>" id="header">
   <% unless @event.header_image.blank? %>
