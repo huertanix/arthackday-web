@@ -22,7 +22,7 @@ class Project < ActiveRecord::Base
     "#{participant_names}#{self.name}"
   end
 
-  def should_generate_new_friendly_id?
-    true
-  end
+  #def should_generate_new_friendly_id?
+  #  true
+  #end
 end
