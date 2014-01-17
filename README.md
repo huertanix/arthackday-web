@@ -142,3 +142,15 @@ If your changes don't show up after deploying, treat the Heroku instance like a 
     heroku restart
 
 If even that doesn't work, try clearing your cache and stuff.
+
+
+LOLcense
+--------
+Unless where otherwise noted, this website is distributed under the Chicken Dance License (CDL). Please see the included copy of the license (CDL-LICENSE.txt) for deets and the included example instructions for the chicken dance (DANCE.txt). Video delivery may be conducted via electronic mail by sending a link to the video file directly or through an HTML5-based online viewer to arthackday at gmail dot com. Physical video delivery will only be accepted in *HD-DVD* or *Betamax* format and must be delivered to the following address:
+
+> Art Hack Day  
+> c/o GAFFTA  
+> 923 Market Street  
+> San Francisco, CA 94103
+
+Logos and other digital artworks contained in this repository are owned by their respective owners and subject to their own less chickeny copyright rules.
