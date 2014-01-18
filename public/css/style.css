@@ -1454,9 +1454,11 @@ body.black {
 .section#projects .projects .project .project-info .project-wrapper > div .basic-colfax {
   margin-bottom: 20px;
   padding: 0px 15px;
+  color: white;
 }
 .section#projects .projects .project .project-info .project-wrapper > div p {
   padding: 0px 10px;
+  color: white;
 }
 .section#projects .projects .project:hover .project-info {
   opacity: 1;
