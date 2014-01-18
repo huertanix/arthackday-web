@@ -873,6 +873,9 @@ body.black {
   color: white;
   letter-spacing: .06em;
 }
+.section#footer #footer-bottom #organized-by a {
+  display: inline-block;
+}
 .section#footer #footer-bottom #organized-by a:hover {
   color: black;
 }
