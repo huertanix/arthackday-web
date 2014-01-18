@@ -761,6 +761,29 @@ body.black {
 .section#location-section iframe {
   height: 400px;
 }
+.section .social-section {
+  float: left;
+}
+.section .social-section li {
+  float: left;
+  font-size: 20px;
+  margin-left: 20px;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.section .social-section li a {
+  color: white;
+}
+.section .social-section li a:hover {
+  color: #5000ff;
+}
+.section .social-section li a svg {
+  height: 20px;
+  width: 20px;
+}
 .section#footer {
   color: white;
   font-family: 'COLFAX';
@@ -818,29 +841,6 @@ body.black {
   font-size: 13px;
   padding: 0px 20px;
   cursor: pointer;
-}
-.section#footer #footer-top #social-section {
-  float: left;
-}
-.section#footer #footer-top #social-section li {
-  float: left;
-  font-size: 20px;
-  margin-left: 20px;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.section#footer #footer-top #social-section li a {
-  color: white;
-}
-.section#footer #footer-top #social-section li a:hover {
-  color: #5000ff;
-}
-.section#footer #footer-top #social-section li a svg {
-  height: 20px;
-  width: 20px;
 }
 .section#footer #footer-top #main-sponsors {
   margin-top: 35px;
@@ -1233,6 +1233,10 @@ body.black {
   font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 14px;
   line-height: 17px;
+}
+.section#contact-page .one-third .social-section li {
+  margin-left: 0px;
+  margin-right: 20px;
 }
 .section#contact-page .two-thirds textarea {
   height: 200px;

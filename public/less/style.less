@@ -140,6 +140,26 @@ body{
 			height:400px;
 		}
 	}
+	.social-section{
+		float: left;
+		li{
+			float:left;
+			font-size: 20px;
+			margin-left: 20px;
+			.transition(all .2s ease);
+			a{
+				color:white;
+				&:hover{
+					color: @electric-blue;
+				}
+				svg{
+					height:20px;
+					width:20px;
+				}
+			}
+		}
+	}
+
 	&#footer{
 		color:white;
 		font-family: 'COLFAX';
@@ -192,25 +212,7 @@ body{
 					}
 				}
 			}
-			#social-section{
-				float: left;
-				li{
-					float:left;
-					font-size: 20px;
-					margin-left: 20px;
-					.transition(all .2s ease);
-					a{
-						color:white;
-						&:hover{
-							color: @electric-blue;
-						}
-						svg{
-							height:20px;
-							width:20px;
-						}
-					}
-				}
-			}
+
 			#main-sponsors{
 				margin-top: 35px;
 				a,h4{
@@ -622,6 +624,12 @@ body{
 						font-size: 14px;
 						line-height: 17px;
 					}
+				}
+			}
+			.social-section{
+				li{
+					margin-left: 0px;
+					margin-right: 20px;
 				}
 			}
 		}
