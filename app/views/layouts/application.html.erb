@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Art Hack Day</title>
+		<title><%= content_for?(:title) ? yield(:title) : "Art Hack Day" %></title>
 		<link rel="icon" href="/img/ahd_assets/favicon.ico" type="image/x-icon"/>
 		<link rel="shortcut icon" href="/img/ahd_assets/favicon.ico" type="image/x-icon"/>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
@@ -17,16 +17,43 @@
 		<link rel="stylesheet" href="/css/admin.css" />
 		<link rel="apple-touch-icon" sizes="144x144" href="/img/ahd_assets/ahd_logo_white_200px.png">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<meta property="og:title" content="ART HACK DAY"/>
+		<meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : "Art Hack Day" %>"/>
 		<meta property="og:type" content="website"/>
 		<meta property="og:url" content="http://www.arthackday.net"/>
-		<!--<meta property="og:image" content="http://www.arthackday.net/img/ahd_assets/ahd_logo_black_200px.png"/>-->
+		<% if params[:controller] === "projects" %>
+			<% unless @project.nil? %>
+				<% unless @project.featured_thumbnail.blank? %>
+					<!-- I hate Facebook so much ~ .dh -->
+					<meta property="og:image" content="<%= @project.featured_thumbnail %>"/>
+				<% end %>
+			<% end %>
+		<% elsif params[:controller] === "events" %>
+			<% unless @event.nil? %>
+				<% unless @event.featured_image.url(:medium).blank? %>
+					<!-- Paperclip default is placekitten, so cat shows up if blank. Feature, not bug? ~ .dh -->
+					<meta property="og:image" content="<%= @event.featured_image.url(:medium) %>"/>
+				<% end %>
+				<% unless @event.projects.empty? %>
+					<% @event.projects.each do |project| %>
+						<% unless project.featured_thumbnail.blank? %>
+							<meta property="og:image" content="<%= project.featured_thumbnail %>"/>
+						<% end %>
+					<% end %>
+				<% end %>
+			<% end %>
+		<% elsif params[:controller] === "about" %>
+			<meta property="og:image" content="http://www.arthackday.net/img/about/Arthackday_About_How-it-works.jpg"/>
+			<meta property="og:image" content="http://www.arthackday.net/img/about/Arthackday_About_Partners.jpg"/>
+			<meta property="og:image" content="http://www.arthackday.net/img/about/Arthackday_About_What-is.jpg"/>
+			<meta property="og:image" content="http://www.arthackday.net/video/berlin_poster.jpg"/>
+		<% end %>
+		<meta property="og:image" content="http://www.arthackday.net/img/ahd_assets/ahd_logo_black_200px.png"/>
 		<meta property="og:site_name" content="ART HACK DAY"/>
-		<!--<meta property="og:description" content="ART HACK DAY is an event for hackers whose medium is art and artists whose medium is technology."/>-->
+		<meta property="og:description" content="<%= content_for?(:description) ? yield(:description) : "ART HACK DAY is an event for hackers whose medium is art and artists whose medium is technology." %>"/>
 
 		<meta name="google-site-verification" content="zu9Bbmki1kIgzpwZbMDTBpmHUUljuDUIKjFMxM75Dh4" />
 	</head>
-	<body <% if params[:controller] === "contact"%>class="black"<%end%>>
+	<body <% if params[:controller] === "messages" %>class="black"<% end %>>
 		<script type="text/javascript" src="/javascripts/lib/jquery.js"></script>
 		<script type="text/javascript" src="/javascripts/lib/waypoints.min.js"></script>
 		<script type="text/javascript" src="/javascripts/lib/fitvids.js"></script>

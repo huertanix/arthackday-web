@@ -1,6 +1,13 @@
 
-<div class="section <%= @events.first.header_image_tiled? ? 'tiled-header' : 'centered-header' %>" id="landing-header" style="background-image: url('<%=@events.first.header_image %>');">
-
+<div class="section <%= @events.first.header_image_tiled? ? 'tiled-header' : 'centered-header' %>" id="landing-header">
+	<% unless @events.first.header_image.blank? %>
+    <script type="text/javascript">
+      // Load 20+ MB gifs only after the rest of the page loads
+      $(function() {
+        $('#landing-header').css("background-image", "url(<%=@events.first.header_image%>)");
+      });
+    </script>
+  <% end %>
 	<%= link_to(@events.first) do %>
 	<div class="event-callout">
 		<div id="hero" style="<%= (@events.first.header_dark_font? ? 'color:#000;' : '') %>"><%= @events.first.theme %></div>

@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :filter_event, only: [:create, :update]
   before_filter :authenticate_organizer!, :only => [:index, :create, :update, :new, :edit, :destroy]
 
   # GET /projects
@@ -64,6 +65,17 @@ class ProjectsController < ApplicationController
   end
 
   private
+
+  # Don't allow assignment to an event the admin has no privileges for
+  def filter_event
+    current_event_id = (@project.nil? ? nil : @project.event_id)
+    new_event_id = params[:project][:event_id].to_i
+
+    if !current_organizer.can_edit_event? new_event_id
+      # Make validation fail if this is a new project, otherwise revert to previous event selection
+      params[:project][:event_id] = (current_event_id.blank? ? nil : current_event_id) 
+    end
+  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_project

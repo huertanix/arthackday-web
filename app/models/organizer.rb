@@ -14,6 +14,18 @@ class Organizer < ActiveRecord::Base
     self.org_admin? || self.event_ids.include?(event_id)
   end
 
+  def allowed_events
+    allowed_events = Array.new
+
+    Event.all.sorted_by_date.each do |event|
+      if self.can_edit_event? event.id
+        allowed_events.push(event)
+      end
+    end
+
+    return allowed_events
+  end
+
   validates_each :invite_code, :on => :create do |record, attr, value|
     record.errors.add attr, "Please enter correct invite code" unless
       value && value == ENV["ORG_INVITE_CODE"]
