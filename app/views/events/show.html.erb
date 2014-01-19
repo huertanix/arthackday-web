@@ -236,7 +236,20 @@
 
               <div class="participant">
                 <div class="name basic-colfax">
-                  <span><%= p.name %></span>
+                  
+                  <div <% if p.photo_url.blank? %> 
+                    class="avatar-image blank"
+                    <% else %>
+                    class="avatar-image" style="background-image:url(<%=p.photo_url%>)"
+                    <% end %> ></div>
+
+                  <div class="name-area">
+                    <h4><%= p.name %></h4>
+                    <% if not p.twitter_handle.blank? %>
+                      <a href="https://twitter.com/<%= p.twitter_handle %>"><p><%= p.twitter_handle %></p></a>
+                    <% end %>
+                  </div>
+                  
                   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                        width="16.264px" height="8.839px" viewBox="0 0 16.264 8.839" enable-background="new 0 0 16.264 8.839" xml:space="preserve">
                     <g id="Layer_1">
@@ -245,21 +258,18 @@
                   </svg>
                 </div>
                 <div class="participant-additional">
+
                   <div class="participant-top">
-                    <img src="<%= p.photo_url.blank? ? 'http://placekitten.com/48/48' : p.photo_url %>" style="width:48px;height:48px;" />
-                    <div>
-                      <% if p.twitter_handle.blank? %>
-                        <a href="<%= p.website %>"><p><%= p.name %></p></a>
-                      <% else %>
-                        <a href="https://twitter.com/<%= p.twitter_handle %>"><p>@<%= p.twitter_handle %></p></a>
-                        <!--<div class="basic-colfax">Brooklyn, ny</div>-->
-                      <% end %>
-                    </div>
-                  </div>
-                  <div class="participant-bottom">
                     <p>
                       <%= p.bio %>
                     </p>
+                  </div>
+                  <div class="participant-bottom">
+                    <div>
+                      <% if not p.website.blank? %>
+                        <a href="<%= p.website %>"><p><%= p.website %></p></a>
+                      <% end %>
+                    </div>
                   </div>
                 </div>
               </div>

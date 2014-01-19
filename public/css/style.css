@@ -1373,8 +1373,38 @@ body.black {
   /* Safari and Chrome */
   column-count: 3;
 }
+.section#participants #participants-container h2 {
+  margin: 50px 0px 20px 0px;
+}
+.section#participants #participants-container .participant {
+  margin-bottom: 10px;
+}
 .section#participants #participants-container .participant .name {
   cursor: pointer;
+}
+.section#participants #participants-container .participant .name .avatar-image {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+.section#participants #participants-container .participant .name .avatar-image.blank {
+  background-color: #5000ff;
+}
+.section#participants #participants-container .participant .name .name-area {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+}
+.section#participants #participants-container .participant .name .name-area a {
+  color: #5000ff;
+}
+.section#participants #participants-container .participant .name .name-area a p {
+  display: none;
+  color: #5000ff;
 }
 .section#participants #participants-container .participant .name:hover {
   color: #5000ff;
@@ -1383,6 +1413,8 @@ body.black {
   opacity: 1;
 }
 .section#participants #participants-container .participant .name svg {
+  vertical-align: top;
+  display: inline-block;
   margin-left: 10px;
   opacity: 0;
   position: relative;
@@ -1391,9 +1423,17 @@ body.black {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   transform: rotate(180deg);
+  margin-top: 8px;
 }
 .section#participants #participants-container .participant .name.selected {
   color: #5000ff;
+}
+.section#participants #participants-container .participant .name.selected .avatar-image {
+  width: 70px;
+  height: 70px;
+}
+.section#participants #participants-container .participant .name.selected .name-area a p {
+  display: block;
 }
 .section#participants #participants-container .participant .name.selected:hover {
   color: black;
@@ -1406,6 +1446,7 @@ body.black {
 .section#participants #participants-container .participant .participant-additional {
   margin: 10px 0px;
   display: none;
+  border-bottom: 1px solid black;
 }
 .section#participants #participants-container .participant .participant-additional img,
 .section#participants #participants-container .participant .participant-additional div {
@@ -1418,9 +1459,14 @@ body.black {
 .section#participants #participants-container .participant .participant-additional a:hover {
   color: black;
 }
+.section#participants #participants-container .participant .participant-top {
+  margin-top: 10px;
+}
 .section#participants #participants-container .participant .participant-bottom {
   padding: 20px 0px;
-  border-bottom: 1px solid black;
+}
+.section#participants #participants-container .participant .participant-bottom a p {
+  color: #5000ff;
 }
 .section#projects .projects .project {
   position: relative;
