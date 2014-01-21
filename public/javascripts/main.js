@@ -88,41 +88,36 @@ function isThere(element){
 }
 
 
-// function participantHinge(open, element){
-// 	var $partAdditional = element.parent().find('.participant-additional');
-// 	var $arrow = $(this).find('svg g polyline');
-// 	if(open){
-// 		// open the participant element
-// 	}else{
-// 		// close the participant element
-// 	}
-// }
+function participantHinge(open, element){
+	//handles the mechanics of opening and closing the participant element
+	var $partAdditional = element.parent().find('.participant-additional');
+	var $arrow = element.find('svg g polyline');
+	if(open){
+		// open the participant element
+		element.addClass('selected');
+		$partAdditional.slideDown(100);
+		$arrow.attr('stroke','#000000');
+	}else{
+		// close the participant element
+		element.removeClass('selected');
+		$partAdditional.slideUp(100);
+		$arrow.attr('stroke','#5000ff');
+	}
+}
 
 $(function(){
 
 	$('.name').click(function(){
-		var $partAdditional = $(this).parent().find('.participant-additional');
-		var $arrow = $(this).find('svg g polyline');
 		if($(this).hasClass('selected')){
-			$(this).removeClass('selected');
-			$partAdditional.slideUp(100);
-			$arrow.attr('stroke','#5000ff');
+			participantHinge(false, $(this));
 		}else{
 			if($('.selected').length > 0){
 				// close existing selected elements
 				$('.selected').each(function(){
-					var $partone = $(this).parent().find('.participant-additional');	
-					var $parttwo = $(this).find('svg g polyline');		
-
-					$(this).removeClass('selected');
-					$partone.slideUp(100);
-					$parttwo.attr('stroke','#5000ff');		
+					participantHinge(false, $(this));
 				})
-
 			}
-			$(this).addClass('selected');
-			$partAdditional.slideDown(100);
-			$arrow.attr('stroke','#000000');
+			participantHinge(true, $(this));
 		}
 	});
 	
