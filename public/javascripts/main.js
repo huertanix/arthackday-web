@@ -87,7 +87,44 @@ function isThere(element){
 	}
 }
 
+
+// function participantHinge(open, element){
+// 	var $partAdditional = element.parent().find('.participant-additional');
+// 	var $arrow = $(this).find('svg g polyline');
+// 	if(open){
+// 		// open the participant element
+// 	}else{
+// 		// close the participant element
+// 	}
+// }
+
 $(function(){
+
+	$('.name').click(function(){
+		var $partAdditional = $(this).parent().find('.participant-additional');
+		var $arrow = $(this).find('svg g polyline');
+		if($(this).hasClass('selected')){
+			$(this).removeClass('selected');
+			$partAdditional.slideUp(100);
+			$arrow.attr('stroke','#5000ff');
+		}else{
+			if($('.selected').length > 0){
+				// close existing selected elements
+				$('.selected').each(function(){
+					var $partone = $(this).parent().find('.participant-additional');	
+					var $parttwo = $(this).find('svg g polyline');		
+
+					$(this).removeClass('selected');
+					$partone.slideUp(100);
+					$parttwo.attr('stroke','#5000ff');		
+				})
+
+			}
+			$(this).addClass('selected');
+			$partAdditional.slideDown(100);
+			$arrow.attr('stroke','#000000');
+		}
+	});
 	
 	// call updateContainer on load and on resize
    	updateContainer();	
@@ -142,19 +179,7 @@ $(function(){
 	// 	$('#black-logo').show();
 	// }
 
-	$('.name').click(function(){
-		var $partAdditional = $(this).parent().find('.participant-additional');
-		var $arrow = $(this).find('svg g polyline');
-		if($(this).hasClass('selected')){
-			$(this).removeClass('selected');
-			$partAdditional.slideUp(100);
-			$arrow.attr('stroke','#5000ff');
-		}else{
-			$(this).addClass('selected');
-			$partAdditional.slideDown(100);
-			$arrow.attr('stroke','#000000');
-		}
-	});
+
 
 	// for the event 
 	if(isThere('#event-video')){
