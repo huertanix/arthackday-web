@@ -229,7 +229,20 @@
         Can't wait to meet you!
       <% else %>
         <% parts = order_participants(@event.participants.each) %>
+
+        <% breaks = participant_breaks(parts, @event.participants.count) %>
+        
+
+
+
+
         <% parts.keys.sort.each do |t| %>
+
+        <% if t == breaks[0] || t == breaks[1] %>
+          </div>
+          <div class="column one-third participants-all">
+        <% end %>
+
           <div class="participant-group" id="<%= t %>-group">
             <h2><%= t %></h2>
             <% parts[t].each do |p| %>
@@ -246,7 +259,7 @@
                   <div class="name-area">
                     <h4><%= p.name %></h4>
                     <% if not p.twitter_handle.blank? %>
-                      <a href="https://twitter.com/<%= p.twitter_handle %>"><p><%= p.twitter_handle %></p></a>
+                      <a href="https://twitter.com/<%= p.twitter_handle %>"><p>@<%= p.twitter_handle %></p></a>
                     <% end %>
                   </div>
                   

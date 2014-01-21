@@ -21,6 +21,25 @@ module EventsHelper
 
 		return partHash
 	end
+
+	def participant_breaks(participants,count)
+		breakPoint = count/3
+		breakLetters = []
+		amount = 0
+
+		participants.keys.sort.each do |p|
+			amount = amount + participants[p].count
+			if amount > breakPoint && breakLetters.count == 0
+				breakLetters << p
+			elsif amount > breakPoint && breakLetters.count == 1
+				breakLetters << p
+			end
+		end
+		
+		return breakLetters
+	end
+
+
 	def google_map_search(venue)
 		location = ''
 		if venue.address
