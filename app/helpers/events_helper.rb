@@ -31,7 +31,7 @@ module EventsHelper
 			amount = amount + participants[p].count
 			if amount > breakPoint && breakLetters.count == 0
 				breakLetters << p
-			elsif amount > breakPoint && breakLetters.count == 1
+			elsif (amount * 2) > breakPoint && breakLetters.count == 1
 				breakLetters << p
 			end
 		end
