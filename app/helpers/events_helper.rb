@@ -23,27 +23,18 @@ module EventsHelper
 	end
 
 	def participant_breaks(participants,count)
-		puts '********'
-		puts count
-		puts participants.count
+		# spacing here is to make up for the letter spacing
+		# above each section. one unit is essentially the height
+		# of one participant. this is sloppy science folks.
 		spacingCount = 7;
 		count = count + (participants.count * spacingCount)
-		puts count
 		breakPoint = count/3
-		puts breakPoint
 		breakLetters = []
 		amount = 0
 
-		puts '-------'
-
 		# puts participants.count
 		participants.keys.sort.each do |p|
-			puts '///////'
-			puts p
-			puts amount
 			amount = amount + participants[p].count + spacingCount
-			puts amount
-			puts '/'
 			if amount > breakPoint && breakLetters.count == 0
 				breakLetters << p
 			elsif amount > (breakPoint * 2) && breakLetters.count == 1
