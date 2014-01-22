@@ -26,7 +26,7 @@ module EventsHelper
 		# spacing here is to make up for the letter spacing
 		# above each section. one unit is essentially the height
 		# of one participant. this is sloppy science folks.
-		spacingCount = 7;
+		spacingCount = 10;
 		count = count + (participants.count * spacingCount)
 		breakPoint = count/3
 		breakLetters = []
