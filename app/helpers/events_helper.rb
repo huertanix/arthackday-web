@@ -29,13 +29,15 @@ module EventsHelper
 
 		participants.keys.sort.each do |p|
 			amount = amount + participants[p].count
-			if count > breakPoint && breakLetters.count == 0
+			if amount > breakPoint && breakLetters.count == 0
 				breakLetters << p
-			elsif count > (breakPoint * 2) && breakLetters.count == 1
+			elsif amount > (breakPoint * 2) && breakLetters.count == 1
 				breakLetters << p
 			end
 		end
 		
+
+
 		return breakLetters
 	end
 
