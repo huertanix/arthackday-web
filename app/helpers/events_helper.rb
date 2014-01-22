@@ -23,20 +23,34 @@ module EventsHelper
 	end
 
 	def participant_breaks(participants,count)
+		puts '********'
+		puts count
+
+		spacingCount = 2;
+		count = count + (participants.count * spacingCount)
+		puts count
 		breakPoint = count/3
+		puts breakPoint
+		puts breakPoint
 		breakLetters = []
 		amount = 0
 
+		puts '-------'
+
+		# puts participants.count
 		participants.keys.sort.each do |p|
-			amount = amount + participants[p].count
+			puts '///////'
+			puts p
+			puts amount
+			amount = amount + participants[p].count + spacingCount
+			puts amount
+			puts '/'
 			if amount > breakPoint && breakLetters.count == 0
 				breakLetters << p
 			elsif amount > (breakPoint * 2) && breakLetters.count == 1
 				breakLetters << p
 			end
 		end
-		
-
 
 		return breakLetters
 	end
