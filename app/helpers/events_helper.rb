@@ -26,7 +26,7 @@ module EventsHelper
 		puts '********'
 		puts count
 		puts participants.count
-		spacingCount = 5;
+		spacingCount = 7;
 		count = count + (participants.count * spacingCount)
 		puts count
 		breakPoint = count/3
