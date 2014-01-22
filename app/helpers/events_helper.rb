@@ -25,12 +25,11 @@ module EventsHelper
 	def participant_breaks(participants,count)
 		puts '********'
 		puts count
-
-		spacingCount = 2;
+		puts participants.count
+		spacingCount = 5;
 		count = count + (participants.count * spacingCount)
 		puts count
 		breakPoint = count/3
-		puts breakPoint
 		puts breakPoint
 		breakLetters = []
 		amount = 0
