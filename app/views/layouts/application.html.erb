@@ -20,32 +20,33 @@
 		<meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : "Art Hack Day" %>"/>
 		<meta property="og:type" content="website"/>
 		<meta property="og:url" content="http://www.arthackday.net"/>
+		<% unix_time = Time.now.to_i %>
 		<% if params[:controller] === "projects" %>
 			<% unless @project.nil? %>
 				<% unless @project.featured_thumbnail.blank? %>
 					<!-- I hate Facebook so much ~ .dh -->
-					<meta property="og:image" content="<%= @project.featured_thumbnail %>"/>
+					<meta property="og:image" content="<%= @project.featured_thumbnail %>?zuckerderp=<%= unix_time %>"/>
 				<% end %>
 			<% end %>
 		<% elsif params[:controller] === "events" %>
 			<% unless @event.nil? %>
 				<% unless @event.featured_image.url(:medium).blank? %>
 					<!-- Paperclip default is placekitten, so cat shows up if blank. Feature, not bug? ~ .dh -->
-					<meta property="og:image" content="<%= @event.featured_image.url(:medium) %>"/>
+					<meta property="og:image" content="<%= @event.featured_image.url(:medium) %>?zuckerderp=<%= unix_time %>"/>
 				<% end %>
 				<% unless @event.projects.empty? %>
 					<% @event.projects.each do |project| %>
 						<% unless project.featured_thumbnail.blank? %>
-							<meta property="og:image" content="<%= project.featured_thumbnail %>"/>
+							<meta property="og:image" content="<%= project.featured_thumbnail %>?zuckerderp=<%= unix_time %>"/>
 						<% end %>
 					<% end %>
 				<% end %>
 			<% end %>
 		<% elsif params[:controller] === "about" %>
-			<meta property="og:image" content="http://www.arthackday.net/img/about/Arthackday_About_How-it-works.jpg"/>
-			<meta property="og:image" content="http://www.arthackday.net/img/about/Arthackday_About_Partners.jpg"/>
-			<meta property="og:image" content="http://www.arthackday.net/img/about/Arthackday_About_What-is.jpg"/>
-			<meta property="og:image" content="http://www.arthackday.net/video/berlin_poster.jpg"/>
+			<meta property="og:image" content="http://www.arthackday.net/img/about/Arthackday_About_How-it-works.jpg?zuckerderp=<%= unix_time %>"/>
+			<meta property="og:image" content="http://www.arthackday.net/img/about/Arthackday_About_Partners.jpg?zuckerderp=<%= unix_time %>"/>
+			<meta property="og:image" content="http://www.arthackday.net/img/about/Arthackday_About_What-is.jpg?zuckerderp=<%= unix_time %>"/>
+			<meta property="og:image" content="http://www.arthackday.net/video/berlin_poster.jpg?zuckerderp=<%= unix_time %>"/>
 		<% end %>
 		<meta property="og:image" content="http://www.arthackday.net/img/ahd_assets/ahd_logo_black_200px.png"/>
 		<meta property="og:site_name" content="ART HACK DAY"/>
