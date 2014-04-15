@@ -40,8 +40,7 @@ namespace :arthackday do
         #end
 
         # only thing that works
-        ##s3 = AWS::S3.new(:access_key_id => ENV['AWS_ACCESS_KEY_ID'], :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'])
-        s3 = AWS::S3.new(:access_key_id => 'AKIAITBMWQFO745DO7EQ', :secret_access_key => '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')
+        s3 = AWS::S3.new(:access_key_id => ENV['AWS_ACCESS_KEY_ID'], :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'])
         # S3 gem handles escaping weird filenames to something URL-friendly
         s3.buckets[ENV['S3_BUCKET_NAME']].objects["participants/avatars/#{file_name}"].write(:file => "#{Rails.root}/public/img/temp/#{file_name}")
         # overwrite the old URL with the S3 (public?) URL
