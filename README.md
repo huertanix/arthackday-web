@@ -34,6 +34,7 @@ You will want to clone from Github (not Heroku) and then add the Heroku staging 
 
     git clone https://github.com/huertanix/arthackday-web.git arthackday-staging
     heroku git:remote -a arthackday-staging
+    heroku keys:add
 
 To push to staging, type this from inside the arthackday-staging directory:
 
