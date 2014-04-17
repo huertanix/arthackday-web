@@ -1,6 +1,11 @@
 <% if @events.empty? %>
 <div class="section" id="landing-header">
-  <h1>Missing data.</h1>
+  <div class="event-callout">
+    <div id="hero">Missing Event Data</div>
+    <div id="sub-hero">
+      <h3>The abyss stares back.</h3>
+    </div>
+  </div>
 </div>
 <% else %>
 <div class="section <%= @events.first.header_image_tiled? ? 'tiled-header' : 'centered-header' %>" id="landing-header">
