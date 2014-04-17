@@ -1,6 +1,10 @@
-
+<% if @events.empty? %>
+<div class="section" id="landing-header">
+  <h1>Missing data.</h1>
+</div>
+<% else %>
 <div class="section <%= @events.first.header_image_tiled? ? 'tiled-header' : 'centered-header' %>" id="landing-header">
-	<% unless @events.first.header_image.blank? %>
+  <% unless @events.first.header_image.blank? %>
     <script type="text/javascript">
       // Load 20+ MB gifs only after the rest of the page loads
       $(function() {
@@ -25,6 +29,7 @@
     </div>
   <% end %>
 </div>
+<% end %>
 
 <div class="section top-margin" id="ahd-about">
 	<div class="container">

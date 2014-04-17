@@ -19,7 +19,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : "Art Hack Day" %>"/>
 		<meta property="og:type" content="website"/>
-		<meta property="og:url" content="http://www.arthackday.net"/>
+		<meta property="og:url" content="<%= request.url %>"/>
 		<% unix_time = Time.now.to_i %>
 		<% if params[:controller] === "projects" %>
 			<% unless @project.nil? %>
@@ -76,9 +76,11 @@
 				<% end %>
 			<% end %>
 			<% unless @events.nil? %>
-				<% if @events.first.attributes.has_key? 'header_dark_font' %>
-					<% if @events.first.header_dark_font === true %>
-						<% show_dark_text = true %>
+				<% unless @events.empty? %>
+					<% if @events.first.attributes.has_key? 'header_dark_font' %>
+						<% if @events.first.header_dark_font === true %>
+							<% show_dark_text = true %>
+						<% end %>
 					<% end %>
 				<% end %>
 			<% end %>
