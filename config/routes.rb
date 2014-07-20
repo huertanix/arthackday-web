@@ -42,6 +42,8 @@ ArthackdayWeb::Application.routes.draw do
   get 'stockholm', to: redirect('/events/larger-than-life')
   get 'berlin', to: redirect('/events/going-dark')
   get 'afterglow', to: redirect('/events/after-glow')
+  # slug drama
+  get 'disnovate', to: redirect('/events/disnovation')
   
   # Project pages
 
