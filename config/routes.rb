@@ -13,6 +13,9 @@ ArthackdayWeb::Application.routes.draw do
 
   resources :venues
 
+  # slug drama
+  get 'events/disnovate', to: redirect('/events/disnovation')
+
   resources :events
 
   resources :admin
@@ -42,8 +45,6 @@ ArthackdayWeb::Application.routes.draw do
   get 'stockholm', to: redirect('/events/larger-than-life')
   get 'berlin', to: redirect('/events/going-dark')
   get 'afterglow', to: redirect('/events/after-glow')
-  # slug drama
-  get 'events/disnovate', to: redirect('/events/disnovation')
   
   # Project pages
 
