@@ -70,7 +70,7 @@
             <div class="pre-about">
               <%if !@event.show_rsvp_url.blank? %>
               <div>
-                <p>Join the Art Hack Day teams on Wednesday January 29 starting at 7:00pm for a closing exhibition, live performances, and party.</p>
+                <p>Join the Art Hack Day teams on Saturday August 30 starting at 7:00pm for a closing exhibition, live performances, and party.</p>
                 <a href="<%= @event.show_rsvp_url%>"><button >RSVP</button></a>
               </div>
               <% end %>
@@ -226,7 +226,7 @@
     <div class="column one-third participants-all">
 
       <% if @event.participants.empty? %>
-        Can't wait to meet you!
+        Coming soon!
       <% else %>
         <% parts = order_participants(@event.participants.each) %>
 
