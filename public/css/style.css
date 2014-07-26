@@ -1433,6 +1433,9 @@ body.black {
   width: 70px;
   height: 70px;
 }
+.section#participants #participants-container .participant .name.selected .name-area {
+  width: 65%;
+}
 .section#participants #participants-container .participant .name.selected .name-area a p {
   display: block;
 }
@@ -1462,6 +1465,7 @@ body.black {
 }
 .section#participants #participants-container .participant .participant-top {
   margin-top: 10px;
+  width: 100%;
 }
 .section#participants #participants-container .participant .participant-bottom {
   padding: 20px 0px;
