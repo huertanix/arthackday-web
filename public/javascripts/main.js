@@ -15,9 +15,7 @@ function updateContainer(wH){
 }
 
 var sxsw = {
-
     full_bleed: function(boxWidth, boxHeight, imgWidth, imgHeight) {
-
         // Calculate new height and width...
         var initW = imgWidth;
         var initH = imgHeight;
@@ -134,7 +132,6 @@ $(function(){
 	if ($('#about-page').length === 1) {
 		videoResize();
 	}
-    
 
 	// FOOTER
 	$('#social-section svg').hover(         
