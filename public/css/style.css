@@ -1111,6 +1111,14 @@ body.black {
   margin-top: 0px;
   top: -8px;
   position: relative;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  /* Non standard for webkit */
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 .section#project-page #project #project-description p {
   margin: 30px 0px;
