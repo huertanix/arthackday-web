@@ -5,19 +5,22 @@ Art Hack Day website.
 
 Install
 -------
-System Prereqs:
+System Prereqs (Debian/Ubuntu/Mint):
 
 * libreadline6
 * libreadline6-dev
 * sqlite3
 * libsqlite3-dev
+* postgresql-9.1 NOTE: This is apparently required even though it is only needed in production
+* postgresql-server-dev-9.1
 * Heroku toolbelt
 
 Ruby Prereqs: 
 * rvm
-* Ruby 1.9.3, 
-* gem install rails (4.0.0)
+* Ruby 1.9.3 (rvm install ruby-1.9.3)
+* Rails (4.0.0)
 * NB: if you have several rubies installed, you may need to switch to the right one. To see which rubies you have installed type 'rvm list rubies' and switch to 1.9.3 with 'rvm ruby-1.9.3.p374'
+* NB NB: If you have 1.9.3 already installed, the Gemfile will now automatically use that one.
 
 Application Install:
 * bundle install
@@ -31,6 +34,7 @@ You will want to clone from Github (not Heroku) and then add the Heroku staging 
 
     git clone https://github.com/huertanix/arthackday-web.git arthackday-staging
     heroku git:remote -a arthackday-staging
+    heroku keys:add
 
 To push to staging, type this from inside the arthackday-staging directory:
 
