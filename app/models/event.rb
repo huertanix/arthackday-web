@@ -24,7 +24,7 @@ class Event < ActiveRecord::Base
 
   friendly_id :theme, use: :slugged
 
-  has_attached_file :featured_image, :styles => { :medium => "600x400", :thumb => "300x200>", :chibi => "100x75>" }, :default_url => "/img/ahd_assets/ahd_logo_color_200px.png", s3_permissions: "public-read"
+  has_attached_file :featured_image, :styles => { :medium => "600x400", :thumb => "300x200>", :chibi => "100x75>" }, :default_url => "http://www.arthackday.net/img/ahd_assets/ahd_logo_color_200px.png", s3_permissions: "public-read"
 
   def upcoming? 
     self.show_end > DateTime.now
