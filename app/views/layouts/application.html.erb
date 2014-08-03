@@ -31,7 +31,6 @@
 		<% elsif params[:controller] === "events" %>
 			<% unless @event.nil? %>
 				<% unless @event.featured_image.url(:medium).blank? %>
-					<!-- Paperclip default is placekitten, so cat shows up if blank. Feature, not bug? ~ .dh -->
 					<meta property="og:image" content="<%= @event.featured_image.url(:medium) %>?zuckerderp=<%= unix_time %>"/>
 				<% end %>
 				<% unless @event.projects.empty? %>
