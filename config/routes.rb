@@ -14,7 +14,7 @@ ArthackdayWeb::Application.routes.draw do
   resources :venues
 
   # slug drama
-  get 'events/disnovate', to: redirect('/events/disnovation')
+  get 'events/disnovation', to: redirect('/events/disnovate')
 
   resources :events
 
