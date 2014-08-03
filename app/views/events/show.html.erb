@@ -303,18 +303,17 @@
 
   <div class="container">
 
-    <div class="sixteen columns">
-      <div class="section-header">
-        <h4>
-          Press
-        </h4>
-      </div>
-    </div>
-
     <% unless @event.press_blurbs.empty? %>
+      <div class="sixteen columns">
+        <div class="section-header">
+          <h4>
+            Press
+          </h4>
+        </div>
+      </div>
       <% @event.press_blurbs.each do |blurb| %>
-        <div class="one-third column about-press-blurb">
-          <a href="<%= blurb.source_url %>">
+        <div class="one-third column third-blurb">
+          <a href="<%= blurb.source_url %>" class="hover">
             <div>
               <div>
                 <h4 class="section-header"><%= blurb.source_name %></h4>
@@ -326,21 +325,29 @@
       <% end %>
     <% end %>
 
-
     <% unless @event.sponsors.empty? %>
-    <div id="partners-container" class="two-thirds column">
-      <div class="section-header"><h4>Partners</h4></div>
-      <a id="partners" class="anchor"></a>
+      <div class="sixteen columns">
+        <div class="section-header">
+          <h4>
+            Partners
+          </h4>
+        </div>
+      </div>
+
       <% @event.sponsors.each do |sponsor| %>
-        <div class="column one-third partner">
+        <div class="one-third column third-blurb">
           <a href="<%=sponsor.website%>">
-          <%= image_tag sponsor.logo.url(:thumb), :alt => sponsor.name %>
+            <div>
+              <div>
+                <%= image_tag sponsor.logo.url(:thumb), :alt => sponsor.name %>
+              </div>
+            </div>
           </a>
         </div>
       <% end %>
-    </div>
-    <%end%>
 
+    <%end%>
+    
   </div>
 </div>
 

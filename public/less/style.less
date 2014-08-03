@@ -352,7 +352,7 @@ body{
 			}
 		}
 	}
-	.about-press-blurb{
+	.third-blurb{
 		position: relative;
 		height: 190px;
 		margin-bottom: 40px;
@@ -374,8 +374,11 @@ body{
 						margin-bottom: 20px;
 					}
 				}
+				img{
+					width: 100%;
+				}
 			}
-			&:hover{
+			&.hover:hover{
 				color:@white;
 				> div{
 					color:@white;
@@ -389,7 +392,7 @@ body{
 			}						
 		}
 	}
-	
+
 	// landing page
 	&#landing-header{
 		overflow: hidden;
@@ -767,24 +770,24 @@ body{
 				}
 			}
 		}
-		#partners-container{
-			.partner{
-				background-color: #eee;
-				height: 186px;
-				margin-bottom: 40px;
-				a{
-					img{
-						border: 1px solid black;
-					}
-				}
-				&:nth-child(even){
-					margin-right: 0px;
-				}
-				&:nth-child(odd){
-					margin-left: 0px;
+
+		.partner{
+			background-color: #eee;
+			height: 186px;
+			margin-bottom: 40px;
+			a{
+				img{
+					border: 1px solid black;
 				}
 			}
+			&:nth-child(even){
+				margin-right: 0px;
+			}
+			&:nth-child(odd){
+				margin-left: 0px;
+			}
 		}
+
 	}
 	&#participants{
 		margin-top: 100px;

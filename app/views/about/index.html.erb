@@ -98,8 +98,8 @@
     </div>
 
     <% @press_blurbs.each do |blurb| %>
-      <div class="one-third column about-press-blurb">
-        <a href="<%= blurb.source_url %>">
+      <div class="one-third column third-blurb">
+        <a href="<%= blurb.source_url %>" class="hover">
           <div>
             <div>
               <h4 class="section-header"><%= blurb.source_name %></h4>

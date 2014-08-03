@@ -960,12 +960,12 @@ body.black {
   background-color: #5000ff;
   border-color: #5000ff;
 }
-.section .about-press-blurb {
+.section .third-blurb {
   position: relative;
   height: 190px;
   margin-bottom: 40px;
 }
-.section .about-press-blurb a {
+.section .third-blurb a {
   color: #121112;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -973,7 +973,7 @@ body.black {
   -ms-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.section .about-press-blurb a > div {
+.section .third-blurb a > div {
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
@@ -985,24 +985,27 @@ body.black {
   display: table;
   height: 190px;
 }
-.section .about-press-blurb a > div > * {
+.section .third-blurb a > div > * {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 }
-.section .about-press-blurb a > div > * .section-header {
+.section .third-blurb a > div > * .section-header {
   margin-bottom: 20px;
 }
-.section .about-press-blurb a:hover {
+.section .third-blurb a > div img {
+  width: 100%;
+}
+.section .third-blurb a.hover:hover {
   color: #ffffff;
 }
-.section .about-press-blurb a:hover > div {
+.section .third-blurb a.hover:hover > div {
   color: #ffffff;
   border-color: #5000ff;
   background-color: #5000ff;
 }
-.section .about-press-blurb a:hover > div .section-header,
-.section .about-press-blurb a:hover > div p {
+.section .third-blurb a.hover:hover > div .section-header,
+.section .third-blurb a.hover:hover > div p {
   color: white;
 }
 .section#landing-header {
@@ -1357,18 +1360,18 @@ body.black {
 .section#press-partners #press-container .press a:hover {
   color: black;
 }
-.section#press-partners #partners-container .partner {
+.section#press-partners .partner {
   background-color: #eee;
   height: 186px;
   margin-bottom: 40px;
 }
-.section#press-partners #partners-container .partner a img {
+.section#press-partners .partner a img {
   border: 1px solid black;
 }
-.section#press-partners #partners-container .partner:nth-child(even) {
+.section#press-partners .partner:nth-child(even) {
   margin-right: 0px;
 }
-.section#press-partners #partners-container .partner:nth-child(odd) {
+.section#press-partners .partner:nth-child(odd) {
   margin-left: 0px;
 }
 .section#participants {
