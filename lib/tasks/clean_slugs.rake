@@ -4,6 +4,7 @@ namespace :arthackday do
     Project.all.each do |project|
       project.slug = nil
       project.save!
+      puts "New slug: #{project.slug}"
     end
   end
 end
