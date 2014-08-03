@@ -319,44 +319,7 @@ body{
 
 			&.about-press{
 				margin: 150px auto;
-				.about-press-blurb{
-					position: relative;
-					height: 190px;
-					margin-bottom: 40px;
-					a{
-						color:@black;
-						.transition(all .2s ease);
-						> div{
-							.transition(all .2s ease);
-							border: 1px solid black;
-							padding: 0px 20px;
-							position: absolute; 
-							display: table; 
-							height:190px;
-							> *{
-								display: table-cell; 
-								vertical-align: middle; 
-								text-align: center;
-								.section-header{
-									margin-bottom: 20px;
-								}
-							}
-						}
-						&:hover{
-							color:@white;
-							> div{
-								color:@white;
-								border-color: @electric-blue;
-								background-color: @electric-blue;
-								.section-header,p{
-									color:white;
-								}
 
-							}
-						}						
-					}
-
-				}
 			}
 			&.about-sponsors{
 				.sponsor-space{
@@ -389,6 +352,44 @@ body{
 			}
 		}
 	}
+	.about-press-blurb{
+		position: relative;
+		height: 190px;
+		margin-bottom: 40px;
+		a{
+			color:@black;
+			.transition(all .2s ease);
+			> div{
+				.transition(all .2s ease);
+				border: 1px solid black;
+				padding: 0px 20px;
+				position: absolute; 
+				display: table; 
+				height:190px;
+				> *{
+					display: table-cell; 
+					vertical-align: middle; 
+					text-align: center;
+					.section-header{
+						margin-bottom: 20px;
+					}
+				}
+			}
+			&:hover{
+				color:@white;
+				> div{
+					color:@white;
+					border-color: @electric-blue;
+					background-color: @electric-blue;
+					.section-header,p{
+						color:white;
+					}
+
+				}
+			}						
+		}
+	}
+	
 	// landing page
 	&#landing-header{
 		overflow: hidden;

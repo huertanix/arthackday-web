@@ -935,51 +935,6 @@ body.black {
 .section#about-page .container.about-press {
   margin: 150px auto;
 }
-.section#about-page .container.about-press .about-press-blurb {
-  position: relative;
-  height: 190px;
-  margin-bottom: 40px;
-}
-.section#about-page .container.about-press .about-press-blurb a {
-  color: #121112;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.section#about-page .container.about-press .about-press-blurb a > div {
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  border: 1px solid black;
-  padding: 0px 20px;
-  position: absolute;
-  display: table;
-  height: 190px;
-}
-.section#about-page .container.about-press .about-press-blurb a > div > * {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-}
-.section#about-page .container.about-press .about-press-blurb a > div > * .section-header {
-  margin-bottom: 20px;
-}
-.section#about-page .container.about-press .about-press-blurb a:hover {
-  color: #ffffff;
-}
-.section#about-page .container.about-press .about-press-blurb a:hover > div {
-  color: #ffffff;
-  border-color: #5000ff;
-  background-color: #5000ff;
-}
-.section#about-page .container.about-press .about-press-blurb a:hover > div .section-header,
-.section#about-page .container.about-press .about-press-blurb a:hover > div p {
-  color: white;
-}
 .section#about-page .container.about-sponsors .sponsor-space {
   height: 50px;
 }
@@ -1004,6 +959,51 @@ body.black {
   color: #ffffff;
   background-color: #5000ff;
   border-color: #5000ff;
+}
+.section .about-press-blurb {
+  position: relative;
+  height: 190px;
+  margin-bottom: 40px;
+}
+.section .about-press-blurb a {
+  color: #121112;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.section .about-press-blurb a > div {
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border: 1px solid black;
+  padding: 0px 20px;
+  position: absolute;
+  display: table;
+  height: 190px;
+}
+.section .about-press-blurb a > div > * {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.section .about-press-blurb a > div > * .section-header {
+  margin-bottom: 20px;
+}
+.section .about-press-blurb a:hover {
+  color: #ffffff;
+}
+.section .about-press-blurb a:hover > div {
+  color: #ffffff;
+  border-color: #5000ff;
+  background-color: #5000ff;
+}
+.section .about-press-blurb a:hover > div .section-header,
+.section .about-press-blurb a:hover > div p {
+  color: white;
 }
 .section#landing-header {
   overflow: hidden;
