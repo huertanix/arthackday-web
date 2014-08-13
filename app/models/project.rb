@@ -2,12 +2,13 @@ class Project < ActiveRecord::Base
   extend FriendlyId
   belongs_to :event
   has_many :medium
+  has_many :photos
   has_and_belongs_to_many :participants
 
-  accepts_nested_attributes_for :medium, allow_destroy: true
+  accepts_nested_attributes_for :medium, :photos, allow_destroy: true
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :name, :description, :tag, :website, :github, :participant_ids, :event_id, :medium_attributes, :featured_thumbnail
+  attr_accessible :name, :description, :tag, :website, :github, :participant_ids, :event_id, :medium_attributes, :featured_thumbnail, :photos_attributes
   has_attached_file :main_image, :styles => { :medium => "600x400", :thumb => "300x200>", :chibi => "100x75>" }, :default_url => "http://placekitten.com/300/200"
 
   friendly_id :participants_with_project_name, use: :slugged

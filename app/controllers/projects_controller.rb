@@ -89,6 +89,6 @@ class ProjectsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def project_params
-    params.require(:project).permit(:name, :description, :tag, :website, :github, :event_id, :featured_thumbnail, {:participant_ids => []}, :medium_attributes => [:id, :snippet, :project_id, :_destroy])
+    params.require(:project).permit(:name, :description, :tag, :website, :github, :event_id, :featured_thumbnail, {:participant_ids => []}, :medium_attributes => [:id, :snippet, :project_id, :_destroy], :photos_attributes => [:id, :image, :credit, :project_id, :_destroy])
   end
 end
