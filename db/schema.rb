@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131223005909) do
+ActiveRecord::Schema.define(version: 20140813011118) do
 
   create_table "events", force: true do |t|
     t.string   "city"
@@ -123,6 +123,17 @@ ActiveRecord::Schema.define(version: 20131223005909) do
   create_table "participants_projects", id: false, force: true do |t|
     t.integer "participant_id", null: false
     t.integer "project_id",     null: false
+  end
+
+  create_table "photos", force: true do |t|
+    t.text     "credit"
+    t.integer  "project_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "press_blurbs", force: true do |t|

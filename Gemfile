@@ -74,6 +74,9 @@ gem 'aws-sdk'
 # Contact form
 gem 'mail_form'
 
+# Twitter profile pic rake tasks
+gem 'twitter'
+
 # Heroku stuff
 group :production do
   gem 'pg'

@@ -1,4 +1,6 @@
 ArthackdayWeb::Application.routes.draw do
+  resources :photos
+
   resources :media
 
   devise_for :organizers
