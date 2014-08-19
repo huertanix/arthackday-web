@@ -77,6 +77,9 @@ gem 'mail_form'
 # Twitter profile pic rake tasks
 gem 'twitter'
 
+# Web server for local instances
+gem 'thin'
+
 # Heroku stuff
 group :production do
   gem 'pg'
