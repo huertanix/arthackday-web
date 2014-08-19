@@ -26,7 +26,7 @@
         </div>
         <% @project.participants.each do |participant| %>
           <div class="project-contributor">
-            <img src="<%= participant.photo_url.blank? ? 'http://placekitten.com/48/48' : participant.photo_url %>" style="width:48px;height:48px;" />
+            <img src="<%= participant.photo_url.blank? ? 'http://placekitten.com/300/300' : participant.photo_url %>" style="width:48px;height:48px;" />
             <div>
               <div class="basic-colfax"><%= participant.name %></div>
               <% unless participant.twitter_handle.blank? %>
@@ -52,7 +52,7 @@
           <% @project.photos.each do |photo| %>
             <div class="project-item">
     					<%= image_tag photo.image.url(:medium), :alt => photo.credit %>
-    					<p class="project-photo-credit"><%= photo.credit %></p>
+    					<p class="project-photo-credit">Credit: <%= photo.credit.blank? ? 'Unknown' : photo.credit %></p>
     				</div>
           <% end %>
 			  <% end %>
