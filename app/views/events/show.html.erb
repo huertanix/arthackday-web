@@ -124,7 +124,7 @@
         <% @event.projects.each_with_index do |project, index| %>
           <% if (index % 3 == 0) %>
             <div class="project">
-              <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>" alt="<%= project.name %>" />
+              <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/640/480" : project.featured_thumbnail ) %>" alt="<%= project.name %>" />
               <div>
                 <%= link_to(project) do %>
                   <div class="project-info">
@@ -151,7 +151,7 @@
         <% @event.projects.each_with_index do |project, index| %>
           <% if (index % 3 == 1) %>
             <div class="project">
-              <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>" alt="<%= project.name %>" />
+              <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/640/480" : project.featured_thumbnail ) %>" alt="<%= project.name %>" />
               <div>
                 <%= link_to(project) do %>
                   <div class="project-info">
@@ -178,7 +178,7 @@
         <% @event.projects.each_with_index do |project, index| %>
           <% if (index % 3 == 2) %>
             <div class="project">
-              <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/300/200" : project.featured_thumbnail ) %>" alt="<%= project.name %>" />
+              <img src="<%= ( project.featured_thumbnail.blank? ? "http://placekitten.com/640/480" : project.featured_thumbnail ) %>" alt="<%= project.name %>" />
               <div>
                 <%= link_to(project) do %>
                   <div class="project-info">
