@@ -47,6 +47,16 @@
 		    </div>-->
 			</div>
 			<div class="two-thirds column" id="project-contents">
+			  <!-- Photos using paperclip gem -->
+			  <% unless @project.photos.empty? %>
+          <% @project.photos.each do |photo| %>
+            <div class="project-item">
+    					<%= image_tag photo.image.url(:medium), :alt => photo.credit %>
+    					<p class="project-photo-credit"><%= photo.credit %></p>
+    				</div>
+          <% end %>
+			  <% end %>
+		    <!-- Video/etc embeds and images hosted off-site -->
         <% unless @project.medium.empty? %>
           <% @project.medium.each do |media| %>
     				<div class="project-item">
