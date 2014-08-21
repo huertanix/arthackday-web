@@ -980,12 +980,13 @@ body.black {
   -ms-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border: 1px solid black;
-  padding: 0px 20px;
+  width: 100%;
   position: absolute;
   display: table;
   height: 190px;
 }
 .section .third-blurb a > div > * {
+  padding: 0px 20px;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
