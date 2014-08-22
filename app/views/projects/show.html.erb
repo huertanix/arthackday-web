@@ -48,7 +48,9 @@
 			</div>
 			<div class="two-thirds column" id="project-contents">
 			  <!-- Photos using paperclip gem -->
-			  <% unless @project.photos.empty? %>
+			  <% if @project.photos.empty? %>
+			    <img src="http://placekitten.com/640/480" alt="No photo available" />
+			  <% else %>
           <% @project.photos.each do |photo| %>
             <div class="project-item">
     					<%= image_tag photo.image.url(:medium), :alt => photo.credit %>
