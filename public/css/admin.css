@@ -41,14 +41,14 @@
 }*/
 
 .login-container {
-  padding-top:100px;
+  padding-top:140px;
   width:442px;
   margin:0 auto;
 }
 
 .login {
   width: 400px;
-  height: 300px;
+  height: 350px;
   border-style: solid;
   border-width: 1px;
   border-color: #000;
@@ -78,6 +78,7 @@
 }
 
 .login .text-field {
+  margin-top:20px;
   width:380px;
 }
 
@@ -86,6 +87,25 @@
   line-height: 17px;
   float:left;
 }*/
+
+#login-button {
+  margin-top:0px;
+  width:400px;
+  font-family:'COLFAX';
+  background-color: #000;
+  color:#FFF;
+  border: none;
+  cursor: pointer;
+}
+
+#login-button:hover {
+  background-color:#5000ff;
+}
+
+.login-links {
+  margin-top:10px;
+  text-align:right;
+}
 
 .admin-two-column {
   -moz-column-count: 2;
@@ -104,6 +124,27 @@
 
 small {
   font-size:12px;
+}
+
+/*Generic form button*/
+.admin-form-button, .admin-form-button:visited {
+  margin-top:15px;
+  padding: 10px 20px;
+  background-color: black;
+  font-family: 'COLFAX';
+  color:#FFF;
+  border: none;
+  font-size: 13px;
+  text-transform:uppercase;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.admin-form-button:hover {
+  background-color: #5000ff;
+  color:#FFF;
 }
 
 /* Admin access buttons when logged in as an admin */

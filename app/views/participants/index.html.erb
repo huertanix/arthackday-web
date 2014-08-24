@@ -22,15 +22,15 @@
             <td><%= participant.bio %></td>
             <td><%= participant.twitter_handle %></td>
             <td><%= participant.website %></td>
-            <td><%= link_to 'Show', participant %></td>
-            <td><%= link_to 'Edit', edit_participant_path(participant) %></td>
-            <td><%= link_to 'Destroy', participant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Show', participant, class: 'admin-form-button' %> </td>
+            <td><%= link_to 'Edit', edit_participant_path(participant), class: 'admin-form-button' %> </td>
+            <td><%= link_to 'Destroy', participant, method: :delete, data: { confirm: 'Are you sure?' }, class: 'admin-form-button' %> </td>
           </tr>
         <% end %>
       </tbody>
     </table>
 
-    <%= link_to 'New Participant', new_participant_path %>
-    <%= link_to 'Back', '/admin' %>
+    <%= link_to 'New Participant', new_participant_path, class: 'admin-form-button' %>
+    <%= link_to 'Back', '/admin', class: 'admin-form-button' %>
   </div>
 </div>

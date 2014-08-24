@@ -23,15 +23,15 @@
             <td><%= project.name %></td>
             <td><%= project.description %></td>
             <td><%= project.tag %></td>
-            <td><%= link_to 'Show', project %></td>
-            <td><%= link_to 'Edit', edit_project_path(project) %></td>
-            <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Show', project, class: 'admin-form-button' %> </td>
+            <td><%= link_to 'Edit', edit_project_path(project), class: 'admin-form-button' %> </td>
+            <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: 'admin-form-button' %> </td>
           </tr>
         <% end %>
       </tbody>
     </table>
     <br>
-    <%= link_to 'New Project', new_project_path %>
-    <%= link_to 'Back', '/admin' %>
+    <%= link_to 'New Project', new_project_path, class: 'admin-form-button' %>
+    <%= link_to 'Back', '/admin', class: 'admin-form-button' %>
   </div>
 </div>
