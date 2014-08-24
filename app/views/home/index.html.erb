@@ -60,19 +60,19 @@
 		<ul id="events" class="sixteen columns">
 		  <% @events.each do |event| %>
 		    <%= link_to(event) do %>
-	      <li <%= event.upcoming? ? 'class=upcoming' : nil %>>
-   			  <div class="event-wrapper">
-	      	  <div class="left-event"><h2><%= event.theme %></h2></div>
-	      	  <div class="right-event">
-	      		  <div class="event-page"><h4> <%= event.hackathon_start.strftime('%^B') %> <%= event.hackathon_start.strftime('%-d') %>-<%= event.hackathon_end.strftime('%-d') %>, <%= event.hackathon_start.strftime('%^Y') %></h4></div>
-	      		  <div class="event-page-time"><h4><%=  event.venue.nil? ? "TBA" : event.venue.city %>_<%= event.venue.nil? ? "TBA" : event.venue.name %></h4></div>
-	      	  </div>
-		      </div>
-	      </li>
+	        <li <%= event.upcoming? ? 'class=upcoming' : nil %>>
+     			  <div class="event-wrapper">
+  	      	  <div class="left-event"><h2><%= event.theme %></h2></div>
+  	      	  <div class="right-event">
+  	      		  <div class="event-page"><h4> <%= event.hackathon_start.strftime('%^B') %> <%= event.hackathon_start.strftime('%-d') %>-<%= event.hackathon_end.strftime('%-d') %>, <%= event.hackathon_start.strftime('%^Y') %></h4></div>
+  	      		  <div class="event-page-time"><h4><%=  event.venue.nil? ? "TBA" : event.venue.city %>_<%= event.venue.nil? ? "TBA" : event.venue.name %></h4></div>
+  	      	  </div>
+  		      </div>
+  	      </li>
+  	      <% if organizer_signed_in? %>
+  		      <div style="margin-bottom:40px;"><%= link_to "Edit #{event.theme}", edit_event_path(event), class: 'admin-button' %></div>
+  	      <% end %>
 			  <% end %>
-				<% if organizer_signed_in? %>
-		      <%= link_to "Edit #{event.theme}", edit_event_path(event), class: 'admin-button' %>
-	      <% end %>
 		  <% end %>
 		</ul>
 	</div>
