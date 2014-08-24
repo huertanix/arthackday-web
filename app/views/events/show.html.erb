@@ -352,7 +352,13 @@
 </div>
 
 <% if organizer_signed_in? %>
-  <%= link_to 'Edit', edit_event_path(@event) %>
+  <div class="section">
+    <div class="container">
+      <div class="sixteen columns">
+        <%= link_to 'Edit', edit_event_path(@event), class: 'admin-button' %>
+      </div>
+    </div>
+  </div>
 <% end %>
 
 <script type="text/javascript"></script>

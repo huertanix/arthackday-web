@@ -45,6 +45,9 @@
             <a><p>@captDaylight</p></a>
           </div>
 		    </div>-->
+		    <% if organizer_signed_in? %>
+          <%= link_to 'Edit', edit_project_path(@project), class: 'admin-button' %>
+        <% end %>
 			</div>
 			<div class="two-thirds column" id="project-contents">
 			  <!-- Photos using paperclip gem -->
@@ -68,9 +71,5 @@
         <% end %>
 			</div>
 		</div>
-    <% if organizer_signed_in? %>
-      <%= link_to 'Edit', edit_project_path(@project) %>
-    <% end %>
 	</div>
-	<br>
 </div>

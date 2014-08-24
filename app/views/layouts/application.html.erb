@@ -96,8 +96,16 @@
 			<% end %>
 			<% #= params[:controller].inspect %>
 			<% if params[:controller] === "projects" || 
+			  params[:controller] === "participants" || 
+			  params[:controller] === "projects" || 
+			  params[:controller] === "venues" || 
+			  params[:controller] === "organizers" || 
+			  params[:controller] === "admin" || 
 				params[:controller] === "devise/sessions" || 
-				params[:controller] === "admin" %>
+				params[:controller] === "devise/confirmations" ||
+				params[:controller] === "devise/passwords" || 
+				params[:controller] === "devise/registrations" ||
+				params[:controller] === "devise/unlocks" %>
 				<% show_dark_text = true %>
 			<% end %>
 			<div class="nav-left">

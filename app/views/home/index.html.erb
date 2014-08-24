@@ -52,37 +52,28 @@
 		<div class="sixteen columns section-header">
 			<h4>Events _ most recent</h4>
 		</div>
-
+    <% if organizer_signed_in? %>
+      <div class="sixteen columns" style="margin-bottom:40px;">
+        <%= link_to 'New Event', new_event_path, class: 'admin-button' %>
+      </div>
+    <% end %>
 		<ul id="events" class="sixteen columns">
 		  <% @events.each do |event| %>
-			    <%= link_to(event) do %>
-
-		      <li <%= event.upcoming? ? 'class=upcoming' : nil %>>
-	   			    <div class="event-wrapper">
-				      	<div class="left-event"><h2><%= event.theme%></h2></div>
-				      	<div class="right-event">
-				      		<div class="event-page"><h4> <%= event.hackathon_start.strftime('%^B') %> <%= event.hackathon_start.strftime('%-d') %>-<%= event.hackathon_end.strftime('%-d') %>, <%= event.hackathon_start.strftime('%^Y') %></h4></div>
-				      		<div class="event-page-time"><h4><%=  event.venue.nil? ? "TBA" : event.venue.city %>_<%= event.venue.nil? ? "TBA" : event.venue.name %></h4></div>
-				      	</div>
-					</div>
-
-		      </li>
-  			  <% end %>
-  				<% if organizer_signed_in? %>
-			        <span><%= link_to 'Show', event %></span>
-			        <span><%= link_to 'Edit', edit_event_path(event) %></span>
-			        <br><br><br><br><br>
-		      	<% end %>
+		    <%= link_to(event) do %>
+	      <li <%= event.upcoming? ? 'class=upcoming' : nil %>>
+   			  <div class="event-wrapper">
+	      	  <div class="left-event"><h2><%= event.theme %></h2></div>
+	      	  <div class="right-event">
+	      		  <div class="event-page"><h4> <%= event.hackathon_start.strftime('%^B') %> <%= event.hackathon_start.strftime('%-d') %>-<%= event.hackathon_end.strftime('%-d') %>, <%= event.hackathon_start.strftime('%^Y') %></h4></div>
+	      		  <div class="event-page-time"><h4><%=  event.venue.nil? ? "TBA" : event.venue.city %>_<%= event.venue.nil? ? "TBA" : event.venue.name %></h4></div>
+	      	  </div>
+		      </div>
+	      </li>
+			  <% end %>
+				<% if organizer_signed_in? %>
+		      <%= link_to "Edit #{event.theme}", edit_event_path(event), class: 'admin-button' %>
+	      <% end %>
 		  <% end %>
 		</ul>
 	</div>
-	<br>
 </div>
-
-<!-- <div class="section">
-	<div class="container" id="contact">
-		<div class="sixteen columns">
-  		To contact us about bringing Art Hack Day to your city or providing sponsorship, contact us at <b>arthackday at gmail dot com</b>.
-  		</div>
-	</div>
-</div> -->

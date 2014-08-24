@@ -1,3 +1,4 @@
+<div class="space"></div>
 <div class="section" id="events-page">
 	<div class="container">
 		<ul id="events" class="sixteen columns">
@@ -14,20 +15,14 @@
 		  <% end %>
 		</ul>
 	</div>
-	<br>
-</div>
-<!-- 
-<div class="section">
-	<div class="container" id="contact">
-		<div class="sixteen columns">
-  		To contact us about bringing Art Hack Day to your city or providing sponsorship, contact us at <b>arthackday at gmail dot com</b>.
-  		</div>
-	</div>
-</div> -->
-
-<div class="section">
-	<% if organizer_signed_in? %>
-	  <%= link_to 'New Event', new_event_path %>
-	<% end %>
 </div>
 
+<% if organizer_signed_in? %>
+  <div class="section">
+    <div class="container">
+      <div class="sixteen columns">
+    	  <%= link_to 'New Event', new_event_path, class: 'admin-button' %>
+  	  </div>
+  	</div>
+  </div>
+<% end %>
