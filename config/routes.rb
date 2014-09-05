@@ -23,9 +23,11 @@ ArthackdayWeb::Application.routes.draw do
   resources :admin
 
   resources :about
+
+  resources :code_of_conduct
   
   # code of conduct page
-  get 'code_of_conduct' => "about#code_of_conduct"
+  # get 'code_of_conduct' => "about#code_of_conduct"
 
   # contact page
   resources :messages, only: [:index, :create]

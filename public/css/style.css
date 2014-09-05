@@ -1579,6 +1579,25 @@ body.black {
 .section .container #events-homepage .event-homepage .event-short-more a:hover {
   color: #5000ff;
 }
+.code-of-conduct p {
+  margin-bottom: 20px;
+}
+.code-of-conduct li {
+  font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  list-style-type: square;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+.code-of-conduct ul {
+  margin: 30px 0px;
+}
+.code-of-conduct .column {
+  margin: 0px auto;
+  display: block;
+  float: none;
+}
 /*
 * Skeleton V1.2
 * Copyright 2011, Dave Gamache
