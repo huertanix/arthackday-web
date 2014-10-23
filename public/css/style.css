@@ -1589,6 +1589,7 @@ body.black {
   list-style-type: square;
   margin-bottom: 10px;
   font-style: italic;
+  margin-left: 15px;
 }
 .code-of-conduct ul {
   margin: 30px 0px;
