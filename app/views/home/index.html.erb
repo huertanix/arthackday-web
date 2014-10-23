@@ -19,7 +19,7 @@
   <% end %>
 	<%= link_to(@events.first) do %>
 	<div class="event-callout">
-		<div id="hero" style="<%= (@events.first.header_dark_font? ? 'color:#000;' : '') %>"><%= @events.first.theme %></div>
+		<div id="hero" style="<%= (@events.first.header_dark_font? ? 'color:#000;' : '') %>"><%= @events.first.theme.html_safe %></div>
 		<div id="sub-hero" style="<%= (@events.first.header_dark_font? ? 'color:#000;' : '') %>">
 			<h3 style="<%= (@events.first.header_dark_font? ? 'color:#000;' : '') %>"><%=  @events.first.venue.nil? ? "TBA" : @events.first.venue.city %>_<%= @events.first.venue.nil? ? "TBA" : @events.first.venue.name %>_<%= @events.first.hackathon_start.strftime('%^B') %> 
 			<%= @events.first.hackathon_start.strftime('%-d') %>-<%= @events.first.show_start.strftime('%-d') %></h3>
@@ -62,7 +62,7 @@
 		    <%= link_to(event) do %>
 	        <li <%= event.upcoming? ? 'class=upcoming' : nil %>>
      			  <div class="event-wrapper">
-  	      	  <div class="left-event"><h2><%= event.theme %></h2></div>
+  	      	  <div class="left-event"><h2><%= event.theme.html_safe %></h2></div>
   	      	  <div class="right-event">
   	      		  <div class="event-page"><h4> <%= event.hackathon_start.strftime('%^B') %> <%= event.hackathon_start.strftime('%-d') %>-<%= event.hackathon_end.strftime('%-d') %>, <%= event.hackathon_start.strftime('%^Y') %></h4></div>
   	      		  <div class="event-page-time"><h4><%=  event.venue.nil? ? "TBA" : event.venue.city %>_<%= event.venue.nil? ? "TBA" : event.venue.name %></h4></div>
