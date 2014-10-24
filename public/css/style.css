@@ -758,6 +758,9 @@ body.black {
   margin: 12px 0px 0px 25px;
   width: 125px;
 }
+#hero {
+  font-size: 60px;
+}
 .section#location-section iframe {
   height: 400px;
 }
