@@ -17,7 +17,7 @@
 		<link rel="stylesheet" href="/css/admin.css" />
 		<link rel="apple-touch-icon" sizes="144x144" href="/img/ahd_assets/ahd_logo_white_200px.png">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : "Art Hack Day" %>"/>
+		<meta property="og:title" content="<%= content_for?(:title) ? yield(:title).html_safe : "Art Hack Day" %>"/>
 		<meta property="og:type" content="website"/>
 		<meta property="og:url" content="<%= request.url %>"/>
 		<% unix_time = Time.now.to_i %>
