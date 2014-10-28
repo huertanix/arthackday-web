@@ -28,6 +28,10 @@
     <%= f.text_field :theme_excerpt %>
   </div>
   <div class="field">
+    <%= f.label :slug %> (Auto-generated; Override if the generated URL sucks)<br>
+    <%= f.text_field :slug %>
+  </div>
+  <div class="field">
     <%= f.label :hackathon_start %><br>
     <%= f.datetime_select :hackathon_start %>
   </div>
