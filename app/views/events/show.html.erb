@@ -70,7 +70,7 @@
             <div class="pre-about">
               <%if !@event.show_rsvp_url.blank? %>
               <div>
-                <p>Join the Art Hack Day teams on Saturday November 15 starting at 7:00pm for a closing exhibition, live performances, and party.</p>
+                <p>Join the Art Hack Day teams on <%= @event.show_start.strftime('%A %B %e starting at %l:%M %p') %> for a closing exhibition, live performances, and party.</p>
                 <a href="<%= @event.show_rsvp_url%>"><button >RSVP</button></a>
               </div>
               <% end %>
