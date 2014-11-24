@@ -61,8 +61,9 @@
   <div class="field">
     <%= f.label :photos %><br>
     <%= f.fields_for :photos do |p| %>
-      Photo: <%= p.file_field :image %><br>
+      Photo-test: <%= p.file_field :image %><br>
       test
+
       <%= p.object%>
       <%= p.object.image%>
       <%= p.object.image.url(:medium)%>
