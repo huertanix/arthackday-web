@@ -62,9 +62,8 @@
     <%= f.label :photos %><br>
     <%= f.fields_for :photos do |p| %>
       Photo: <%= p.file_field :image %><br>
-      <%= image_tag p.image.url(:medium), :alt => photo.credit %>
       Credit: <%= p.text_field :credit %><br>
-      <%= p.link_to_remove "Remove?" %><br><br>
+      <%= p.link_to_remove "Remove?" %><br>
     <% end %>
     <%= f.link_to_add "Add another Photo", :photos %>
   </div>
