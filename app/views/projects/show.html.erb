@@ -10,7 +10,7 @@
 				<h2><%= @project.name %></h2>
 	    	<div class="basic-colfax black-link">
 	      	<%= link_to(@project.event) do %>
-            << <%= @project.event.theme + " : " + @project.event.city %>
+            << <%= @project.event.theme.html_safe  + " : " + @project.event.city %>
           <% end %>
 	    	</div>
 	    	<p><%= @project.description.html_safe %></p>
