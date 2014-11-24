@@ -61,6 +61,9 @@
   <div class="field">
     <%= f.label :photos %><br>
     <%= f.fields_for :photos do |p| %>
+      <% unless p.object.image.nil? %>
+        <%= image_tag p.object.image.url(:chibi), :alt => "" %>
+      <% end %>
       Photo: <%= p.file_field :image %><br>
       Credit: <%= p.text_field :credit %><br>
       <%= p.link_to_remove "Remove?" %><br>
