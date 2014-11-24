@@ -64,9 +64,11 @@
       <% unless p.object.image.nil? %>
         <%= image_tag p.object.image.url(:chibi), :alt => "" %>
       <% end %>
-      Photo: <%= p.file_field :image %><br>
-      Credit: <%= p.text_field :credit %><br>
-      <%= p.link_to_remove "Remove?" %><br>
+      <br />
+      Photo: <%= p.file_field :image %><br />
+      Credit: <%= p.text_field :credit %><br />
+      <%= p.link_to_remove "Remove?" %><br />
+      <br />
     <% end %>
     <%= f.link_to_add "Add another Photo", :photos %>
   </div>
