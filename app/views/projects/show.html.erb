@@ -24,21 +24,18 @@
           contributors
         </div>
         <% @project.participants.each do |participant| %>
-          <div class="project-contributor">
+          <div class="project-contributor">  
+                      
+            <% if participant.photo_url.blank? %> 
+              <div class="avatar-image blank"></div>
+            <% else %>
+              <img src="<%= participant.photo_url %>" alt="" />
+            <% end %>
             
-            <div <% if participant.photo_url.blank? %> 
-              class="avatar-image blank"
-              <% else %>
-              class="avatar-image" style="background-image:url(<%= participant.photo_url %>)"
-              <% end %> ></div>
             <div>
-              
               <div class="basic-colfax"><%= participant.name %></div>
               <% unless participant.twitter_handle.blank? %>
-                <p>
-                  <a href="https://www.twitter.com/<%= URI.encode_www_form_component "#{participant.twitter_handle}" %>">@<%= participant.twitter_handle %>
-                  </a>
-                </p>
+                <p><a href="https://www.twitter.com/<%= URI.encode_www_form_component "#{participant.twitter_handle}" %>">@<%= participant.twitter_handle %></a></p>
               <% end %>
             </div>
           </div>

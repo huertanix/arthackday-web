@@ -1164,9 +1164,10 @@ body.black {
 .section#project-page #project #project-contents .project-item img {
   width: 100%;
 }
-.no-project-photo {
-  width:640px;
-  height:480px;
+.section#project-page #project #project-contents .project-item .no-project-photo {
+  display:block;
+  width:100%;
+  height:400px;
   background-color:#5000ff;
 }
 .section#events-page #events {
