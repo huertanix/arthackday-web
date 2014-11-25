@@ -1145,7 +1145,10 @@ body.black {
   display: inline-block;
   vertical-align: middle;
 }
-.section#project-page #project #project-description .project-contributor img {
+.section#project-page #project #project-description .project-contributor img,
+.section#project-page #project #project-description .project-contributor .blank {
+  height:48px;
+  width:48px;
   margin-right: 10px;
 }
 .section#project-page #project #project-description .project-contributor p {
@@ -1160,6 +1163,11 @@ body.black {
 }
 .section#project-page #project #project-contents .project-item img {
   width: 100%;
+}
+.no-project-photo {
+  width:640px;
+  height:480px;
+  background-color:#5000ff;
 }
 .section#events-page #events {
   margin-top: 50px;
@@ -1397,7 +1405,7 @@ body.black {
   background-position: center;
   background-size: 100% auto;
 }
-.section#participants #participants-container .participant .name .avatar-image.blank {
+.avatar-image.blank {
   background-color: #5000ff;
 }
 .section#participants #participants-container .participant .name .name-area {
