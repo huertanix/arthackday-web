@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140813011118) do
+ActiveRecord::Schema.define(version: 20141125004817) do
 
   create_table "events", force: true do |t|
     t.string   "city"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20140813011118) do
     t.string   "header_image_artist_website"
     t.string   "theme_excerpt"
     t.string   "slug"
-    t.string   "featured_video"
+    t.text     "featured_video"
     t.string   "featured_image_file_name"
     t.string   "featured_image_content_type"
     t.integer  "featured_image_file_size"
