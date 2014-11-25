@@ -3,21 +3,21 @@
 <% content_for :description do %><%=@project.description %><% end %>
 
 <div class="section" id="project-page">
-	<div class="container">
-		<div id="project">
-			<div class="one-third column" id="project-description">
+  <div class="container">
+    <div id="project">
+      <div class="one-third column" id="project-description">
         
-				<h2><%= @project.name %></h2>
-	    	<div class="basic-colfax black-link">
-	      	<%= link_to(@project.event) do %>
+        <h2><%= @project.name %></h2>
+        <div class="basic-colfax black-link">
+          <%= link_to(@project.event) do %>
             << <%= @project.event.theme.html_safe  + " : " + @project.event.city %>
           <% end %>
-	    	</div>
-	    	<p><%= @project.description.html_safe %></p>
-	    	<% if @project.website? %>
-				  <a href="<%= @project.website %>"><p>Project Website</p></a>
+        </div>
+        <p><%= @project.description.html_safe %></p>
+        <% if @project.website? %>
+          <a href="<%= @project.website %>"><p>Project Website</p></a>
         <% end %>
-  			<% if @project.github? %>
+        <% if @project.github? %>
           <a href="<%= @project.github %>"><p>Project Github</p></a>
         <% end %>
         <div class="section-header basic-colfax">
@@ -35,40 +35,40 @@
                 </p>
               <% end %>
             </div>
-  		    </div>
+          </div>
         <% end %>
-		    <!--<div class="project-contributor">
+        <!--<div class="project-contributor">
           <img src="https://si0.twimg.com/profile_images/3258619754/02839446b5983cff17edfd914cbde4fe_bigger.jpeg"/>
           <div>
             <div class="basic-colfax">paul christophe</div>
             <a><p>@captDaylight</p></a>
           </div>
-		    </div>-->
-		    <% if organizer_signed_in? %>
+        </div>-->
+        <% if organizer_signed_in? %>
           <%= link_to 'Edit', edit_project_path(@project), class: 'admin-button' %>
         <% end %>
-			</div>
-			<div class="two-thirds column" id="project-contents">
-			  <!-- Photos using paperclip gem -->
-			  <% if @project.photos.empty? && @project.medium.empty? %>
-			    <img src="http://placekitten.com/640/480" alt="No photo available" />
-			  <% else %>
+      </div>
+      <div class="two-thirds column" id="project-contents">
+        <!-- Photos using paperclip gem -->
+        <% if @project.photos.empty? && @project.medium.empty? %>
+          <img src="http://placekitten.com/640/480" alt="No photo available" />
+        <% else %>
           <% @project.photos.each do |photo| %>
             <div class="project-item">
-    					<%= image_tag photo.image.url(:medium), :alt => photo.credit %>
-    					<p class="project-photo-credit">Credit: <%= photo.credit.blank? ? 'Unknown' : photo.credit %></p>
-    				</div>
-          <% end %>
-			  <% end %>
-		    <!-- Video/etc embeds and images hosted off-site -->
-        <% unless @project.medium.empty? %>
-          <% @project.medium.each do |media| %>
-    				<div class="project-item">
-    					<%= media.snippet.html_safe %>
-    				</div>
+              <%= image_tag photo.image.url(:medium), :alt => photo.credit %>
+              <p class="project-photo-credit">Credit: <%= photo.credit.blank? ? 'Unknown' : photo.credit %></p>
+            </div>
           <% end %>
         <% end %>
-			</div>
-		</div>
-	</div>
+        <!-- Video/etc embeds and images hosted off-site -->
+        <% unless @project.medium.empty? %>
+          <% @project.medium.each do |media| %>
+            <div class="project-item">
+              <%= media.snippet.html_safe %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
