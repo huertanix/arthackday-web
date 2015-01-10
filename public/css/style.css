@@ -936,6 +936,12 @@ body.black {
 .section#about-page .container.about-press {
   margin: 150px auto;
 }
+.section#about-page .container.about-faq p {
+  margin-bottom:20px;
+}
+.section#about-page .container.about-faq span.q {
+  font-weight:bold;
+}
 .section#about-page .container.about-sponsors .sponsor-space {
   height: 50px;
 }
