@@ -29,7 +29,13 @@
       <div class="section-header"><h4>exhibit information</h4></div>
       
       <h2>
-        <%= @event.hackathon_start.strftime('%^B') %> <%= @event.hackathon_start.strftime('%-d') %>-<%= @event.hackathon_end.strftime('%-d') %>, <%= @event.hackathon_start.strftime('%^Y') %>
+        <%= @event.hackathon_start.strftime('%^B') %> <%= @event.hackathon_start.strftime('%-d') %> -
+        <% if @event.hackathon_start.mon == @event.hackathon_end.mon %>
+          <%= @event.hackathon_end.strftime('%-d') %>, 
+        <% else %>
+          <%= @event.hackathon_end.strftime('%^B') %> <%= @event.hackathon_end.strftime('%-d') %>, 
+        <% end %>
+        <%= @event.hackathon_start.strftime('%^Y') %>
         <br/>
         <%=  @event.venue.nil? ? "TBA" : @event.venue.city %>_<%= @event.venue.nil? ? "TBA" : @event.venue.name %>
       </h2>
@@ -47,7 +53,6 @@
       <h4>
         HACKING BEGINS
         <br/>
-
         <%= @event.hackathon_start.strftime('%A %^B %e, %Y — %l %p') %>
         <br/>
         <br/>
