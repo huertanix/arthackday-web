@@ -1,4 +1,4 @@
-<% if @events.empty? %>
+<% if @future_events.empty? %>
 <div class="section" id="landing-header">
   <div class="event-callout">
     <div id="hero">Missing Event Data</div>
@@ -8,35 +8,35 @@
   </div>
 </div>
 <% else %>
-<div class="section <%= @events.first.header_image_tiled? ? 'tiled-header' : 'centered-header' %>" id="landing-header">
-  <% unless @events.first.header_image.blank? %>
+<div class="section <%= @future_events.last.header_image_tiled? ? 'tiled-header' : 'centered-header' %>" id="landing-header">
+  <% unless @future_events.last.header_image.blank? %>
     <script type="text/javascript">
       // Load 20+ MB gifs only after the rest of the page loads
       $(function() {
-        $('#landing-header').css("background-image", "url(<%=@events.first.header_image%>)");
+        $('#landing-header').css("background-image", "url(<%=@future_events.last.header_image%>)");
       });
     </script>
   <% end %>
-	<%= link_to(@events.first) do %>
+	<%= link_to(@future_events.last) do %>
 	<div class="event-callout">
-		<div id="hero" style="<%= (@events.first.header_dark_font? ? 'color:#000;' : '') %>"><%= @events.first.theme.html_safe %></div>
-		<div id="sub-hero" style="<%= (@events.first.header_dark_font? ? 'color:#000;' : '') %>">
-			<h3 style="<%= (@events.first.header_dark_font? ? 'color:#000;' : '') %>">
-        <%= @events.first.venue.nil? ? "TBA" : @events.first.venue.city %>_<%= @events.first.venue.nil? ? "TBA" : @events.first.venue.name %>_<%= @events.first.hackathon_start.strftime('%^B') %> 
-        <%= @events.first.hackathon_start.strftime('%-d') %> - 
-        <% unless @events.first.hackathon_start.mon == @events.first.hackathon_end.mon %>
-          <%= @events.first.hackathon_end.strftime('%^B') %> 
+		<div id="hero" style="<%= (@future_events.last.header_dark_font? ? 'color:#000;' : '') %>"><%= @future_events.last.theme.html_safe %></div>
+		<div id="sub-hero" style="<%= (@future_events.last.header_dark_font? ? 'color:#000;' : '') %>">
+			<h3 style="<%= (@future_events.last.header_dark_font? ? 'color:#000;' : '') %>">
+        <%= @future_events.last.venue.nil? ? "TBA" : @future_events.last.venue.city %>_<%= @future_events.last.venue.nil? ? "TBA" : @future_events.last.venue.name %>_<%= @future_events.last.hackathon_start.strftime('%^B') %> 
+        <%= @future_events.last.hackathon_start.strftime('%-d') %> - 
+        <% unless @future_events.last.hackathon_start.mon == @future_events.last.hackathon_end.mon %>
+          <%= @future_events.last.hackathon_end.strftime('%^B') %> 
         <% end %>
-        <%= @events.first.show_start.strftime('%-d') %>
+        <%= @future_events.last.show_start.strftime('%-d') %>
 			</h3>
 		</div>
 	</div>
 	<% end %>
 		
-	<% unless @events.first.header_image_artist.blank? %>
+	<% unless @future_events.last.header_image_artist.blank? %>
     <div id="header-credit">
-      <h4><a href="<%= @events.first.header_image_artist_website %>" 
-      	style="<%= (@events.first.header_dark_font? ? 'color:#000;' : '') %>">IMAGERY BY: <%= @events.first.header_image_artist %></a></h4>
+      <h4><a href="<%= @future_events.last.header_image_artist_website %>" 
+      	style="<%= (@future_events.last.header_dark_font? ? 'color:#000;' : '') %>">IMAGERY BY: <%= @future_events.last.header_image_artist %></a></h4>
     </div>
   <% end %>
 </div>
