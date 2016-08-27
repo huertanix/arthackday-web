@@ -4,6 +4,10 @@ class HomeController < ApplicationController
 
     @future_events = Array.new
 
-    @events.map { |event| @future_events.push event unless event.show_end < Date.new }
+    @events.each do |event| 
+      @future_events.push event unless event.show_end < Date.today 
+    end
+
+    logger.debug "Earliest event in future: #{@future_events.last.theme}"
   end
 end
