@@ -77,7 +77,7 @@
       	<%= content_tag :div, msg, class: name %>
     	<% end -%>
 			<% # This block is why Ruby sometimes blows ~ .dh %>
-			<% unless @event.nil? %>
+			<% unless @events.nil? %>
 				<% #= @event.inspect # Run this in a project edit page, shit bricks. %>
 				<% if @event.attributes.has_key? 'header_dark_font' %>
 					<% if @event.header_dark_font === true %>
@@ -85,10 +85,10 @@
 					<% end %>
 				<% end %>
 			<% end %>
-			<% unless @events.nil? %>
-				<% unless @events.empty? %>
-					<% if @events.first.attributes.has_key? 'header_dark_font' %>
-						<% if @events.first.header_dark_font === true %>
+			<% unless @future_events.nil? %>
+				<% unless @future_events.empty? %>
+					<% if @future_events.last.attributes.has_key? 'header_dark_font' %>
+						<% if @future_events.last.header_dark_font === true %>
 							<% show_dark_text = true %>
 						<% end %>
 					<% end %>
