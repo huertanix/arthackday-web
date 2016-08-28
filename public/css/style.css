@@ -1088,13 +1088,19 @@ body.black {
 .section#landing-header .event-callout #sub-hero h3,
 .section#header .event-callout #sub-hero h3,
 .section#landing-header .event-callout #sub-hero h4,
-.section#header .event-callout #sub-hero h4 {
+.section#header .event-callout #sub-hero h4, 
+.section#landing-header #header-credit a,
+.section#header #header-credit a,
+.section#landing-header #header-next-event h4 a {
   color: white;
 }
 .section#landing-header .event-callout.dark #hero,
 .section#header .event-callout.dark #hero,
 .section#landing-header .event-callout.dark #sub-hero,
-.section#header .event-callout.dark #sub-hero {
+.section#header .event-callout.dark #sub-hero, 
+.section#landing-header #header-credit.dark a,
+.section#header #header-credit.dark a,
+.section#landing-header #header-next-event.dark h4 a {
   color: black;
 }
 .section#landing-header #header-credit,
@@ -1103,14 +1109,18 @@ body.black {
   bottom: 20px;
   margin-left: 25px;
 }
-.section#landing-header #header-credit a,
-.section#header #header-credit a {
+.section#landing-header #header-next-event {
+  position: absolute;
+  bottom: 20px;
+  right: 25px;
+  text-align: right;
+}
+/* {
   color: white;
 }
-.section#landing-header #header-credit.dark a,
-.section#header #header-credit.dark a {
+ {
   color: black;
-}
+}*/
 .section#project-page {
   background-color: white;
 }

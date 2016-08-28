@@ -39,6 +39,18 @@
       	style="<%= (@future_events.last.header_dark_font? ? 'color:#000;' : '') %>">IMAGERY BY: <%= @future_events.last.header_image_artist %></a></h4>
     </div>
   <% end %>
+
+  <% if @future_events.length > 1 %>
+    <div id="header-next-event" class="<%= (@future_events[@future_events.length - 2].header_dark_font? ? 'dark' : '') %>">
+      <h4>
+        <%= link_to(@future_events[@future_events.length - 2]) do %>
+          <%= @future_events[@future_events.length - 2].hackathon_start.strftime('%^B %-d') %>: <%= @future_events[@future_events.length - 2].theme.html_safe %><br />
+          <%= @future_events[@future_events.length - 2].venue.nil? ? "TBA" : @future_events[@future_events.length - 2].venue.city %>
+        <% end %>
+      </h4>
+    </div>
+  <% end %>
+
 </div>
 <% end %>
 
