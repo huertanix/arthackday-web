@@ -44,8 +44,9 @@
     <div id="header-next-event" class="<%= (@future_events.last.header_dark_font? ? 'dark' : '') %>">
       <h4>
         <%= link_to(@future_events[@future_events.length - 2]) do %>
-          <%= @future_events[@future_events.length - 2].hackathon_start.strftime('%^B %-d') %>: <%= @future_events[@future_events.length - 2].theme.html_safe %><br />
-          <%= @future_events[@future_events.length - 2].venue.nil? ? "TBA" : @future_events[@future_events.length - 2].venue.city %>
+          Coming Soon</br />
+          <%= @future_events[@future_events.length - 2].theme.html_safe %><br />
+          <%= @future_events[@future_events.length - 2].venue.nil? ? "TBA" : @future_events[@future_events.length - 2].venue.city %>_<%= @future_events[@future_events.length - 2].hackathon_start.strftime('%^B %-d') %>
         <% end %>
       </h4>
     </div>
