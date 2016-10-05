@@ -8,6 +8,10 @@ class HomeController < ApplicationController
       @future_events.push event unless event.show_end < Date.today 
     end
 
-    logger.debug "Earliest event in future: #{@future_events.last.theme}"
+    if @future_events.empty? 
+    	@future_events.push @events.first
+    end
+
+    #logger.debug "Earliest event in future: #{@future_events.last.theme}"
   end
 end
