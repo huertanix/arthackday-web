@@ -23,6 +23,11 @@ namespace :arthackday do
           project.featured_thumbnail = new_thumb_url
           puts project.featured_thumbnail
           project.save!
+        elsif project.featured_thumbnail.include?("//36.media.tumblr.com")
+          new_thumb_url = project.featured_thumbnail.gsub('//36','//38')
+          project.featured_thumbnail = new_thumb_url
+          puts project.featured_thumbnail
+          project.save!
         end
       end
     end
