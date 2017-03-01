@@ -27,8 +27,13 @@ namespace :arthackday do
         medium.snippet = new_img_snippet
         puts medium.snippet
         medium.save!
-      elsif medium.snippet.include?("//26.media.tumblr.com")
+      elsif medium.snippet.include?("//36.media.tumblr.com")
         new_img_snippet = medium.snippet.gsub('//36','//38')
+        medium.snippet = new_img_snippet
+        puts medium.snippet
+        medium.save!
+      elsif medium.snippet.include?("//26.media.tumblr.com")
+        new_img_snippet = medium.snippet.gsub('//26','//38')
         medium.snippet = new_img_snippet
         puts medium.snippet
         medium.save!
