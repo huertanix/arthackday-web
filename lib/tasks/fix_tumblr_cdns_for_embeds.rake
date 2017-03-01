@@ -1,5 +1,5 @@
 namespace :arthackday do
-  desc "Change CDN URL for featured thumbnail photos using 24, 31, 37 etc to use 36."
+  desc "Change CDN URL for featured thumbnail photos using 24, 31, 37 etc to use 38."
   task :fix_tumblr_cdns_for_embeds => :environment do
     Medium.all.each do |medium|
       if medium.snippet.include?("//24.media.tumblr.com")
@@ -27,7 +27,7 @@ namespace :arthackday do
         medium.snippet = new_img_snippet
         puts medium.snippet
         medium.save!
-      elsif medium.snippet.include?("//28.media.tumblr.com")
+      elsif medium.snippet.include?("//26.media.tumblr.com")
         new_img_snippet = medium.snippet.gsub('//36','//38')
         medium.snippet = new_img_snippet
         puts medium.snippet

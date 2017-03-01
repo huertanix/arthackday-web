@@ -1,5 +1,5 @@
 namespace :arthackday do
-  desc "Change CDN URL for featured thumbnail photos using 31 or 37 to use 36."
+  desc "Change CDN URL for featured thumbnail photos using 31 or 37 to use 38."
   task :fix_tumblr_cdns => :environment do
     Project.all.each do |project|
       unless project.featured_thumbnail.nil?
