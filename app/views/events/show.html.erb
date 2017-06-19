@@ -360,7 +360,8 @@
   <div class="section">
     <div class="container">
       <div class="sixteen columns">
-        <%= link_to 'Edit', edit_event_path(@event), class: 'admin-button' %>
+        <%= link_to 'Edit', edit_event_path(@event), class: 'admin-button' %> 
+        <%= link_to 'Delete', @event, method: :delete, data: { confirm: 'Are you sure?' }, class: 'admin-button' %>
       </div>
     </div>
   </div>
