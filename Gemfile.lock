@@ -1048,6 +1048,7 @@ GEM
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
     mime-types (1.25.1)
+    mimemagic (0.3.0)
     mini_portile2 (2.4.0)
     minitest (4.7.5)
     multi_json (1.15.0)
@@ -1058,11 +1059,12 @@ GEM
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
-    paperclip (3.5.4)
-      activemodel (>= 3.0.0)
-      activesupport (>= 3.0.0)
-      cocaine (~> 0.5.3)
+    paperclip (4.3.7)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      cocaine (~> 0.5.5)
       mime-types
+      mimemagic (= 0.3.0)
     pg (1.2.3)
     polyglot (0.3.5)
     protected_attributes (1.0.3)
@@ -1169,7 +1171,7 @@ DEPENDENCIES
   mail_form
   nested_form
   nokogiri
-  paperclip (~> 3.0)
+  paperclip (~> 4.3)
   pg
   protected_attributes
   puma
