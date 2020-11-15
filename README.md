@@ -17,13 +17,13 @@ System Prereqs (Debian/Ubuntu/Mint):
 
 Ruby Prereqs: 
 * rvm
-* Ruby 1.9.3 (rvm install ruby-1.9.3)
+* Ruby 2.3.0 (`rvm install ruby-2.3.0`)
 * Rails (4.0.0)
-* NB: if you have several rubies installed, you may need to switch to the right one. To see which rubies you have installed type 'rvm list rubies' and switch to 1.9.3 with 'rvm ruby-1.9.3.p374'
-* NB NB: If you have 1.9.3 already installed, the Gemfile will now automatically use that one.
+* NB: if you have several rubies installed, you may need to switch to the right one. To see which rubies you have installed type `rvm list` and switch to 1.9.3 with `rvm ruby-2.3.0`
+* NB NB: If you have 2.3.0 already installed, the Gemfile will now automatically use that one.
 
 Application Install:
-* bundle install
+* bundle install --without production
 * rake db:migrate
 * rails s
 * open the app on http://localhost:3000/

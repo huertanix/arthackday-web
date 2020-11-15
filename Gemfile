@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
-ruby "1.9.3"
+ruby "2.3.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record, but not on Heroku
 group :development, :test do
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.6', '< 1.4' # older Rails, older sqlite3 version
   #gem 'pg' # temporary for data migration
   gem 'taps'
 end
@@ -84,4 +84,5 @@ gem 'thin'
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'puma'
 end
