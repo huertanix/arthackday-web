@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
-ruby "2.3.8"
+ruby "2.5.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '4.2.8'
 
 # Use sqlite3 as the database for Active Record, but not on Heroku
 group :development, :test do
-  gem 'sqlite3', '~> 1.3.6', '< 1.4' # older Rails, older sqlite3 version
+  gem 'sqlite3', '~> 1.3.6' #, '< 1.4' # older Rails, older sqlite3 version
   #gem 'pg' # temporary for data migration
   gem 'taps'
 end
@@ -50,8 +50,9 @@ end
 # gem 'debugger', group: [:development, :test]
 
 # User management
-gem 'protected_attributes' # use attr_accessible until Device supports strong_parameters
-gem 'devise', '3.2.2'
+gem 'protected_attributes' # use attr_accessible until Devise supports strong_parameters
+#gem 'devise', '3.2.2'
+gem 'devise', '~> 4.0'
 
 # Nested form support
 gem 'nested_form' #, :git => "git://github.com/madebydna/nested_form.git"
