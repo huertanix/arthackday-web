@@ -9,7 +9,7 @@ class HomeController < ApplicationController
     end
 
     if @future_events.empty? 
-    	@future_events.push @events.first
+    	@future_events.push @events.first unless @events.empty?
     end
 
     #logger.debug "Earliest event in future: #{@future_events.last.theme}"
