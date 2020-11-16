@@ -5,6 +5,7 @@ Art Hack Day website.
 
 Install
 -------
+
 System Prereqs (Debian/Ubuntu/Mint):
 
 * libreadline6
@@ -15,14 +16,16 @@ System Prereqs (Debian/Ubuntu/Mint):
 * postgresql-server-dev-9.1
 * Heroku toolbelt
 
-Ruby Prereqs: 
+Ruby Prereqs:
+
 * rvm
-* Ruby 2.3.0 (`rvm install ruby-2.3.0`)
-* Rails (4.0.0)
-* NB: if you have several rubies installed, you may need to switch to the right one. To see which rubies you have installed type `rvm list` and switch to 1.9.3 with `rvm ruby-2.3.0`
-* NB NB: If you have 2.3.0 already installed, the Gemfile will now automatically use that one.
+* Ruby 2.3.8 (`rvm install ruby-2.3.8`)
+* Rails (4.2.8)
+* NB: if you have several rubies installed, you may need to switch to the right one. To see which rubies you have installed type `rvm list` and switch to 1.9.3 with `rvm use 2.3.8`
+* NB NB: If you already have 2.3.8 installed, the Gemfile will now automatically use that one.
 
 Application Install:
+
 * bundle install --without production
 * rake db:migrate
 * rails s
@@ -30,6 +33,7 @@ Application Install:
 
 Getting Started
 ---------------
+
 You will want to clone from Github (not Heroku) and then add the Heroku staging instance as a remote to push changes to http://arthackday-staging.herokuapp.com, where changes can be previewed in a way that's nearly idential to the live site. To do that, run these commands on your machine:
 
     git clone https://github.com/huertanix/arthackday-web.git arthackday-staging
@@ -48,6 +52,7 @@ Most admin functionality hasn't been stitched together into a cohesive user expe
 
 Getting the latest data from Heroku Postgres
 --------------------------------------------
+
 To get the latest and greatest data from production into your local build to test and develop with, you'll want to follow these several steps:
 
 For Mac OS X:
@@ -119,18 +124,20 @@ Stop rails if it's running and run `rake db:migrate`. Start rails again and you 
 
 ...restart Rails and run `rake db:migrate` again. Now both config/database.yml and db/schema.rb should no longer show up when you run `git status` and it should be safe to commit your changes.
 
-
 Deploying to Staging
 -----------------------
+
 Assuming you have been assigned as a collaborator for arthackday-staging.herokuapp.com (and you have installed https://toolbelt.heroku.com/) push to staging by adding Heroku to your list of git remotes using this command and then pushing:
 
     git remote rm heroku
     heroku git:remote -a arthackday-staging
     git push heroku master
 
+Refresh http://arthackday-staging.herokuapp.com and make sure it works.
 
 Deploying to Production
 -----------------------
+
 Assuming you have been assigned as a collaborator for arthackday-website.herokuapp.com, you need to install the Heroku toolbelt if you haven't yet (https://toolbelt.heroku.com/) and add Heroku to your list of git remotes using this command:
 
     heroku git:remote -a arthackday-website
@@ -147,9 +154,9 @@ If your changes don't show up after deploying, treat the Heroku instance like a 
 
 If even that doesn't work, try clearing your cache and stuff.
 
-
 LOLcense
 --------
+
 Unless where otherwise noted, this website is distributed under the Chicken Dance License (CDL). Please see the included copy of the license (CDL-LICENSE.txt) for deets and the included example instructions for the chicken dance (DANCE.txt). Video delivery may be conducted via electronic mail by sending a link to the video file directly or through an HTML5-based online viewer to arthackday at gmail dot com. Physical video delivery will only be accepted in *HD-DVD* or *Betamax* format and must be delivered to the following address:
 
 > Art Hack Day  
