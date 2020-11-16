@@ -20,7 +20,7 @@ class Event < ActiveRecord::Base
   :venue_id, :header_image, :header_image_tiled, :header_image_artist, :header_image_artist_website, :theme_excerpt, 
   :featured_video, :featured_image, :header_dark_font, :organizer_section, :slug
 
-  scope :sorted_by_date, order('hackathon_start desc') 
+  scope :sorted_by_date, -> { order(hackathon_start: :desc) } 
 
   friendly_id :theme, use: :slugged
 
