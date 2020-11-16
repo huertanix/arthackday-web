@@ -1065,7 +1065,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
-    pg (1.2.3)
+    pg (0.21.0)
     polyglot (0.3.5)
     protected_attributes (1.0.3)
       activemodel (>= 4.0.0, < 5.0)
@@ -1172,7 +1172,7 @@ DEPENDENCIES
   nested_form
   nokogiri
   paperclip (~> 4.3)
-  pg
+  pg (~> 0.21)
   protected_attributes
   puma
   rails (= 4.0.0)

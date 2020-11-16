@@ -82,9 +82,7 @@ gem 'thin'
 
 # Heroku stuff
 group :production, :staging do
-  gem 'pg'
+  gem 'pg', '~> 0.21' # Use old-ass version of pg for Rails < 5.1.5
   gem 'rails_12factor'
   gem 'puma'
 end
-
-gem 'pg'
