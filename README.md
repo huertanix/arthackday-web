@@ -14,22 +14,22 @@ System Prereqs (Debian/Ubuntu/Mint):
 * libsqlite3-dev
 * postgresql-9.1 NOTE: This is apparently required even though it is only needed in production
 * postgresql-server-dev-9.1
-* Heroku toolbelt
+* [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 
 Ruby Prereqs:
 
 * rvm
-* Ruby 2.3.8 (`rvm install ruby-2.3.8`)
+* Ruby 2.5.8 (`rvm install ruby-2.5.8`)
 * Rails (4.2.8)
-* NB: if you have several rubies installed, you may need to switch to the right one. To see which rubies you have installed type `rvm list` and switch to 1.9.3 with `rvm use 2.3.8`
-* NB NB: If you already have 2.3.8 installed, the Gemfile will now automatically use that one.
+* NB: if you have several rubies installed, you may need to switch to the right one. To see which rubies you have installed type `rvm list` and switch to 1.9.3 with `rvm use 2.5.8`
+* NB NB: If you already have 2.5.8 installed, the Gemfile will now automatically use that one.
 
 Application Install:
 
 * bundle install --without production
 * rake db:migrate
 * rails s
-* open the app on http://localhost:3000/
+* open the app on <http://localhost:3000/>
 
 Getting Started
 ---------------
@@ -55,13 +55,9 @@ Getting the latest data from Heroku Postgres
 
 To get the latest and greatest data from production into your local build to test and develop with, you'll want to follow these several steps:
 
-For Mac OS X:
+For macOS:
 
 Download and install Postgres 9.1 or above
-
-If you're running OS X Mountain Lion: You might want to use the postgres package for brew, and use that instead of a what OS X ships with. Mountain Lion ships with an outdated, broken crappy version of Postgres that will break anything you change to make it work in your environment every time you update XCode. It was so bad even Apple ragequit trying to maintain it and removed it from Mavericks: http://stackoverflow.com/questions/19611505/does-postgresql-exist-on-os-x-mavericks.
-
-To install brew if you haven't, run this command:
 
     ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
@@ -71,7 +67,7 @@ Once brew is installed, run this to install postgres:
     brew update
     brew install postgres
 
-There might be some additional steps needed if you want to run postgres on startup, see: http://stolho.com/2013/04/01/how-to-install-postgresql-9-on-mac-os-x/ for deets.
+There might be some additional steps needed if you want to run postgres on startup, see: <http://stolho.com/2013/04/01/how-to-install-postgresql-9-on-mac-os-x/> for deets.
 
 For Debian/Ubuntu:
 
@@ -79,9 +75,9 @@ For Debian/Ubuntu:
 
 Once you have postgres installed, you can manage postgres through the command line like some sort of ancient rite of passage or you can install pgAdmin.
 
-For OS X:
+For macOS:
 
-Go to http://www.pgadmin.org/download/macosx.php, download the latest dmg and follow the installer's instructions.
+Go to <http://www.pgadmin.org/download/macosx.php>, download the latest dmg and follow the installer's instructions.
 
 For Debian/Ubuntu:
 
@@ -127,18 +123,18 @@ Stop rails if it's running and run `rake db:migrate`. Start rails again and you 
 Deploying to Staging
 -----------------------
 
-Assuming you have been assigned as a collaborator for arthackday-staging.herokuapp.com (and you have installed https://toolbelt.heroku.com/) push to staging by adding Heroku to your list of git remotes using this command and then pushing:
+Assuming you have been assigned as a collaborator for arthackday-staging.herokuapp.com and you have installed [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli), push to staging by adding Heroku to your list of git remotes using this command and then pushing:
 
     git remote rm heroku
     heroku git:remote -a arthackday-staging
     git push heroku master
 
-Refresh http://arthackday-staging.herokuapp.com and make sure it works.
+Refresh <http://arthackday-staging.herokuapp.com> and make sure it works.
 
 Deploying to Production
 -----------------------
 
-Assuming you have been assigned as a collaborator for arthackday-website.herokuapp.com, you need to install the Heroku toolbelt if you haven't yet (https://toolbelt.heroku.com/) and add Heroku to your list of git remotes using this command:
+Assuming you have been assigned as a collaborator for arthackday-website.herokuapp.com, you need to install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) and add Heroku to your list of git remotes using this command:
 
     heroku git:remote -a arthackday-website
 
@@ -159,9 +155,9 @@ LOLcense
 
 Unless where otherwise noted, this website is distributed under the Chicken Dance License (CDL). Please see the included copy of the license (CDL-LICENSE.txt) for deets and the included example instructions for the chicken dance (DANCE.txt). Video delivery may be conducted via electronic mail by sending a link to the video file directly or through an HTML5-based online viewer to arthackday at gmail dot com. Physical video delivery will only be accepted in *HD-DVD* or *Betamax* format and must be delivered to the following address:
 
-> Art Hack Day  
-> c/o GAFFTA  
-> 923 Market Street  
-> San Francisco, CA 94103
+> Art Hack Day
+> c/o Gray Area Foundation
+> 2665 Mission Street
+> San Francisco, CA 94110
 
 Logos and other digital artworks contained in this repository are owned by their respective owners and subject to their own less chickeny copyright rules.
