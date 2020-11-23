@@ -1,4 +1,4 @@
-class Participant < ActiveRecord::Base
+class Participant < ApplicationRecord
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
@@ -10,7 +10,7 @@ class Participant < ActiveRecord::Base
   ##       :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :name, :bio, :twitter_handle, :website, :photo_url, :event_ids
+  #attr_accessible :email, :name, :bio, :twitter_handle, :website, :photo_url, :event_ids
 
   has_and_belongs_to_many :events
   has_and_belongs_to_many :projects
