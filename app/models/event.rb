@@ -1,4 +1,4 @@
-class Event < ActiveRecord::Base
+class Event < ApplicationRecord
   extend FriendlyId
   belongs_to :venue
   has_many :projects
@@ -15,10 +15,10 @@ class Event < ActiveRecord::Base
   # venue might not work here?
   accepts_nested_attributes_for :projects, :press_blurbs, :sponsors, :participants, allow_destroy: true
   # protect from hax
-  attr_accessible :city, :theme, :hackathon_start, :hackathon_end, :show_start, :show_end, :about, 
-  :hack_rsvp_url, :show_rsvp_url, :press_blurbs_attributes, :projects_attributes, :sponsors_attributes, 
-  :venue_id, :header_image, :header_image_tiled, :header_image_artist, :header_image_artist_website, :theme_excerpt, 
-  :featured_video, :featured_image, :header_dark_font, :organizer_section, :slug
+  #attr_accessible :city, :theme, :hackathon_start, :hackathon_end, :show_start, :show_end, :about, 
+  #:hack_rsvp_url, :show_rsvp_url, :press_blurbs_attributes, :projects_attributes, :sponsors_attributes, 
+  #:venue_id, :header_image, :header_image_tiled, :header_image_artist, :header_image_artist_website, :theme_excerpt, 
+  #:featured_video, :featured_image, :header_dark_font, :organizer_section, :slug
 
   scope :sorted_by_date, -> { order(hackathon_start: :desc) } 
 

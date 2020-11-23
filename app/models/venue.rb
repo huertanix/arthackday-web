@@ -1,10 +1,10 @@
-class Venue < ActiveRecord::Base
+class Venue < ApplicationRecord
   has_many :events
   # Geocoder gem geocoding
   geocoded_by :full_address
   before_save :geocode
   # protect from hax
-  attr_accessible :name, :address, :city, :subdivision, :country, :postal_code, :website
+  #attr_accessible :name, :address, :city, :subdivision, :country, :postal_code, :website
 
   def full_address
   	if self.country.downcase === 'sweden' || self.country.downcase === 'germany'

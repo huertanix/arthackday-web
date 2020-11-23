@@ -1,4 +1,4 @@
-class Organizer < ActiveRecord::Base
+class Organizer < ApplicationRecord
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
@@ -8,7 +8,7 @@ class Organizer < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes
   attr_accessor :invite_code
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :invite_code, :event_ids
+  #attr_accessible :email, :password, :password_confirmation, :remember_me, :invite_code, :event_ids
 
   def can_edit_event?(event_id)
     self.org_admin? || self.event_ids.include?(event_id)

@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -13,180 +12,175 @@
 
 ActiveRecord::Schema.define(version: 20141125004817) do
 
-  create_table "events", force: true do |t|
-    t.string   "city"
-    t.string   "theme"
+  create_table "events", force: :cascade do |t|
+    t.string   "city",                        limit: 255
+    t.string   "theme",                       limit: 255
     t.datetime "hackathon_start"
     t.datetime "hackathon_end"
     t.datetime "show_start"
     t.datetime "show_end"
     t.text     "about"
-    t.string   "hack_rsvp_url"
-    t.string   "show_rsvp_url"
+    t.string   "hack_rsvp_url",               limit: 255
+    t.string   "show_rsvp_url",               limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "venue_id"
-    t.string   "header_image"
-    t.string   "header_image_artist"
-    t.string   "header_image_artist_website"
-    t.string   "theme_excerpt"
-    t.string   "slug"
+    t.string   "header_image",                limit: 255
+    t.string   "header_image_artist",         limit: 255
+    t.string   "header_image_artist_website", limit: 255
+    t.string   "theme_excerpt",               limit: 255
+    t.string   "slug",                        limit: 255
     t.text     "featured_video"
-    t.string   "featured_image_file_name"
-    t.string   "featured_image_content_type"
+    t.string   "featured_image_file_name",    limit: 255
+    t.string   "featured_image_content_type", limit: 255
     t.integer  "featured_image_file_size"
     t.datetime "featured_image_updated_at"
     t.boolean  "header_image_tiled"
     t.boolean  "header_dark_font"
     t.text     "organizer_section"
+    t.index ["slug"], name: "index_events_on_slug", unique: true
   end
 
-  add_index "events", ["slug"], name: "index_events_on_slug", unique: true
-
-  create_table "events_organizers", id: false, force: true do |t|
+  create_table "events_organizers", id: false, force: :cascade do |t|
     t.integer "event_id",     null: false
     t.integer "organizer_id", null: false
   end
 
-  create_table "events_participants", id: false, force: true do |t|
+  create_table "events_participants", id: false, force: :cascade do |t|
     t.integer "event_id",       null: false
     t.integer "participant_id", null: false
   end
 
-  create_table "events_venues", id: false, force: true do |t|
+  create_table "events_venues", id: false, force: :cascade do |t|
     t.integer "event_id", null: false
     t.integer "venue_id", null: false
   end
 
-  create_table "friendly_id_slugs", force: true do |t|
-    t.string   "slug",                      null: false
-    t.integer  "sluggable_id",              null: false
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string   "slug",           limit: 255, null: false
+    t.integer  "sluggable_id",               null: false
     t.string   "sluggable_type", limit: 50
-    t.string   "scope"
+    t.string   "scope",          limit: 255
     t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
+    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
-  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
-  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
-  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
-  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
-
-  create_table "media", force: true do |t|
+  create_table "media", force: :cascade do |t|
     t.text     "snippet"
     t.integer  "project_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "organizers", force: true do |t|
-    t.string   "name"
+  create_table "organizers", force: :cascade do |t|
+    t.string   "name",                   limit: 255
     t.boolean  "org_admin"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+    t.string   "email",                  limit: 255, default: "", null: false
+    t.string   "encrypted_password",     limit: 255, default: "", null: false
+    t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0
+    t.integer  "sign_in_count",                      default: 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
+    t.string   "current_sign_in_ip",     limit: 255
+    t.string   "last_sign_in_ip",        limit: 255
+    t.index ["email"], name: "index_organizers_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_organizers_on_reset_password_token", unique: true
   end
 
-  add_index "organizers", ["email"], name: "index_organizers_on_email", unique: true
-  add_index "organizers", ["reset_password_token"], name: "index_organizers_on_reset_password_token", unique: true
-
-  create_table "participants", force: true do |t|
-    t.string   "name"
-    t.string   "bio"
-    t.string   "twitter_handle"
-    t.string   "website"
+  create_table "participants", force: :cascade do |t|
+    t.string   "name",                   limit: 255
+    t.string   "bio",                    limit: 255
+    t.string   "twitter_handle",         limit: 255
+    t.string   "website",                limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+    t.string   "email",                  limit: 255, default: "", null: false
+    t.string   "encrypted_password",     limit: 255, default: "", null: false
+    t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0
+    t.integer  "sign_in_count",                      default: 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.string   "photo_url"
+    t.string   "current_sign_in_ip",     limit: 255
+    t.string   "last_sign_in_ip",        limit: 255
+    t.string   "photo_url",              limit: 255
+    t.index ["reset_password_token"], name: "index_participants_on_reset_password_token", unique: true
   end
 
-  add_index "participants", ["reset_password_token"], name: "index_participants_on_reset_password_token", unique: true
-
-  create_table "participants_projects", id: false, force: true do |t|
+  create_table "participants_projects", id: false, force: :cascade do |t|
     t.integer "participant_id", null: false
     t.integer "project_id",     null: false
   end
 
-  create_table "photos", force: true do |t|
+  create_table "photos", force: :cascade do |t|
     t.text     "credit"
     t.integer  "project_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
+    t.string   "image_file_name",    limit: 255
+    t.string   "image_content_type", limit: 255
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
   end
 
-  create_table "press_blurbs", force: true do |t|
+  create_table "press_blurbs", force: :cascade do |t|
     t.text     "headline",    limit: 255
-    t.string   "source_name"
-    t.string   "source_url"
-    t.string   "logo_uri"
+    t.string   "source_name", limit: 255
+    t.string   "source_url",  limit: 255
+    t.string   "logo_uri",    limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "event_id"
     t.boolean  "featured"
   end
 
-  create_table "projects", force: true do |t|
-    t.string   "name"
+  create_table "projects", force: :cascade do |t|
+    t.string   "name",                    limit: 255
     t.text     "description"
-    t.string   "tag"
+    t.string   "tag",                     limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "event_id"
-    t.string   "website"
-    t.string   "github"
-    t.string   "main_image_file_name"
-    t.string   "main_image_content_type"
+    t.string   "website",                 limit: 255
+    t.string   "github",                  limit: 255
+    t.string   "main_image_file_name",    limit: 255
+    t.string   "main_image_content_type", limit: 255
     t.integer  "main_image_file_size"
     t.datetime "main_image_updated_at"
-    t.string   "featured_thumbnail"
-    t.string   "slug"
+    t.string   "featured_thumbnail",      limit: 255
+    t.string   "slug",                    limit: 255
+    t.index ["slug"], name: "index_projects_on_slug", unique: true
   end
 
-  add_index "projects", ["slug"], name: "index_projects_on_slug", unique: true
-
-  create_table "sponsors", force: true do |t|
-    t.string   "name"
-    t.string   "website"
+  create_table "sponsors", force: :cascade do |t|
+    t.string   "name",              limit: 255
+    t.string   "website",           limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "event_id"
-    t.string   "logo_file_name"
-    t.string   "logo_content_type"
+    t.string   "logo_file_name",    limit: 255
+    t.string   "logo_content_type", limit: 255
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
     t.boolean  "featured"
   end
 
-  create_table "venues", force: true do |t|
-    t.string   "name"
-    t.string   "address"
-    t.string   "city"
-    t.string   "subdivision"
-    t.string   "country"
-    t.string   "postal_code"
-    t.string   "website"
+  create_table "venues", force: :cascade do |t|
+    t.string   "name",        limit: 255
+    t.string   "address",     limit: 255
+    t.string   "city",        limit: 255
+    t.string   "subdivision", limit: 255
+    t.string   "country",     limit: 255
+    t.string   "postal_code", limit: 255
+    t.string   "website",     limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.float    "latitude"

@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby "2.5.8"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.10'
+gem 'rails', '5.0.1'
 
 # Use sqlite3 as the database for Active Record, but not on Heroku
 group :development, :test do
@@ -12,16 +12,16 @@ group :development, :test do
 end
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails' #, '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails' #, '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -50,7 +50,7 @@ end
 # gem 'debugger', group: [:development, :test]
 
 # User management
-gem 'protected_attributes' # use attr_accessible until Devise supports strong_parameters
+#gem 'protected_attributes' # use attr_accessible until Devise supports strong_parameters <-- remove after Rails 5 upgrade
 #gem 'devise', '3.2.2'
 gem 'devise', '~> 4.0'
 
@@ -64,7 +64,7 @@ gem 'geocoder'
 gem 'friendly_id', '~> 5.0.0' # Need 5.0.0 or above for Rails 4
 
 # File uploads, because it's a fucking mission to Jupiter with just Rails
-gem 'paperclip', '~> 4.3'
+gem 'paperclip' #, '~> 4.3'
 
 # For the rake task parsing out html from old project descriptions
 gem 'nokogiri'

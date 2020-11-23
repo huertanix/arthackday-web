@@ -69,6 +69,6 @@ class PressBlurbsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def press_blurb_params
-      params.require(:press_blurb).permit(:headline, :source_name, :source_url, :logo_uri)
+      params.require(:press_blurb).permit(:headline, :source_name, :source_url, :logo_uri, :featured)
     end
 end
