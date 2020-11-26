@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
   before_action :filter_event, only: [:create, :update]
-  before_filter :authenticate_organizer!, :only => [:index, :create, :update, :new, :edit, :destroy]
+  before_action :authenticate_organizer!, :only => [:index, :create, :update, :new, :edit, :destroy]
 
   # GET /projects
   # GET /projects.json

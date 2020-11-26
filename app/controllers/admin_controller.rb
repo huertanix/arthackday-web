@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
-  before_filter :authenticate_organizer!
+  before_action :authenticate_organizer!
   
   def index
   end

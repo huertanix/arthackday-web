@@ -1,7 +1,7 @@
 class ParticipantsController < ApplicationController
   before_action :set_participant, only: [:show, :edit, :update, :destroy]
   before_action :filter_events, only: [:create, :update]
-  before_filter :authenticate_organizer!, :only => [:create, :update, :new, :edit, :destroy]
+  before_action :authenticate_organizer!, :only => [:create, :update, :new, :edit, :destroy]
 
   # GET /participants
   # GET /participants.json
