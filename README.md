@@ -20,7 +20,7 @@ Ruby Prereqs:
 
 * rvm
 * Ruby 2.5.8 (`rvm install ruby-2.5.8`)
-* Rails (5.2.0)
+* Rails (5.2.4)
 * NB: if you have several rubies installed, you may need to switch to the right one. To see which rubies you have installed type `rvm list` and switch to 1.9.3 with `rvm use 2.5.8`
 * NB NB: If you already have 2.5.8 installed, the Gemfile will now automatically use that one.
 
