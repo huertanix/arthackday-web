@@ -114,4 +114,7 @@ Rails.application.configure do
     :authentication       => 'plain',
     :enable_starttls_auto => true
   }
+
+  #config.active_record.yaml_column_permitted_classes = [Symbol, Date, Time, ActiveSupport::TimeWithZone, ActiveSupport::TimeZone]
+  config.active_record.use_yaml_unsafe_load = true
 end

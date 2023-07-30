@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
-ruby "2.6.6"
+ruby "3.0.2"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.2.8.1'
+gem 'rails', '6.0.6.1'
 
 # Use sqlite3 as the database for Active Record, but not on Heroku
 group :development, :test do
-  gem 'sqlite3', '~> 1.3.6' #, '< 1.4' # older Rails, older sqlite3 version
+  gem 'sqlite3' #, '~> 1.3.6' #, '< 1.4' # older Rails, older sqlite3 version
   #gem 'pg' # temporary for data migration
   gem 'taps'
 end
@@ -15,7 +15,7 @@ end
 gem 'sass-rails' #, '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier' #, '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails' #, '~> 4.0.0'
@@ -30,7 +30,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.10'
+gem 'jbuilder' #, '~> 2.10'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -52,7 +52,7 @@ end
 # User management
 #gem 'protected_attributes' # use attr_accessible until Devise supports strong_parameters <-- remove after Rails 5 upgrade
 #gem 'devise', '3.2.2'
-gem 'devise', '~> 4.0'
+gem 'devise' #, '~> 4.0'
 
 # Nested form support
 gem 'nested_form' #, :git => "git://github.com/madebydna/nested_form.git"
