@@ -3,10 +3,10 @@
 one:
   city: MyString
   theme: MyString
-  hackathon_start: 2013-07-06 16:26:56
-  hackathon_end: 2013-07-06 16:26:56
-  show_start: 2013-07-06 16:26:56
-  show_end: 2013-07-06 16:26:56
+  hackathon_start: "2013-07-06 16:26:56"
+  hackathon_end: "2013-07-06 16:26:56"
+  show_start: "2013-07-06 16:26:56"
+  show_end: "2013-07-06 16:26:56"
   about: MyText
   hack_rsvp_url: MyString
   show_rsvp_url: MyString
@@ -14,10 +14,10 @@ one:
 two:
   city: MyString
   theme: MyString
-  hackathon_start: 2013-07-06 16:26:56
-  hackathon_end: 2013-07-06 16:26:56
-  show_start: 2013-07-06 16:26:56
-  show_end: 2013-07-06 16:26:56
+  hackathon_start: "2013-07-06 16:26:56"
+  hackathon_end: "2013-07-06 16:26:56"
+  show_start: "2013-07-06 16:26:56"
+  show_end: "2013-07-06 16:26:56"
   about: MyText
   hack_rsvp_url: MyString
   show_rsvp_url: MyString
