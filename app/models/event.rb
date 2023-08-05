@@ -24,8 +24,14 @@ class Event < ApplicationRecord
 
   friendly_id :theme, use: :slugged
 
-  has_attached_file :featured_image, :styles => { :medium => "600x400", :thumb => "300x200>", :chibi => "100x75>" }, :default_url => "https://placekitten.com/400/500", s3_permissions: "public-read"
-  validates_attachment_content_type :featured_image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+  has_attached_file :featured_image, 
+    :styles => { :medium => "600x400", :thumb => "300x200>", :chibi => "100x75>" },
+    :default_url => "https://placekitten.com/400/500", 
+    s3_permissions: "public-read"
+    #:bucket => "arthackday", #ENV['S3_BUCKET_NAME'] # Not sure why these aren't being loaded from config/environments/*.rb
+  
+  validates_attachment_content_type :featured_image,
+   :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
   def upcoming? 
     self.show_end > DateTime.now

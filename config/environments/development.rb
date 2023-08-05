@@ -61,13 +61,19 @@ Rails.application.configure do
 
   config.paperclip_defaults = {
     :storage => :s3,
-    :s3_region => "us-west-1", #ENV['AWS_REGION'],
+    :s3_region => ENV['AWS_REGION'],
     :s3_credentials => {
       :bucket => ENV['S3_BUCKET_NAME'],
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
+
+  # AWS gem may need specific config
+  # Aws.config.update(
+  #   region: 'us-west-1',
+  #   credentials: Aws::Credentials.new(ENV['AWS_ACCESS_KEY_ID'], ENV['AWS_SECRET_ACCESS_KEY'])
+  # ) # This does nothing
   
   # For local dev environments, assuming Thin web server with defaults
   config.action_mailer.default_url_options = { :host => '0.0.0.0:3000' }
