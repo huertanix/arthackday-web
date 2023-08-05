@@ -6,13 +6,15 @@
 		<link rel="shortcut icon" href="/img/ahd_assets/favicon.ico" type="image/x-icon"/>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 		<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+		<!--<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />-->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 		<% #javascript_include_tag "application", "data-turbolinks-track" => true %>
 		<%= javascript_include_tag "application", "nested_form" %>
-		<script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+		<!--<script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>-->
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 		<%= csrf_meta_tags %>
-		<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-		<link href="//vjs.zencdn.net/4.2/video-js.css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+		<link href="https://vjs.zencdn.net/4.2/video-js.css" rel="stylesheet">
 		<link rel="stylesheet" href="/css/style.css" />
 		<link rel="stylesheet" href="/css/admin.css" />
 		<link rel="apple-touch-icon" sizes="144x144" href="/img/ahd_assets/ahd_logo_white_200px.png">
@@ -42,12 +44,12 @@
 				<% end %>
 			<% end %>
 		<% elsif params[:controller] === "about" %>
-			<meta property="og:image" content="http://www.arthackday.net/img/about/Arthackday_About_How-it-works.jpg?zuckerderp=<%= unix_time %>"/>
-			<meta property="og:image" content="http://www.arthackday.net/img/about/Arthackday_About_Partners.jpg?zuckerderp=<%= unix_time %>"/>
-			<meta property="og:image" content="http://www.arthackday.net/img/about/Arthackday_About_What-is.jpg?zuckerderp=<%= unix_time %>"/>
-			<meta property="og:image" content="http://www.arthackday.net/video/berlin_poster.jpg?zuckerderp=<%= unix_time %>"/>
+			<meta property="og:image" content="/img/about/Arthackday_About_How-it-works.jpg?zuckerderp=<%= unix_time %>"/>
+			<meta property="og:image" content="/img/about/Arthackday_About_Partners.jpg?zuckerderp=<%= unix_time %>"/>
+			<meta property="og:image" content="/img/about/Arthackday_About_What-is.jpg?zuckerderp=<%= unix_time %>"/>
+			<meta property="og:image" content="/video/berlin_poster.jpg?zuckerderp=<%= unix_time %>"/>
 		<% end %>
-		<meta property="og:image" content="http://www.arthackday.net/img/ahd_assets/ahd_logo_black_200px.png"/>
+		<meta property="og:image" content="/img/ahd_assets/ahd_logo_black_200px.png"/>
 		<meta property="og:site_name" content="ART HACK DAY"/>
 		<meta property="og:description" content="<%= content_for?(:description) ? yield(:description) : "ART HACK DAY is an event for hackers whose medium is art and artists whose medium is technology." %>"/>
 
@@ -69,7 +71,7 @@
 		<script type="text/javascript" src="/javascripts/lib/waypoints.min.js"></script>
 		<script type="text/javascript" src="/javascripts/lib/fitvids.js"></script>
 		<script type="text/javascript" src="/javascripts/lib/fittext.js"></script>
-		<script src="//vjs.zencdn.net/4.2/video.js"></script>
+		<script src="https://vjs.zencdn.net/4.2/video.js"></script>
 		<script type="text/javascript" src="/javascripts/main.js"></script>
 		
 		<div class="section animated nav" id="nav-main">
