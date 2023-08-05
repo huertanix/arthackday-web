@@ -64,7 +64,9 @@ gem 'geocoder'
 gem 'friendly_id', '~> 5.0.0' # Need 5.0.0 or above for Rails 4
 
 # File uploads, because it's a fucking mission to Jupiter with just Rails
-gem 'paperclip' #, '~> 4.3'
+#gem 'paperclip' #, '~> 4.3'
+# Paperclip is abandoned and doesn't work with Ruby 3, using the kt-paperclip fork now
+gem "kt-paperclip", '~> 6.4', '>= 6.4.1'
 
 # For the rake task parsing out html from old project descriptions
 gem 'nokogiri'
