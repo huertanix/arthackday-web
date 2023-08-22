@@ -1,0 +1,832 @@
+current directory: /home/huertanix/Source/arthackday-staging/vendor/bundle/ruby/3.1.0/gems/pg-0.21.0/ext
+/home/huertanix/.rvm/rubies/ruby-3.1.3/bin/ruby -I /home/huertanix/.rvm/rubies/ruby-3.1.3/lib/ruby/3.1.0 extconf.rb
+checking for pg_config... yes
+Using config values from /usr/bin/pg_config
+checking for libpq-fe.h... yes
+checking for libpq/libpq-fs.h... yes
+checking for pg_config_manual.h... yes
+checking for PQconnectdb() in -lpq... yes
+checking for PQconnectionUsedPassword()... yes
+checking for PQisthreadsafe()... yes
+checking for PQprepare()... yes
+checking for PQexecParams()... yes
+checking for PQescapeString()... yes
+checking for PQescapeStringConn()... yes
+checking for PQescapeLiteral()... yes
+checking for PQescapeIdentifier()... yes
+checking for PQgetCancel()... yes
+checking for lo_create()... yes
+checking for pg_encoding_to_char()... yes
+checking for pg_char_to_encoding()... yes
+checking for PQsetClientEncoding()... yes
+checking for PQlibVersion()... yes
+checking for PQping()... yes
+checking for PQsetSingleRowMode()... yes
+checking for PQconninfo()... yes
+checking for PQsslAttribute()... yes
+checking for rb_encdb_alias()... yes
+checking for rb_enc_alias()... yes
+checking for rb_thread_call_without_gvl()... yes
+checking for rb_thread_call_with_gvl()... yes
+checking for rb_thread_fd_select()... yes
+checking for rb_w32_wrap_io_handle()... no
+checking for rb_str_modify_expand()... yes
+checking for rb_hash_dup()... yes
+checking for PGRES_COPY_BOTH in libpq-fe.h... yes
+checking for PGRES_SINGLE_TUPLE in libpq-fe.h... yes
+checking for PG_DIAG_TABLE_NAME in libpq-fe.h... yes
+checking for struct pgNotify.extra in libpq-fe.h... yes
+checking for unistd.h... yes
+checking for inttypes.h... yes
+checking for ruby/st.h... yes
+checking for C99 variable length arrays... yes
+creating extconf.h
+creating Makefile
+
+current directory: /home/huertanix/Source/arthackday-staging/vendor/bundle/ruby/3.1.0/gems/pg-0.21.0/ext
+make DESTDIR\= sitearchdir\=./.gem.20230821-20845-qqsp43 sitelibdir\=./.gem.20230821-20845-qqsp43 clean
+
+current directory: /home/huertanix/Source/arthackday-staging/vendor/bundle/ruby/3.1.0/gems/pg-0.21.0/ext
+make DESTDIR\= sitearchdir\=./.gem.20230821-20845-qqsp43 sitelibdir\=./.gem.20230821-20845-qqsp43
+compiling gvl_wrappers.c
+In file included from pg.h:132,
+                 from gvl_wrappers.c:6:
+/usr/include/postgresql/pg_config_manual.h:85:5: warning: "SIZEOF_VOID_P" is not defined, evaluates to 0 [-Wundef]
+   85 | #if SIZEOF_VOID_P >= 8
+      |     ^~~~~~~~~~~~~
+/usr/include/postgresql/pg_config_manual.h:168:5: warning: "HAVE_DECL_POSIX_FADVISE" is not defined, evaluates to 0 [-Wundef]
+  168 | #if HAVE_DECL_POSIX_FADVISE && defined(HAVE_POSIX_FADVISE)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling pg.c
+In file included from pg.h:132,
+                 from pg.c:49:
+/usr/include/postgresql/pg_config_manual.h:85:5: warning: "SIZEOF_VOID_P" is not defined, evaluates to 0 [-Wundef]
+   85 | #if SIZEOF_VOID_P >= 8
+      |     ^~~~~~~~~~~~~
+/usr/include/postgresql/pg_config_manual.h:168:5: warning: "HAVE_DECL_POSIX_FADVISE" is not defined, evaluates to 0 [-Wundef]
+  168 | #if HAVE_DECL_POSIX_FADVISE && defined(HAVE_POSIX_FADVISE)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+pg.c: In function ‘Init_pg_ext’:
+pg.c:405:1: warning: old-style function definition [-Wold-style-definition]
+  405 | Init_pg_ext()
+      | ^~~~~~~~~~~
+pg.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling pg_binary_decoder.c
+In file included from pg.h:132,
+                 from pg_binary_decoder.c:7:
+/usr/include/postgresql/pg_config_manual.h:85:5: warning: "SIZEOF_VOID_P" is not defined, evaluates to 0 [-Wundef]
+   85 | #if SIZEOF_VOID_P >= 8
+      |     ^~~~~~~~~~~~~
+/usr/include/postgresql/pg_config_manual.h:168:5: warning: "HAVE_DECL_POSIX_FADVISE" is not defined, evaluates to 0 [-Wundef]
+  168 | #if HAVE_DECL_POSIX_FADVISE && defined(HAVE_POSIX_FADVISE)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+pg_binary_decoder.c: In function ‘init_pg_binary_decoder’:
+pg_binary_decoder.c:143:1: warning: old-style function definition [-Wold-style-definition]
+  143 | init_pg_binary_decoder()
+      | ^~~~~~~~~~~~~~~~~~~~~~
+pg_binary_decoder.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling pg_binary_encoder.c
+In file included from pg.h:132,
+                 from pg_binary_encoder.c:7:
+/usr/include/postgresql/pg_config_manual.h:85:5: warning: "SIZEOF_VOID_P" is not defined, evaluates to 0 [-Wundef]
+   85 | #if SIZEOF_VOID_P >= 8
+      |     ^~~~~~~~~~~~~
+/usr/include/postgresql/pg_config_manual.h:168:5: warning: "HAVE_DECL_POSIX_FADVISE" is not defined, evaluates to 0 [-Wundef]
+  168 | #if HAVE_DECL_POSIX_FADVISE && defined(HAVE_POSIX_FADVISE)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+pg_binary_encoder.c: In function ‘init_pg_binary_encoder’:
+pg_binary_encoder.c:141:1: warning: old-style function definition [-Wold-style-definition]
+  141 | init_pg_binary_encoder()
+      | ^~~~~~~~~~~~~~~~~~~~~~
+pg_binary_encoder.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling pg_coder.c
+In file included from pg.h:132,
+                 from pg_coder.c:6:
+/usr/include/postgresql/pg_config_manual.h:85:5: warning: "SIZEOF_VOID_P" is not defined, evaluates to 0 [-Wundef]
+   85 | #if SIZEOF_VOID_P >= 8
+      |     ^~~~~~~~~~~~~
+/usr/include/postgresql/pg_config_manual.h:168:5: warning: "HAVE_DECL_POSIX_FADVISE" is not defined, evaluates to 0 [-Wundef]
+  168 | #if HAVE_DECL_POSIX_FADVISE && defined(HAVE_POSIX_FADVISE)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+pg_coder.c: In function ‘pg_coder_encode’:
+pg_coder.c:146:17: warning: ‘RB_OBJ_INFECT’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+  146 |                 OBJ_INFECT(intermediate, value);
+      |                 ^~~~~~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/core/rstring.h:30,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic.h:23,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:27,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_coder.c:6:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:114:30: note: declared here
+  114 | #define RB_OBJ_INFECT        RB_OBJ_INFECT
+      |                              ^~~~~~~~~~~~~
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:890:1: note: in expansion of macro ‘RB_OBJ_INFECT’
+  890 | RB_OBJ_INFECT(VALUE dst, VALUE src)
+      | ^~~~~~~~~~~~~
+pg_coder.c:158:9: warning: ‘RB_OBJ_INFECT’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+  158 |         OBJ_INFECT(res, value);
+      |         ^~~~~~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/core/rstring.h:30,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic.h:23,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:27,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_coder.c:6:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:114:30: note: declared here
+  114 | #define RB_OBJ_INFECT        RB_OBJ_INFECT
+      |                              ^~~~~~~~~~~~~
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:890:1: note: in expansion of macro ‘RB_OBJ_INFECT’
+  890 | RB_OBJ_INFECT(VALUE dst, VALUE src)
+      | ^~~~~~~~~~~~~
+pg_coder.c: In function ‘pg_coder_decode’:
+pg_coder.c:201:9: warning: ‘RB_OBJ_INFECT’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+  201 |         OBJ_INFECT(res, argv[0]);
+      |         ^~~~~~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/core/rstring.h:30,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic.h:23,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:27,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_coder.c:6:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:114:30: note: declared here
+  114 | #define RB_OBJ_INFECT        RB_OBJ_INFECT
+      |                              ^~~~~~~~~~~~~
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:890:1: note: in expansion of macro ‘RB_OBJ_INFECT’
+  890 | RB_OBJ_INFECT(VALUE dst, VALUE src)
+      | ^~~~~~~~~~~~~
+pg_coder.c: In function ‘init_pg_coder’:
+pg_coder.c:436:1: warning: old-style function definition [-Wold-style-definition]
+  436 | init_pg_coder()
+      | ^~~~~~~~~~~~~
+pg_coder.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling pg_connection.c
+In file included from pg.h:132,
+                 from pg_connection.c:7:
+/usr/include/postgresql/pg_config_manual.h:85:5: warning: "SIZEOF_VOID_P" is not defined, evaluates to 0 [-Wundef]
+   85 | #if SIZEOF_VOID_P >= 8
+      |     ^~~~~~~~~~~~~
+/usr/include/postgresql/pg_config_manual.h:168:5: warning: "HAVE_DECL_POSIX_FADVISE" is not defined, evaluates to 0 [-Wundef]
+  168 | #if HAVE_DECL_POSIX_FADVISE && defined(HAVE_POSIX_FADVISE)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_s_encrypt_password’:
+pg_connection.c:447:9: warning: ‘RB_OBJ_INFECT’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+  447 |         OBJ_INFECT( rval, password );
+      |         ^~~~~~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/core/rstring.h:30,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic.h:23,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:27,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:114:30: note: declared here
+  114 | #define RB_OBJ_INFECT        RB_OBJ_INFECT
+      |                              ^~~~~~~~~~~~~
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:890:1: note: in expansion of macro ‘RB_OBJ_INFECT’
+  890 | RB_OBJ_INFECT(VALUE dst, VALUE src)
+      | ^~~~~~~~~~~~~
+pg_connection.c:448:9: warning: ‘RB_OBJ_INFECT’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+  448 |         OBJ_INFECT( rval, username );
+      |         ^~~~~~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/core/rstring.h:30,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic.h:23,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:27,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:114:30: note: declared here
+  114 | #define RB_OBJ_INFECT        RB_OBJ_INFECT
+      |                              ^~~~~~~~~~~~~
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:890:1: note: in expansion of macro ‘RB_OBJ_INFECT’
+  890 | RB_OBJ_INFECT(VALUE dst, VALUE src)
+      | ^~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_db’:
+pg_connection.c:595:9: warning: ‘rbimpl_tainted_str_new_cstr’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+  595 |         return rb_tainted_str_new2(db);
+      |         ^~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/intern.h:57,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:192,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/intern/string.h:1411:1: note: declared here
+ 1411 | rbimpl_tainted_str_new_cstr(const char *str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_user’:
+pg_connection.c:609:9: warning: ‘rbimpl_tainted_str_new_cstr’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+  609 |         return rb_tainted_str_new2(user);
+      |         ^~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/intern.h:57,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:192,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/intern/string.h:1411:1: note: declared here
+ 1411 | rbimpl_tainted_str_new_cstr(const char *str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_pass’:
+pg_connection.c:623:9: warning: ‘rbimpl_tainted_str_new_cstr’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+  623 |         return rb_tainted_str_new2(user);
+      |         ^~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/intern.h:57,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:192,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/intern/string.h:1411:1: note: declared here
+ 1411 | rbimpl_tainted_str_new_cstr(const char *str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_host’:
+pg_connection.c:637:9: warning: ‘rbimpl_tainted_str_new_cstr’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+  637 |         return rb_tainted_str_new2(host);
+      |         ^~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/intern.h:57,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:192,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/intern/string.h:1411:1: note: declared here
+ 1411 | rbimpl_tainted_str_new_cstr(const char *str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_tty’:
+pg_connection.c:664:9: warning: ‘rbimpl_tainted_str_new_cstr’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+  664 |         return rb_tainted_str_new2(tty);
+      |         ^~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/intern.h:57,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:192,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/intern/string.h:1411:1: note: declared here
+ 1411 | rbimpl_tainted_str_new_cstr(const char *str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_options’:
+pg_connection.c:678:9: warning: ‘rbimpl_tainted_str_new_cstr’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+  678 |         return rb_tainted_str_new2(options);
+      |         ^~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/intern.h:57,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:192,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/intern/string.h:1411:1: note: declared here
+ 1411 | rbimpl_tainted_str_new_cstr(const char *str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_parameter_status’:
+pg_connection.c:758:17: warning: ‘rbimpl_tainted_str_new_cstr’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+  758 |                 return rb_tainted_str_new2(ret);
+      |                 ^~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/intern.h:57,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:192,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/intern/string.h:1411:1: note: declared here
+ 1411 | rbimpl_tainted_str_new_cstr(const char *str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_error_message’:
+pg_connection.c:803:9: warning: ‘rbimpl_tainted_str_new_cstr’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+  803 |         return rb_tainted_str_new2(error);
+      |         ^~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/intern.h:57,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:192,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/intern/string.h:1411:1: note: declared here
+ 1411 | rbimpl_tainted_str_new_cstr(const char *str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_describe_portal’:
+pg_connection.c:1473:1: warning: old-style function definition [-Wold-style-definition]
+ 1473 | pgconn_describe_portal(self, stmt_name)
+      | ^~~~~~~~~~~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_s_escape’:
+pg_connection.c:1568:9: warning: ‘RB_OBJ_INFECT’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+ 1568 |         OBJ_INFECT(result, string);
+      |         ^~~~~~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/core/rstring.h:30,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic.h:23,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:27,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:114:30: note: declared here
+  114 | #define RB_OBJ_INFECT        RB_OBJ_INFECT
+      |                              ^~~~~~~~~~~~~
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:890:1: note: in expansion of macro ‘RB_OBJ_INFECT’
+  890 | RB_OBJ_INFECT(VALUE dst, VALUE src)
+      | ^~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_s_escape_bytea’:
+pg_connection.c:1614:9: warning: ‘RB_OBJ_INFECT’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+ 1614 |         OBJ_INFECT(ret, str);
+      |         ^~~~~~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/core/rstring.h:30,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic.h:23,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:27,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:114:30: note: declared here
+  114 | #define RB_OBJ_INFECT        RB_OBJ_INFECT
+      |                              ^~~~~~~~~~~~~
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:890:1: note: in expansion of macro ‘RB_OBJ_INFECT’
+  890 | RB_OBJ_INFECT(VALUE dst, VALUE src)
+      | ^~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_s_unescape_bytea’:
+pg_connection.c:1644:9: warning: ‘RB_OBJ_INFECT’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+ 1644 |         OBJ_INFECT(ret, str);
+      |         ^~~~~~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/core/rstring.h:30,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic.h:23,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:27,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:114:30: note: declared here
+  114 | #define RB_OBJ_INFECT        RB_OBJ_INFECT
+      |                              ^~~~~~~~~~~~~
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:890:1: note: in expansion of macro ‘RB_OBJ_INFECT’
+  890 | RB_OBJ_INFECT(VALUE dst, VALUE src)
+      | ^~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_escape_literal’:
+pg_connection.c:1680:9: warning: ‘RB_OBJ_INFECT’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+ 1680 |         OBJ_INFECT(result, string);
+      |         ^~~~~~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/core/rstring.h:30,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic.h:23,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:27,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:114:30: note: declared here
+  114 | #define RB_OBJ_INFECT        RB_OBJ_INFECT
+      |                              ^~~~~~~~~~~~~
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:890:1: note: in expansion of macro ‘RB_OBJ_INFECT’
+  890 | RB_OBJ_INFECT(VALUE dst, VALUE src)
+      | ^~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_escape_identifier’:
+pg_connection.c:1722:9: warning: ‘RB_OBJ_INFECT’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+ 1722 |         OBJ_INFECT(result, string);
+      |         ^~~~~~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/core/rstring.h:30,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic.h:23,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:27,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:114:30: note: declared here
+  114 | #define RB_OBJ_INFECT        RB_OBJ_INFECT
+      |                              ^~~~~~~~~~~~~
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:890:1: note: in expansion of macro ‘RB_OBJ_INFECT’
+  890 | RB_OBJ_INFECT(VALUE dst, VALUE src)
+      | ^~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_consume_input’:
+pg_connection.c:2086:1: warning: old-style function definition [-Wold-style-definition]
+ 2086 | pgconn_consume_input(self)
+      | ^~~~~~~~~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_is_busy’:
+pg_connection.c:2108:1: warning: old-style function definition [-Wold-style-definition]
+ 2108 | pgconn_is_busy(self)
+      | ^~~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_setnonblocking’:
+pg_connection.c:2131:1: warning: old-style function definition [-Wold-style-definition]
+ 2131 | pgconn_setnonblocking(self, state)
+      | ^~~~~~~~~~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_isnonblocking’:
+pg_connection.c:2161:1: warning: old-style function definition [-Wold-style-definition]
+ 2161 | pgconn_isnonblocking(self)
+      | ^~~~~~~~~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_flush’:
+pg_connection.c:2178:1: warning: old-style function definition [-Wold-style-definition]
+ 2178 | pgconn_flush(self)
+      | ^~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_notifies’:
+pg_connection.c:2256:9: warning: ‘rbimpl_tainted_str_new_cstr’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+ 2256 |         relname = rb_tainted_str_new2(notification->relname);
+      |         ^~~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/intern.h:57,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:192,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/intern/string.h:1411:1: note: declared here
+ 1411 | rbimpl_tainted_str_new_cstr(const char *str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_connection.c:2258:9: warning: ‘rbimpl_tainted_str_new_cstr’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+ 2258 |         extra = rb_tainted_str_new2(notification->extra);
+      |         ^~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/intern.h:57,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:192,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/intern/string.h:1411:1: note: declared here
+ 1411 | rbimpl_tainted_str_new_cstr(const char *str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_wait_for_notify’:
+pg_connection.c:2528:9: warning: ‘rbimpl_tainted_str_new_cstr’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+ 2528 |         relname = rb_tainted_str_new2( pnotification->relname );
+      |         ^~~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/intern.h:57,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:192,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/intern/string.h:1411:1: note: declared here
+ 1411 | rbimpl_tainted_str_new_cstr(const char *str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_connection.c:2533:17: warning: ‘rbimpl_tainted_str_new_cstr’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+ 2533 |                 extra = rb_tainted_str_new2( pnotification->extra );
+      |                 ^~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/intern.h:57,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:192,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/intern/string.h:1411:1: note: declared here
+ 1411 | rbimpl_tainted_str_new_cstr(const char *str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_connection.c: In function ‘notice_processor_proxy’:
+pg_connection.c:2894:17: warning: ‘rbimpl_tainted_str_new_cstr’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+ 2894 |                 VALUE message_str = rb_tainted_str_new2(message);
+      |                 ^~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/intern.h:57,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:192,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/intern/string.h:1411:1: note: declared here
+ 1411 | rbimpl_tainted_str_new_cstr(const char *str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_get_client_encoding’:
+pg_connection.c:2953:9: warning: ‘rbimpl_tainted_str_new_cstr’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+ 2953 |         return rb_tainted_str_new2(encoding);
+      |         ^~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/intern.h:57,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:192,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/intern/string.h:1411:1: note: declared here
+ 1411 | rbimpl_tainted_str_new_cstr(const char *str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_s_quote_ident’:
+pg_connection.c:3073:9: warning: ‘RB_OBJ_INFECT’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+ 3073 |         OBJ_INFECT(ret, str_or_array);
+      |         ^~~~~~~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/core/rstring.h:30,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic.h:23,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:27,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:114:30: note: declared here
+  114 | #define RB_OBJ_INFECT        RB_OBJ_INFECT
+      |                              ^~~~~~~~~~~~~
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/fl_type.h:890:1: note: in expansion of macro ‘RB_OBJ_INFECT’
+  890 | RB_OBJ_INFECT(VALUE dst, VALUE src)
+      | ^~~~~~~~~~~~~
+pg_connection.c: In function ‘pgconn_set_client_encoding_async’:
+pg_connection.c:3699:75: warning: passing argument 3 of ‘rb_rescue’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 3699 |         return rb_rescue(pgconn_set_client_encoding_async1, (VALUE)&args, pgconn_set_client_encoding_async2, Qnil);
+      |                                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                           |
+      |                                                                           VALUE (*)(VALUE) {aka long unsigned int (*)(long unsigned int)}
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:40,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_connection.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/iterator.h:364:62: note: expected ‘VALUE (*)(VALUE,  VALUE)’ {aka ‘long unsigned int (*)(long unsigned int,  long unsigned int)’} but argument is of type ‘VALUE (*)(VALUE)’ {aka ‘long unsigned int (*)(long unsigned int)’}
+  364 | VALUE rb_rescue(VALUE (*b_proc)(VALUE), VALUE data1, VALUE (*r_proc)(VALUE, VALUE), VALUE data2);
+      |                                                      ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+pg_connection.c: In function ‘init_pg_connection’:
+pg_connection.c:3917:1: warning: old-style function definition [-Wold-style-definition]
+ 3917 | init_pg_connection()
+      | ^~~~~~~~~~~~~~~~~~
+pg_connection.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling pg_copy_coder.c
+In file included from pg.h:132,
+                 from pg_copy_coder.c:6:
+/usr/include/postgresql/pg_config_manual.h:85:5: warning: "SIZEOF_VOID_P" is not defined, evaluates to 0 [-Wundef]
+   85 | #if SIZEOF_VOID_P >= 8
+      |     ^~~~~~~~~~~~~
+/usr/include/postgresql/pg_config_manual.h:168:5: warning: "HAVE_DECL_POSIX_FADVISE" is not defined, evaluates to 0 [-Wundef]
+  168 | #if HAVE_DECL_POSIX_FADVISE && defined(HAVE_POSIX_FADVISE)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+pg_copy_coder.c: In function ‘init_pg_copycoder’:
+pg_copy_coder.c:563:1: warning: old-style function definition [-Wold-style-definition]
+  563 | init_pg_copycoder()
+      | ^~~~~~~~~~~~~~~~~
+pg_copy_coder.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling pg_errors.c
+In file included from pg.h:132,
+                 from pg_errors.c:6:
+/usr/include/postgresql/pg_config_manual.h:85:5: warning: "SIZEOF_VOID_P" is not defined, evaluates to 0 [-Wundef]
+   85 | #if SIZEOF_VOID_P >= 8
+      |     ^~~~~~~~~~~~~
+/usr/include/postgresql/pg_config_manual.h:168:5: warning: "HAVE_DECL_POSIX_FADVISE" is not defined, evaluates to 0 [-Wundef]
+  168 | #if HAVE_DECL_POSIX_FADVISE && defined(HAVE_POSIX_FADVISE)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+pg_errors.c: In function ‘init_pg_errors’:
+pg_errors.c:73:1: warning: old-style function definition [-Wold-style-definition]
+   73 | init_pg_errors()
+      | ^~~~~~~~~~~~~~
+pg_errors.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling pg_result.c
+In file included from pg.h:132,
+                 from pg_result.c:7:
+/usr/include/postgresql/pg_config_manual.h:85:5: warning: "SIZEOF_VOID_P" is not defined, evaluates to 0 [-Wundef]
+   85 | #if SIZEOF_VOID_P >= 8
+      |     ^~~~~~~~~~~~~
+/usr/include/postgresql/pg_config_manual.h:168:5: warning: "HAVE_DECL_POSIX_FADVISE" is not defined, evaluates to 0 [-Wundef]
+  168 | #if HAVE_DECL_POSIX_FADVISE && defined(HAVE_POSIX_FADVISE)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+pg_result.c: In function ‘pgresult_init_fnames’:
+pg_result.c:269:25: warning: ‘rbimpl_tainted_str_new_cstr’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+  269 |                         VALUE fname = rb_tainted_str_new2(PQfname(this->pgresult, i));
+      |                         ^~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/intern.h:57,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:192,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_result.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/intern/string.h:1411:1: note: declared here
+ 1411 | rbimpl_tainted_str_new_cstr(const char *str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_result.c: In function ‘pgresult_res_status’:
+pg_result.c:334:9: warning: ‘rbimpl_tainted_str_new_cstr’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+  334 |         VALUE ret = rb_tainted_str_new2(PQresStatus(NUM2INT(status)));
+      |         ^~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/intern.h:57,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:192,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_result.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/intern/string.h:1411:1: note: declared here
+ 1411 | rbimpl_tainted_str_new_cstr(const char *str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_result.c: In function ‘pgresult_error_message’:
+pg_result.c:348:9: warning: ‘rbimpl_tainted_str_new_cstr’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+  348 |         VALUE ret = rb_tainted_str_new2(PQresultErrorMessage(pgresult_get(self)));
+      |         ^~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/intern.h:57,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:192,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_result.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/intern/string.h:1411:1: note: declared here
+ 1411 | rbimpl_tainted_str_new_cstr(const char *str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_result.c: In function ‘pgresult_error_field’:
+pg_result.c:408:17: warning: ‘rbimpl_tainted_str_new_cstr’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+  408 |                 ret = rb_tainted_str_new2( fieldstr );
+      |                 ^~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/intern.h:57,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:192,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_result.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/intern/string.h:1411:1: note: declared here
+ 1411 | rbimpl_tainted_str_new_cstr(const char *str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_result.c: In function ‘pgresult_fname’:
+pg_result.c:462:9: warning: ‘rbimpl_tainted_str_new_cstr’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+  462 |         fname = rb_tainted_str_new2(PQfname(result, i));
+      |         ^~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/intern.h:57,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:192,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_result.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/intern/string.h:1411:1: note: declared here
+ 1411 | rbimpl_tainted_str_new_cstr(const char *str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_result.c: In function ‘pgresult_cmd_status’:
+pg_result.c:763:9: warning: ‘rbimpl_tainted_str_new_cstr’ is deprecated: taintedness turned out to be a wrong idea. [-Wdeprecated-declarations]
+  763 |         VALUE ret = rb_tainted_str_new2(PQcmdStatus(pgresult_get(self)));
+      |         ^~~~~
+In file included from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/intern.h:57,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/ruby.h:192,
+                 from /home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby.h:38,
+                 from pg.h:20,
+                 from pg_result.c:7:
+/home/huertanix/.rvm/rubies/ruby-3.1.3/include/ruby-3.1.0/ruby/internal/intern/string.h:1411:1: note: declared here
+ 1411 | rbimpl_tainted_str_new_cstr(const char *str)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_result.c: In function ‘init_pg_result’:
+pg_result.c:1217:1: warning: old-style function definition [-Wold-style-definition]
+ 1217 | init_pg_result()
+      | ^~~~~~~~~~~~~~
+pg_result.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling pg_text_decoder.c
+In file included from pg.h:132,
+                 from pg_text_decoder.c:31:
+/usr/include/postgresql/pg_config_manual.h:85:5: warning: "SIZEOF_VOID_P" is not defined, evaluates to 0 [-Wundef]
+   85 | #if SIZEOF_VOID_P >= 8
+      |     ^~~~~~~~~~~~~
+/usr/include/postgresql/pg_config_manual.h:168:5: warning: "HAVE_DECL_POSIX_FADVISE" is not defined, evaluates to 0 [-Wundef]
+  168 | #if HAVE_DECL_POSIX_FADVISE && defined(HAVE_POSIX_FADVISE)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+pg_text_decoder.c: In function ‘init_pg_text_decoder’:
+pg_text_decoder.c:396:1: warning: old-style function definition [-Wold-style-definition]
+  396 | init_pg_text_decoder()
+      | ^~~~~~~~~~~~~~~~~~~~
+pg_text_decoder.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling pg_text_encoder.c
+In file included from pg.h:132,
+                 from pg_text_encoder.c:43:
+/usr/include/postgresql/pg_config_manual.h:85:5: warning: "SIZEOF_VOID_P" is not defined, evaluates to 0 [-Wundef]
+   85 | #if SIZEOF_VOID_P >= 8
+      |     ^~~~~~~~~~~~~
+/usr/include/postgresql/pg_config_manual.h:168:5: warning: "HAVE_DECL_POSIX_FADVISE" is not defined, evaluates to 0 [-Wundef]
+  168 | #if HAVE_DECL_POSIX_FADVISE && defined(HAVE_POSIX_FADVISE)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+pg_text_encoder.c: In function ‘init_pg_text_encoder’:
+pg_text_encoder.c:655:1: warning: old-style function definition [-Wold-style-definition]
+  655 | init_pg_text_encoder()
+      | ^~~~~~~~~~~~~~~~~~~~
+pg_text_encoder.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling pg_type_map.c
+In file included from pg.h:132,
+                 from pg_type_map.c:7:
+/usr/include/postgresql/pg_config_manual.h:85:5: warning: "SIZEOF_VOID_P" is not defined, evaluates to 0 [-Wundef]
+   85 | #if SIZEOF_VOID_P >= 8
+      |     ^~~~~~~~~~~~~
+/usr/include/postgresql/pg_config_manual.h:168:5: warning: "HAVE_DECL_POSIX_FADVISE" is not defined, evaluates to 0 [-Wundef]
+  168 | #if HAVE_DECL_POSIX_FADVISE && defined(HAVE_POSIX_FADVISE)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+pg_type_map.c: In function ‘init_pg_type_map’:
+pg_type_map.c:146:1: warning: old-style function definition [-Wold-style-definition]
+  146 | init_pg_type_map()
+      | ^~~~~~~~~~~~~~~~
+pg_type_map.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling pg_type_map_all_strings.c
+In file included from pg.h:132,
+                 from pg_type_map_all_strings.c:9:
+/usr/include/postgresql/pg_config_manual.h:85:5: warning: "SIZEOF_VOID_P" is not defined, evaluates to 0 [-Wundef]
+   85 | #if SIZEOF_VOID_P >= 8
+      |     ^~~~~~~~~~~~~
+/usr/include/postgresql/pg_config_manual.h:168:5: warning: "HAVE_DECL_POSIX_FADVISE" is not defined, evaluates to 0 [-Wundef]
+  168 | #if HAVE_DECL_POSIX_FADVISE && defined(HAVE_POSIX_FADVISE)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+pg_type_map_all_strings.c: In function ‘init_pg_type_map_all_strings’:
+pg_type_map_all_strings.c:94:1: warning: old-style function definition [-Wold-style-definition]
+   94 | init_pg_type_map_all_strings()
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_type_map_all_strings.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling pg_type_map_by_class.c
+In file included from pg.h:132,
+                 from pg_type_map_by_class.c:10:
+/usr/include/postgresql/pg_config_manual.h:85:5: warning: "SIZEOF_VOID_P" is not defined, evaluates to 0 [-Wundef]
+   85 | #if SIZEOF_VOID_P >= 8
+      |     ^~~~~~~~~~~~~
+/usr/include/postgresql/pg_config_manual.h:168:5: warning: "HAVE_DECL_POSIX_FADVISE" is not defined, evaluates to 0 [-Wundef]
+  168 | #if HAVE_DECL_POSIX_FADVISE && defined(HAVE_POSIX_FADVISE)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+pg_type_map_by_class.c: In function ‘init_pg_type_map_by_class’:
+pg_type_map_by_class.c:219:1: warning: old-style function definition [-Wold-style-definition]
+  219 | init_pg_type_map_by_class()
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~
+pg_type_map_by_class.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling pg_type_map_by_column.c
+In file included from pg.h:132,
+                 from pg_type_map_by_column.c:7:
+/usr/include/postgresql/pg_config_manual.h:85:5: warning: "SIZEOF_VOID_P" is not defined, evaluates to 0 [-Wundef]
+   85 | #if SIZEOF_VOID_P >= 8
+      |     ^~~~~~~~~~~~~
+/usr/include/postgresql/pg_config_manual.h:168:5: warning: "HAVE_DECL_POSIX_FADVISE" is not defined, evaluates to 0 [-Wundef]
+  168 | #if HAVE_DECL_POSIX_FADVISE && defined(HAVE_POSIX_FADVISE)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+pg_type_map_by_column.c: In function ‘pg_tmbc_allocate’:
+pg_type_map_by_column.c:205:1: warning: old-style function definition [-Wold-style-definition]
+  205 | pg_tmbc_allocate()
+      | ^~~~~~~~~~~~~~~~
+pg_type_map_by_column.c: In function ‘init_pg_type_map_by_column’:
+pg_type_map_by_column.c:285:1: warning: old-style function definition [-Wold-style-definition]
+  285 | init_pg_type_map_by_column()
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_type_map_by_column.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling pg_type_map_by_mri_type.c
+In file included from pg.h:132,
+                 from pg_type_map_by_mri_type.c:10:
+/usr/include/postgresql/pg_config_manual.h:85:5: warning: "SIZEOF_VOID_P" is not defined, evaluates to 0 [-Wundef]
+   85 | #if SIZEOF_VOID_P >= 8
+      |     ^~~~~~~~~~~~~
+/usr/include/postgresql/pg_config_manual.h:168:5: warning: "HAVE_DECL_POSIX_FADVISE" is not defined, evaluates to 0 [-Wundef]
+  168 | #if HAVE_DECL_POSIX_FADVISE && defined(HAVE_POSIX_FADVISE)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+pg_type_map_by_mri_type.c: In function ‘init_pg_type_map_by_mri_type’:
+pg_type_map_by_mri_type.c:260:1: warning: old-style function definition [-Wold-style-definition]
+  260 | init_pg_type_map_by_mri_type()
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pg_type_map_by_mri_type.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling pg_type_map_by_oid.c
+In file included from pg.h:132,
+                 from pg_type_map_by_oid.c:7:
+/usr/include/postgresql/pg_config_manual.h:85:5: warning: "SIZEOF_VOID_P" is not defined, evaluates to 0 [-Wundef]
+   85 | #if SIZEOF_VOID_P >= 8
+      |     ^~~~~~~~~~~~~
+/usr/include/postgresql/pg_config_manual.h:168:5: warning: "HAVE_DECL_POSIX_FADVISE" is not defined, evaluates to 0 [-Wundef]
+  168 | #if HAVE_DECL_POSIX_FADVISE && defined(HAVE_POSIX_FADVISE)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+pg_type_map_by_oid.c: In function ‘init_pg_type_map_by_oid’:
+pg_type_map_by_oid.c:330:1: warning: old-style function definition [-Wold-style-definition]
+  330 | init_pg_type_map_by_oid()
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+pg_type_map_by_oid.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling pg_type_map_in_ruby.c
+In file included from pg.h:132,
+                 from pg_type_map_in_ruby.c:7:
+/usr/include/postgresql/pg_config_manual.h:85:5: warning: "SIZEOF_VOID_P" is not defined, evaluates to 0 [-Wundef]
+   85 | #if SIZEOF_VOID_P >= 8
+      |     ^~~~~~~~~~~~~
+/usr/include/postgresql/pg_config_manual.h:168:5: warning: "HAVE_DECL_POSIX_FADVISE" is not defined, evaluates to 0 [-Wundef]
+  168 | #if HAVE_DECL_POSIX_FADVISE && defined(HAVE_POSIX_FADVISE)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+pg_type_map_in_ruby.c: In function ‘init_pg_type_map_in_ruby’:
+pg_type_map_in_ruby.c:271:1: warning: old-style function definition [-Wold-style-definition]
+  271 | init_pg_type_map_in_ruby()
+      | ^~~~~~~~~~~~~~~~~~~~~~~~
+pg_type_map_in_ruby.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling util.c
+In file included from pg.h:132,
+                 from util.c:7:
+/usr/include/postgresql/pg_config_manual.h:85:5: warning: "SIZEOF_VOID_P" is not defined, evaluates to 0 [-Wundef]
+   85 | #if SIZEOF_VOID_P >= 8
+      |     ^~~~~~~~~~~~~
+/usr/include/postgresql/pg_config_manual.h:168:5: warning: "HAVE_DECL_POSIX_FADVISE" is not defined, evaluates to 0 [-Wundef]
+  168 | #if HAVE_DECL_POSIX_FADVISE && defined(HAVE_POSIX_FADVISE)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+linking shared-object pg_ext.so
+
+current directory: /home/huertanix/Source/arthackday-staging/vendor/bundle/ruby/3.1.0/gems/pg-0.21.0/ext
+make DESTDIR\= sitearchdir\=./.gem.20230821-20845-qqsp43 sitelibdir\=./.gem.20230821-20845-qqsp43 install
+/usr/bin/install -m 0755 pg_ext.so ./.gem.20230821-20845-qqsp43

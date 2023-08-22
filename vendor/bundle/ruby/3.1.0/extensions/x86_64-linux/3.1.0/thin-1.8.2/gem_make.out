@@ -1,0 +1,31 @@
+current directory: /home/huertanix/Source/arthackday-staging/vendor/bundle/ruby/3.1.0/gems/thin-1.8.2/ext/thin_parser
+/home/huertanix/.rvm/rubies/ruby-3.1.3/bin/ruby -I /home/huertanix/.rvm/rubies/ruby-3.1.3/lib/ruby/3.1.0 extconf.rb
+checking for main() in -lc... yes
+creating Makefile
+
+current directory: /home/huertanix/Source/arthackday-staging/vendor/bundle/ruby/3.1.0/gems/thin-1.8.2/ext/thin_parser
+make DESTDIR\= sitearchdir\=./.gem.20230821-20845-km4oxa sitelibdir\=./.gem.20230821-20845-km4oxa clean
+
+current directory: /home/huertanix/Source/arthackday-staging/vendor/bundle/ruby/3.1.0/gems/thin-1.8.2/ext/thin_parser
+make DESTDIR\= sitearchdir\=./.gem.20230821-20845-km4oxa sitelibdir\=./.gem.20230821-20845-km4oxa
+compiling parser.c
+parser.c:31:18: warning: ‘http_parser_en_main’ defined but not used [-Wunused-const-variable=]
+   31 | static const int http_parser_en_main = 1;
+      |                  ^~~~~~~~~~~~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+compiling thin.c
+thin.c: In function ‘Init_thin_parser’:
+thin.c:393:6: warning: old-style function definition [-Wold-style-definition]
+  393 | void Init_thin_parser()
+      |      ^~~~~~~~~~~~~~~~
+thin.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+linking shared-object thin_parser.so
+
+current directory: /home/huertanix/Source/arthackday-staging/vendor/bundle/ruby/3.1.0/gems/thin-1.8.2/ext/thin_parser
+make DESTDIR\= sitearchdir\=./.gem.20230821-20845-km4oxa sitelibdir\=./.gem.20230821-20845-km4oxa install
+/usr/bin/install -m 0755 thin_parser.so ./.gem.20230821-20845-km4oxa

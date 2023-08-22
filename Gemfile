@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-ruby "3.0.2"
+ruby '3.1.3' # heroku
+#ruby '3.0.2' # vanilla ubuntu 22
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '6.1.7.4'
@@ -21,7 +22,7 @@ gem 'uglifier' #, '>= 1.3.0'
 gem 'coffee-rails' #, '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer', platforms: :ruby
+#gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -88,7 +89,7 @@ gem 'bootsnap', require: false
 
 # Heroku stuff
 group :production, :staging do
-  gem 'pg', '~> 0.21' # Use old-ass version of pg for Rails < 5.1.5
+  gem 'pg' #, '~> 0.21' # Use old-ass version of pg for Rails < 5.1.5
   gem 'rails_12factor'
   gem 'puma'
 end

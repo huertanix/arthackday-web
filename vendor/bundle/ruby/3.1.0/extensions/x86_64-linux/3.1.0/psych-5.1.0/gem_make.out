@@ -1,0 +1,24 @@
+current directory: /home/huertanix/Source/arthackday-staging/vendor/bundle/ruby/3.1.0/gems/psych-5.1.0/ext/psych
+/home/huertanix/.rvm/rubies/ruby-3.1.3/bin/ruby -I /home/huertanix/.rvm/rubies/ruby-3.1.3/lib/ruby/3.1.0 extconf.rb
+checking for yaml.h... yes
+checking for yaml_get_version() in -lyaml... yes
+creating Makefile
+
+current directory: /home/huertanix/Source/arthackday-staging/vendor/bundle/ruby/3.1.0/gems/psych-5.1.0/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20230821-20845-re4xjj sitelibdir\=./.gem.20230821-20845-re4xjj clean
+cd libyaml && make clean
+/bin/sh: 1: cd: can't cd to libyaml
+make: [Makefile:282: clean-so] Error 2 (ignored)
+
+current directory: /home/huertanix/Source/arthackday-staging/vendor/bundle/ruby/3.1.0/gems/psych-5.1.0/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20230821-20845-re4xjj sitelibdir\=./.gem.20230821-20845-re4xjj
+compiling psych.c
+compiling psych_emitter.c
+compiling psych_parser.c
+compiling psych_to_ruby.c
+compiling psych_yaml_tree.c
+linking shared-object psych.so
+
+current directory: /home/huertanix/Source/arthackday-staging/vendor/bundle/ruby/3.1.0/gems/psych-5.1.0/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20230821-20845-re4xjj sitelibdir\=./.gem.20230821-20845-re4xjj install
+/usr/bin/install -m 0755 psych.so ./.gem.20230821-20845-re4xjj

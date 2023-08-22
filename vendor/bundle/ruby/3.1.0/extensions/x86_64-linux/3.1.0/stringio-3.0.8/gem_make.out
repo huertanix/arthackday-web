@@ -1,0 +1,15 @@
+current directory: /home/huertanix/Source/arthackday-staging/vendor/bundle/ruby/3.1.0/gems/stringio-3.0.8/ext/stringio
+/home/huertanix/.rvm/rubies/ruby-3.1.3/bin/ruby -I /home/huertanix/.rvm/rubies/ruby-3.1.3/lib/ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /home/huertanix/Source/arthackday-staging/vendor/bundle/ruby/3.1.0/gems/stringio-3.0.8/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20230821-22706-l69z2j sitelibdir\=./.gem.20230821-22706-l69z2j clean
+
+current directory: /home/huertanix/Source/arthackday-staging/vendor/bundle/ruby/3.1.0/gems/stringio-3.0.8/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20230821-22706-l69z2j sitelibdir\=./.gem.20230821-22706-l69z2j
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: /home/huertanix/Source/arthackday-staging/vendor/bundle/ruby/3.1.0/gems/stringio-3.0.8/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20230821-22706-l69z2j sitelibdir\=./.gem.20230821-22706-l69z2j install
+/usr/bin/install -m 0755 stringio.so ./.gem.20230821-22706-l69z2j

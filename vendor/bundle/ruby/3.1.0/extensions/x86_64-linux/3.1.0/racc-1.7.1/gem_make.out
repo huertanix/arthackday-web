@@ -1,0 +1,17 @@
+current directory: /home/huertanix/Source/arthackday-staging/vendor/bundle/ruby/3.1.0/gems/racc-1.7.1/ext/racc/cparse
+/home/huertanix/.rvm/rubies/ruby-3.1.3/bin/ruby -I /home/huertanix/.rvm/rubies/ruby-3.1.3/lib/ruby/3.1.0 extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /home/huertanix/Source/arthackday-staging/vendor/bundle/ruby/3.1.0/gems/racc-1.7.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230821-20845-395rln sitelibdir\=./.gem.20230821-20845-395rln clean
+
+current directory: /home/huertanix/Source/arthackday-staging/vendor/bundle/ruby/3.1.0/gems/racc-1.7.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230821-20845-395rln sitelibdir\=./.gem.20230821-20845-395rln
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/huertanix/Source/arthackday-staging/vendor/bundle/ruby/3.1.0/gems/racc-1.7.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230821-20845-395rln sitelibdir\=./.gem.20230821-20845-395rln install
+/usr/bin/install -m 0755 cparse.so ./.gem.20230821-20845-395rln/racc
